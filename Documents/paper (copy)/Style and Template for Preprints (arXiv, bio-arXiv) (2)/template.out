@@ -1,0 +1,38 @@
+\BOOKMARK [1][-]{section.1}{Preliminaries}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{System Model}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Modeling Asynchronous Dynamic Links}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Configurations and Executions}{section.1}% 4
+\BOOKMARK [2][-]{subsection.1.4}{Problem Definition}{section.1}% 5
+\BOOKMARK [1][-]{section.2}{Leader Election Algorithm}{}% 6
+\BOOKMARK [2][-]{subsection.2.1}{Informal Description}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.2}{System Model}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.3}{Overview of Algorithm}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Correctness}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Height Tokens and Their Properties}{section.3}% 11
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Property A}{subsection.3.1}% 12
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Property B}{subsection.3.1}% 13
+\BOOKMARK [2][-]{subsection.3.2}{Bounding the Number of Elections}{section.3}% 14
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Property C}{subsection.3.2}% 15
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Property D}{subsection.3.2}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Lemma 1}{subsection.3.2}% 17
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Lemma 2}{subsection.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.3}{Bounding the Number of New Reference Levels}{section.3}% 19
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Property E}{subsection.3.3}% 20
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Property F}{subsection.3.3}% 21
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Property G}{subsection.3.3}% 22
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Property H}{subsection.3.3}% 23
+\BOOKMARK [3][-]{subsubsection.3.3.5}{Property I}{subsection.3.3}% 24
+\BOOKMARK [3][-]{subsubsection.3.3.6}{Lemma 3}{subsection.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.4}{Bounding the Number of Messages}{section.3}% 26
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Lemma 4}{subsection.3.4}% 27
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Lemma 5}{subsection.3.4}% 28
+\BOOKMARK [3][-]{subsubsection.3.4.3}{Lemma 6}{subsection.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.5}{Leader-Oriented DAG}{section.3}% 30
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Property J}{subsection.3.5}% 31
+\BOOKMARK [3][-]{subsubsection.3.5.2}{Property K}{subsection.3.5}% 32
+\BOOKMARK [3][-]{subsubsection.3.5.3}{Theorem 7}{subsection.3.5}% 33
+\BOOKMARK [1][-]{section.4}{Leader Stability}{}% 34
+\BOOKMARK [2][-]{subsection.4.1}{Theorem 8}{section.4}% 35
+\BOOKMARK [2][-]{subsection.4.2}{Claim 1}{section.4}% 36
+\BOOKMARK [2][-]{subsection.4.3}{Claim 2}{section.4}% 37
+\BOOKMARK [1][-]{section.5}{Conclustion}{}% 38
