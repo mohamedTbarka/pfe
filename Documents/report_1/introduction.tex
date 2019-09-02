@@ -1,0 +1,56 @@
+\chapter{Introduction}
+
+\paragraph{}Leader election is an important primitive for distributed computing, useful as a subroutine for any application that requires the selection of a unique processor among
+multiple candidate processors. Applications that need a leader range from the primarybackup approach for replication-based fault-tolerance to group communication systems [26], and from video conferencing to multi-player games [11].
+In a dynamic network, communication channels go up and down frequently. Causes
+for such communication volatility range from the changing position of nodes in mobile networks to failure and repair of point-to-point links in wired networks. Recent
+research has focused on porting some of the applications mentioned above to dynamic networks, including wireless and sensor networks. For instance, Wang and Wu
+propose a replication-based scheme for data delivery in mobile and fault-prone sensor networks [29]. Thus there is a need for leader election algorithms that work in
+dynamic networks.
+We consider the problem of ensuring that, if changes to the communication topology cease, then eventually each connected component of the network has a unique
+leader (introduced as the “local leader election problem” in [7]). Our algorithm is an
+extension of the leader election algorithm in [18], which in turn is an extension of the
+MANET routing algorithm TORA in [22]. TORA itself is based on ideas from [9].
+Gafni and Bertsekas [9] present two routing algorithms based on the notion of link
+reversal. The goal of each algorithm is to create directed paths in the communication
+topology graph from each node to a distinguished destination node. In these algorithms, each node maintains a height variable, drawn from a totally-ordered set; the
+(bidirectional) communication link between two nodes is considered to be directed
+from the endpoint with larger height to that with smaller height. Whenever a node
+becomes a sink, i.e., has no outgoing links, due to a link going down or due to notification of a neighbor’s changed height, the node increases its height so that at least one
+of its incoming links becomes outgoing. In one of the algorithms of [9], the height is
+a pair consisting of a counter and the node’s unique id, while in the other algorithm
+the height is a triple consisting of two counters and the node id. In both algorithms,
+heights are compared lexicographically with the least significant component being
+the node id. In the first algorithm, a sink increases its counter to be larger than the
+counter of all its neighbors, while in the second algorithm, a more complicated rule
+is employed for changing the counters.
+The algorithms in [9] cause an infinite number of messages to be sent if a portion
+of the communication graph is disconnected from the destination. This drawback is
+overcome in TORA [22], through the addition of a clever mechanism by which nodes
+\begin{algorithm}
+\caption{Put your caption here}
+\begin{algorithmic}[1]
+
+%\Procedure{Roy}{$a,b$}       \Comment{This is a test}
+    \State System Initialization
+    \State Read the value 
+    \If{$condition = True$}
+        \State Do this
+        \If{$Condition \geq 1$}
+        \State Do that
+        \ElsIf{$Condition \neq 5$}
+        \State Do another
+        \State Do that as well
+        \Else
+        \State Do otherwise
+        \EndIf
+    \EndIf
+
+    \While{$something \not= 0$}  \Comment{put some comments here}
+        \State $var1 \leftarrow var2$  \Comment{another comment}
+        \State $var3 \leftarrow var4$
+    \EndWhile  \label{roy's loop}
+%\EndProcedure
+
+\end{algorithmic}
+\end{algorithm}

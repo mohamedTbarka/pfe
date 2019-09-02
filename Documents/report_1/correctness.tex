@@ -1,0 +1,94 @@
+\chapter{Correctness}
+In this section, we show that, once topology changes
+cease, the algorithm eventually terminates with each con-
+nected component forming a leader-oriented DAG. First, we
+make some definitions regarding the information concerning nodes’ heights that exists in the system and prove some
+properties about it. Then we prove that, after the last topology change, each node elects itself a finite number of times
+and a finite number of new reference levels are started. As
+a result, we show that eventually no messages are in transit
+and at that point we have a leader-oriented DAG.
+Throughout the proof, consider an arbitrary execution of
+the algorithm in which the last topology change occurs at
+some time $t_{LTC}$ , and consider any connected component of
+the final topology.
+
+\section{Height Tokens and Their Properties}
+\textbf{Property A :} If h is a height token for a node v in the (v, u)
+height sequence, then:
+(i) nlts(h) ≤ LC v and τ (h) ≤ LC v
+(ii) If h is in transit, then
+nlts(h) ≤ T and τ (h) ≤ T
+where T is the logical timestamp on the Update mes-
+sage from v to u containing h.
+(iii) If h is in u’s height array then
+nlts(h) ≤ LC u and τ (h) ≤ LC u .
+
+\textbf{Property B:} Let h 0 , h 1 , . . . , h m be the (u, v) height sequence
+for any Link{u, v} whose status is Up or ComingUp u . Then
+the following are true:
+(1) h 0 = h 1 .
+(2) For all l, 0 ≤ l < m, LP(h l ) ≤ LP(h l+1 ).
+(3) For all l, 0 ≤ l < m, if LP(h l ) = LP(h l+1 ), then
+RL(h l ) ≥ RL(h l+1 ).
+
+\section{Bounding the Number of Elections}
+\textbf{Property C:} For each height token h with RL (t, p, r), either
+t = p = r = 0, or t > 0, p is a node id, and r is 0 or 1.
+
+\textbf{Property D:} Let h be a height token for some node u. If
+LP(h) = (−s, l), where LC l (t) = s at time t and t ≥ t LTC ,
+then RL(h) = (0, 0, 0) and δ (h) is the distance in LT (−s, l)
+from l to u.
+
+
+\textbf{Lemma 1:}Any node u that adopts leader pair (−s, l) for
+any l and any s, where LC l (t) = s and t > t LTC , never sub-
+sequently becomes a sink.
+
+\textbf{Lemma 2:}No node elects itself more than a finite number
+of times after t LTC.
+
+\section{Bounding the Number of New Reference Levels}
+\textbf{Property E:} If h and h ′ are two height tokens for the same
+node u with RL(h) = RL(h ′ ) and LP(h) = LP(h ′ ), then
+δ (h) = δ (h ′ ).
+\textbf{Property F:} If there is a height token for node u with RL
+prefix (t, p), where LC u (t ′ ) = t and t ′ ≥ t LTC , then u is in
+RD(t, p).
+\textbf{Property G:} If there is a height token for node u with RL
+(t, p, 1), where LC u (t ′ ) = t and t ′ ≥ t LTC , then all neighbors
+of u are in RD(t, p).
+\textbf{Property H:} Suppose node u has height h u , neighboring
+node v has height h v , and u’s view of v’s height is h ′ v , all
+with the same LP. If h u < h ′ v , then h ′ v = h v .
+Property I: Consider two height tokens, h u for a node u
+with RL(h u ) = (t, p, r u ) and δ (h u ) = d u , and h v for a neigh-
+boring node v with RL(h v ) = (t, p, r v ) and δ (h v ) = d v , where
+LC p (t ′ ) = t and t ′ ≥ t LTC . Then the following are true:
+(1) r u ≤ r v if and only if u is a predecessor of v in RD(t, p).
+(2) If r u = r v = 0, then d u > d v if and only if u is a prede-
+cessor of v.
+(3) If r u = r v = 1, then d v > d u if and only if u is a prede-
+cessor of v.
+Lemma 3 Every node starts a finite number of new RLs
+after t LTC .
+\section{Bounding the Number of Messages}
+\textbf{Lemma 4:}Eventually every node in the connected compo-
+nent has the same leader pair.
+
+\textbf{Lemma 5:} Eventually there are no messages in transit.
+
+\textbf{Lemma 6:} Eventually every node has an accurate view of
+its neighbors’ heights.
+\section{Leader-Oriented DAG}
+\textbf{Property J:} A node is never a sink in its own view.
+\textbf{Property K:} Consider any height token h for node u. If
+RL(h) = (0, 0, 0), then δ (h) ≥ 0. Furthermore, δ (h) = 0 if
+and only if u is a leader.
+
+{Theorem 7} Eventually the connected component is a
+leader-oriented DAG.
+
+
+
+
