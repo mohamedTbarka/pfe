@@ -1,24 +1,25 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}% 
-\contentsline {chapter}{\numberline {2}Preliminaries}{3}% 
-\contentsline {section}{\numberline {2.1}System Model}{3}% 
-\contentsline {section}{\numberline {2.2}Modeling Asynchronous Dynamic Links}{3}% 
-\contentsline {section}{\numberline {2.3}Configurations and Executions}{5}% 
-\contentsline {section}{\numberline {2.4}Problem Definition}{6}% 
-\contentsline {chapter}{\numberline {3}Leader Election Algorithm}{7}% 
-\contentsline {section}{\numberline {3.1}System Model}{7}% 
-\contentsline {section}{\numberline {3.2}Overview of Algorithm}{9}% 
-\contentsline {chapter}{\numberline {4}Correctness}{14}% 
-\contentsline {section}{\numberline {4.1}Height Tokens and Their Properties}{14}% 
-\contentsline {section}{\numberline {4.2}Bounding the Number of Elections}{14}% 
-\contentsline {section}{\numberline {4.3}Bounding the Number of New Reference Levels}{15}% 
-\contentsline {section}{\numberline {4.4}Bounding the Number of Messages}{15}% 
-\contentsline {section}{\numberline {4.5}Leader-Oriented DAG}{15}% 
-\contentsline {chapter}{\numberline {5}Implementation}{17}% 
-\contentsline {section}{\numberline {5.1}The Tool used}{17}% 
-\contentsline {section}{\numberline {5.2}Features and Architecture}{18}% 
-\contentsline {subsection}{\numberline {5.2.1}Basic features of nodes and links}{18}% 
-\contentsline {subsection}{\numberline {5.2.2}Distributed vs. centralized algorithms}{20}% 
-\contentsline {subsection}{\numberline {5.2.3}Architecture of the event system}{20}% 
-\contentsline {subsection}{\numberline {5.2.4}Single threading: why and how?}{21}% 
-\contentsline {subsection}{\numberline {5.2.5}Interactivity}{22}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{24}% 
+\contentsline {chapter}{\numberline {2}Preliminaries}{6}% 
+\contentsline {section}{\numberline {2.1}System Model}{6}% 
+\contentsline {section}{\numberline {2.2}Modeling Asynchronous Dynamic Links}{6}% 
+\contentsline {section}{\numberline {2.3}Configurations and Executions}{8}% 
+\contentsline {section}{\numberline {2.4}Problem Definition}{9}% 
+\contentsline {chapter}{\numberline {3}Leader Election Algorithm}{10}% 
+\contentsline {section}{\numberline {3.1}System Model}{10}% 
+\contentsline {section}{\numberline {3.2}Overview of Algorithm}{12}% 
+\contentsline {chapter}{\numberline {4}Correctness}{16}% 
+\contentsline {section}{\numberline {4.1}Height Tokens and Their Properties}{16}% 
+\contentsline {section}{\numberline {4.2}Bounding the Number of Elections}{16}% 
+\contentsline {section}{\numberline {4.3}Bounding the Number of New Reference Levels}{17}% 
+\contentsline {section}{\numberline {4.4}Bounding the Number of Messages}{17}% 
+\contentsline {section}{\numberline {4.5}Leader-Oriented DAG}{17}% 
+\contentsline {chapter}{\numberline {5}Implementation}{19}% 
+\contentsline {section}{\numberline {5.1}The Tool used}{19}% 
+\contentsline {section}{\numberline {5.2}Features and Architecture}{20}% 
+\contentsline {subsection}{\numberline {5.2.1}Basic features of nodes and links}{20}% 
+\contentsline {subsection}{\numberline {5.2.2}Distributed vs. centralized algorithms}{22}% 
+\contentsline {subsection}{\numberline {5.2.3}Architecture of the event system}{22}% 
+\contentsline {subsection}{\numberline {5.2.4}Single threading: why and how?}{23}% 
+\contentsline {subsection}{\numberline {5.2.5}Interactivity}{24}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{26}% 
+\contentsline {chapter}{Bibliography}{27}% 

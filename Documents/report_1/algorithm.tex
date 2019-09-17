@@ -7,7 +7,7 @@ Each node i keeps an array of heights, height i , with an entry for itself and f
 
 Each height is a 7-tuple, with the following components:
 \begin{enumerate}
-\item τ , a nonnegative timestamp that is either 0 or the time when the current search for an alternate path to the leader was initiated
+\item $\tau$ , a nonnegative timestamp that is either 0 or the time when the current search for an alternate path to the leader was initiated
 \item oid, a nonnegative value that is either 0 or the id of the node that started the current search
 \item r, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a deadend
 \item δ , an integer that is set to ensure that links are directed appropriately to neighbors with the same first three components

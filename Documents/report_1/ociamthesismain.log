@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.8.28)  29 AUG 2019 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  16 SEP 2019 16:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -72,27 +72,1254 @@ Package: enumitem 2019/02/04 v3.8 Customized lists
 \enit@count@id=\count89
 \enitdp@description=\count90
 )
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
 
-! LaTeX Error: File `algorithm.sty' not found.
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks17
+\float@box=\box28
+\@float@everytoks=\toks18
+\@floatcapt=\box29
+)
+\@float@every@algorithm=\toks19
+\c@algorithm=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
-Enter file name: 
-! Emergency stop.
-<read *> 
-         
-l.9 \usepackage
-               {algpseudocode}^^M
-*** (cannot \read from terminal in nonstop modes)
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count93
+\c@ALG@rem=\count94
+\c@ALG@nested=\count95
+\ALG@tlm=\skip44
+\ALG@thistlm=\skip45
+\c@ALG@Lnr=\count96
+\c@ALG@blocknr=\count97
+\c@ALG@storecount=\count98
+\c@ALG@tmpcounter=\count99
+\ALG@tmplength=\skip46
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
+(./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
+(./correctness.aux) (./implementation.aux) (./conclusions.aux))
+\openout1 = `ociamthesismain.aux'.
 
- 
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen106
+\scratchbox=\box30
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen107
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks21
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<oxlogo.png, id=1, 1505.625pt x 602.25pt>
+File: oxlogo.png Graphic file (type png)
+<use oxlogo.png>
+Package pdftex.def Info: oxlogo.png  used on input line 44.
+(pdftex.def)             Requested size: 91.04881pt x 36.4183pt.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./oxlogo.png>]
+\openout2 = `dedication.aux'.
+
+
+(./dedication.tex [2
+
+
+])
+\openout2 = `acknowlegements.aux'.
+
+ (./acknowlegements.tex [3
+
+
+
+])
+\openout2 = `abstract.aux'.
+
+ (./abstract.tex [4
+
+
+
+])
+(./ociamthesismain.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+
+])
+\tf@toc=\write3
+\openout3 = `ociamthesismain.toc'.
+
+ [2]
+(./ociamthesismain.lof)
+\tf@lof=\write4
+\openout4 = `ociamthesismain.lof'.
+
+ [3
+
+]
+\openout2 = `introduction.aux'.
+
+ (./introduction.tex
+Chapter 1.
+)
+Overfull \hbox (3.23195pt too wide) in paragraph at lines 3--55
+\OT1/cmr/m/n/12 mul-ti-ple can-di-date pro-ces-sors. Ap-pli-ca-tions that need 
+a leader range from the primary-
+ []
+
+[1
+
+
+
+] [2] [3] [4] [5]
+\openout2 = `preliminaries.aux'.
+
+ (./preliminaries.tex
+Chapter 2.
+[6
+
+
+
+]
+<screenshot.png, id=54, 462.72874pt x 229.85875pt>
+File: screenshot.png Graphic file (type png)
+<use screenshot.png>
+Package pdftex.def Info: screenshot.png  used on input line 21.
+(pdftex.def)             Requested size: 347.0457pt x 172.39362pt.
+ [7 <./screenshot.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...d global time gt to each event e i , i ≥
+                                                   1, such that gt(e i ) < g...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...ng event, so gt(C i ) = gt(e i ) for i ≥
+                                                   1; we define gt(C 0 ) to ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[8]) [9]
+\openout2 = `algorithm.aux'.
+
+ (./algorithm.tex
+Chapter 3.
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 \item τ
+              , a nonnegative timestamp that is either 0 or the time when th...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \item δ
+              , an integer that is set to ensure that links are directed app...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 Components ( τ
+                     , oid, r) are referred to as the reference
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 level, or RL; ( τ
+                        , oid) alone are referred to as the reference
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 as ( τ
+             k , oid k , r k , δ k , nlts k , lid k , k) in the pseudocode.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 as ( τ k , oid k , r k , δ
+                                  k , nlts k , lid k , k) in the pseudocode.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[10
+
+
+
+]
+Overfull \hbox (12.3754pt too wide) in paragraph at lines 36--46
+[]\OT1/cmr/m/n/12 Other events that oc-cur at a node are for-ma-tions (LinkUps)
+ and fail-ures (LinkDowns)
+ []
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item height i [i] = (0, 0, 0, δ
+                                       i , 0, l, i), where l is the id of a
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[11]
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 Furthermore, for each node i, δ
+                                      i equals the distance from i
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ∀ (U+2200)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \item SINK = ((LP i j = LP ii ∀
+                                       j ∈ N i ) and (height i [i] <
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ∈ (U+2208)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \item SINK = ((LP i j = LP ii ∀ j ∈
+                                             N i ) and (height i [i] <
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ∀ (U+2200)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 min{height i [ j] ∀
+                           j ∈ N i }) and (lid ii , i)). This pred-
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ∈ (U+2208)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 min{height i [ j] ∀ j ∈
+                                 N i }) and (lid ii , i)). This pred-
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 ... EF L EVEL and takes on RL (1,G,0) and δ
+                                                   = 0.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[12]
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 RL (1,G,0), set its δ
+                             to −1, ensuring that its height is
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 RL (1,G,0), set its δ to −
+                                   1, ensuring that its height is
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 RL (1,G,0) with δ
+                         set to −2, update their logical clocks
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 RL (1,G,0) with δ set to −
+                                   2, update their logical clocks
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 level to 1, resetting its δ
+                                   to 0, and sending its new
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 (1,G,1) and set their δ
+                               to −1, causing their heights to
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 (1,G,1) and set their δ to −
+                                     1, causing their heights to
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 (f), but set their δ
+                            variables to −2. As a result from
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.150 (f), but set their δ variables to −
+                                            2. As a result from
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 E and F having δ
+                        = 1, B and C having δ = 2, and A
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 E and F having δ = 1, B and C having δ
+                                               = 2, and A
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 having δ
+                = 3.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[13]
+
+LaTeX Warning: File `../../Pictures/algorithm_2.png' not found on input line 18
+6.
+
+
+! Package pdftex.def Error: File `../../Pictures/algorithm_2.png' not found: us
+ing draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186 ...cale=.75]{../../Pictures/algorithm_2.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<screenshot_3.png, id=81, 547.04375pt x 355.3275pt>
+File: screenshot_3.png Graphic file (type png)
+<use screenshot_3.png>
+Package pdftex.def Info: screenshot_3.png  used on input line 191.
+(pdftex.def)             Requested size: 410.2818pt x 266.49495pt.
+<screenshot_1.png, id=82, 977.6525pt x 402.50375pt>
+File: screenshot_1.png Graphic file (type png)
+<use screenshot_1.png>
+Package pdftex.def Info: screenshot_1.png  used on input line 197.
+(pdftex.def)             Requested size: 488.82506pt x 201.25137pt.
+
+Overfull \hbox (55.20506pt too wide) in paragraph at lines 197--200
+ [][] 
+ []
+
+) [14] [15 <./screenshot_3.png> <./screenshot_1.png>]
+\openout2 = `correctness.aux'.
+
+ (./correctness.tex
+Chapter 4.
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 (i) nlts(h) ≤
+                     LC v and τ (h) ≤ LC v
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 (i) nlts(h) ≤ LC v and τ
+                                 (h) ≤ LC v
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 (i) nlts(h) ≤ LC v and τ (h) ≤
+                                         LC v
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 nlts(h) ≤
+                 T and τ (h) ≤ T
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 nlts(h) ≤ T and τ
+                          (h) ≤ T
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 nlts(h) ≤ T and τ (h) ≤
+                                  T
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 nlts(h) ≤
+                 LC u and τ (h) ≤ LC u .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 nlts(h) ≤ LC u and τ
+                             (h) ≤ LC u .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 nlts(h) ≤ LC u and τ (h) ≤
+                                     LC u .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 (2) For all l, 0 ≤
+                          l < m, LP(h l ) ≤ LP(h l+1 ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 (2) For all l, 0 ≤ l < m, LP(h l ) ≤
+                                              LP(h l+1 ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 (3) For all l, 0 ≤
+                          l < m, if LP(h l ) = LP(h l+1 ), then
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 RL(h l ) ≥
+                  RL(h l+1 ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 LP(h) = (−
+                 s, l), where LC l (t) = s at time t and t ≥ t LTC ,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.39 ...l), where LC l (t) = s at time t and t ≥
+                                                   t LTC ,
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 then RL(h) = (0, 0, 0) and δ
+                                   (h) is the distance in LT (−s, l)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ..., 0) and δ (h) is the distance in LT (−
+                                                  s, l)
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[16
+
+
+
+]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...1:}Any node u that adopts leader pair (−
+                                                  s, l) for
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \textbf{Property E:} If h and h ′
+                                         are two height tokens for the same
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 node u with RL(h) = RL(h ′
+                                  ) and LP(h) = LP(h ′ ), then
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 ...th RL(h) = RL(h ′ ) and LP(h) = LP(h ′
+                                                   ), then
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 δ
+        (h) = δ (h ′ ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 δ (h) = δ
+                 (h ′ ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 δ (h) = δ (h ′
+                        ).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 prefix (t, p), where LC u (t ′
+                                      ) = t and t ′ ≥ t LTC , then u is in
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 ... (t, p), where LC u (t ′ ) = t and t ′
+                                                   ≥ t LTC , then u is in
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 ... p), where LC u (t ′ ) = t and t ′ ≥
+                                                   t LTC , then u is in
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 (t, p, 1), where LC u (t ′
+                                  ) = t and t ′ ≥ t LTC , then all neigh...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 (t, p, 1), where LC u (t ′ ) = t and t ′
+                                                  ≥ t LTC , then all neigh...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ... 1), where LC u (t ′ ) = t and t ′ ≥
+                                                   t LTC , then all neighbors
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ... , and u’s view of v’s height is h ′
+                                                   v , all
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 with the same LP. If h u < h ′
+                                      v , then h ′ v = h v .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...the same LP. If h u < h ′ v , then h ′
+                                                   v = h v .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 with RL(h u ) = (t, p, r u ) and δ
+                                         (h u ) = d u , and h v for a neigh-
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 ...node v with RL(h v ) = (t, p, r v ) and δ
+                                                   (h v ) = d v , where
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 LC p (t ′
+                 ) = t and t ′ ≥ t LTC . Then the following are true:
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ′ (U+2032)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 LC p (t ′ ) = t and t ′
+                                 ≥ t LTC . Then the following are true:
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 LC p (t ′ ) = t and t ′ ≥
+                                     t LTC . Then the following are true:
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 (1) r u ≤
+                 r v if and only if u is a predecessor of v in RD(t, p).
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 RL(h) = (0, 0, 0), then δ
+                                (h) ≥ 0. Furthermore, δ (h) = 0 if
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 RL(h) = (0, 0, 0), then δ (h) ≥
+                                        0. Furthermore, δ (h) = 0 if
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.86 ... 0, 0), then δ (h) ≥ 0. Furthermore, δ
+                                                   (h) = 0 if
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[17]) [18]
+\openout2 = `implementation.aux'.
+
+ (./implementation.tex
+Chapter 5.
+[19
+
+
+
+]
+<screenshot_4.png, id=105, 413.545pt x 122.4575pt>
+File: screenshot_4.png Graphic file (type png)
+<use screenshot_4.png>
+Package pdftex.def Info: screenshot_4.png  used on input line 56.
+(pdftex.def)             Requested size: 413.54398pt x 122.45718pt.
+ [20 <./screenshot_4.png>]
+<screenshot_5.png, id=110, 270.00874pt x 190.7125pt>
+File: screenshot_5.png Graphic file (type png)
+<use screenshot_5.png>
+Package pdftex.def Info: screenshot_5.png  used on input line 85.
+(pdftex.def)             Requested size: 270.00807pt x 190.71202pt.
+ [21 <./screenshot_5.png>] [22] [23]
+<screenshot_6.png, id=121, 982.67125pt x 274.02374pt>
+File: screenshot_6.png Graphic file (type png)
+<use screenshot_6.png>
+Package pdftex.def Info: screenshot_6.png  used on input line 221.
+(pdftex.def)             Requested size: 982.66885pt x 274.02307pt.
+
+Overfull \hbox (549.04886pt too wide) in paragraph at lines 221--222
+ [][] 
+ []
+
+) [24] [25 <./screenshot_6.png>]
+\openout2 = `conclusions.aux'.
+
+ (./conclusions.tex
+Chapter 6.
+) [26
+
+
+
+] (./ociamthesismain.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [27
+
+
+] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
+(./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
+(./correctness.aux) (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
- 1270 strings out of 494518
- 16546 string characters out of 6176313
- 72427 words of memory out of 5000000
- 4991 multiletter control sequences out of 15000+600000
- 3938 words of font info for 15 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 32i,0n,27p,275b,36s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 2869 strings out of 492615
+ 41109 string characters out of 6131390
+ 135341 words of memory out of 5000000
+ 6665 multiletter control sequences out of 15000+600000
+ 11571 words of font info for 43 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,7n,27p,1134b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on ociamthesismain.pdf (34 pages, 1230554 bytes).
+PDF statistics:
+ 173 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

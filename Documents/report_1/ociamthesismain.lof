@@ -1,13 +1,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces State diagram for status variable of $Link\delimiter "4266308 u, v\delimiter "5267309 $ .}}{4}% 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces State diagram for status variable of $Link\delimiter "4266308 u, v\delimiter "5267309 $ .}}{7}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Code triggered by link changes.}}{12}% 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Subroutines}}{12}% 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Simple execution when leader H becomes disconnected (a), with time increasing from (a)– (h). With no other link changes, every node in the connected component will eventually adopt G as its leader.}}{13}% 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Code triggered by link changes.}}{14}% 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Subroutines}}{15}% 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Simple execution when leader H becomes disconnected (a), with time increasing from (a)\IeC {\textendash } (h). With no other link changes, every node in the connected component will eventually adopt G as its leader.}}{15}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A highway scenario composed of vehicles, road-side units, and central servers. Part of the network is ad hoc (and wireless); the rest is infrastructured (and wired)}}{18}% 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces A swarming scenario, whereby mobiles robots and UAVs collaborate in order to clean a public park}}{19}% 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Main sources of events and corresponding interfaces in JB OT S IM}}{23}% 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A highway scenario composed of vehicles, road-side units, and central servers. Part of the network is ad hoc (and wireless); the rest is infrastructured (and wired)}}{20}% 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces A swarming scenario, whereby mobiles robots and UAVs collaborate in order to clean a public park}}{21}% 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Main sources of events and corresponding interfaces in JB OT S IM}}{25}% 
 \addvspace {10\p@ }
