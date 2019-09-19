@@ -16,5 +16,20 @@
 \contentsline {paragraph}{}{5}% 
 \contentsline {paragraph}{}{5}% 
 \contentsline {chapter}{\numberline {2}Preliminaries}{7}% 
-\contentsline {chapter}{\numberline {3}Conclusion}{8}% 
-\contentsline {chapter}{Bibliography}{9}% 
+\contentsline {section}{\numberline {2.1}System Model}{7}% 
+\contentsline {paragraph}{}{7}% 
+\contentsline {paragraph}{}{7}% 
+\contentsline {section}{\numberline {2.2}Modeling Asynchronous Dynamic Links}{7}% 
+\contentsline {paragraph}{}{7}% 
+\contentsline {paragraph}{}{8}% 
+\contentsline {paragraph}{}{8}% 
+\contentsline {paragraph}{}{8}% 
+\contentsline {section}{\numberline {2.3}Configurations and Executions}{8}% 
+\contentsline {paragraph}{}{9}% 
+\contentsline {paragraph}{}{9}% 
+\contentsline {paragraph}{}{9}% 
+\contentsline {section}{\numberline {2.4}Problem Definition}{10}% 
+\contentsline {paragraph}{}{10}% 
+\contentsline {paragraph}{}{10}% 
+\contentsline {chapter}{\numberline {3}Conclusion}{11}% 
+\contentsline {chapter}{Bibliography}{12}% 
