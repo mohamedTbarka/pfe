@@ -1,0 +1,926 @@
+This is LuaTeX, Version 1.07.0 (TeX Live 2019/dev/Debian)  (format=lualatex 2019.4.30)  16 JUN 2019 12:54
+ restricted system commands enabled.
+**algorithm.tex
+(./algorithm.tex
+LaTeX2e <2018-12-01>
+[\directlua]:1: module 'luaotfload-main' not found:
+	no field package.preload['luaotfload-main']
+	[kpse lua searcher] file not found: 'luaotfload-main'
+	[kpse C searcher] file not found: 'luaotfload-main'
+Error in luaotfload: reverting to OT1
+! Undefined control sequence.
+l.1 \chapter
+          {Leader Election Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{L
+            eader Election Algorithm}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[]Leader
+ []
+
+! Undefined control sequence.
+l.3 \section
+          {System Model}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \section{S
+            ystem Model}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--5
+[]System
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 E
+   ach node i keeps an array of heights, height i , with an entry for itself...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+[]Each
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 E
+   ach height is a 7-tuple, with the following components:
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 8--9
+[]Each
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 24--35
+[]Nodes
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 36--46
+[]Other
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 47--60
+[]Nodes
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 61--65
+[]Given
+ []
+
+! Undefined control sequence.
+l.91 \section
+           {Overview of Algorithm}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+\c@* 
+l.107 \begin{enumerate}[label=\alph *
+                                   )]
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 \item A
+            quiescent network is a leader-oriented DAG in
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 \item A
+            quiescent network is a leader-oriented DAG in
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 \item A
+            quiescent network is a leader-oriented DAG in
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \item W
+           hen non-leader node G loses its last outgoing link
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \item W
+           hen non-leader node G loses its last outgoing link
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \item W
+           hen non-leader node G loses its last outgoing link
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \item N
+           odes D, E, and F receive the messages sent from node
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \item N
+           odes D, E, and F receive the messages sent from node
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \item N
+           odes D, E, and F receive the messages sent from node
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \item N
+           ode B has received messages from both E and D with
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \item N
+           ode B has received messages from both E and D with
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 \item N
+           ode B has received messages from both E and D with
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \item N
+           ode A has received message from both nodes B and
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \item N
+           ode A has received message from both nodes B and
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \item N
+           ode A has received message from both nodes B and
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 \item N
+           odes B and C take on the reflected reference level
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 \item N
+           odes B and C take on the reflected reference level
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 \item N
+           odes B and C take on the reflected reference level
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 \item N
+           odes D, E, and F act similarly as B and C did in part
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 \item N
+           odes D, E, and F act similarly as B and C did in part
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 \item N
+           odes D, E, and F act similarly as B and C did in part
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \item W
+           hen node G receives the reflected reference level
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \item W
+           hen node G receives the reflected reference level
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153 \item W
+           hen node G receives the reflected reference level
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.162 \end{enumerate}
+                   
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165 \begin{figure}
+                  [hbtp]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 166.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 166.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 166.
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 165--167
+[][hbtp]
+ []
+
+
+Overfull \hbox (29.93802pt too wide) in paragraph at lines 165--167
+\OT1/lmr/bx/n/10 When
+ []
+
+
+Overfull \hbox (76.02034pt too wide) in paragraph at lines 165--167
+\OML/cmm/m/it/10 ChannelDown[]v$
+ []
+
+
+Overfull \hbox (26.8336pt too wide) in paragraph at lines 165--167
+\OT1/lmr/bx/n/10 event
+ []
+
+
+Overfull \hbox (15.01373pt too wide) in paragraph at lines 165--167
+\OT1/lmr/bx/n/10 oc-
+ []
+
+
+Overfull \hbox (20.77197pt too wide) in paragraph at lines 165--167
+\OT1/lmr/bx/n/10 curs 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 168--168
+[] 
+ []
+
+
+Overfull \hbox (22.45827pt too wide) in paragraph at lines 169--170
+\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 :=
+ []
+
+
+Overfull \hbox (30.99765pt too wide) in paragraph at lines 169--170
+\OML/cmm/m/it/10 N\OMS/cmsy/m/n/10 n []$ 
+ []
+
+
+Overfull \hbox (52.29823pt too wide) in paragraph at lines 170--171
+\OML/cmm/m/it/10 forming \OT1/cmr/m/n/10 :=
+ []
+
+
+Overfull \hbox (60.83762pt too wide) in paragraph at lines 170--171
+\OML/cmm/m/it/10 forming\OMS/cmsy/m/n/10 n []$ 
+ []
+
+
+Overfull \hbox (6.7085pt too wide) in paragraph at lines 171--172
+\OT1/lmr/bx/n/10 if
+ []
+
+
+Overfull \hbox (23.56938pt too wide) in paragraph at lines 171--172
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (8.88892pt too wide) in paragraph at lines 171--172
+\OMS/cmsy/m/n/10 ;\OT1/cmr/m/n/10 )$ 
+ []
+
+
+Overfull \hbox (67.109pt too wide) in paragraph at lines 172--173
+\OML/cmm/m/it/10 ELECTSELF$ 
+ []
+
+
+Overfull \hbox (16.87265pt too wide) in paragraph at lines 173--174
+\OML/cmm/m/it/10 w \OMS/cmsy/m/n/10 2
+ []
+
+
+Overfull \hbox (38.96494pt too wide) in paragraph at lines 173--174
+\OML/cmm/m/it/10 forming$ 
+ []
+
+
+Overfull \hbox (18.27249pt too wide) in paragraph at lines 174--175
+\OT1/lmr/bx/n/10 else
+ []
+
+
+Overfull \hbox (7.84239pt too wide) in paragraph at lines 174--175
+\OT1/lmr/bx/n/10 if\nullfont (SINK) 
+ []
+
+
+Overfull \hbox (125.29166pt too wide) in paragraph at lines 175--176
+\OML/cmm/m/it/10 STARTNEWREFLEVEL$ 
+ []
+
+
+Overfull \hbox (16.87265pt too wide) in paragraph at lines 176--177
+\OML/cmm/m/it/10 w \OMS/cmsy/m/n/10 2
+ []
+
+
+Overfull \hbox (19.68056pt too wide) in paragraph at lines 176--177
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 N \OMS/cmsy/m/n/10 [
+ []
+
+
+Overfull \hbox (42.85384pt too wide) in paragraph at lines 176--177
+\OML/cmm/m/it/10 forming\OT1/cmr/m/n/10 )$ 
+ []
+
+
+Overfull \hbox (18.27249pt too wide) in paragraph at lines 177--178
+\OT1/lmr/bx/n/10 else
+ []
+
+
+Overfull \hbox (6.7085pt too wide) in paragraph at lines 177--178
+\OT1/lmr/bx/n/10 if
+ []
+
+
+Overfull \hbox (19.1349pt too wide) in paragraph at lines 177--178
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 j \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (26.89993pt too wide) in paragraph at lines 177--178
+\OML/cmm/m/it/10 pred[]\OT1/cmr/m/n/10 )$ 
+ []
+
+
+Overfull \hbox (33.56654pt too wide) in paragraph at lines 178--179
+\OML/cmm/m/it/10 pred[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (115.14879pt too wide) in paragraph at lines 178--179
+\OML/cmm/m/it/10 min []$ 
+ []
+
+
+Overfull \hbox (18.04901pt too wide) in paragraph at lines 179--180
+\OT1/lmr/bx/n/10 end
+ []
+
+
+Overfull \hbox (7.84239pt too wide) in paragraph at lines 179--180
+\OT1/lmr/bx/n/10 if 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.182 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 \begin{figure}
+                  [hbtp]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.186 \includegraphics
+                    [scale=.75]{../../Pictures/algorithm_2.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.186 ...aphics[scale=.75]{../../Pictures/algorithm_
+                                                  2.png}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.186 ...[scale=.75]{../../Pictures/algorithm_2.png}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 \caption
+            {Code triggered by link changes.}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.188 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.188 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.188 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 \begin{figure}
+                  [hbtp]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.191 \includegraphics
+                    [scale=.75]{screenshot_3.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.191 \includegraphics[scale=.75]{screenshot_
+                                           3.png}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.191 \includegraphics[scale=.75]{screenshot_3.png}
+                                                 
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.192 \caption
+            {Subroutines}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.193 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.193 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 184--194
+[][hbtp]
+ []
+
+
+Overfull \hbox (153.73567pt too wide) in paragraph at lines 184--194
+[scale=.75]../../Pictures/algorithm$[][]\OML/cmm/m/it/10 :png[]$
+ []
+
+
+Overfull \hbox (77.91406pt too wide) in paragraph at lines 184--194
+[scale=.75]screenshot$[][]\OML/cmm/m/it/10 :png[]$ 
+ []
+
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195 \begin{figure}
+                  [hbtp]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.197 \includegraphics
+                    [scale=.5]{screenshot_1.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.197 \includegraphics[scale=.5]{screenshot_
+                                          1.png}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.197 \includegraphics[scale=.5]{screenshot_1.png}
+                                                
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 \caption
+            {Simple execution when leader H becomes disconnected (a), with t...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.201 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no – (U+2013) in font cmr10!
+Missing character: There is no – (U+2013) in font cmr10!
+! Missing } inserted.
+<inserted text> 
+}
+l.201 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 195--202
+[][hbtp]
+ []
+
+
+Overfull \hbox (836.62848pt too wide) in paragraph at lines 195--202
+[scale=.5]screenshot$[][]\OML/cmm/m/it/10 :png[]$ 
+ []
+
+)
+! Emergency stop.
+<*> algorithm.tex
+              
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 61 strings out of 494383
+ 100000,89155 words of node,token memory allocated 68098 words of node memory still in use:
+   213 hlist, 9 disc, 40 local_par, 1 dir, 16 math, 2073 glue, 101 kern, 134 pen
+alty, 7153 glyph, 34 glue_spec nodes
+   avail lists: 2:13,3:172,4:530,5:5,7:3,8:173,10:529
+ 4365 multiletter control sequences out of 65536+600000
+ 26 fonts using 1087259 bytes
+ 20i,2n,13p,298b,132s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

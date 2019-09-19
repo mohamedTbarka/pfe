@@ -1,0 +1,447 @@
+This is LuaTeX, Version 1.07.0 (TeX Live 2019/dev/Debian)  (format=lualatex 2019.4.30)  14 MAY 2019 14:28
+ restricted system commands enabled.
+**correctness.tex
+(./correctness.tex
+LaTeX2e <2018-12-01>
+[\directlua]:1: module 'luaotfload-main' not found:
+	no field package.preload['luaotfload-main']
+	[kpse lua searcher] file not found: 'luaotfload-main'
+	[kpse C searcher] file not found: 'luaotfload-main'
+Error in luaotfload: reverting to OT1
+! Undefined control sequence.
+l.1 \chapter
+          {Correctness}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{C
+            orrectness}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--16
+[]Correctness
+ []
+
+! Undefined control sequence.
+l.17 \section
+           {Height Tokens and Their Properties}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \section{H
+             eight Tokens and Their Properties}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 18.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (20.0pt too wide) in paragraph at lines 17--27
+[]Height
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 17--27
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 17--27
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (8.694pt too wide) in paragraph at lines 17--27
+\OT1/lmr/bx/n/10 A
+ []
+
+
+Overfull \hbox (3.1945pt too wide) in paragraph at lines 17--27
+\OT1/lmr/bx/n/10 :
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \textbf{Property B:}
+                        Let h 0 , h 1 , . . . , h m be the (u, v) height seq...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (48.5693pt too wide) in paragraph at lines 28--35
+[]\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 28--35
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (11.37498pt too wide) in paragraph at lines 28--35
+\OT1/lmr/bx/n/10 B:
+ []
+
+! Undefined control sequence.
+l.36 \section
+           {Bounding the Number of Elections}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 \section{B
+             ounding the Number of Elections}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 36--39
+[]Bounding
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 36--39
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 36--39
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (11.50049pt too wide) in paragraph at lines 36--39
+\OT1/lmr/bx/n/10 C:
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 \textbf{Property D:}
+                        Let h be a height token for some node u. If
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (48.5693pt too wide) in paragraph at lines 40--44
+[]\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 40--44
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (12.01349pt too wide) in paragraph at lines 40--44
+\OT1/lmr/bx/n/10 D:
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \textbf{Lemma 1:}
+                    Any node u that adopts leader pair (−s, l) for
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (56.94398pt too wide) in paragraph at lines 46--49
+[]\OT1/lmr/bx/n/10 Lemma
+ []
+
+
+Overfull \hbox (8.94449pt too wide) in paragraph at lines 46--49
+\OT1/lmr/bx/n/10 1:\nullfont Any
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \textbf{Lemma 2:}
+                    No node elects itself more than a finite number
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (56.94398pt too wide) in paragraph at lines 50--52
+[]\OT1/lmr/bx/n/10 Lemma
+ []
+
+
+Overfull \hbox (8.94449pt too wide) in paragraph at lines 50--52
+\OT1/lmr/bx/n/10 2:\nullfont No
+ []
+
+! Undefined control sequence.
+l.53 \section
+           {Bounding the Number of New Reference Levels}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \section{B
+             ounding the Number of New Reference Levels}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.77 \section
+           {Bounding the Number of Messages}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 53--80
+[]Bounding
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (10.74998pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 E:
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (10.4305pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 F:
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (12.2365pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 G:
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (12.19449pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 H:
+ []
+
+
+Overfull \hbox (36.94398pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 Lemma
+ []
+
+
+Overfull \hbox (8.94449pt too wide) in paragraph at lines 53--80
+\OT1/lmr/bx/n/10 4:\nullfont Eventually
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 \textbf{Lemma 5:}
+                     Eventually there are no messages in transit.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (56.94398pt too wide) in paragraph at lines 81--82
+[]\OT1/lmr/bx/n/10 Lemma
+ []
+
+
+Overfull \hbox (8.94449pt too wide) in paragraph at lines 81--82
+\OT1/lmr/bx/n/10 5:
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \textbf{Lemma 6:}
+                     Eventually every node has an accurate view of
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.85 \section
+           {Leader-Oriented DAG}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (56.94398pt too wide) in paragraph at lines 83--90
+[]\OT1/lmr/bx/n/10 Lemma
+ []
+
+
+Overfull \hbox (8.94449pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 6:
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (9.13899pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 J:
+ []
+
+
+Overfull \hbox (28.5693pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 Prop-
+ []
+
+
+Overfull \hbox (20.22903pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 erty
+ []
+
+
+Overfull \hbox (12.2085pt too wide) in paragraph at lines 83--90
+\OT1/lmr/bx/n/10 K:
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 {T
+     heorem 7} Eventually the connected component is a
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 91--93
+[]Theorem
+ []
+
+)
+! Emergency stop.
+<*> correctness.tex
+                
+*** (job aborted, no legal \end found)
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 43 strings out of 494383
+ 100000,89155 words of node,token memory allocated 28402 words of node memory still in use:
+   77 hlist, 14 disc, 11 local_par, 1 dir, 975 glue, 25 kern, 39 penalty, 2883 g
+lyph, 34 glue_spec nodes
+   avail lists: 2:13,4:219,5:3,7:12,8:1,10:218
+ 4358 multiletter control sequences out of 65536+600000
+ 15 fonts using 632891 bytes
+ 13i,1n,8p,168b,99s stack positions out of 5000i,500n,10000p,200000b,100000s
+!  ==> Fatal error occurred, no output PDF file produced!

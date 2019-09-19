@@ -1,0 +1,87 @@
+\begin{figure}[hbtp]
+
+\textbf{ELECTSELF}
+\begin{enumerate}
+\item $ height[i] := (0,0,0,0,-LC_{i},i,i) $
+\end{enumerate}
+
+\textbf{REFLECTREFLEVEL}
+\begin{enumerate}
+\item $ height[i] := (\tau ,oid,1,0,nlts^{i},lid^i,i) $
+\end{enumerate}
+
+
+\textbf {REFLECTREFLEVEL}
+\begin{enumerate}
+\item $ height[i] := (\tau ,oid,1,0,nlts^{i},lid^i,i) $
+\end{enumerate}
+
+
+\textbf{PROPAGATELARGESTREFLEVEL}
+\begin{enumerate}
+\item $ (\tau , oid^{i}, r^{i}) := max\left\lbrace (\tau ^{k},oid^{k},r^{k}) \vert k\in N\right\rbrace  $
+\item $ \delta ^{i} := min \left\lbrace \delta ^{k} \vert k \in N \quad and \quad (\tau ^{i} , oid^{i}, r^{i}) = (\tau ^{k},oid^{k},r^{k})\right\rbrace - 1 $
+\end{enumerate}
+
+\textbf {STARTNEWREFLEVEL}
+\begin{enumerate}
+\item $ height[i] := (\tau ,oid,1,0,nlts^{i},lid^i,i) $
+\end{enumerate}
+
+\textbf {ADOPTLPIFPRIORITY($j, D$)}
+\begin{enumerate}
+\item \textbf{if}$( (nlts^{j}<nlts^{i})\quad \textbf{or} \quad ((nlts^{j}=nlts^{i}) \quad \textbf{and} \quad (lid^{j} < lid^{i}))$
+\item  \quad $ height[i] := (\tau ^{j} ,oid^{j},r^{j},\delta ^{j}+1,nlts^{j},lid^j,i) $
+
+\item \quad \textbf{if} $ (\delta _{v} \quad mod \quad D \neq 0) $
+\item \quad \quad $ SLP_u = (lid^j, min \left\lbrace k \quad \vert \quad k\in N_i \quad and \quad \delta_k = \delta_j \right\rbrace  )$
+\item \quad \textbf{else if } $ \delta_v = 0 $
+\item \quad \quad $ SLP_u = (j, -1)$
+\item \quad \textbf{else}
+\item \quad \quad $ SLP_u = (j, j)$
+\item \quad \textbf{end if}
+\item \textbf{end if}
+\end{enumerate}
+
+\caption{Subroutines}
+
+\end{figure}
+
+\begin{figure}
+
+\textbf{When node $u$ receives $Update(h)$ from node $v \in forming \cup N:$}
+\\ \quad \quad // if v is in neither forming nor N, message is ignored
+\begin{enumerate}
+
+\item \quad$height[v] := h$
+\item \quad$forming := forming \ {v}$
+\item \quad$N := N ∪ {v}$
+\item \quad$myOldHeight := height[u]$
+\item \quad if($(nlts^u ,lid^u ) = (nlts^v ,lid^v ))$) // leader pairs are the same
+\item \quad \quad if(SINK)
+\item \quad \quad \quad if($\exists (\tau , oid, r) | (\tau ^k, oid^k, r^k) = (\tau , oid, r) \forall k \in N $)
+\item \quad \quad \quad \quad if($(\tau > 0)$ and $(r = 0$)
+\item \quad \quad \quad \quad \quad REFLETREFLEVEL
+\item \quad \quad \quad \quad else if ($(\tau > 0) and (r = 1) and (oid = i)$)
+\item \quad \quad \quad \quad \quad ELECTSELF
+\item \quad \quad \quad \quad else
+\\ // ($\tau = 0$) or ($\tau >0$ and $r=1$ and $oid \neq i$)
+\item \quad \quad \quad \quad \quad $STARTNEWREFLEVEL$
+\item \quad \quad \quad \quad  end if
+\item \quad \quad \quad end if
+\item \quad \quad else
+\\ // neighbors have different ref levels
+\item \quad \quad \quad $PROPAGATELARGESTREFLEVEL$
+\item \quad \quad end if
+\\ // else not sink, do nothing
+\item \quad end if
+\item else // leader pairs are different
+\item \quad $ADOPTLPIFPRIORITY(j)$
+\item  end if
+\item if($myOldHeight \neq height[i]$)
+\item \quad send Update($height[i]$)
+\item \quad with timestamp $LC$ to all $k \in (N \cup forming)$
+\item end if
+\end{enumerate}
+\caption{Code triggered by Update message.}
+\end{figure}
