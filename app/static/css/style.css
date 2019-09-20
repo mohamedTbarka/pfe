@@ -1,0 +1,453 @@
+/* Importing fonts */
+
+@font-face {
+    font-family: 'Sequel100Wide-45Wide';
+    src:  url("/static/fonts/Sequel100Wide-45Wide.otf")  format('opentype'),
+           url("/static/fonts/Sequel100Wide-45Wide.woff") format('woff'), url("/static/fonts/Sequel100Wide-45Wide.ttf")  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Sequel100Wide-65Wide';
+    src:  url("/static/fonts/Sequel100Wide-65Wide.otf")  format('opentype'),
+           url("/static/fonts/Sequel100Wide-65Wide.woff") format('woff'), url("/static/fonts/Sequel100Wide-65Wide.ttf")  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+
+
+
+
+
+
+/* Texts */
+.title{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 23px!important;
+}
+.t_btn{
+    
+}
+.t13{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 13px!important;
+}
+.t15{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 15px!important;
+}
+.t20{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 20px!important;
+}
+.t22{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 22px!important;
+}
+.t79{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 79px!important;
+}
+.t50{
+    font-family: 'Sequel100Wide-65Wide';
+    font-size: 50px!important; 
+}
+.t22_65{
+    font-family: 'Sequel100Wide-65Wide';
+    font-size: 22px!important; 
+    line-height: 30px;
+}
+.t13_65{
+    font-family: 'Sequel100Wide-65Wide';
+    font-size: 13px!important;
+}
+.t15_65{
+    font-family: 'Sequel100Wide-65Wide';
+    font-size: 15px!important;
+}
+/* backgrounds */
+.bg_green{
+    background-color: #246630!important;
+}
+.bg1{
+    background-image:  url("./resourses/bg1.jpg");
+    height: 600px;
+    max-height:600px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.bg_white{
+    background-color: rgba(255, 255, 255, 0.473)
+}
+
+.nv1{
+    background-image: url("./resourses/promotions.jpg");
+    min-height:353px;
+    max-height:353px;
+    max-width: 282px;
+    min-width: 282px;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: 300px;
+   transition: all .5s ease-in;
+ 
+}
+
+.nv1:hover {
+    background-size: 340px!important;
+  }
+.nv2{
+    background-image: url("./resourses/evenement.jpg");
+    min-height:353px;
+    max-height:353px;
+    max-width: 282px;
+    min-width: 282px;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: 300px;
+   transition: all .5s ease-in;
+}
+.nv2:hover {
+    background-size: 380px!important;
+  }
+
+.nv3{
+    background-image: url("./resourses/compain.jpg");
+    min-height:353px;
+    max-height:353px;
+    max-width: 575px;
+    min-width: 575px;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: 580px;
+   transition: all .5s ease-in;
+}
+.nv3:hover {
+    background-size: 680px!important;
+  }
+
+.offr1{
+        background-image: url("./resourses/shopping.jpg");
+        min-height:353px;
+        max-height:353px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 400px;   
+        transition: all .5s ease-in;
+}
+.offr1:hover {
+    background-size: 500px!important;
+  }
+
+.offr2{
+    background-image: url("./resourses/restauration.jpg");
+    min-height: 48%;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: 500px;   
+   transition: all .5s ease-in;
+}
+.offr2:hover {
+    background-size: 600px!important;
+  }
+.offr3{
+    background-image: url("./resourses/hypermarche.jpg");
+    min-height: 48%;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: 500px;   
+   transition: all .5s ease-in;
+}
+.offr3:hover {
+    background-size: 600px!important;
+  }
+.offr4{
+    background-image: url("./resourses/cinema.jpg");
+    min-height: 48%;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;   
+   background-size: 500px;   
+   transition: all .5s ease-in;
+}
+.offr4:hover {
+    background-size: 600px!important;
+  }
+.offr5{
+    background-image: url("./resourses/culture\ &\ loisirs.jpg");
+    min-height: 48%;
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;   
+   background-size: 500px;   
+   transition: all .5s ease-in;
+}
+.offr5:hover {
+    background-size: 600px!important;
+  }
+.bg2{    
+    background-image:  url("./resourses/bg2.jpg");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.bg3{   
+    background-image:  url("./resourses/parking.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg4{    
+    background-image:  url("./resourses/bg4.png");
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* texts */
+.txt_green{
+    color: #246630;
+}
+
+
+/* lines */
+.line_left{
+    width: 450px!important;
+    height: 1px;
+    background-color: grey;
+    margin-top: 20px;
+    
+}
+
+.line_right{
+    width: 450px!important;
+    height: 1px;
+    background-color: grey;
+    margin-top: 20px;
+}
+
+
+
+/* Positions  & Spacing*/
+.pd1{ 
+    padding-top: 4%;
+}
+
+
+.navbar-nav  a{
+    position: relative;
+}
+
+.afterr::after{
+    content: '|';
+    position: absolute;
+    right: 0;
+}
+
+.txt_img{
+    padding-top: 160px;
+}
+
+.txt_img2{
+    padding-top: 70px;
+}
+
+.sp0{
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
+
+
+
+
+.parallax-window {
+    min-height: 300px;
+    background: transparent;
+}
+.parallax-window2 {
+    min-height: 300px;
+    background: transparent;
+}
+.text-shadow{
+    text-shadow: 3px -2px 3px rgba(89,89,89,0.68);
+}
+
+/* Icones Color Hover  */
+.img_grey {
+    -webkit-filter: grayscale(200%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(200%); /* FF 35+ */
+    
+    }
+    .img_grey:hover {
+
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%); /* FF 35+ */
+    }
+    /* END _ Icones Color  Hover */
+      
+.bg-transparent{
+    background-color: transparent!important;
+}
+.search_top{
+    border-color: #333333!important;
+    border-width: 2px!important;
+    max-width: 220px!important;
+    
+}
+
+input#example-search-input::placeholder {
+    color: #93a896;
+   
+}
+input#example-search-input{
+    border-width: 2px;
+    
+}
+.bg-transparent.input-group-text.border-left-0.pb-0.pt-0.text-white{
+    border-width: 2px;
+}
+.earth{
+    display: flex;
+}
+.up{
+    position: absolute;
+    right: -120px;
+}
+/* ------------------------   Business page   ------------------------- */
+/* Style to change separator  */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">"!important;
+}
+
+.bg_business{
+    background-image:  url("./resourses/business.jpg");
+    height: 300px;
+    max-height:300px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.bg_newsletter{
+    background-image:  url("./resourses/newsletter.png");
+    height: 320px;
+    max-height:320px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.t_business{
+    font-size: 50px;
+    padding-top: 6%;
+}
+.bs-example{
+    margin: 20px;        
+}
+.btn_contactUs{
+    border-width: 3px!important;
+    border-color:  black;
+}
+
+.newsletter{
+    width: 350px!important;
+    height: 50px!important;
+}
+.newsletter:focus{
+    color: #333333!important;
+} 
+/* ------------------------   marque page   ------------------------- */
+.bg_marque{
+    background-image:  url("./resourses/marque.jpg");
+    height: 300px;
+    max-height:300px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.shadows{
+    text-shadow: 2px 2px 6px #0000!important;
+
+}
+/* ------------------------   galerie page   ------------------------- */
+
+.bg_galerie{
+    background-image:  url("./resourses/galerie.jpg");
+    height: 300px;
+    max-height:300px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+#card_date::after{
+content: ">";
+float: right;
+}
+/* ------------------------   Evenements page   ------------------------- */
+
+
+.badges{
+    position: absolute;
+    bottom:85px;
+    
+
+}
+.bg_badges{
+    background-color: #00906f;
+}
+.bg_orange{
+    background-color: #e76100;
+}
+.border_img{
+   
+   border: solid 7px transparent;
+    transition: all .5s ease-in;
+}
+.border_img:hover{
+    
+    border: #00906f;
+    border-style: solid;
+    border-width: 7px;
+    
+    
+}
+
+/* ------------------------    page Simple     ------------------------- */
+.bg_simple{
+    background-image:  url("./resourses/bg_sample.jpg");
+    height: 300px;
+    max-height:300px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+/* ------------------------    Shops Page     ------------------------- */
+.bg_shopping{
+    background-image:  url("./resourses/bg_shopping.jpg");
+    height: 300px;
+    max-height:300px!important;
+   
+    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.alph{
+    text-align-last: justify!important;
+}
