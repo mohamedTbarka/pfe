@@ -1,0 +1,100 @@
+\section{Leader Election Algorithm}
+\paragraph{}In this section, we present our leader election algorithm. The pseudocode for the algorithm is presented in Figures 1, 2 and 3. First, we provide an informal description of the algorithm, then, we present the details of the algorithm and the pseudocode, and finally, we provide an example execution. In the rest of this section, variable var of node u will be indicated as varu . For brevity, in the pseudocode for node u, variable varu is denoted by just var.
+\section{Informal Description}
+\paragraph{}Each node in the system has a 7-tuple of integers called a height. The directions of the edges in the graph are determined by comparing the heights of neighboring nodes: an edge is directed from a node with a larger height to a node with a smaller height. Due to topology changes nodes may lose some of their incident links, or get new ones throughout the execution. Whenever a node loses its last outgoing link because of a topology change, it has no path to the current leader, so it reverses all of its incident edges. Reversing all incident edges acts as the start of a search mechanism (called a reference level) for the current leader. Each node that receives the newly started reference level reverses the edges to some of its neighbors and in effect propagates the search throughout the connected component. Once a node becomes a sink and all of its neighbors are already participating in the same search, it means that the search has hit a dead end and the current leader is not present in this part of the connected component. Such dead-end information is then propagated back towards the originator of the search. When a node which started a search receives such dead- end messages from all of its neighbors, it concludes that the current leader is not present in the connected component, and so the originator of the search elects itself as the new leader. Finally, this new leader information propagates throughout the network via an extra “wave” of propagation of messages.
+\paragraph{}In our algorithm, two of the components of a node’s height are timestamps record- ing the time when a new “search” for the leader is started, and the time when a leader is elected. In the algorithm in [15], these timestamps are obtained from a global clock accessible to all nodes in the system. In this paper, we use the notion of causal clocks (defined in Section 2.3) instead.
+\paragraph{}One difficulty that arises in solving leader election in dynamic networks is dealing with the partitioning and merging of connected components. For example, when a connected component is partitioned from the current leader due to links going down, the above algorithm ensures that a new leader is elected using the mechanism of waves searching for the leader and convergecasting back to the originator. On the other hand, it is also possible that two connected components merge together resulting in two leaders in the new connected component. When the different heights of the two leaders are being propagated in the new connected component, eventually, some node needs to compare both and decide which one to adopt and continue propagating. Recall that when a new leader is elected, a component of the height of the leader records the time of the election which can be used to determine the more recent of two elections. Therefore, when a node receives a height with a different leader information from its own, it adopts the one corresponding to the more recent election.
+\paragraph{}Similarly, if two reference levels are being propagated in the same connected component, whenever a node receives a height with a reference level different from its current one, it adopts the reference level with the more recent timestamp and con- tinues propagating it. Therefore, even though conflicting information may be prop- agating in the same connected component, eventually the algorithm ensures that as long as topology changes stop, each connected component has a unique leader.
+\section{Nodes, Neighbors and Heights}
+\paragraph{}First, we describe the mechanism through which nodes get to know their neighbors. Each node in the algorithm keeps a directed approximation of its neighborhood in Gchan as follows. When u gets a ChannelUp event for the channel from u to v, it puts v in a local set variable called formingu . When u subsequently receives a message from v, it moves v from its formingu set to a local set variable called Nu (N for neighbor). If u gets a message from a node which is neither in its forming set, nor in Nu , it ignores that message. And when u gets a ChannelDown event for the channel from u to v, it removes v from formingu or Nu , as appropriate. For the purposes of the algorithm, u considers as its neighbors only those nodes in Nu . It is possible for two nodes u and v to have inconsistent views concerning whether u and v are neighbors of each other. We will refer to the ordered pair (u, v), where v is in Nu , as a link of node u.
+\paragraph{}Nodes assign virtual directions to their links using variables called heights. Each node maintains a height for itself, which can change over time, and sends its height over all outgoing channels at various points in the execution. Each node keeps track of the heights it has received in messages. For each link (u, v) of node u, u considers the link as incoming (directed from v to u) if the height that u has recorded for v is larger than u’s own height; otherwise u considers the link as outgoing (directed from u to v). Heights are compared using lexicographic ordering; the definition of height ensures that two nodes never have the same height. Note that, even if v is viewed as a neighbor of u and vice versa, u and v might assign opposite directions to their corresponding links, due to asynchrony in message delays.
+\paragraph{}Next, we examine the structure of a node’s height in more detail. The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta , (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth components are referred to as the leader pair ($LP$). In more detail, the components are defined as follows:
+\begin{list}{--}{spacing}
+	\item $\tau$ , a non-negative timestamp which is either $0$ or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
+	\item $oid$, is a non-negative value that is either $0$ or the $id$ of the node that started the current search (we assume node $ids$ are positive integers).
+	\item $r$, a bit that is set to $0$ when the current search is initiated and set to $1$ when the current search hits a dead end.
+	\item  $\delta$ , an integer that is set to ensure that links are directed appropriately to neighbors with the same first three components. During the execution of the algorithm $\delta$ serves multiple purposes. When the algorithm is in the stage of searching for the leader (having either reflected or unreflected $RL$), the $\delta$ value ensures that as a node u adopts the new reference level from a node $v$, the direction of the edge between them is from $v$ to $u$; in other words it coincides with the direction of the search propagation. Therefore, $u$ adopts the $RL$ of $v$ and sets its $\delta$ to one less than $v$’s. When a leader is already elected, the $\delta$ value helps orient the edges of each node towards the leader. Therefore, when node $u$ receives information about a new leader from node $v$, it adopts the entire height of $v$ and sets the $\delta$ value to one more than $v$’s. $-- nlts$, a non-positive timestamp whose absolute value is the causal clock time when the current leader was elected. $– lid$, the $id$ of the current leader. $-- id$, the node’s unique ID.
+\end{list}
+Each node $u$ keeps track of the heights of its neighbors in an array $height_u$, where the height of a neighbor node $v$ is stored in $height_u[v]$. The components of $height_u[v]$ are referred to as $(\tau ^v , oid^v , r^v , \delta ^v , nlts^v , lid^v , v)$ in the pseudocode.
+\section{Initial States}
+\paragraph{}The definition of an initial configuration for the entire system from Section 2.3 in- cluded the condition that each node be in an initial state according to its algorithm. The collection of initial states for the nodes must be consistent with the collection of initial states for the channels. Let Ginit chan be the undirected graph corresponding to the initial states of the channels, as defined in Section 2.3. Then in an initial configura- tion, the state of each node u must satisfy the following:
+\begin{list}{--}{spacing}
+	\item formingu is empty, – Nu equals the set of neighbors of u in Ginit chan
+	\item heightu[u] = $(0, 0, 0, \delta _u , 0, l, u)$ where $l$ is the id of a fixed node in $u's$ connected chan (the current leader), and $\delta _u$ equals the distance from $u$ to $l$ in component in Ginit Ginit chan ,
+	\item for each v in Nu , heightu[v] = heightv [v] (i.e., u has accurate information about v’s height), and
+	\item Tu is initialized properly with respect to the definition of causal clocks.
+\end{list}
+\paragraph{}The constraints on the initial configuration just given imply that initially, each connected component of the communication topology graph has a leader; further- more, by following the virtual directions on the links, nodes can easily forward in- formation to the leader (as in TORA). One way of viewing our algorithm is that it maintains leaders in the network in the presence of arbitrary topology changes. In order to establish this property, the same algorithm can be executed, with each node initially being in a singleton connected component of the topology graph prior to any ChannelUp or ChannelDown events.
+\section{Goal of the Algorithm}
+\paragraph{}The goal of the algorithm is to ensure that, once topology changes cease, eventually each connected component of $G_{chan} ^{final}$ is “leader-oriented”, which we now define. Let CC be any connected component of $G_{chan} ^{final}$ . First, we define a directed version of $CC$, denoted $CC^{\longleftrightarrow}$, in which each undirected edge of $CC$ is directed from the endpoint with larger height to the endpoint with smaller height. We say that \begin{algorithm}
+	\caption{When ChannelDownuv event occurs:}
+	\begin{algorithmic}[1]
+		
+		%\Procedure{Roy}{$a,b$}       \Comment{This is a test}
+		\State System Initialization
+		\State Read the value 
+		\If{$condition = True$}
+		\State Do this
+		\If{$Condition \geq 1$}
+		\State Do that
+		\ElsIf{$Condition \neq 5$}
+		\State Do another
+		\State Do that as well
+		\Else
+		\State Do otherwise
+		\EndIf
+		\EndIf
+		
+		\While{$something \not= 0$}  \Comment{put some comments here}
+		\State $var1 \leftarrow var2$  \Comment{another comment}
+		\State $var3 \leftarrow var4$
+		\EndWhile  \label{roy's loop}
+		%\EndProcedure
+		
+	\end{algorithmic}
+\end{algorithm}
+CC is leader-oriented if the following conditions hold:
+\begin{enumerate}
+	\item No messages are in transit in CC.
+	\item For each (undirected) edge {u, v} in CC, if (u, v) is a link of u, then u has the correct view of v’s height.
+	\item  Each node in CC has the same leader id, say $l$, where $l$ is also in $CC^{\longrightarrow}$. 
+	\item  CC is a directed acyclic graph (DAG) with $l$ as the unique sink.
+\end{enumerate}
+A consequence of each connected component being leader-oriented is that the leader election problem is solved.
+\section{Description of the Algorithm}
+\paragraph{}The algorithm consists of three different actions, one for each of the possible events that can occur in the system: a channel going up, a channel going down, and the receipt of a message from another node. Next, we describe each of these actions in detail.
+\paragraph{}First, we formally define the conditions under which a node is considered to be a sink:
+\begin{list}{--}{spacing}
+	\item SINK = $((\forall v \in N_u, LP_u ^v = LP_u ^u )$ and $(\forall v ∈ Nu , height_u [u] < height_u [v])$ and $(lid_u ^u 6= u))$. Recall that the $LP$ component of node $u’s$ view of $v’s$ height, as stored in $u’s$ height array, is denoted $LP_u ^v$ , and similarly for all the other height components. This predicate is true when, according to $u’s$ local state, all of $u’s$ neighbors have the same leader pair as $u$, $u$ has no outgoing links, and $u$ is not its own leader. If node $u$ has links to any neighbors with different $LPs$, $u$ is not considered a sink, regardless of the directions of those links.
+\end{list}
+\paragraph{}ChannelDown event: When a node u receives a notification that one of its incident channels has gone down, it needs to check whether it still has a path to the current leader. If the $ChannelDown$ event has caused $u$ to lose its last neighbor, as indicated by u’s N variable, then $u$ elects itself by calling the subroutine ELECT S ELF. In this subroutine, node u sets its first four components to 0, and the LP component to (nlts,u) where nlts is the negative value of u’s current causal clock time. Then, in case u has any incident channels that are in the process of forming, u sends its new height over them. If the ChannelDown event has not robbed u of all its neighbors (as indicated by u’s N variable) but u has lost its last outgoing link, i.e., it passes the SINK test, then u starts a new reference level (a search for the leader) by setting its τ value to the current clock time, oid to u’s id, the r bit to 0, and the $\delta$ value to $0$, as shown in subroutine $STARTNEWREFLEVEL$. The complete pseudo-code for the $ChannelDown$ action is available in Figure 1.
+
+\paragraph{}ChannelUp event: When a node $u$ receives a notification of a channel going up to another node, say v, then u sends its current height to v and includes v in its set formingu . The pseudocode for the ChannelUp action is available in Figure 1.
+
+\begin{algorithm}
+	\caption{Put your caption here}
+	\begin{algorithmic}[1]
+		
+		%\Procedure{Roy}{$a,b$}       \Comment{This is a test}
+		\State System Initialization
+		\State Read the value 
+		\If{$condition = True$}
+		\State Do this
+		\If{$Condition \geq 1$}
+		\State Do that
+		\ElsIf{$Condition \neq 5$}
+		\State Do another
+		\State Do that as well
+		\Else
+		\State Do otherwise
+		\EndIf
+		\EndIf
+		
+		\While{$something \not= 0$}  \Comment{put some comments here}
+		\State $var1 \leftarrow var2$  \Comment{another comment}
+		\State $var3 \leftarrow var4$
+		\EndWhile  \label{roy's loop}
+		%\EndProcedure
+		
+	\end{algorithmic}
+\end{algorithm}

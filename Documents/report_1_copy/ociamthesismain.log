@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  19 SEP 2019 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  20 SEP 2019 03:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -107,8 +107,11 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
-(./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
-(./correctness.aux) (./implementation.aux) (./conclusions.aux))
+(./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux
+
+LaTeX Warning: Label `roy's loop' multiply defined.
+
+) (./correctness.aux) (./implementation.aux) (./conclusions.aux))
 \openout1 = `ociamthesismain.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -262,64 +265,17 @@ Chapter 2.
 
 
 
-] [8] [9]
+] [8] [9]) [10]
+\openout2 = `algorithm.aux'.
 
-! LaTeX Error: \mathcal allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 ... For each node $u$, the values of \mathcal
-                                                  {T}_u are increasing, i.e....
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.35 ... each node $u$, the values of \mathcal{T}_
-                                                  u are increasing, i.e., if...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.35 ...\mathcal{T}_u are increasing, i.e., if $e_
-                                                  i$ and $e_j$ are events in...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ (./algorithm.tex [11
 
 
-! Package inputenc Error: Unicode character ℓ (U+2113)
-(inputenc)                not set up for use with LaTeX.
+] [12]
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...l topology graph Gchan contains a node ℓ
-                                                  , the leader, such that li...
+LaTeX Warning: Command \textendash invalid in math mode on input line 16.
 
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character ℓ (U+2113)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...node ℓ, the leader, such that lidu = ℓ
-                                                   for all nodes u ∈ CC, i...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
+[13] [14] [15]
 
 ! Package inputenc Error: Unicode character ∈ (U+2208)
 (inputenc)                not set up for use with LaTeX.
@@ -328,28 +284,42 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 ..., such that lidu = ℓ for all nodes u ∈
-                                                   CC, including ℓ itself.
+l.68 ..., LP_u ^v = LP_u ^u )$ and $(\forall v ∈
+                                                   Nu , height_u [u] < heigh...
+
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-! Package inputenc Error: Unicode character ℓ (U+2113)
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 68.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 68.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 68.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 68.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 68.
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 ... ℓ for all nodes u ∈ CC, including ℓ
-                                                   itself.
+l.70 ...a search for the leader) by setting its τ
+                                                   value to the current cloc...
+
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-) [10]
-\openout2 = `algorithm.aux'.
-
- (./algorithm.tex)
+) [16] [17]
 \openout2 = `correctness.aux'.
 
  (./correctness.tex)
@@ -358,12 +328,9 @@ You may provide a definition with
  (./implementation.tex)
 \openout2 = `conclusions.aux'.
 
-
-(./conclusions.tex
+ (./conclusions.tex
 Chapter 3.
-) [11
-
-
+) [18
 
 
 
@@ -375,34 +342,38 @@ Chapter 3.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [12
+) [19
 
 
 ] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
 (./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
-(./correctness.aux) (./implementation.aux) (./conclusions.aux)) ) 
+(./correctness.aux) (./implementation.aux) (./conclusions.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2781 strings out of 492615
- 39651 string characters out of 6131390
- 110322 words of memory out of 5000000
- 6589 multiletter control sequences out of 15000+600000
+ 2807 strings out of 492615
+ 40053 string characters out of 6131390
+ 111378 words of memory out of 5000000
+ 6615 multiletter control sequences out of 15000+600000
  10748 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,4n,27p,2593b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
-.pfb>
-Output written on ociamthesismain.pdf (18 pages, 899940 bytes).
+ 41i,7n,27p,2593b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb>
+Output written on ociamthesismain.pdf (25 pages, 933626 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
