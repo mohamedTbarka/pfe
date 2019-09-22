@@ -31,26 +31,31 @@
 \contentsline {section}{\numberline {2.4}Problem Definition}{10}% 
 \contentsline {paragraph}{}{10}% 
 \contentsline {paragraph}{}{10}% 
-\contentsline {section}{\numberline {2.5}Leader Election Algorithm}{11}% 
+\contentsline {chapter}{\numberline {3}Leader Election Algorithm}{11}% 
 \contentsline {paragraph}{}{11}% 
-\contentsline {section}{\numberline {2.6}Informal Description}{11}% 
-\contentsline {paragraph}{}{11}% 
+\contentsline {section}{\numberline {3.1}Informal Description}{11}% 
 \contentsline {paragraph}{}{11}% 
 \contentsline {paragraph}{}{12}% 
 \contentsline {paragraph}{}{12}% 
-\contentsline {section}{\numberline {2.7}Nodes, Neighbors and Heights}{12}% 
+\contentsline {paragraph}{}{12}% 
+\contentsline {section}{\numberline {3.2}Nodes, Neighbors and Heights}{12}% 
 \contentsline {paragraph}{}{12}% 
 \contentsline {paragraph}{}{13}% 
 \contentsline {paragraph}{}{13}% 
-\contentsline {section}{\numberline {2.8}Initial States}{14}% 
+\contentsline {section}{\numberline {3.3}Initial States}{14}% 
 \contentsline {paragraph}{}{14}% 
 \contentsline {paragraph}{}{14}% 
-\contentsline {section}{\numberline {2.9}Goal of the Algorithm}{15}% 
+\contentsline {section}{\numberline {3.4}Goal of the Algorithm}{15}% 
 \contentsline {paragraph}{}{15}% 
-\contentsline {section}{\numberline {2.10}Description of the Algorithm}{16}% 
+\contentsline {section}{\numberline {3.5}Description of the Algorithm}{15}% 
+\contentsline {paragraph}{}{15}% 
+\contentsline {paragraph}{}{15}% 
 \contentsline {paragraph}{}{16}% 
 \contentsline {paragraph}{}{16}% 
-\contentsline {paragraph}{}{16}% 
-\contentsline {paragraph}{}{16}% 
-\contentsline {chapter}{\numberline {3}Conclusion}{18}% 
-\contentsline {chapter}{Bibliography}{19}% 
+\contentsline {paragraph}{}{17}% 
+\contentsline {paragraph}{}{17}% 
+\contentsline {paragraph}{}{17}% 
+\contentsline {paragraph}{}{18}% 
+\contentsline {section}{\numberline {3.6}Sample execution}{18}% 
+\contentsline {chapter}{\numberline {4}Conclusion}{19}% 
+\contentsline {chapter}{Bibliography}{20}% 
