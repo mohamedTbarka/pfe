@@ -12,9 +12,10 @@ class BaseModel(models.Model):
 class Contact(BaseModel):
     name = models.CharField(max_length=100, unique=True)
     email = models.EmailField()
+    object = models.CharField(max_length=150)
     content = models.TextField()
 
 
 class Newsletter(BaseModel):
     email = models.EmailField(unique=True)
-    subscribe = models.BooleanField(default=True)
+    subscribed = models.BooleanField(default=True)

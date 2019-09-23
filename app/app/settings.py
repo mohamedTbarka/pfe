@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'marque',
     'nouveaute',
     'service',
+    'contact',
 ]
 
 MIDDLEWARE = [
