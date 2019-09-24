@@ -80,8 +80,9 @@
             <div class="col-md-12 px-0">
                   <div class="row bg3" style="background-image:  url('media/{{service.background_image}}');">  
                     <div class="col-md-12 pt-5"><h2 class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
-                    <div class="col-md-12 t22"><p class="text-white">{{service.description}}</p></div> 
-                        <div class="col-md-12"> <a href="{{service.url}}"> <button  class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 ">voir plus</button></a></div>
+                    <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> 
+                   
+                        <div class="col-md-12"> <a href="{{service.url}}"  class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 ">voir plus</a></div>
                   </div>
               </div>
               {%endif%}
@@ -91,10 +92,10 @@
                       {%for service in  services%}
 
                         <div class="col md-2">
-                            <div class="service_icon">
+                            <a class="text-dark" href="{{service.url}}"><div class="service_icon">
                                 <img src="media/{{service.icon}}" alt="">
                             </div>
-                            <h3 class="text-uppercase t22_65">{{service.title}}</h3>
+                            <h3 class="text-uppercase t22_65">{{service.title}}</h3></a>
                         </div>
 
 
