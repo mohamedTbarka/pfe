@@ -26,7 +26,7 @@ class SlideAdmin(admin.ModelAdmin):
 
 
 class MarqueAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'logo', 'group', 'created', 'updated',)
+    list_display = ('id', 'name', 'group', 'created', 'updated',)
     list_filter = ('group', 'created', 'updated',)
     filter_horizontal = ('categories',)
     search_fields = ('name',)
