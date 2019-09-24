@@ -4,7 +4,7 @@ from service.models import Info, Service
 
 
 class InfoForm(ModelForm):
-    ''' mettre field titre un ckeditor'''
+    ''' make description field a ckeditor'''
 
     class Meta:
         model = Info
@@ -21,7 +21,7 @@ class InfoForm(ModelForm):
 
 
 class ServiceForm(ModelForm):
-    ''' mettre field titre un ckeditor'''
+    ''' make description and content a ckeditor'''
 
     class Meta:
         model = Service
