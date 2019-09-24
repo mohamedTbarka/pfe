@@ -33,9 +33,19 @@ class Service(BaseModel):
     background_image = models.ImageField(upload_to="./uploads/service/img")
     principal = models.BooleanField(default=False)
     order = models.PositiveSmallIntegerField(default=get_service_default_order)
+    old_principal = None
 
     def __str__(self):
         return self.title
+
+    def __init__(self, *args, **kwargs):
+        super(Service, self).__init__(*args, **kwargs)
+        self.old_principal = self.principal
+
+    def save(self, *args, **kwargs):
+        if self.old_principal != self.principal and self.principal:
+            Service.objects.all().update(principal=False)
+        super(Service, self).save(*args, **kwargs)
 
 
 class Info(BaseModel):
@@ -54,6 +64,10 @@ class Preference(models.Model):
     background_image = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
+    facebook = models.CharField(max_length=250, null=True, blank=True)
+    twitter = models.CharField(max_length=250, null=True, blank=True)
+    youtube = models.CharField(max_length=250, null=True, blank=True)
+    instagram = models.CharField(max_length=250, null=True, blank=True)
     email = models.EmailField(null=True, blank=True)
     open_hour = models.TimeField()
     close_hour = models.TimeField()

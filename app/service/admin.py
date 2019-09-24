@@ -38,6 +38,7 @@ class ServiceAdmin(admin.ModelAdmin):
         'updated',
     )
     form = ServiceForm
+    list_editable = ('order',)
 
 
 class InfoAdmin(admin.ModelAdmin):
@@ -53,6 +54,7 @@ class InfoAdmin(admin.ModelAdmin):
         'updated',
     )
     form = InfoForm
+    list_editable = ('order',)
 
 
 def _register(model, admin_class):
