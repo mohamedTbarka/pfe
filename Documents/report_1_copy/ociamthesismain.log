@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  22 SEP 2019 20:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  24 SEP 2019 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -106,23 +106,26 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip46
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
 (./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
 (./correctness.aux) (./implementation.aux) (./conclusions.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -191,7 +194,7 @@ e
 <oxlogo.png, id=1, 1505.625pt x 602.25pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
-Package pdftex.def Info: oxlogo.png  used on input line 43.
+Package pdftex.def Info: oxlogo.png  used on input line 45.
 (pdftex.def)             Requested size: 91.04881pt x 36.4183pt.
 
 [1
@@ -292,18 +295,27 @@ LaTeX Warning: Command \textquoteright invalid in math mode on input line 41.
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 43.
 
-[16] [17]) [18]
+[16] [17] [18] [19] [20] [21]
+<test_1.png, id=105, 977.6525pt x 603.25375pt>
+File: test_1.png Graphic file (type png)
+<use test_1.png>
+Package pdftex.def Info: test_1.png  used on input line 168.
+(pdftex.def)             Requested size: 650.43pt x 401.352pt.
+ [22 <./test_1.png>])
 \openout2 = `correctness.aux'.
 
  (./correctness.tex)
 \openout2 = `implementation.aux'.
 
- (./implementation.tex)
+
+(./implementation.tex)
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 4.
-) [19
+) [23
+
+
 
 
 
@@ -315,20 +327,20 @@ Chapter 4.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [20
+) [24
 
 
 ] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
 (./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
 (./correctness.aux) (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
- 2800 strings out of 492615
- 39965 string characters out of 6131390
- 110322 words of memory out of 5000000
- 6605 multiletter control sequences out of 15000+600000
- 10748 words of font info for 40 fonts, out of 8000000 for 9000
+ 2839 strings out of 492615
+ 40572 string characters out of 6131390
+ 113501 words of memory out of 5000000
+ 6638 multiletter control sequences out of 15000+600000
+ 11253 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,27p,2593b,274s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,7n,27p,2593b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
@@ -338,11 +350,12 @@ e1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on ociamthesismain.pdf (27 pages, 939068 bytes).
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on ociamthesismain.pdf (31 pages, 1175713 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 154 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
