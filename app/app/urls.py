@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from app import settings
 from service.views import Home
@@ -23,4 +23,7 @@ from service.views import Home
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('', Home.as_view()),
+                  path('', include('marque.urls')),
+                  path('', include('nouveaute.urls')),
+                  path('', include('service.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

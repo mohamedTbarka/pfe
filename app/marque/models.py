@@ -65,8 +65,9 @@ class Marque(BaseModel):
     phone = models.CharField(max_length=15)
     phone_second = models.CharField(max_length=15)
     email = models.EmailField()
-    latitude = models.CharField(max_length=20)
-    longitude = models.CharField(max_length=20)
+    localisation = models.CharField(max_length=50)
+    open_hours = models.TextField()
+    content = models.TextField()
 
     def __str__(self):
         return self.name
