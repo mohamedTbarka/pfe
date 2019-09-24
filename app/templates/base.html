@@ -1,5 +1,6 @@
 {% load static %}
 {% load preference_tags %}
+{% preference as  preference%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,6 +17,9 @@
     <!-- <script type="text/javascript"href="{%static 'js/jQuery.js'%}"></script> -->
     <!-- <script type="text/javascript"href="{%static 'js/jquery1.js'%}"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+
+
 
   </head>
  
@@ -50,7 +54,7 @@
               <div class="row">
                   <div class="col-md-12 d-flex justify-content-around mt-3">
                       <div class="col-md-2 offset-md-2 text-center pl-0">
-                        <img src="{%logo%}" alt="">  
+                        <img src="{{preference.get_logo}}" alt="">  
                       </div>
                       <div class="col-md-3  text-center" style="margin-left:  120px!important;">
                         <div class="input-group  search_input  pt-2 ">
@@ -104,9 +108,9 @@
         <div class="container px-0  mt-4 ">
           <div class="col-md-12 d-flex justify-content-around">
             <div class="row pt-4  ">
-              <div class="col-md-5 earth "><span class="px-2"><img src="static/resources/earth.png" alt=""></span><p class="text-white font-weight-light t15">  {%address%}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/phone.png" alt=""> {%phone%}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/watch.png" alt="">{% open_hour %}==={% with open_hour as open_hour_valeur %} {{ open_hour_valeur }} {% endwith %} </p></div>
+              <div class="col-md-5 earth "><span class="px-2"><img src="static/resources/earth.png" alt=""></span><p class="text-white font-weight-light t15">  {{preference.address}}</p></div>
+              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/phone.png" alt=""> {{preference.phone}}</p></div>
+              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/watch.png" alt="">  {{preference.get_open_hour}} - {{preference.get_close_hour}}</p></div>
               <div class="col-md-3">
 
                 <div class="input-group  search_input ">
@@ -160,7 +164,7 @@
           <div class="col-md-12">
               <nav class="navbar navbar-expand-sm bg_green  row">
                   <div class="col-md-2">
-                      <h3 id="nos_offres" class="text-white text-uppercase t15_65 ">nos&nbsp;offres&nbsp;:</h3>
+                      <h3 style="display: block" id="nos_offres" class="text-white text-uppercase t15_65 ">nos&nbsp;offres&nbsp;:</h3>
                   </div>
                   <div class="col-md-10">
                   <ul class="navbar-nav list1"  style="display: none">
@@ -222,8 +226,19 @@
 
   });
 
-  $('.parallax-window').parallax({imageSrc: 'static/resources/bg2.jpg'});
+  
 
+  </script>
+  <script>
+  $(function() {
+    var $el = $('#paral');
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+             'background-position':'50%'+(.4*scroll)+'px'
+        });
+    });
+});
   </script>
 <!--    
     <script>

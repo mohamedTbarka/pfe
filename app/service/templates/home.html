@@ -58,10 +58,75 @@
                   </div>
               </div>
           </div>
-          <div class="col-md-12 text-right px-0"><button class="btn btn-outline-dark my-4 t_btn text-uppercase px-4">toutes les marques</button></div>
+          <div class="col-md-12 text-right px-0"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les marques</button></div>
     </div>
 </div>
 
 <!-- background paralex -->
-<div class="parallax-window" data-parallax="scroll"></div>
+<div  style=" background-image: url('{{preference.get_background_image}}');" id="paral" class="parallax-window" ></div>
+
+
+<div class="container">
+        <div class="row d-flex justify-content-around text-center">
+            <div class="col-ms-12 ">
+                <div class="row d-flex justify-content-between  py-4">
+                     <div class="col-md-4 line_left"> </div>
+                     <div class="col-md-3   "><h2 class="title text-uppercase">Nos services</h2></div>
+                     <div class="col-md-4  line_right" ></div>
+                   </div>
+             </div>
+             {%for service in  services%} 
+             {%if service.principal%}
+            <div class="col-md-12 px-0">
+                  <div class="row bg3" style="background-image:  url('media/{{service.background_image}}');">  
+                    <div class="col-md-12 pt-5"><h2 class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
+                    <div class="col-md-12 t22"><p class="text-white">{{service.description}}</p></div> 
+                        <div class="col-md-12"> <a href="{{service.url}}"> <button  class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 ">voir plus</button></a></div>
+                  </div>
+              </div>
+              {%endif%}
+              {%endfor%}
+              <div class="col-md-12 px-0">
+                  <div class="row  pt-5 pb-3">
+                      {%for service in  services%}
+
+                        <div class="col md-2">
+                            <div class="service_icon">
+                                <img src="media/{{service.icon}}" alt="">
+                            </div>
+                            <h3 class="text-uppercase t22_65">{{service.title}}</h3>
+                        </div>
+
+
+                      <!-- <table class="table table-borderless">
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col"><img src="./resourses/guichet.png" alt=""></th>
+                              <th scope="col"><img src="./resourses/pray.png"></th>
+                              <th scope="col"><img src="./resourses/baby.png" alt=""></th>
+                              <th scope="col"><img src="./resourses/chaises.png" alt=""></th>
+                              <th scope="col"><img src="./resourses/poussettes.png" alt=""></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row"><h3 class="text-uppercase t22_65">Wifi</h3></th>
+                              <td><h3 class="text-uppercase t22_65 ">Guichet bancaire</h3></td>
+                              <td><h3 class="text-uppercase t22_65">Salle <br> de <br> prière </h3></td>
+                              <td><h3 class="text-uppercase t22_65">Baby <br> changing <br> room</h3></td>
+                              <td><h3 class="text-uppercase t22_65">Chaises roulantes</h3></td>
+                              <td><h3 class="text-uppercase t22_65">Poussettes</h3></td>
+
+                            </tr>
+                           
+                          </tbody>
+
+                        </table> -->
+                        {% endfor %}
+                  </div>
+              </div>
+             
+        </div>
+    </div>
 {% endblock %}
