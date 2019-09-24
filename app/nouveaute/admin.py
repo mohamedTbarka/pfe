@@ -1,27 +1,39 @@
 # vim: set fileencoding=utf-8 :
 from django.contrib import admin
 
+from nouveaute.forms import PromotionForm, EventForm, CompagneForm
+from nouveaute.models import Display
 from . import models
 
 
 class PromotionAdmin(admin.ModelAdmin):
-
-    list_display = ('id', 'title', 'created', 'updated',)
-    list_filter = (
-        'created',
-        'updated',
-    )
-    search_fields = ('title',)
-
-
-class EventAdmin(admin.ModelAdmin):
-
     list_display = (
         'id',
         'title',
-        'description',
+        'image',
+        'content',
+        'date',
+        'created',
+        'updated',
+    )
+    list_filter = (
+        'created',
+        'updated',
+        'date',
+    )
+    form = PromotionForm
+
+
+class EventAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+        'content',
         'start_date',
         'end_date',
+        'image',
+        'created',
+        'updated',
     )
     list_filter = (
         'created',
@@ -29,7 +41,36 @@ class EventAdmin(admin.ModelAdmin):
         'start_date',
         'end_date',
     )
-    search_fields = ('title',)
+    form = EventForm
+
+
+class CompagneAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+        'content',
+        'date',
+        'image',
+        'created',
+        'updated',
+    )
+    list_filter = (
+        'created',
+        'updated',
+        'date',
+    )
+    form = CompagneForm
+
+
+class DisplayInline(admin.TabularInline):
+    model = Display
+
+
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'created', 'updated',)
+    list_filter = ('created', 'updated',)
+    search_fields = ('name',)
+    filter_horizontal = [DisplayInline, ]
 
 
 def _register(model, admin_class):
@@ -38,3 +79,5 @@ def _register(model, admin_class):
 
 _register(models.Promotion, PromotionAdmin)
 _register(models.Event, EventAdmin)
+_register(models.Compagne, CompagneAdmin)
+_register(models.Gallery, GalleryAdmin)

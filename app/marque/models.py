@@ -17,6 +17,7 @@ class Group(BaseModel):
     def __str__(self):
         return self.name
 
+
 class Category(BaseModel):
     name = models.CharField(max_length=100, unique=True)
     sup_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, )
