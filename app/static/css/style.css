@@ -73,7 +73,7 @@
     background-color: #246630!important;
 }
 .bg1{
-    background-image:  url("./resourses/bg1.jpg");
+   
     height: 600px;
     max-height:600px!important;
    
@@ -86,7 +86,7 @@
 }
 
 .nv1{
-    background-image: url("./resourses/promotions.jpg");
+   
     min-height:353px;
     max-height:353px;
     max-width: 282px;
@@ -102,7 +102,7 @@
     background-size: 340px!important;
   }
 .nv2{
-    background-image: url("./resourses/evenement.jpg");
+    
     min-height:353px;
     max-height:353px;
     max-width: 282px;
@@ -117,7 +117,7 @@
   }
 
 .nv3{
-    background-image: url("./resourses/compain.jpg");
+    
     min-height:353px;
     max-height:353px;
     max-width: 575px;

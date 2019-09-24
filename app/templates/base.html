@@ -1,6 +1,5 @@
 {% load static %}
 {% load preference_tags %}
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,11 +12,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- <script  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript"href="{%static 'js/jQuery.js'%}"></script> -->
+    <!-- <script type="text/javascript"href="{%static 'js/jquery1.js'%}"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
   </head>
+ 
   <body>
-      
       <nav class="navbar navbar-expand-sm bg_green justify-content-center">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -53,7 +55,7 @@
                       <div class="col-md-3  text-center" style="margin-left:  120px!important;">
                         <div class="input-group  search_input  pt-2 ">
                             
-                            <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" placeholder="Recherche" id="example-search-input">
+                            <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" id="example-search-input">
                             <span class="input-group-prepend ">
                                 <div class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src="static/resources/search.png" alt="" style=""></div>
                             </span>
@@ -104,7 +106,7 @@
             <div class="row pt-4  ">
               <div class="col-md-5 earth "><span class="px-2"><img src="static/resources/earth.png" alt=""></span><p class="text-white font-weight-light t15">  {%address%}</p></div>
               <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/phone.png" alt=""> {%phone%}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/watch.png" alt=""> {% open_hour %} {% close_hour %}</p></div>
+              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/watch.png" alt="">{% open_hour %}==={% with open_hour as open_hour_valeur %} {{ open_hour_valeur }} {% endwith %} </p></div>
               <div class="col-md-3">
 
                 <div class="input-group  search_input ">
@@ -206,14 +208,34 @@
         </div>
     </div>
 
+  </body>
+   <script type="text/javascript"href="{%static 'js/parallax.js'%}">
+</script> 
+  <script>
+    $("#search").val();
+    console.log($("#search").val());
+
+    $(document).ready(function(){
+    $("#nos_offres").click(function(){        
+      $(".list1").toggle("slow");
+    });
+
+  });
+
+  $('.parallax-window').parallax({imageSrc: 'static/resources/bg2.jpg'});
+
+  </script>
+<!--    
     <script>
       $(document).ready(function(){
-    $("#nos_offres").click(function(){
-        
-        
+    $("#nos_offres").click(function(){        
       $(".list1").toggle("slow");
-     
     });
-    
   });
-      </script>
+      </script> -->
+     
+
+      <!-- <script>
+          $('.parallax-window').parallax({imageSrc: 'static/resources/bg2.jpg'});
+          $('.parallax-window2').parallax({imageSrc: 'static/resources/bg4.png'});
+      </script> -->
