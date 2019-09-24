@@ -70,7 +70,7 @@ class GalleryAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'created', 'updated',)
     list_filter = ('created', 'updated',)
     search_fields = ('name',)
-    filter_horizontal = [DisplayInline, ]
+    filter_horizontal = ["displays", ]
 
 
 def _register(model, admin_class):
