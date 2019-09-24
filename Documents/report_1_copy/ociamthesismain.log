@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  24 SEP 2019 18:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  24 SEP 2019 21:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -114,18 +114,18 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 (./correctness.aux) (./implementation.aux) (./conclusions.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -194,7 +194,7 @@ e
 <oxlogo.png, id=1, 1505.625pt x 602.25pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
-Package pdftex.def Info: oxlogo.png  used on input line 45.
+Package pdftex.def Info: oxlogo.png  used on input line 46.
 (pdftex.def)             Requested size: 91.04881pt x 36.4183pt.
 
 [1
@@ -304,20 +304,35 @@ Package pdftex.def Info: test_1.png  used on input line 168.
  [22 <./test_1.png>])
 \openout2 = `correctness.aux'.
 
- (./correctness.tex)
+ (./correctness.tex
+Chapter 4.
+<fig_1.png, id=110, 743.02594pt x 147.55125pt>
+File: fig_1.png Graphic file (type png)
+<use fig_1.png>
+Package pdftex.def Info: fig_1.png  used on input line 9.
+(pdftex.def)             Requested size: 433.62pt x 86.11111pt.
+[23
+
+
+
+
+
+]
+Overfull \hbox (1.8328pt too wide) in paragraph at lines 15--16
+ \OT1/cmr/bx/n/12 Proof[] \OT1/cmr/m/n/12 When Chan-nel-Downuv oc-curs, u re-mo
+ves v from both its Nu and formingu
+ []
+
+[24 <./fig_1.png (PNG copy)>] [25] [26] [27] [28]) [29]
 \openout2 = `implementation.aux'.
 
-
-(./implementation.tex)
+ (./implementation.tex)
 \openout2 = `conclusions.aux'.
 
- (./conclusions.tex
-Chapter 4.
-) [23
 
-
-
-
+(./conclusions.tex
+Chapter 5.
+) [30
 
 
 
@@ -327,18 +342,18 @@ Chapter 4.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [24
+) [31
 
 
 ] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
 (./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
 (./correctness.aux) (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
- 2839 strings out of 492615
- 40572 string characters out of 6131390
- 113501 words of memory out of 5000000
- 6638 multiletter control sequences out of 15000+600000
- 11253 words of font info for 43 fonts, out of 8000000 for 9000
+ 2846 strings out of 492615
+ 40661 string characters out of 6131390
+ 113512 words of memory out of 5000000
+ 6644 multiletter control sequences out of 15000+600000
+ 11600 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,7n,27p,2593b,287s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/te
@@ -352,10 +367,10 @@ onts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on ociamthesismain.pdf (31 pages, 1175713 bytes).
+Output written on ociamthesismain.pdf (38 pages, 1222743 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 179 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

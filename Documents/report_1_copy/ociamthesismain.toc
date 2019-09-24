@@ -59,5 +59,48 @@
 \contentsline {section}{\numberline {3.6}Sample execution}{18}% 
 \contentsline {paragraph}{}{20}% 
 \contentsline {paragraph}{}{20}% 
-\contentsline {chapter}{\numberline {4}Conclusion}{23}% 
-\contentsline {chapter}{Bibliography}{24}% 
+\contentsline {chapter}{\numberline {4}Correctness}{23}% 
+\contentsline {paragraph}{}{23}% 
+\contentsline {paragraph}{}{23}% 
+\contentsline {paragraph}{}{23}% 
+\contentsline {section}{\numberline {4.1}Channels and Neighbors}{24}% 
+\contentsline {paragraph}{}{24}% 
+\contentsline {paragraph}{}{24}% 
+\contentsline {paragraph}{Lemma 1}{24}% 
+\contentsline {subparagraph}{Proof}{24}% 
+\contentsline {subparagraph}{}{25}% 
+\contentsline {section}{\numberline {4.2}Height Tokens and Their Properties}{25}% 
+\contentsline {paragraph}{}{25}% 
+\contentsline {paragraph}{}{25}% 
+\contentsline {paragraph}{Property A}{25}% 
+\contentsline {paragraph}{Proof}{25}% 
+\contentsline {paragraph}{}{25}% 
+\contentsline {paragraph}{}{26}% 
+\contentsline {paragraph}{}{26}% 
+\contentsline {paragraph}{}{26}% 
+\contentsline {paragraph}{}{26}% 
+\contentsline {paragraph}{Property B:}{26}% 
+\contentsline {paragraph}{Proof}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{27}% 
+\contentsline {subparagraph}{}{28}% 
+\contentsline {subparagraph}{}{28}% 
+\contentsline {subparagraph}{}{28}% 
+\contentsline {subparagraph}{}{28}% 
+\contentsline {subparagraph}{}{28}% 
+\contentsline {subparagraph}{}{28}% 
+\contentsline {section}{\numberline {4.3}Bounding the Number of Elections}{28}% 
+\contentsline {paragraph}{}{28}% 
+\contentsline {paragraph}{}{29}% 
+\contentsline {paragraph}{Porperty C:}{29}% 
+\contentsline {subparagraph}{Poof}{29}% 
+\contentsline {subparagraph}{}{29}% 
+\contentsline {paragraph}{Property D:}{29}% 
+\contentsline {chapter}{\numberline {5}Conclusion}{30}% 
+\contentsline {chapter}{Bibliography}{31}% 
