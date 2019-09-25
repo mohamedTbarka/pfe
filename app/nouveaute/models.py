@@ -69,8 +69,8 @@ class Display(BaseModel):
     title = models.CharField(max_length=100, null=True, blank=True)
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, )
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
 
     def get_image_url(self):
         if self.image:
