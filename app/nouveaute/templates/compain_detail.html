@@ -17,25 +17,25 @@
             <nav aria-label="breadcrumb ">
                 <ol class="breadcrumb bg-white pl-0">
                   <li class="t15 breadcrumb-item active" aria-current="page">Home</li>
-                  <li class="t15 breadcrumb-item active" aria-current="page">Home</li>
-                  <li class="t15 breadcrumb-item " aria-current="page">{{event.title}}</li>
+                  <li class="t15 breadcrumb-item active" aria-current="page">Compagne</li>
+                  <li class="t15 breadcrumb-item " aria-current="page">{{compagne.title}}</li>
                 </ol>
               </nav>
         </div>
     </div>
     <div class="row">
     <div class="col-md-4 ">
-        <img src="../../media/{{event.image}}" class="mb-3" alt="">
+        <img src="../../media/{{compagne.image}}" class="mb-3" alt="">
        
     </div>
     <div class="col-md-8">
-        <h1 class="text-uppercase t22 pb-2">{{event.title}}</h1>
-        <div class="row">
-            <div class="col-md-2"><h5  class="  px-2 py-1 t15  text-white bg_badges "> {{event.get_badge}}</h5></div>
+        <h1 class="text-uppercase t22 pb-2">{{compagne.title}}</h1>
+     
+           
             
-            <div class="col-md-4 offset-md-1"><p class="text-secondary text-center t13"><img src="{% static 'resources/watch.png'%}" alt=""> Du {{event.start_date|date:'m'}} au {{event.end_date|date:'m'}} a partir de {{event.start_date|date:'H'}}h</p></div>
+           <p class="text-secondary text-left t13"><img src="{% static 'resources/watch.png'%}" alt=""> Le {{compagne.date|date:'m'}} a partir de {{compagne.date|date:'H'}}h</p>
 
-        </div>
+        
         <p class="t15 pt-3">Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prope Rauracum ventum est ad supercilia fluminis Rheni, resistente multitudine Alamanna pontem suspendere navium conpage Romani vi nimia vetabantur ritu grandinis undique  </p>
             <div id="slide" class="col-md-12 px-0">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -51,11 +51,11 @@
                       </div>
                     </div>
                     <a class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev" style="margin-left: -100px">
-                     <img src="{% static 'resources/arrow_left.png'%}" alt="">
+                     <img src="./resourses/arrow_left.png" alt="">
                       <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="margin-right: -100px">
-                        <img src="{% static 'resources/arrow-right.png'%}" alt="">
+                        <img src="./resourses/arrow-right.png" alt="">
                       <span class="sr-only">Next</span>
                     </a>
                   </div>

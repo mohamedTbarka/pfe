@@ -67,3 +67,4 @@ class CompagneListView(generic.ListView):
 
 class CompagneDetailView(generic.DetailView):
     model = Compagne
+    template_name = "promotion_detail.html"
