@@ -1,3 +1,6 @@
+import datetime
+
+from django.db.models import Q
 from django.shortcuts import render
 
 # Create your views here.
@@ -34,7 +37,7 @@ class EventListView(generic.ListView):
         return context
 
     def get_queryset(self):
-        return self.queryset.filter(start_date__gte=timezone.now)
+        return Event.objects.filter(Q(start_date__gte=timezone.now())|Q(end_date__gte=timezone.now()))
 
 
 class CompagneListView(generic.ListView):
