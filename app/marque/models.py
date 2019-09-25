@@ -67,6 +67,7 @@ class Marque(BaseModel):
     email = models.EmailField()
     localisation = models.CharField(max_length=50)
     open_hours = models.TextField()
+    week_open_hours = models.TextField()
     content = models.TextField()
 
     def __str__(self):

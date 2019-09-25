@@ -13,6 +13,7 @@ class MarqueForm(ModelForm):
         widgets = {
             'content': Textarea(attrs={'class': 'ckeditor', }),
             'open_hours': Textarea(attrs={'class': 'ckeditor', }),
+            'week_open_hours': Textarea(attrs={'class': 'ckeditor', }),
         }
 
     class Media:
@@ -20,4 +21,3 @@ class MarqueForm(ModelForm):
         css = {
             'all': ('css/admin.css',)
         }
-
