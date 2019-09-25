@@ -63,7 +63,7 @@ class Marque(BaseModel):
     categories = models.ManyToManyField(Category, null=True, blank=True, )
     group = models.ForeignKey(Group, null=True, blank=True, on_delete=models.SET_NULL)
     phone = models.CharField(max_length=15)
-    phone_second = models.CharField(max_length=15)
+    phone_second = models.CharField(max_length=15, null=True, blank=True, )
     email = models.EmailField()
     localisation = models.CharField(max_length=50)
     open_hours = models.TextField()

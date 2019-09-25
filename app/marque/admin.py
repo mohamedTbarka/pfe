@@ -1,6 +1,7 @@
 # vim: set fileencoding=utf-8 :
 from django.contrib import admin
 
+from marque.forms import MarqueForm
 from . import models
 
 
@@ -26,10 +27,11 @@ class SlideAdmin(admin.ModelAdmin):
 
 
 class MarqueAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'group', 'created', 'updated',)
+    list_display = ('id', 'name', 'group', 'email', 'phone', 'localisation', 'created', 'updated',)
     list_filter = ('group', 'created', 'updated',)
     filter_horizontal = ('categories',)
     search_fields = ('name',)
+    form = MarqueForm
 
 
 def _register(model, admin_class):
