@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from app import settings
+from custom_flatpages.views import flatpage
 from service.views import Home
 
 urlpatterns = [
@@ -27,3 +28,5 @@ urlpatterns = [
                   path('', include('nouveaute.urls')),
                   path('', include('service.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))

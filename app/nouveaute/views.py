@@ -32,6 +32,9 @@ class EventListView(generic.ListView):
         context['now'] = timezone.now()
         return context
 
+    def get_queryset(self):
+        return self.queryset.filter(start_date__gte=timezone.now)
+
 
 class CompagneListView(generic.ListView):
     """

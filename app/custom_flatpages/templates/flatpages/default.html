@@ -1,0 +1,19 @@
+{% load staticfiles %}
+{% block content %}
+
+<img src="/media/{{ flatpage.image_principale }}"/><br/>
+{{ flatpage.titre_principale }}<br/>
+{{ flatpage.titre_description}}<br/>
+{{ flatpage.description|striptags|safe}}<br/>
+<img src="/media/{{ flatpage.image_description }}"/><br/>
+
+
+
+{% for element_page  in flatpage.flat_page.all %}
+{{element_page.titre}}<br/>
+{{element_page.contenu|striptags|safe}}<br/>
+
+<img src="/media/{{element_page.image}}"/><br/><br/><br/>
+{% endfor %}
+
+{% endblock %}
