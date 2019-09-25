@@ -391,7 +391,7 @@ input#example-search-input{
 } 
 /* ------------------------   marque page   ------------------------- */
 .bg_marque{
-    background-image:  url("./resourses/marque.jpg");
+  
     height: 300px;
     max-height:300px!important;
    

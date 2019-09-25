@@ -16,6 +16,7 @@ class PromotionListView(generic.ListView):
     """
     model = Promotion
     paginate_by = 50  # if pagination is desired
+    template_name = "promotions.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -46,6 +47,7 @@ class CompagneListView(generic.ListView):
     """
     model = Compagne
     paginate_by = 50  # if pagination is desired
+    template_name = "compagne.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
