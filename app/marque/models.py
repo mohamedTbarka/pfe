@@ -1,6 +1,8 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 
+from nouveaute.models import Gallery
+
 
 class BaseModel(models.Model):
     created = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name=u"Date création")
@@ -69,6 +71,7 @@ class Marque(BaseModel):
     open_hours = models.TextField()
     week_open_hours = models.TextField()
     content = models.TextField()
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
