@@ -424,8 +424,6 @@ float: right;
 .badges{
     position: absolute;
     bottom:81px;
-    
-
 }
 .bg_badges{
     background-color: #00906f;
@@ -473,9 +471,39 @@ float: right;
 
 
 /* Mobile responsive */
+#nav_mobile{
+    display: none;
+}
+#search_mobile{
+    display: none;
+}
+
+ 
 
 @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
+    #nav1 {
+     display: none;
     }
-  }
+    #nav_mobile{
+        display: block;
+    }
+    #logo{
+        display: none;
+    }
+
+    #social{
+        display: inline-flex;
+        justify-content: center;
+        padding-bottom: 10px;
+
+    }
+    #search_mobile{
+        display: flex;
+    }
+    #search_responsive{
+        display: none;
+    }
+    .extra{
+        display: none;
+    }
+}

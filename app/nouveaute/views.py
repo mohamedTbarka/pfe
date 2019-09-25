@@ -26,6 +26,7 @@ class PromotionListView(generic.ListView):
 
 class PromotionDetailView(generic.DetailView):
     model = Promotion
+    template_name = "promotion_detail.html"
 
 
 class EventListView(generic.ListView):
@@ -47,6 +48,7 @@ class EventListView(generic.ListView):
 
 class EventDetailView(generic.DetailView):
     model = Event
+    template_name = "event_detail.html"
 
 
 class CompagneListView(generic.ListView):
