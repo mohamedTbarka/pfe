@@ -23,6 +23,10 @@ class PromotionListView(generic.ListView):
         return context
 
 
+class PromotionDetailView(generic.DetailView):
+    model = Promotion
+
+
 class EventListView(generic.ListView):
     """
     Event list page
@@ -36,7 +40,11 @@ class EventListView(generic.ListView):
         return context
 
     def get_queryset(self):
-        return Event.objects.filter(Q(start_date__gte=timezone.now())|Q(end_date__gte=timezone.now()))
+        return Event.objects.filter(Q(start_date__gte=timezone.now()) | Q(end_date__gte=timezone.now()))
+
+
+class EventDetailView(generic.DetailView):
+    model = Event
 
 
 class CompagneListView(generic.ListView):
@@ -50,3 +58,7 @@ class CompagneListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
+
+
+class CompagneDetailView(generic.DetailView):
+    model = Compagne
