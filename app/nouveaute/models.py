@@ -1,7 +1,7 @@
-import datetime
-
 from django.db import models
 from django.utils import timezone
+
+from app import settings
 
 
 class BaseModel(models.Model):
@@ -12,11 +12,21 @@ class BaseModel(models.Model):
         abstract = True
 
 
+class Gallery(BaseModel):
+    name = models.CharField(max_length=100, )
+
+    # image = models.ImageField(upload_to="./uploads/gallery/img")
+
+    def __str__(self):
+        return self.name
+
+
 class Promotion(BaseModel):
     title = models.CharField(max_length=100, )
     image = models.ImageField(upload_to="./uploads/promotion/img")
     content = models.TextField()
     date = models.DateTimeField()
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -28,6 +38,7 @@ class Event(BaseModel):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/event/img")
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
 
     def get_badge(self):
         if timezone.now() < self.start_date:
@@ -47,6 +58,7 @@ class Compagne(BaseModel):
     content = models.TextField()
     date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/compagne/img")
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -55,15 +67,12 @@ class Compagne(BaseModel):
 class Display(BaseModel):
     image = models.ImageField(upload_to="./uploads/gallery/display/img")
     title = models.CharField(max_length=100, null=True, blank=True)
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, )
 
     def __str__(self):
         return self.name
 
-
-class Gallery(BaseModel):
-    name = models.CharField(max_length=100, )
-    # image = models.ImageField(upload_to="./uploads/gallery/img")
-    displays = models.ManyToManyField(Display)
-
-    def __str__(self):
-        return self.name
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""

@@ -19,3 +19,7 @@ class MarqueListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
+
+
+class MarqueDetailView(generic.DetailView):
+    model = Marque
