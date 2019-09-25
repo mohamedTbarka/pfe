@@ -61,7 +61,7 @@
                             
                             <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" id="example-search-input">
                             <span class="input-group-prepend ">
-                                <div class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src="static/resources/search.png" alt="" style=""></div>
+                                <div class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" style=""></div>
                             </span>
                         </div>
                       </div>
@@ -108,13 +108,13 @@
         <div class="container px-0  mt-4 ">
           <div class="col-md-12 d-flex justify-content-around">
             <div class="row pt-4  ">
-              <div class="col-md-5 earth "><span class="px-2"><img src="static/resources/earth.png" alt=""></span><p class="text-white font-weight-light t15">  {{preference.address}}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/phone.png" alt=""> {{preference.phone}}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="static/resources/watch.png" alt="">  {{preference.get_open_hour}} - {{preference.get_close_hour}}</p></div>
+              <div class="col-md-5 earth "><span class="px-2"><img src=" {% static 'resources/earth.png'%}" alt=""></span><p class="text-white font-weight-light t15">  {{preference.address}}</p></div>
+              <div class="col-md-2"><p class="text-white text-center t15"><img src="{% static 'resources/phone.png'%}" alt=""> {{preference.phone}}</p></div>
+              <div class="col-md-2"><p class="text-white text-center t15"><img src="{% static 'resources/watch.png'%}" alt="">  {{preference.get_open_hour}} - {{preference.get_close_hour}}</p></div>
               <div class="col-md-3">
 
                 <div class="input-group  search_input ">
-                    <span ><img class="mx-2" src="static/resources/email.png" alt=""></span>
+                    <span ><img class="mx-2" src="{% static 'resources/email.png'%}" alt=""></span>
                     
                   <input class=" bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 " type="search" placeholder="Adresse Email" id="example-search-input">
                   <span class="input-group-prepend  ">
@@ -123,7 +123,7 @@
               </div>
 
               </div>
-              <a href="#body"><img  class="up" src="static/resources/up.png" alt=""></a>
+              <a href="#body"><img  class="up" src="{% static 'resources/up.png'%}" alt=""></a>
               
             </div>
           </div>

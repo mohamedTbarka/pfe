@@ -39,6 +39,10 @@
     font-family: 'Sequel100Wide-45Wide';
     font-size: 15px!important;
 }
+.t18{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 18px!important;
+}
 .t20{
     font-family: 'Sequel100Wide-45Wide';
     font-size: 20px!important;
@@ -402,7 +406,7 @@ input#example-search-input{
 /* ------------------------   galerie page   ------------------------- */
 
 .bg_galerie{
-    background-image:  url("./resourses/galerie.jpg");
+    
     height: 300px;
     max-height:300px!important;
    
@@ -431,8 +435,8 @@ float: right;
 }
 .border_img{
    
-   border: solid 7px transparent;
-    transition: all .5s ease-in;
+   
+    transition: all .2s ease-in;
 }
 .border_img:hover{
     

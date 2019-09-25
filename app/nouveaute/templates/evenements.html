@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %} 
+
+
+
+
+<div class="container-fluid ">
+        <div style="background-image:  url('../../static/resources/marque.jpg');" class="row bg_galerie">
+            <div class="col-md-12">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Evenements</h4>
+            </div>
+            
+        </div>
+</div>
+<div class="container px-0">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-white pl-0">
+                      <li class="breadcrumb-item active" aria-current="page">Home</li>
+                      <li class="breadcrumb-item active" aria-current="page">événements</li>
+                   
+                    </ol>
+                  </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pl-0">
+            <div class="row">
+                {%for event in events%}
+                <div class="col-md-3 pb-3">
+                    <div class="card" >
+                        <div class="border_img">
+                                <img src="media/{{event.image}}" class="card-img-top" alt="..." >
+                        </div>
+                        <h5  class="  px-2 py-1 t15 badges text-white bg_badges "> A venir</h5>
+                        <div class="card-body bg_green ">
+                          <h5 class="card-title text-uppercase text-white mb-0 t18  ">{{event.title}}</h5>
+                          <p id="card_date" class="card-text text-white t15 ">Du{{event.start_date}} au {{event.end_date}} </p>
+                        </div>
+                      </div>                  
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+
+
+
+
+{%endblock%}
