@@ -13,6 +13,7 @@ class MarqueListView(generic.ListView):
     """
     model = Marque
     paginate_by = 50  # if pagination is desired
+    template_name = "marque_list.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
