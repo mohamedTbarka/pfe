@@ -73,11 +73,11 @@
 \contentsline {paragraph}{}{25}% 
 \contentsline {paragraph}{}{25}% 
 \contentsline {paragraph}{Property A}{25}% 
-\contentsline {paragraph}{Proof}{25}% 
-\contentsline {paragraph}{}{25}% 
-\contentsline {paragraph}{}{26}% 
-\contentsline {paragraph}{}{26}% 
-\contentsline {paragraph}{}{26}% 
+\contentsline {subparagraph}{Proof}{25}% 
+\contentsline {subparagraph}{}{25}% 
+\contentsline {subparagraph}{}{26}% 
+\contentsline {subparagraph}{}{26}% 
+\contentsline {subparagraph}{}{26}% 
 \contentsline {paragraph}{}{26}% 
 \contentsline {paragraph}{Property B:}{26}% 
 \contentsline {paragraph}{Proof}{27}% 
@@ -102,5 +102,64 @@
 \contentsline {subparagraph}{Poof}{29}% 
 \contentsline {subparagraph}{}{29}% 
 \contentsline {paragraph}{Property D:}{29}% 
-\contentsline {chapter}{\numberline {5}Conclusion}{30}% 
-\contentsline {chapter}{Bibliography}{31}% 
+\contentsline {subparagraph}{Proof:}{29}% 
+\contentsline {subparagraph}{}{29}% 
+\contentsline {subparagraph}{}{29}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {paragraph}{Lemma 2}{30}% 
+\contentsline {subparagraph}{Proof}{31}% 
+\contentsline {subparagraph}{}{31}% 
+\contentsline {subparagraph}{}{31}% 
+\contentsline {subparagraph}{}{31}% 
+\contentsline {subparagraph}{}{31}% 
+\contentsline {subparagraph}{}{31}% 
+\contentsline {paragraph}{Lemma 3}{31}% 
+\contentsline {subparagraph}{Proof}{32}% 
+\contentsline {subparagraph}{}{32}% 
+\contentsline {subparagraph}{}{32}% 
+\contentsline {subparagraph}{}{32}% 
+\contentsline {section}{\numberline {4.4}Bounding the Number of New Reference Levels}{33}% 
+\contentsline {paragraph}{}{33}% 
+\contentsline {paragraph}{Property E:}{33}% 
+\contentsline {subparagraph}{Proof}{33}% 
+\contentsline {subparagraph}{}{33}% 
+\contentsline {subparagraph}{}{33}% 
+\contentsline {subparagraph}{}{33}% 
+\contentsline {subparagraph}{}{34}% 
+\contentsline {subparagraph}{}{34}% 
+\contentsline {subparagraph}{}{34}% 
+\contentsline {paragraph}{}{34}% 
+\contentsline {paragraph}{}{34}% 
+\contentsline {paragraph}{Property F:}{34}% 
+\contentsline {subparagraph}{Proof}{34}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {paragraph}{Property G:}{35}% 
+\contentsline {subparagraph}{Proof}{35}% 
+\contentsline {subparagraph}{}{36}% 
+\contentsline {subparagraph}{}{36}% 
+\contentsline {subparagraph}{}{36}% 
+\contentsline {subparagraph}{}{36}% 
+\contentsline {subparagraph}{}{36}% 
+\contentsline {paragraph}{Property H:}{36}% 
+\contentsline {subparagraph}{Proof}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{37}% 
+\contentsline {subparagraph}{}{38}% 
+\contentsline {paragraph}{Lemma 4}{39}% 
+\contentsline {subparagraph}{Proof}{39}% 
+\contentsline {section}{\numberline {4.5}Bounding the Number of Messages}{40}% 
+\contentsline {chapter}{\numberline {5}Conclusion}{44}% 
+\contentsline {chapter}{Bibliography}{45}% 
