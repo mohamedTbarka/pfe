@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'nouveaute',
     'service',
     'contact',
+    'custom_flatpages',
 ]
 
 MIDDLEWARE = [

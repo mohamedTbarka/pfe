@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class BaseModel(models.Model):
@@ -25,6 +26,14 @@ class Event(BaseModel):
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/event/img")
+
+    def get_badge(self):
+        if timezone.now < self.start_date:
+            return u"A venir"
+        elif self.start_date <= timezone.now <= self.end_date:
+            return u"En cours"
+        else:
+            return "Achevé"
 
     def __str__(self):
         return self.title

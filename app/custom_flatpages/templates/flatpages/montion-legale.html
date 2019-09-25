@@ -1,0 +1,60 @@
+{% extends "includes/base.html" %}
+{% load i18n staticfiles %}
+{% block og_image %}
+  <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}/media/{{ flatpage.image }}" />
+{% endblock %}
+{% block content %}
+
+    <div id="slider">
+            <img src="/media/{{ flatpage.image }}" alt="Présentation" title="Présentation" class="img_header">
+            <div class="container">
+                <div class="textSlider"><h2>{{ flatpage.titre }}</h2></div><!--textSlider -->
+            </div><!--container -->
+    </div><!-- slider -->
+
+      <div class="container page_interne">
+        <div class="navigation">
+          <ol class="breadcrumb">
+            <li><a href="{% url 'home' %}">{% trans "ACCUEIL" %}</a></li>
+            <li class="active">{{ flatpage.titre }}</li>
+          </ol>
+        </div><!-- navigation -->
+        <h2>{{ flatpage.titre }}</h2>       
+        <div class="row">
+          <div class="col-md-8">             
+            <div class="textCollapse">  
+                {% if flatpage.description %}                                  
+              {{ flatpage.description|safe }}
+              {% endif %}
+            </div><!-- textCollapse -->  
+            <div class="accordiants">
+               {% for el  in flatpage.flat_page.all %}
+               <div class="accordiant">              
+                <h4>
+                  <a class="collapsed" role="button" data-toggle="collapse" href="#accordiant{{ forloop.counter0 }}" aria-expanded="false" aria-controls="accordiant{{ forloop.counter0 }}">
+                    {{ el.titre }}
+                    <span class="firstText">{% trans "Voir plus" %} </span>
+                    <span class="secondText">{% trans "Réduire l’onglet" %}</span>
+
+
+                   </a> 
+                </h4>  
+                <div class="collapse" id="accordiant{{ forloop.counter0 }}">
+                  <div class="textCollapse">                                    
+                     {% if el.image %} <img src="/media/{{ el.image }}" alt="" /> {% endif %}
+                      {{ el.contenu|safe }}                      
+                    </div><!-- textCollapse -->
+                </div><!-- collapse -->
+               </div><!-- accordiant -->  
+               {%endfor%}                                                                    
+             </div><!-- accordiants -->                           
+          </div><!-- col -->
+          <div class="col-md-4">
+            {% include "includes/sidebar.html" %} 
+          </div><!-- col -->
+        </div><!-- row -->
+      </div><!-- page_interne --> 
+
+
+
+{% endblock %}
