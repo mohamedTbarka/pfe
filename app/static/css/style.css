@@ -39,6 +39,10 @@
     font-family: 'Sequel100Wide-45Wide';
     font-size: 15px!important;
 }
+.t18{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 18px!important;
+}
 .t20{
     font-family: 'Sequel100Wide-45Wide';
     font-size: 20px!important;
@@ -132,7 +136,6 @@
   }
 
 .offr1{
-        background-image: url("./resourses/shopping.jpg");
         min-height:353px;
         max-height:353px;
         background-position: center;
@@ -145,7 +148,7 @@
   }
 
 .offr2{
-    background-image: url("./resourses/restauration.jpg");
+    
     min-height: 48%;
    
     background-position: center;
@@ -157,7 +160,7 @@
     background-size: 600px!important;
   }
 .offr3{
-    background-image: url("./resourses/hypermarche.jpg");
+    
     min-height: 48%;
     background-position: center;
    background-repeat: no-repeat;
@@ -168,7 +171,7 @@
     background-size: 600px!important;
   }
 .offr4{
-    background-image: url("./resourses/cinema.jpg");
+    
     min-height: 48%;
     background-position: center;
    background-repeat: no-repeat;
@@ -180,7 +183,7 @@
     background-size: 600px!important;
   }
 .offr5{
-    background-image: url("./resourses/culture\ &\ loisirs.jpg");
+    
     min-height: 48%;
     background-position: center;
    background-repeat: no-repeat;
@@ -200,7 +203,7 @@
     background-size: 100% 100%;
 }
 .bg3{   
-    background-image:  url("./resourses/parking.jpg");
+    
     height: 400px;
     background-position: center;
     background-repeat: no-repeat;
@@ -273,9 +276,18 @@
 
 
 
-.parallax-window {
-    min-height: 300px;
-    background: transparent;
+#paral {
+   
+    /* background-position: 0; */
+    /* background-repeat: no-repeat; */
+    -webkit-background-size: 400px;
+    background-size: 200%;
+
+    -moz-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    min-height:300px!important;
+   
 }
 .parallax-window2 {
     min-height: 300px;
@@ -285,7 +297,7 @@
     text-shadow: 3px -2px 3px rgba(89,89,89,0.68);
 }
 
-/* Icones Color Hover  */
+/* Icons Color Hover  */
 .img_grey {
     -webkit-filter: grayscale(200%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(200%); /* FF 35+ */
@@ -298,6 +310,11 @@
     filter: grayscale(0%); /* FF 35+ */
     }
     /* END _ Icones Color  Hover */
+
+.service_icon{
+        min-height: 80px;
+        max-height: 80px;
+    }
       
 .bg-transparent{
     background-color: transparent!important;
@@ -327,6 +344,8 @@ input#example-search-input{
     position: absolute;
     right: -120px;
 }
+
+
 /* ------------------------   Business page   ------------------------- */
 /* Style to change separator  */
 .breadcrumb-item + .breadcrumb-item::before {
@@ -387,7 +406,7 @@ input#example-search-input{
 /* ------------------------   galerie page   ------------------------- */
 
 .bg_galerie{
-    background-image:  url("./resourses/galerie.jpg");
+    
     height: 300px;
     max-height:300px!important;
    
@@ -404,7 +423,7 @@ float: right;
 
 .badges{
     position: absolute;
-    bottom:85px;
+    bottom:81px;
     
 
 }
@@ -416,8 +435,8 @@ float: right;
 }
 .border_img{
    
-   border: solid 7px transparent;
-    transition: all .5s ease-in;
+   
+    transition: all .2s ease-in;
 }
 .border_img:hover{
     
@@ -440,7 +459,7 @@ float: right;
 }
 /* ------------------------    Shops Page     ------------------------- */
 .bg_shopping{
-    background-image:  url("./resourses/bg_shopping.jpg");
+   
     height: 300px;
     max-height:300px!important;
    
@@ -451,3 +470,12 @@ float: right;
 .alph{
     text-align-last: justify!important;
 }
+
+
+/* Mobile responsive */
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }

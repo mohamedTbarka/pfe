@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+{%load static%}
+{% block content %} 
+
+
+
+
+<div class="container-fluid">
+        <div style=" background-image:  url('../../static/resources/bg_shopping.jpg');" class="row bg_shopping">
+            <div class="col-md-12">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Nos Marques</h4>
+            </div>
+            
+        </div>
+</div>
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-white pl-0">
+                      <li class="breadcrumb-item active" aria-current="page"><a class="text-dark t15" href="" >Accueil</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"> <a class="text-dark t15"  href="">Nos marques</a></li>
+                      <li class="breadcrumb-item " aria-current="page"><a class="text-secondary t15"  href="">Shopping</a></li>
+                    </ol>
+                  </nav>
+            </div>
+            
+        </div>
+</div>
+
+<div class="container pt-0">
+        <div class="row">
+            <div class="col-md-12 px-0 pb-3">
+                <nav class="navbar navbar-expand-sm justify-content-start px-0">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">Tout&nbsp;voir</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">mode&nbsp;femme</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">mode&nbsp;homme</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">mode&nbsp;enfants</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">lingerie</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr " href="#">chaussures</a>
+                        </li>
+                         <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">maroquinerie</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">accessories</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link txt_green text-uppercase t15 " href="#">bijoux</a>
+                        </li>
+                    </ul>
+                    </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-3 ">
+        <div class="row">
+            <div class="col-md-12 pb-2">
+                <div class="row">
+                <div class="col-md-2 px-0">
+                    <a href="" class="text-uppercase text-dark px-1 t20">A - Z</a>
+                </div>
+                <div class="col-md-10 alph px-0">
+                    <a href="" class="text-uppercase text-dark px-1 t20">A</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">B</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">C</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">D</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">e</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">f</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">g</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">h</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">i</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">j</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">k</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">l</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">m</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">n</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">o</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">p</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">q</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">r</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">s</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">t</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">u</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">v</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">w</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">x</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">y</a>
+                    <a href="" class="text-uppercase text-dark px-1 t20">z</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+            <div class="row ">
+                {% for marque in marque_list%}
+                <div class="col-md-4 pb-4
+                  px-4">
+                    <div class="row border-dark border">
+                        <div class="col-md-4 pb-4
+                        ">
+                            <img src="../media/{{marque.logo}}" alt="" style="width: 100%; padding-top: 40px;">
+                        </div>
+                        <div class="col-md-8">
+                            <h2 class="t15_65 pt-3 text-uppercase">{{marque.name}}</h2>
+                            <h5 class="t15">{{marque.open_hours|safe}}</h5>
+                            <h5 class="t15 pb-2">{{marque.phone}}</h5>
+                        </div>
+                        <div class="col-md-12 px-0">
+                            <h5 class="text-center border-dark border-top t15 pt-2"><img src="{% static 'resources/position.png'%}" alt=""> 1er etage</h5>
+                        </div>
+                    </div>
+                </div>
+               {%endfor%}
+            </div>
+        </div>
+
+    {%endblock%}
