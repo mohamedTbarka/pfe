@@ -67,7 +67,7 @@ class Compagne(BaseModel):
 class Display(BaseModel):
     image = models.ImageField(upload_to="./uploads/gallery/display/img")
     title = models.CharField(max_length=100, null=True, blank=True)
-    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, )
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, related_name='images')
 
     # def __str__(self):
     #     return self.title
