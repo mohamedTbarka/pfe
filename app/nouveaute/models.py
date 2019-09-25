@@ -70,7 +70,7 @@ class Display(BaseModel):
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, )
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_image_url(self):
         if self.image:
