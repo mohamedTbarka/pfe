@@ -29,8 +29,8 @@ class MarqueListView(generic.ListView):
 
     def get_queryset(self):
         alpha = self.request.GET.get('alpha', '')
-        cat = self.request.GET.get('cate', '')
-        new_context = Marque.objects.filter(name__istartswith=alpha, categories__name=cat)
+        cat = self.request.GET.get('cat', '')
+        new_context = Marque.objects.filter(name__istartswith=alpha, )  # categories__name=cat)
         return new_context
 
 
