@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.views import generic
 
 from marque.models import Group
-from service.models import Service, Info
+from service.models import Service, Info, Slider
 
 
 class Home(generic.TemplateView):
@@ -18,5 +18,6 @@ class Home(generic.TemplateView):
         services = Service.objects.all().order_by('order')
         groups = Group.objects.all()
         infos = Info.objects.all().order_by('order')
-        context = {"services": services, "groups": groups, "infos": infos, }
+        slides = Slider.objects.all()
+        context = {"services": services, "groups": groups, "infos": infos, "slides": slides}
         return context

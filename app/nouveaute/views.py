@@ -63,3 +63,14 @@ class CompagneListView(generic.ListView):
 
 class CompagneDetailView(generic.DetailView):
     model = Compagne
+
+
+class NouveauteList(generic.TemplateView):
+    """
+    Nouveautes List page
+    """
+
+    def get_context_data(self, **kwargs):
+        events = Event.objects.all()
+        context = {"events": events, }
+        return context

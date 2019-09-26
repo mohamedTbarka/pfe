@@ -100,3 +100,18 @@ class Preference(models.Model):
 
     def __str__(self):
         return u"%s" % self.title
+
+
+class Slider(BaseModel):
+    image = models.ImageField(upload_to="./uploads/slider/img")
+    title = models.CharField(max_length=100, null=True, blank=True)
+    url = models.CharField(max_length=100, null=True, blank=True)
+    description = models.TextField()
+
+    # def __str__(self):
+    #     return self.title
+
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
