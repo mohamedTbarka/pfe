@@ -21,3 +21,7 @@ class Home(generic.TemplateView):
         slides = Slider.objects.all()
         context = {"services": services, "groups": groups, "infos": infos, "slides": slides}
         return context
+
+
+class ServiceDetailView(generic.DetailView):
+    model = Service
