@@ -299,6 +299,17 @@
     });
 });
   </script>
+    <script>
+        $(function() {
+          var $el = $('#paral2');
+          $(window).on('scroll', function () {
+              var scroll = $(document).scrollTop();
+              $el.css({
+                   'background-position':'50%'+(.4*scroll)+'px'
+              });
+          });
+      });
+        </script>
 <!--    
     <script>
       $(document).ready(function(){
