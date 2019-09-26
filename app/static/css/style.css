@@ -436,7 +436,11 @@ float: right;
 
 .badges{
     position: absolute;
-    bottom:81px;
+    bottom:62px;
+}
+.badges2{
+    position: absolute;
+    top: 7px
 }
 .bg_badges{
     background-color: #00906f;

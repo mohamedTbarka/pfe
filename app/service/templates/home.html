@@ -58,12 +58,12 @@
         </div>
         <div class="col-md-12  px-0">
               <div class="row ">
-                  <div  style=" background-image: url('static/resources/promotions.jpg');" class="col-md-2 nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22_65">promotions</h3></div>
-                  <div style="background-image: url('static/resources/evenement.jpg');" class="col-md-2 nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22_65">Evènements</h3></div>
-                  <div style="background-image: url('static/resources/compain.jpg');" class="col-md-4 nv3"><h3 class="text-white text-uppercase txt_img t22_65">campagne</h3></div>
+                  <a href="{%url 'promotions'%}"><div  style=" background-image: url('static/resources/promotions.jpg');" class="col-md-2 nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22_65">promotions</h3></div></a>
+                  <a href="{%url 'evenements'%}"><div style="background-image: url('static/resources/evenement.jpg');" class="col-md-2 nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22_65">Evènements</h3></div></a>
+                  <a href="{%url 'compagnes'%}"><div style="background-image: url('static/resources/compain.jpg');" class="col-md-4 nv3"><h3 class="text-white text-uppercase txt_img t22_65">campagne</h3></div></a>
               </div>
           </div>
-          <div class="col-md-12 text-right px-0 "><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les nouveautés</button></div>
+          <div class="col-md-12 text-right px-0 "><a href="{%url 'nouveautes'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les nouveautés</button></div></a>
     </div>
 </div>
 
