@@ -106,6 +106,7 @@ class Slider(BaseModel):
     image = models.ImageField(upload_to="./uploads/slider/img")
     title = models.CharField(max_length=100, null=True, blank=True)
     url = models.CharField(max_length=100, null=True, blank=True)
+    url_text = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField()
 
     # def __str__(self):
