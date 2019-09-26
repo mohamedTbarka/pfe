@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-10 alph px-0">
                     {%for  alpha in alphabet%}
-                    <a href="" class="text-uppercase text-dark px-1 t20" {%if not alpha.value%} disabled {%endif%}>{{alpha.key}}</a>
+                    <a class="text-uppercase  px-1 t20{%if  alpha.value%} text-dark {%else%} text-secondary {%endif%} " {%if  alpha.value%} href="?alpha={{alpha.key}}" {%endif%}>{{alpha.key}}</a>
                     {%endfor%}
                 </div>
             </div>
