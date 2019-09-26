@@ -161,5 +161,12 @@
 \contentsline {paragraph}{Lemma 4}{39}% 
 \contentsline {subparagraph}{Proof}{39}% 
 \contentsline {section}{\numberline {4.5}Bounding the Number of Messages}{40}% 
-\contentsline {chapter}{\numberline {5}Conclusion}{44}% 
-\contentsline {chapter}{Bibliography}{45}% 
+\contentsline {chapter}{\numberline {5}Implementation}{44}% 
+\contentsline {section}{\numberline {5.1}JBotSim: a Tool for Fast Prototyping of Distributed Algorithms in Dynamic Networks}{44}% 
+\contentsline {subsection}{\numberline {5.1.1}What's JBotSim ?}{44}% 
+\contentsline {subsection}{\numberline {5.1.2}Practical Aspects}{45}% 
+\contentsline {paragraph}{}{45}% 
+\contentsline {subsubsection}{\numberline {5.1.2.1}Fetching JBOTSIM}{45}% 
+\contentsline {chapter}{\numberline {6}Leader Stability}{46}% 
+\contentsline {chapter}{\numberline {7}Conclusion}{50}% 
+\contentsline {chapter}{Bibliography}{51}% 

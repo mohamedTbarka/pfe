@@ -1,11 +1,3 @@
 \chapter{Conclusion}
 
-We have described and proved correct a leader election
-algorithm using logical clocks for asynchronous dynamic
-networks. A set of circumstances were identified under
-which the algorithm does not elect a leader unnecessarily,
-but it remains to give a more complete characterization of
-such circumstances. Also, the time and message complexity
-of the algorithm needs to be analyzed. It would be interest-
-ing to compare the efficiency of the algorithm in the cases
-of perfect clocks and logical clocks.
+We have described and proved correct a leader election algorithm for dynamic net- works. To provide for the temporal ordering of events that the algorithm requires, we use a generic notion of time–causal clocks–which can be implemented using, for instance, perfect clocks or logical clocks. Note that the algorithm is correct in the case of complete synchrony between clocks (perfect clocks) and also in the case of clocks with no bound on skew (logical clocks), but it is not correct for approximately synchronized clocks (which assume an upper bound on skew) unless they preserve causality. Notably, our definition of causal clocks does not include vector clocks (e.g., [8]), since vector clock values do not form a totally-ordered set in order to capture non-causality as well as causality1 An open question is how to extend our algorithm and its analysis to handle a wider range of clocks, such as approximately synchro- nized clocks and vector clocks. We identified different sets of circumstances under which the algorithm does not elect a leader unnecessarily. Depending on the types of clocks used to implement causal time and the amount of synchrony they provide, however, these circumstances tend to be different. It would be interesting to introduce different types of clocks, which not only preserve causality but also have some upper bound on skew, and see how they affect the stability condition of the algorithm. Moreover, an analysis of the time and message complexity needs to be performed, taking into account that using some clocks to implement causal time will be more efficient compared to others. Acknowledgements We thank Bernadette Charron-Bost, Antoine Gaillard, Nick Neumann, Lyn Pierce, Srikanth Sastry and Josef Widder for helpful conversations, and the anonymous reviewers for comments that improved the presentation.
