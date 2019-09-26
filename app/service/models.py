@@ -26,12 +26,13 @@ def get_default_order():
 
 class Service(BaseModel):
     title = models.CharField(max_length=100, )
-    url = models.CharField(max_length=100, )
+    url = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     content = models.TextField(null=True, blank=True)
     icon = models.ImageField(upload_to="./uploads/service/icon")
     background_image = models.ImageField(upload_to="./uploads/service/img", null=True, blank=True)
     principal = models.BooleanField(default=False)
+    active = models.BooleanField(default=False)
     order = models.PositiveSmallIntegerField(default=get_service_default_order)
     old_principal = None
 
