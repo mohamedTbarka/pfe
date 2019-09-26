@@ -21,17 +21,17 @@ class MarqueListView(generic.ListView):
         alphas = list(string.ascii_lowercase)
         alphabet = []
         for alpha in alphas:
-            alphabet.append({'%s' % alpha: Marque.objects.filter(name__istartswith=alpha).exists()})
+            alphabet.append({'key': alpha, "value": Marque.objects.filter(name__istartswith=alpha).exists()})
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         context['alphabet'] = alphabet
         return context
 
-    # def get_queryset(self):
-    #     alpha = self.request.GET.get('alpha', '')
-    #     cat = self.request.GET.get('cate', '')
-    #     new_context = Marque.objects.filter(name__istartswith=alpha,categories__name=cat )
-    #     return new_context
+    def get_queryset(self):
+        alpha = self.request.GET.get('alpha', '')
+        cat = self.request.GET.get('cate', '')
+        new_context = Marque.objects.filter(name__istartswith=alpha, categories__name=cat)
+        return new_context
 
 
 class MarqueDetailView(generic.DetailView):
