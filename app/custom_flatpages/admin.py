@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.forms import ModelForm, Textarea
 from django.core.exceptions import ValidationError
 
-from custom_flatpages.models import FlatPage
+from custom_flatpages.models import FlatPage, Display, Gallery
 
 
 class FlatPageForm(ModelForm):
@@ -37,5 +37,15 @@ class FlatPageAdmin(admin.ModelAdmin):
     class Meta:
         model = FlatPage
 
+class DisplayInline(admin.TabularInline):
+    model = Display
+
+
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'created', 'updated',)
+    list_filter = ('created', 'updated',)
+    search_fields = ('name',)
+    inlines = [DisplayInline]
 
 admin.site.register(FlatPage, FlatPageAdmin)
+admin.site.register(Gallery, GalleryAdmin)
