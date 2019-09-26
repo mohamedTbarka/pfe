@@ -5,5 +5,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The status of the channel from u to v remains Up, but the status of the channel from v to u fluctuates.}}{24}% 
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A highway scenario composed of vehicles, road-side units, and central servers. Part of the network is ad hoc (and wireless); the rest is infrastructured (and wired).}}{47}% 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces A swarming scenario, whereby mobiles robots and UAVs collaborate in order to clean a public park.}}{48}% 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Main sources of events and corresponding interfaces in JB OT S IM.}}{51}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }

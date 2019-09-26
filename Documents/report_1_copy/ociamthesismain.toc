@@ -163,10 +163,26 @@
 \contentsline {section}{\numberline {4.5}Bounding the Number of Messages}{40}% 
 \contentsline {chapter}{\numberline {5}Implementation}{44}% 
 \contentsline {section}{\numberline {5.1}JBotSim: a Tool for Fast Prototyping of Distributed Algorithms in Dynamic Networks}{44}% 
-\contentsline {subsection}{\numberline {5.1.1}What's JBotSim ?}{44}% 
-\contentsline {subsection}{\numberline {5.1.2}Practical Aspects}{45}% 
+\contentsline {paragraph}{What's JBotSim ?}{44}% 
+\contentsline {paragraph}{}{44}% 
 \contentsline {paragraph}{}{45}% 
-\contentsline {subsubsection}{\numberline {5.1.2.1}Fetching JBOTSIM}{45}% 
-\contentsline {chapter}{\numberline {6}Leader Stability}{46}% 
-\contentsline {chapter}{\numberline {7}Conclusion}{50}% 
-\contentsline {chapter}{Bibliography}{51}% 
+\contentsline {paragraph}{Practical Aspects}{45}% 
+\contentsline {subparagraph}{Fetching JBOTSIM}{45}% 
+\contentsline {subparagraph}{First steps}{45}% 
+\contentsline {subparagraph}{}{46}% 
+\contentsline {subparagraph}{Sources of documentation}{46}% 
+\contentsline {subparagraph}{}{46}% 
+\contentsline {paragraph}{Features and Architecture}{46}% 
+\contentsline {subparagraph}{Basic features of nodes and links}{47}% 
+\contentsline {subparagraph}{}{47}% 
+\contentsline {subparagraph}{}{47}% 
+\contentsline {subparagraph}{}{48}% 
+\contentsline {subparagraph}{Distributed vs. centralized algorithms}{48}% 
+\contentsline {subparagraph}{}{48}% 
+\contentsline {subparagraph}{Distributed algorithm}{48}% 
+\contentsline {subparagraph}{Centralized algorithms}{50}% 
+\contentsline {subparagraph}{Architecture of the event system}{50}% 
+\contentsline {subparagraph}{Single threading: why and how?}{51}% 
+\contentsline {chapter}{\numberline {6}Leader Stability}{53}% 
+\contentsline {chapter}{\numberline {7}Conclusion}{57}% 
+\contentsline {chapter}{Bibliography}{58}% 
