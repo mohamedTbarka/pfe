@@ -152,7 +152,7 @@
               <div class="col-md-12 px-0">
                   <div class="row  pt-5 pb-3">
                       {%for service in  services%}
-
+                      {%if not service.principal%}
                         <div class="col md-2">
                             <a class="text-dark" href="{{service.url}}"><div class="service_icon">
                                 <img src="media/{{service.icon}}" alt="">
@@ -160,7 +160,7 @@
                             <h3 class="text-uppercase t22_65">{{service.title}}</h3></a>
                         </div>
 
-
+                        {%endif%}
                         {% endfor %}
                   </div>
               </div>
