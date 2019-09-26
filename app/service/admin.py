@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from service.forms import InfoForm, ServiceForm
+from service.forms import InfoForm, ServiceForm, SliderForm
 from . import models
 
 
@@ -57,9 +57,26 @@ class InfoAdmin(admin.ModelAdmin):
     list_editable = ('order',)
 
 
+class SliderAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+        'url',
+        'url_text',
+        'created',
+        'updated',
+    )
+    list_filter = (
+        'created',
+        'updated',
+    )
+    form = SliderForm
+
+
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
 
 
 _register(models.Service, ServiceAdmin)
 _register(models.Info, InfoAdmin)
+_register(models.Slider, SliderAdmin)
