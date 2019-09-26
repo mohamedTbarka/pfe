@@ -31,6 +31,11 @@ class Promotion(BaseModel):
     def __str__(self):
         return self.title
 
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
+
 
 class Event(BaseModel):
     title = models.CharField(max_length=100, )
@@ -39,6 +44,11 @@ class Event(BaseModel):
     end_date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/event/img")
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
+
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
 
     def get_badge(self):
         if timezone.now() < self.start_date:
@@ -62,6 +72,11 @@ class Compagne(BaseModel):
 
     def __str__(self):
         return self.title
+
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
 
 
 class Display(BaseModel):
