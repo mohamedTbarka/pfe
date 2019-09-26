@@ -32,13 +32,15 @@
                 {%for nouveaux in nouveautes%}
                
                 <div class="col-md-3 pb-3">
-                    <div class="card" ><a href="../promotion/{{nouveaux}}">
+                    <div class="card" ><a href="../{{nouveaux.type}}/{{nouveaux.pk}}">
                         <div class="border_img">
-                                <img src="../../media/{{nouveaux.image}}" class="card-img-top" alt="..." >
+                                <img src="{{nouveaux.image}}" class="card-img-top" alt="..." >
                                 
                         </div>
                         <h5  class="  px-2 py-1 t15 badges2 text-white bg_badges "> {{nouveaux.type}}</h5>
-                        <h5  class="  px-2 py-1 t15 badges text-white bg_badges "> {{nouveaux.get_badge}}</h5>
+                        {%ifequal nouveaux.type 'evenement'%}
+                        <h5  class="  px-2 py-1 t15 badges text-white bg_badges "> {{nouveaux.badge}}</h5>
+                        {%endifequal%}
                         <div class="card-body bg_green ">
                           <h5 class="card-title text-uppercase text-white mb-0 t18  ">{{nouveaux.title}}</h5>
                           <p id="card_date" class="card-text text-white t15 ">{{nouveaux.date|date:''}} </p>

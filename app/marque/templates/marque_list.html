@@ -74,32 +74,9 @@
                     <a href="" class="text-uppercase text-dark px-1 t20">A - Z</a>
                 </div>
                 <div class="col-md-10 alph px-0">
-                    <a href="" class="text-uppercase text-dark px-1 t20">A</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">B</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">C</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">D</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">e</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">f</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">g</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">h</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">i</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">j</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">k</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">l</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">m</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">n</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">o</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">p</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">q</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">r</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">s</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">t</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">u</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">v</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">w</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">x</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">y</a>
-                    <a href="" class="text-uppercase text-dark px-1 t20">z</a>
+                    {%for  alpha in alphabet%}
+                    <a href="" class="text-uppercase text-dark px-1 t20" {%if not alpha.value%} disabled {%endif%}>{{alpha.key}}</a>
+                    {%endfor%}
                 </div>
             </div>
             </div>
