@@ -75,20 +75,21 @@ class NouveauteList(generic.TemplateView):
     Nouveautes List page
     """
     template_name = "nouveautes_list.html"
+
     def get_context_data(self, **kwargs):
         events = Event.objects.filter(Q(start_date__gte=timezone.now()) | Q(end_date__gte=timezone.now()))
         compagnes = Compagne.objects.filter(date__gte=timezone.now())
         promotions = Promotion.objects.filter(date__gte=timezone.now())
         nouveautes = []
         for event in events:
-            nouveautes.append({"title": event.title, "date": event.start_date, "end_date": event.end_date,
-                               "image": event.get_image_url(), "type": "Evenement", "badge": event.get_badge()})
+            nouveautes.append(
+                {"pk": event.pk, "title": event.title, "date": event.start_date, "end_date": event.end_date,
+                 "image": event.get_image_url(), "type": "evenement", "badge": event.get_badge()})
         for compagne in compagnes:
-            nouveautes.append({"title": compagne.title, "date": compagne.date, "end_date": None,
-                               "image": compagne.get_image_url(), "type": "Compagne", "badge": None})
+            nouveautes.append({"pk": compagne.pk, "title": compagne.title, "date": compagne.date, "end_date": None,
+                               "image": compagne.get_image_url(), "type": "compagne", "badge": None})
         for promotion in promotions:
-            nouveautes.append({"title": promotion.title, "date": promotion.date, "end_date": None,
-                               "image": promotion.get_image_url(), "type": "Compagne", "badge": None})
-
-        context = {"nouveautes": events, }
+            nouveautes.append({"pk": promotion.pk, "title": promotion.title, "date": promotion.date, "end_date": None,
+                               "image": promotion.get_image_url(), "type": "promotion", "badge": None})
+        context = {"nouveautes": nouveautes, }
         return context
