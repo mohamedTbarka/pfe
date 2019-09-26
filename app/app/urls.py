@@ -23,7 +23,7 @@ from service.views import Home
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('', Home.as_view()),
+                  path('', Home.as_view(),name="home"),
                   path('', include('marque.urls')),
                   path('', include('nouveaute.urls')),
                   path('', include('service.urls')),
