@@ -6,7 +6,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from django.views import generic
 
-from marque.models import Marque
+from marque.models import Marque, Category
 
 
 class MarqueListView(generic.ListView):
@@ -25,12 +25,15 @@ class MarqueListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         context['alphabet'] = alphabet
+        context['categories'] = Category.objects.all()
         return context
 
     def get_queryset(self):
         alpha = self.request.GET.get('alpha', '')
         cat = self.request.GET.get('cat', '')
-        new_context = Marque.objects.filter(name__istartswith=alpha, )  # categories__name=cat)
+        new_context = Marque.objects.filter(name__istartswith=alpha)
+        if cat:
+            new_context = new_context.filter(categories=cat)
         return new_context
 
 
