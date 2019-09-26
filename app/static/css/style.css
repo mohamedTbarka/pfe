@@ -525,26 +525,17 @@ float: right;
     float: left;
     text-align: center;
 }
-.carousel_widget .item {
-    color: #fff;
-}
-#widget .content .item h1 {
-    font-size: 15px;
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.carousel_widget .owl-dots {
-    text-align: center;
-    position: absolute;
-    left: 0;
-    bottom: -25px;
-    width: 100%;
-}
 
+.carousel-control-prev {
+    /* left: 30px!important; */
+}
+#carouselContent{
 
+}
+#carousel-item{
+    margin-top: -100px;
+    color: white!important;
+}
 
 
 
