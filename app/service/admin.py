@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from service.forms import InfoForm, ServiceForm, SliderForm
+from service.forms import InfoForm, ServiceForm, SliderForm, DiscoverForm
 from . import models
 
 
@@ -73,6 +73,15 @@ class SliderAdmin(admin.ModelAdmin):
     form = SliderForm
 
 
+class DiscoverAdmin(admin.ModelAdmin):
+    list_display = ('id', 'title', 'created', 'updated',)
+    list_filter = (
+        'created',
+        'updated',
+    )
+    form = DiscoverForm
+
+
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
 
@@ -80,3 +89,4 @@ def _register(model, admin_class):
 _register(models.Service, ServiceAdmin)
 _register(models.Info, InfoAdmin)
 _register(models.Slider, SliderAdmin)
+_register(models.Discover, DiscoverAdmin)

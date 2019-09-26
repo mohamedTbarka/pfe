@@ -122,3 +122,9 @@ class Slider(BaseModel):
         if self.image:
             return "{0}{1}".format(settings.MEDIA_URL, self.image)
         return ""
+
+
+class Discover(BaseModel):
+    image = models.ImageField(upload_to="./uploads/discover/img")
+    title = models.CharField(max_length=100, )
+    content = models.TextField(null=True, blank=True)

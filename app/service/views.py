@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.views import generic
 
 from marque.models import Group
-from service.models import Service, Info, Slider
+from service.models import Service, Info, Slider, Discover
 
 
 class Home(generic.TemplateView):
@@ -25,3 +25,17 @@ class Home(generic.TemplateView):
 
 class ServiceDetailView(generic.DetailView):
     model = Service
+
+
+class DiscoverListView(generic.ListView):
+    """
+    Discover list page
+    """
+    model = Discover
+    paginate_by = 50  # if pagination is desired
+    template_name = "decouvrir.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
