@@ -276,7 +276,7 @@
     </div>
 
   </body>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script>
     $("#search").val();
     console.log($("#search").val());
@@ -299,17 +299,26 @@
     });
 });
   </script>
-    <script>
-        $(function() {
-          var $el = $('#paral2');
-          $(window).on('scroll', function () {
-              var scroll = $(document).scrollTop();
-              $el.css({
-                   'background-position':'50%'+(.4*scroll)+'px'
-              });
-          });
-      });
-        </script>
+  <script>
+    $(function() {
+      var $el = $('#paral2');
+        $(window).on('scroll', function () {
+            var scroll = $(document).scrollTop();
+            $el.css({
+                  'background-position':'50%'+(.4*scroll)+'px'
+            });
+        });
+    });
+  </script>
+
+  <script>
+  $('#widget').click(function() {
+    $(this).toggleClass('widgethide');
+});
+  </script>
+
+
+
 <!--    
     <script>
       $(document).ready(function(){

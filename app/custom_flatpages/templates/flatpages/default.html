@@ -1,19 +1,56 @@
 {% load staticfiles %}
+{% load static %}
 {% block content %}
 
-<img src="/media/{{ flatpage.image_principale }}"/><br/>
-{{ flatpage.titre_principale }}<br/>
-{{ flatpage.titre_description}}<br/>
-{{ flatpage.description|striptags|safe}}<br/>
-<img src="/media/{{ flatpage.image_description }}"/><br/>
+<div class="container-fluid">
+        <div style="background-image:  url('{{preference.get_background_image}}');" class="row bg_simple">
+            <div class="col-md-12">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">page simple</h4>
+            </div>
+            
+        </div>
+    </div>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-white pl-0">
+                      <li class="breadcrumb-item active" aria-current="page">Home</li>
+                      <li class="breadcrumb-item active" aria-current="page">{{flatpages.titre}}</li>
+                    </ol>
+                  </nav>
+            </div>
+            <div class="col-md-12">
+                <h5 class="t22 ">{{flatpages.titre}}</h5>
+                <p class="t15 py-3">{{flat_pages.description}}
+                </p>
+                
+            </div>
+            
+        </div>
+        <div style=" background-image:  url({% static 'resources/newsletter.png'%});" class="row bg_newsletter ">
+            <div class="col-md-12 pb-0  pt-5">
+                <h1 class="text-white text-uppercase text-center t50">newsletter</h1>
+             </div>
+             <div class="col-md-6 offset-md-3">
+                <p class="text-white text-uppercase text-center t22">Restez à l’ecoute ! <br><span class="text-lowercase">Inscrivez-vous 
+                    à notre newsletter pour ne rien rater </span></p>
+             </div>
+             <div class="col-ms-6 offset-md-4 mb-3 ">
+                    <div class="input-group  search_input ">
+                        
+                        <input class=" bg-white form-control  border-right-0 form-control-sm  text-uppercase text-white border-dark newsletter btn_contactUs " type="search" placeholder="Adresse email" id="example-search-input">
+                        <span class="input-group-prepend  ">
+                            <div class=" bg-white input-group-text  border-left-0 pb-0 pt-0 text-dark border-dark btn_contactUs t15_65">ok</div>
+                        </span>
+                    </div>
+                </div>
+                    
+                 
 
+            </div>
+        </div>
+    </div>
 
-
-{% for element_page  in flatpage.flat_page.all %}
-{{element_page.titre}}<br/>
-{{element_page.contenu|striptags|safe}}<br/>
-
-<img src="/media/{{element_page.image}}"/><br/><br/><br/>
-{% endfor %}
 
 {% endblock %}

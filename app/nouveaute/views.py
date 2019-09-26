@@ -74,7 +74,7 @@ class NouveauteList(generic.TemplateView):
     """
     Nouveautes List page
     """
-
+    template_name = "nouveautes_list.html"
     def get_context_data(self, **kwargs):
         events = Event.objects.all()
         context = {"events": events, }
