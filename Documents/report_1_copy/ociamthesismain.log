@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 10:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,23 +528,23 @@ LaTeX Warning: Command \textquoteright invalid in math mode on input line 41.
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 43.
 
-[17] [18] [19] [20] [21] [22]
-<test_1.png, id=120, 977.6525pt x 603.25375pt>
+[17] [18] [19] [20] [21] [22] [23]
+<test_1.png, id=123, 977.6525pt x 603.25375pt>
 File: test_1.png Graphic file (type png)
 <use test_1.png>
-Package pdftex.def Info: test_1.png  used on input line 169.
+Package pdftex.def Info: test_1.png  used on input line 171.
 (pdftex.def)             Requested size: 650.43pt x 401.352pt.
- [23 <./test_1.png>])
+ [24 <./test_1.png>])
 \openout2 = `correctness.aux'.
 
  (./correctness.tex
 Chapter 4.
-<fig_1.png, id=125, 743.02594pt x 147.55125pt>
+<fig_1.png, id=128, 743.02594pt x 147.55125pt>
 File: fig_1.png Graphic file (type png)
 <use fig_1.png>
 Package pdftex.def Info: fig_1.png  used on input line 9.
 (pdftex.def)             Requested size: 433.62pt x 86.11111pt.
-[24
+[25
 
 
 
@@ -556,8 +556,8 @@ Overfull \hbox (1.73473pt too wide) in paragraph at lines 15--16
 s v from both its Nu and formingu
  []
 
-[25 <./fig_1.png (PNG copy)>] [26] [27] [28] [29] [30] [31] [32] [33] [34]
-[35] [36] [37] [38] [39] [40]) [41] [42] [43] [44]
+[26 <./fig_1.png (PNG copy)>] [27] [28] [29] [30] [31] [32] [33] [34] [35]
+[36] [37] [38] [39] [40] [41]) [42] [43] [44] [45]
 \openout2 = `leader_stability.aux'.
 
  (./leader_stability.tex
@@ -702,16 +702,16 @@ l.4 ...nk. Induction: d > 0. Consider a node a ∈
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-) [45
+) [46
 
 
 
-] [46] [47] [48]
+] [47] [48] [49]
 \openout2 = `implementation.aux'.
 
  (./implementation.tex
 Chapter 6.
-[49
+[50
 
 
 
@@ -722,14 +722,14 @@ File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
- [50]
-[51]
-<fig_2.png, id=217, 352.31625pt x 107.65219pt>
+ [51]
+[52]
+<fig_2.png, id=221, 352.31625pt x 107.65219pt>
 File: fig_2.png Graphic file (type png)
 <use fig_2.png>
 Package pdftex.def Info: fig_2.png  used on input line 34.
 (pdftex.def)             Requested size: 303.53267pt x 92.74661pt.
-<fig_3.png, id=218, 291.33844pt x 204.01219pt>
+<fig_3.png, id=222, 291.33844pt x 204.01219pt>
 File: fig_3.png Graphic file (type png)
 <use fig_3.png>
 Package pdftex.def Info: fig_3.png  used on input line 42.
@@ -738,26 +738,26 @@ Package pdftex.def Info: fig_3.png  used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[52 <./fig_2.png (PNG copy)>] [53 <./fig_3.png (PNG copy)>] [54] [55]
-<fig_4.png, id=232, 688.07062pt x 190.46156pt>
+[53 <./fig_2.png (PNG copy)>] [54 <./fig_3.png (PNG copy)>] [55] [56]
+<fig_4.png, id=235, 688.07062pt x 190.46156pt>
 File: fig_4.png Graphic file (type png)
 <use fig_4.png>
 Package pdftex.def Info: fig_4.png  used on input line 78.
 (pdftex.def)             Requested size: 433.62pt x 120.02917pt.
- [56 <./fig_4.png (PNG copy)>]
-<fig_5.png, id=236, 455.45157pt x 179.92218pt>
+ [57 <./fig_4.png (PNG copy)>]
+<fig_5.png, id=239, 455.45157pt x 179.92218pt>
 File: fig_5.png Graphic file (type png)
 <use fig_5.png>
 Package pdftex.def Info: fig_5.png  used on input line 118.
 (pdftex.def)             Requested size: 303.53267pt x 119.9103pt.
- [57] [58 <./fig_5.png (PNG copy)>]
-<fig_6.png, id=244, 464.4853pt x 412.54124pt>
+ [58] [59 <./fig_5.png (PNG copy)>]
+<fig_6.png, id=247, 464.4853pt x 412.54124pt>
 File: fig_6.png Graphic file (type png)
 <use fig_6.png>
 Package pdftex.def Info: fig_6.png  used on input line 129.
 (pdftex.def)             Requested size: 303.53267pt x 269.59645pt.
- [59 <./fig_6.png (PNG copy)>] [60] [61]
-<fig_7.png, id=254, 648.17157pt x 284.56313pt>
+ [60 <./fig_6.png (PNG copy)>] [61] [62]
+<fig_7.png, id=257, 648.17157pt x 284.56313pt>
 File: fig_7.png Graphic file (type png)
 <use fig_7.png>
 Package pdftex.def Info: fig_7.png  used on input line 159.
@@ -767,10 +767,10 @@ Package pdftex.def Info: fig_7.png  used on input line 159.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `26' on page 62 undefined on input line 167.
+LaTeX Warning: Citation `26' on page 63 undefined on input line 167.
 
-[62] [63 <./fig_7.png (PNG copy)>]
-<performance_test.png, id=261, 1157.32375pt x 475.7775pt>
+[63] [64 <./fig_7.png (PNG copy)>]
+<performance_test.png, id=265, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
 Package pdftex.def Info: performance_test.png  used on input line 213.
@@ -780,12 +780,12 @@ Overfull \hbox (29.3013pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
-) [64 <./performance_test.png>]
+) [65 <./performance_test.png>]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 7.
-) [65
+) [66
 
 
 
@@ -793,7 +793,7 @@ Chapter 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [66
+) [67
 
 
 ] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
@@ -829,10 +829,10 @@ e/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share
 /texmf/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on ociamthesismain.pdf (75 pages, 1729957 bytes).
+Output written on ociamthesismain.pdf (76 pages, 1732349 bytes).
 PDF statistics:
- 335 PDF objects out of 1000 (max. 8388607)
- 225 compressed objects within 3 object streams
+ 338 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -61,149 +61,149 @@
 \contentsline {section}{\numberline {3.6}Sample execution}{19}% 
 \contentsline {paragraph}{}{21}% 
 \contentsline {paragraph}{}{21}% 
-\contentsline {chapter}{\numberline {4}Correctness}{24}% 
-\contentsline {paragraph}{}{24}% 
-\contentsline {paragraph}{}{24}% 
-\contentsline {paragraph}{}{24}% 
-\contentsline {section}{\numberline {4.1}Channels and Neighbors}{25}% 
+\contentsline {chapter}{\numberline {4}Correctness}{25}% 
 \contentsline {paragraph}{}{25}% 
 \contentsline {paragraph}{}{25}% 
-\contentsline {paragraph}{Lemma 1}{25}% 
-\contentsline {subparagraph}{Proof}{25}% 
-\contentsline {subparagraph}{}{26}% 
-\contentsline {section}{\numberline {4.2}Height Tokens and Their Properties}{26}% 
+\contentsline {paragraph}{}{25}% 
+\contentsline {section}{\numberline {4.1}Channels and Neighbors}{26}% 
 \contentsline {paragraph}{}{26}% 
 \contentsline {paragraph}{}{26}% 
-\contentsline {paragraph}{Property A}{26}% 
+\contentsline {paragraph}{Lemma 1}{26}% 
 \contentsline {subparagraph}{Proof}{26}% 
-\contentsline {subparagraph}{}{26}% 
 \contentsline {subparagraph}{}{27}% 
-\contentsline {subparagraph}{}{27}% 
-\contentsline {subparagraph}{}{27}% 
+\contentsline {section}{\numberline {4.2}Height Tokens and Their Properties}{27}% 
 \contentsline {paragraph}{}{27}% 
-\contentsline {paragraph}{Property B:}{27}% 
-\contentsline {paragraph}{Proof}{28}% 
+\contentsline {paragraph}{}{27}% 
+\contentsline {paragraph}{Property A}{27}% 
+\contentsline {subparagraph}{Proof}{27}% 
+\contentsline {subparagraph}{}{27}% 
 \contentsline {subparagraph}{}{28}% 
 \contentsline {subparagraph}{}{28}% 
 \contentsline {subparagraph}{}{28}% 
-\contentsline {subparagraph}{}{28}% 
-\contentsline {subparagraph}{}{28}% 
-\contentsline {subparagraph}{}{28}% 
-\contentsline {subparagraph}{}{28}% 
-\contentsline {subparagraph}{}{28}% 
+\contentsline {paragraph}{}{28}% 
+\contentsline {paragraph}{Property B:}{28}% 
+\contentsline {paragraph}{Proof}{29}% 
 \contentsline {subparagraph}{}{29}% 
 \contentsline {subparagraph}{}{29}% 
 \contentsline {subparagraph}{}{29}% 
 \contentsline {subparagraph}{}{29}% 
 \contentsline {subparagraph}{}{29}% 
 \contentsline {subparagraph}{}{29}% 
-\contentsline {section}{\numberline {4.3}Bounding the Number of Elections}{29}% 
-\contentsline {paragraph}{}{29}% 
+\contentsline {subparagraph}{}{29}% 
+\contentsline {subparagraph}{}{29}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {subparagraph}{}{30}% 
+\contentsline {section}{\numberline {4.3}Bounding the Number of Elections}{30}% 
 \contentsline {paragraph}{}{30}% 
-\contentsline {paragraph}{Porperty C:}{30}% 
-\contentsline {subparagraph}{Poof}{30}% 
-\contentsline {subparagraph}{}{30}% 
-\contentsline {paragraph}{Property D:}{30}% 
-\contentsline {subparagraph}{Proof:}{30}% 
-\contentsline {subparagraph}{}{30}% 
-\contentsline {subparagraph}{}{30}% 
+\contentsline {paragraph}{}{31}% 
+\contentsline {paragraph}{Porperty C:}{31}% 
+\contentsline {subparagraph}{Poof}{31}% 
+\contentsline {subparagraph}{}{31}% 
+\contentsline {paragraph}{Property D:}{31}% 
+\contentsline {subparagraph}{Proof:}{31}% 
 \contentsline {subparagraph}{}{31}% 
 \contentsline {subparagraph}{}{31}% 
-\contentsline {subparagraph}{}{31}% 
-\contentsline {subparagraph}{}{31}% 
-\contentsline {subparagraph}{}{31}% 
-\contentsline {paragraph}{Lemma 2}{31}% 
-\contentsline {subparagraph}{Proof}{32}% 
 \contentsline {subparagraph}{}{32}% 
 \contentsline {subparagraph}{}{32}% 
 \contentsline {subparagraph}{}{32}% 
 \contentsline {subparagraph}{}{32}% 
 \contentsline {subparagraph}{}{32}% 
-\contentsline {paragraph}{Lemma 3}{32}% 
+\contentsline {paragraph}{Lemma 2}{32}% 
 \contentsline {subparagraph}{Proof}{33}% 
 \contentsline {subparagraph}{}{33}% 
 \contentsline {subparagraph}{}{33}% 
 \contentsline {subparagraph}{}{33}% 
-\contentsline {section}{\numberline {4.4}Bounding the Number of New Reference Levels}{34}% 
-\contentsline {paragraph}{}{34}% 
-\contentsline {paragraph}{Property E:}{34}% 
+\contentsline {subparagraph}{}{33}% 
+\contentsline {subparagraph}{}{33}% 
+\contentsline {paragraph}{Lemma 3}{33}% 
 \contentsline {subparagraph}{Proof}{34}% 
 \contentsline {subparagraph}{}{34}% 
 \contentsline {subparagraph}{}{34}% 
 \contentsline {subparagraph}{}{34}% 
-\contentsline {subparagraph}{}{35}% 
-\contentsline {subparagraph}{}{35}% 
-\contentsline {subparagraph}{}{35}% 
+\contentsline {section}{\numberline {4.4}Bounding the Number of New Reference Levels}{35}% 
 \contentsline {paragraph}{}{35}% 
-\contentsline {paragraph}{}{35}% 
-\contentsline {paragraph}{Property F:}{35}% 
+\contentsline {paragraph}{Property E:}{35}% 
 \contentsline {subparagraph}{Proof}{35}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {subparagraph}{}{35}% 
+\contentsline {subparagraph}{}{35}% 
 \contentsline {subparagraph}{}{36}% 
 \contentsline {subparagraph}{}{36}% 
 \contentsline {subparagraph}{}{36}% 
-\contentsline {subparagraph}{}{36}% 
-\contentsline {subparagraph}{}{36}% 
-\contentsline {paragraph}{Property G:}{36}% 
+\contentsline {paragraph}{}{36}% 
+\contentsline {paragraph}{}{36}% 
+\contentsline {paragraph}{Property F:}{36}% 
 \contentsline {subparagraph}{Proof}{36}% 
 \contentsline {subparagraph}{}{37}% 
 \contentsline {subparagraph}{}{37}% 
 \contentsline {subparagraph}{}{37}% 
 \contentsline {subparagraph}{}{37}% 
 \contentsline {subparagraph}{}{37}% 
-\contentsline {paragraph}{Property H:}{37}% 
-\contentsline {subparagraph}{Proof}{38}% 
+\contentsline {paragraph}{Property G:}{37}% 
+\contentsline {subparagraph}{Proof}{37}% 
 \contentsline {subparagraph}{}{38}% 
 \contentsline {subparagraph}{}{38}% 
 \contentsline {subparagraph}{}{38}% 
 \contentsline {subparagraph}{}{38}% 
 \contentsline {subparagraph}{}{38}% 
-\contentsline {subparagraph}{}{38}% 
-\contentsline {subparagraph}{}{38}% 
+\contentsline {paragraph}{Property H:}{38}% 
+\contentsline {subparagraph}{Proof}{39}% 
 \contentsline {subparagraph}{}{39}% 
-\contentsline {paragraph}{Lemma 4}{40}% 
-\contentsline {subparagraph}{Proof}{40}% 
-\contentsline {section}{\numberline {4.5}Bounding the Number of Messages}{41}% 
-\contentsline {chapter}{\numberline {5}Leader Stability}{45}% 
-\contentsline {chapter}{\numberline {6}Implementation}{49}% 
-\contentsline {section}{\numberline {6.1}JBotSim: a Tool for Fast Prototyping of Distributed Algorithms in Dynamic Networks}{49}% 
-\contentsline {paragraph}{What's JBotSim ?}{49}% 
-\contentsline {paragraph}{}{49}% 
+\contentsline {subparagraph}{}{39}% 
+\contentsline {subparagraph}{}{39}% 
+\contentsline {subparagraph}{}{39}% 
+\contentsline {subparagraph}{}{39}% 
+\contentsline {subparagraph}{}{39}% 
+\contentsline {subparagraph}{}{39}% 
+\contentsline {subparagraph}{}{40}% 
+\contentsline {paragraph}{Lemma 4}{41}% 
+\contentsline {subparagraph}{Proof}{41}% 
+\contentsline {section}{\numberline {4.5}Bounding the Number of Messages}{42}% 
+\contentsline {chapter}{\numberline {5}Leader Stability}{46}% 
+\contentsline {chapter}{\numberline {6}Implementation}{50}% 
+\contentsline {section}{\numberline {6.1}JBotSim: a Tool for Fast Prototyping of Distributed Algorithms in Dynamic Networks}{50}% 
+\contentsline {paragraph}{What's JBotSim ?}{50}% 
 \contentsline {paragraph}{}{50}% 
-\contentsline {paragraph}{Practical Aspects}{50}% 
-\contentsline {subparagraph}{Fetching JBOTSIM}{50}% 
-\contentsline {subparagraph}{First steps}{50}% 
-\contentsline {subparagraph}{}{51}% 
-\contentsline {subparagraph}{Sources of documentation}{51}% 
-\contentsline {subparagraph}{}{51}% 
-\contentsline {paragraph}{Features and Architecture}{51}% 
-\contentsline {subparagraph}{Basic features of nodes and links}{52}% 
+\contentsline {paragraph}{}{51}% 
+\contentsline {paragraph}{Practical Aspects}{51}% 
+\contentsline {subparagraph}{Fetching JBOTSIM}{51}% 
+\contentsline {subparagraph}{First steps}{51}% 
 \contentsline {subparagraph}{}{52}% 
+\contentsline {subparagraph}{Sources of documentation}{52}% 
 \contentsline {subparagraph}{}{52}% 
+\contentsline {paragraph}{Features and Architecture}{52}% 
+\contentsline {subparagraph}{Basic features of nodes and links}{53}% 
 \contentsline {subparagraph}{}{53}% 
-\contentsline {subparagraph}{Distributed vs. centralized algorithms}{53}% 
 \contentsline {subparagraph}{}{53}% 
-\contentsline {subparagraph}{Distributed algorithm}{53}% 
-\contentsline {subparagraph}{Centralized algorithms}{55}% 
-\contentsline {subparagraph}{Architecture of the event system}{55}% 
-\contentsline {subparagraph}{Single threading: why and how?}{56}% 
-\contentsline {subparagraph}{}{57}% 
-\contentsline {subparagraph}{}{57}% 
-\contentsline {subparagraph}{Interactivity}{58}% 
+\contentsline {subparagraph}{}{54}% 
+\contentsline {subparagraph}{Distributed vs. centralized algorithms}{54}% 
+\contentsline {subparagraph}{}{54}% 
+\contentsline {subparagraph}{Distributed algorithm}{54}% 
+\contentsline {subparagraph}{Centralized algorithms}{56}% 
+\contentsline {subparagraph}{Architecture of the event system}{56}% 
+\contentsline {subparagraph}{Single threading: why and how?}{57}% 
 \contentsline {subparagraph}{}{58}% 
 \contentsline {subparagraph}{}{58}% 
+\contentsline {subparagraph}{Interactivity}{59}% 
 \contentsline {subparagraph}{}{59}% 
-\contentsline {paragraph}{A zoom on selected features}{59}% 
-\contentsline {subparagraph}{Exchanging messages}{59}% 
+\contentsline {subparagraph}{}{59}% 
 \contentsline {subparagraph}{}{60}% 
-\contentsline {subparagraph}{Working at the graph level}{60}% 
-\contentsline {subparagraph}{}{60}% 
-\contentsline {subparagraph}{}{60}% 
-\contentsline {subparagraph}{Embedding JBOTSIM in a java applet}{61}% 
+\contentsline {paragraph}{A zoom on selected features}{60}% 
+\contentsline {subparagraph}{Exchanging messages}{60}% 
 \contentsline {subparagraph}{}{61}% 
-\contentsline {paragraph}{Concluding remarks}{62}% 
-\contentsline {paragraph}{}{62}% 
-\contentsline {paragraph}{}{62}% 
-\contentsline {paragraph}{}{62}% 
-\contentsline {section}{\numberline {6.2}Performance Analysis}{62}% 
-\contentsline {chapter}{\numberline {7}Conclusion}{65}% 
-\contentsline {chapter}{Bibliography}{66}% 
+\contentsline {subparagraph}{Working at the graph level}{61}% 
+\contentsline {subparagraph}{}{61}% 
+\contentsline {subparagraph}{}{61}% 
+\contentsline {subparagraph}{Embedding JBOTSIM in a java applet}{62}% 
+\contentsline {subparagraph}{}{62}% 
+\contentsline {paragraph}{Concluding remarks}{63}% 
+\contentsline {paragraph}{}{63}% 
+\contentsline {paragraph}{}{63}% 
+\contentsline {paragraph}{}{63}% 
+\contentsline {section}{\numberline {6.2}Performance Analysis}{63}% 
+\contentsline {chapter}{\numberline {7}Conclusion}{66}% 
+\contentsline {chapter}{Bibliography}{67}% 
