@@ -39,3 +39,4 @@ class MarqueListView(generic.ListView):
 
 class MarqueDetailView(generic.DetailView):
     model = Marque
+    template_name = "marque_details.html"

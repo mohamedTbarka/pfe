@@ -73,6 +73,9 @@
     font-size: 15px!important;
 }
 /* backgrounds */
+.bg_green_light{
+    background-color: #e6fff0;
+}
 .bg_green{
     background-color: #246630!important;
 }
@@ -539,6 +542,56 @@ float: right;
 
 
 
+
+
+
+
+
+
+
+
+
+/* Vertical  slider */
+.vertical .carousel-item-next.carousel-item-left,
+.vertical .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0)!important;
+            transform: translate3d(0, 0, 0)!important;
+}
+
+.vertical .carousel-item-next,
+.vertical .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0)!important;
+            transform: translate3d(0, 100% 0)!important;
+}
+
+.vertical .carousel-item-prev,
+.vertical .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0)!important;
+        transform: translate3d(0,-100%, 0)!important;
+}
+
+/* .number_indi ol {
+    position: absolute!important;
+    bottom: 0!important;
+    margin: 0!important;
+    left: 500px!important;
+    right: 0!important;
+    width: auto!important;
+
+}
+.number_indi li, .number_indi li.active {
+    float: left;
+    width: 33%;
+    height: 10px;
+    margin: 0;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+  } */
+  
+/* Vertical  slider ---- END*/
+
+
 /* Mobile responsive */
 #nav_mobile{
     display: none;
@@ -547,7 +600,7 @@ float: right;
     display: none;
 }
 
- 
+
 
 @media only screen and (max-width: 600px) {
     #nav1 {
@@ -555,6 +608,7 @@ float: right;
     }
     #nav_mobile{
         display: block;
+        
     }
     #logo{
         display: none;
@@ -574,5 +628,8 @@ float: right;
     }
     .extra{
         display: none;
+    }
+    .hide_mobile{
+        display: none!important;
     }
 }
