@@ -167,7 +167,7 @@
                       {%for service in  services%}
                       {%if not service.principal%}
                         <div class="col md-2 ">
-                            <a class="text-dark"  {%if service.url %} href="{{service.url}}" {% endif %}><div class="service_icon">
+                            <a class="text-dark"  {%if not service.url %} href="{{service.url}}" {% endif %}><div class="service_icon">
                                 <img src="media/{{service.icon}}" alt="">
                             </div>
                             <h3 class="text-uppercase t22_65 pt-4">{{service.title}}</h3></a>
