@@ -1,8 +1,15 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 
 from contact import views
 
+router = routers.DefaultRouter()
+
+"""Adding tokens"""
+router.register(r'subscribe', views.SubscribeAPIView)
+router.register(r'contact_us', views.ContactAPIView)
+
 urlpatterns = [
-    path('subscribe', views.SubscribeAPIView().as_view(), name='subscribe'),
+    path('', include(router.urls)),
 
 ]

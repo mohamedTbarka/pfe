@@ -10,7 +10,7 @@ class BaseModel(models.Model):
 
 
 class Contact(BaseModel):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100,)
     email = models.EmailField()
     object = models.CharField(max_length=150)
     content = models.TextField()
