@@ -31,12 +31,16 @@ class MarqueListView(generic.ListView):
     def get_queryset(self):
         alpha = self.request.GET.get('alpha', '')
         cat = self.request.GET.get('cat', '')
+        group = self.request.GET.get('group', '')
         new_context = Marque.objects.filter(name__istartswith=alpha)
         if cat:
             new_context = new_context.filter(categories=cat)
+        if group:
+            new_context = new_context.filter(group=group)
         return new_context
 
 
 class MarqueDetailView(generic.DetailView):
     model = Marque
     template_name = "marque_details.html"
+

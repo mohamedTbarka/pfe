@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_admin_generator',
     ###############
+    'haystack',
+    ###############
     'marque',
     'nouveaute',
     'service',
@@ -125,6 +127,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, '../static_root/')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/'),
 )
+
+# search
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+    },
+}
+
+# HAYSTACK_CONNECTIONS = {
+#               'default': {
+#                     'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
+#                     'URL': 'http://127.0.0.1:9200/',
+#                     'INDEX_NAME': 'haystack_books',
+#               },
+#     }
+#
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 try:
     from app.local_settings import *
