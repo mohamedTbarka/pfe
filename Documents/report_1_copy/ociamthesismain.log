@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -290,6 +290,64 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \zifour@ocount=\count101
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks22
+\ex@=\dimen106
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen107
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count102
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count103
+\leftroot@=\count104
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count105
+\DOTSCASE@=\count106
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box30
+\strutbox@=\box31
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count107
+\c@MaxMatrixCols=\count108
+\dotsspace@=\muskip10
+\c@parentequation=\count109
+\dspbrk@lvl=\count110
+\tag@help=\toks23
+\row@=\count111
+\column@=\count112
+\maxfields@=\count113
+\andhelp@=\toks24
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks25
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks26
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
@@ -299,24 +357,24 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count102
-\lst@gtempboxa=\box30
-\lst@token=\toks22
-\lst@length=\count103
-\lst@currlwidth=\dimen106
-\lst@column=\count104
-\lst@pos=\count105
-\lst@lostspace=\dimen107
-\lst@width=\dimen108
-\lst@newlines=\count106
-\lst@lineno=\count107
-\lst@maxwidth=\dimen109
+\lst@mode=\count114
+\lst@gtempboxa=\box32
+\lst@token=\toks27
+\lst@length=\count115
+\lst@currlwidth=\dimen115
+\lst@column=\count116
+\lst@pos=\count117
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count118
+\lst@lineno=\count119
+\lst@maxwidth=\dimen118
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count108
-\lst@skipnumbers=\count109
-\lst@framebox=\box31
+\c@lstnumber=\count120
+\lst@skipnumbers=\count121
+\lst@framebox=\box33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -332,38 +390,38 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 (./conclusions.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 66.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    ... okay on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen110
-\scratchbox=\box32
-\nofMPsegments=\count111
-\nofMParguments=\count112
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen111
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count122
+\scratchdimen=\dimen119
+\scratchbox=\box34
+\nofMPsegments=\count123
+\nofMParguments=\count124
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count125
+\MPscratchDim=\dimen120
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
+\everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -419,11 +477,11 @@ e
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@lstlisting=\count116
+\c@lstlisting=\count128
 <oxlogo.png, id=1, 1505.625pt x 602.25pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
-Package pdftex.def Info: oxlogo.png  used on input line 74.
+Package pdftex.def Info: oxlogo.png  used on input line 77.
 (pdftex.def)             Requested size: 91.04881pt x 36.4183pt.
  [1
 
@@ -528,11 +586,15 @@ LaTeX Warning: Command \textquoteright invalid in math mode on input line 41.
 
 LaTeX Warning: Command \textquoteright invalid in math mode on input line 43.
 
-[17] [18] [19] [20] [21] [22] [23]
+[17] [18] [19] [20] [21]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22] [23]
 <test_1.png, id=123, 977.6525pt x 603.25375pt>
 File: test_1.png Graphic file (type png)
 <use test_1.png>
-Package pdftex.def Info: test_1.png  used on input line 171.
+Package pdftex.def Info: test_1.png  used on input line 199.
 (pdftex.def)             Requested size: 650.43pt x 401.352pt.
  [24 <./test_1.png>])
 \openout2 = `correctness.aux'.
@@ -562,156 +624,16 @@ s v from both its Nu and formingu
 
  (./leader_stability.tex
 Chapter 5.
-
-! Package inputenc Error: Unicode character ≤ (U+2264)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 ...ter t has either $\tau$ $\geq$ t or lts ≤
-                                                   −te . Claim 1 follows f...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 ...t has either $\tau$ $\geq$ t or lts ≤ −
-                                                  te . Claim 1 follows from ...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character ≤ (U+2264)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3 ... (t, u), this common reflected RL has s ≤
-                                                   t. By Claim 1, s $\geq$ t...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...time t ' the connected component CC' is −
-                                                  → l-oriented. By definit...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ... is a DAG with the unique sink being l. −
-                                                  → −→ Thus every node...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...AG with the unique sink being l. −→ −
-                                                  → Thus every node in CC'...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...n CC' to l. Let CC be the result of re- −
-                                                  →' moving the directed e...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ... v} from CC . Let A be the set of nodes −
-                                                   → in CC that have a (di...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character − (U+2212)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...i.e., after the ChannelDown at time t), −
-                                                  → and let B be the set o...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! Package inputenc Error: Unicode character ∈ (U+2208)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...nk. Induction: d > 0. Consider a node a ∈
-                                                   A at distance d from l in...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-) [46
+[46
 
 
 
-] [47] [48] [49]
+] [47] [48]) [49] [50]
 \openout2 = `implementation.aux'.
 
  (./implementation.tex
 Chapter 6.
-[50
+[51
 
 
 
@@ -722,14 +644,14 @@ File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
- [51]
-[52]
-<fig_2.png, id=221, 352.31625pt x 107.65219pt>
+ [52]
+[53]
+<fig_2.png, id=224, 352.31625pt x 107.65219pt>
 File: fig_2.png Graphic file (type png)
 <use fig_2.png>
 Package pdftex.def Info: fig_2.png  used on input line 34.
 (pdftex.def)             Requested size: 303.53267pt x 92.74661pt.
-<fig_3.png, id=222, 291.33844pt x 204.01219pt>
+<fig_3.png, id=225, 291.33844pt x 204.01219pt>
 File: fig_3.png Graphic file (type png)
 <use fig_3.png>
 Package pdftex.def Info: fig_3.png  used on input line 42.
@@ -738,26 +660,26 @@ Package pdftex.def Info: fig_3.png  used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[53 <./fig_2.png (PNG copy)>] [54 <./fig_3.png (PNG copy)>] [55] [56]
-<fig_4.png, id=235, 688.07062pt x 190.46156pt>
+[54 <./fig_2.png (PNG copy)>] [55 <./fig_3.png (PNG copy)>] [56] [57]
+<fig_4.png, id=238, 688.07062pt x 190.46156pt>
 File: fig_4.png Graphic file (type png)
 <use fig_4.png>
 Package pdftex.def Info: fig_4.png  used on input line 78.
 (pdftex.def)             Requested size: 433.62pt x 120.02917pt.
- [57 <./fig_4.png (PNG copy)>]
-<fig_5.png, id=239, 455.45157pt x 179.92218pt>
+ [58 <./fig_4.png (PNG copy)>]
+<fig_5.png, id=243, 455.45157pt x 179.92218pt>
 File: fig_5.png Graphic file (type png)
 <use fig_5.png>
 Package pdftex.def Info: fig_5.png  used on input line 118.
 (pdftex.def)             Requested size: 303.53267pt x 119.9103pt.
- [58] [59 <./fig_5.png (PNG copy)>]
-<fig_6.png, id=247, 464.4853pt x 412.54124pt>
+ [59] [60 <./fig_5.png (PNG copy)>]
+<fig_6.png, id=250, 464.4853pt x 412.54124pt>
 File: fig_6.png Graphic file (type png)
 <use fig_6.png>
 Package pdftex.def Info: fig_6.png  used on input line 129.
 (pdftex.def)             Requested size: 303.53267pt x 269.59645pt.
- [60 <./fig_6.png (PNG copy)>] [61] [62]
-<fig_7.png, id=257, 648.17157pt x 284.56313pt>
+ [61 <./fig_6.png (PNG copy)>] [62] [63]
+<fig_7.png, id=260, 648.17157pt x 284.56313pt>
 File: fig_7.png Graphic file (type png)
 <use fig_7.png>
 Package pdftex.def Info: fig_7.png  used on input line 159.
@@ -767,10 +689,10 @@ Package pdftex.def Info: fig_7.png  used on input line 159.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation `26' on page 63 undefined on input line 167.
+LaTeX Warning: Citation `26' on page 64 undefined on input line 167.
 
-[63] [64 <./fig_7.png (PNG copy)>]
-<performance_test.png, id=265, 1157.32375pt x 475.7775pt>
+[64] [65 <./fig_7.png (PNG copy)>]
+<performance_test.png, id=268, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
 Package pdftex.def Info: performance_test.png  used on input line 213.
@@ -780,12 +702,12 @@ Overfull \hbox (29.3013pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
-) [65 <./performance_test.png>]
+) [66 <./performance_test.png>]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 7.
-) [66
+) [67
 
 
 
@@ -793,7 +715,7 @@ Chapter 7.
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [67
+) [68
 
 
 ] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
@@ -805,23 +727,23 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 5734 strings out of 492615
- 79167 string characters out of 6131390
- 348410 words of memory out of 5000000
- 9447 multiletter control sequences out of 15000+600000
- 17731 words of font info for 48 fonts, out of 8000000 for 9000
+ 6335 strings out of 492615
+ 85951 string characters out of 6131390
+ 358920 words of memory out of 5000000
+ 10030 multiletter control sequences out of 15000+600000
+ 20313 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,72p,4842b,1657s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,72p,3236b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
 share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/en
 c/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/sha
+1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1
 /public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
 x2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/shar
@@ -829,10 +751,10 @@ e/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/
 public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share
 /texmf/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on ociamthesismain.pdf (76 pages, 1732349 bytes).
+Output written on ociamthesismain.pdf (77 pages, 1739278 bytes).
 PDF statistics:
- 338 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 341 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

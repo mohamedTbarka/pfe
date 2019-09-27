@@ -148,19 +148,47 @@ Next, we provide an example which illustrates a particular algorithm execution. 
 	\caption{$ELECTSELF$}
 	\begin{algorithmic}
 		\State $height[u] := (0,0,0,0,-\mathcal{T}_u ,u,u)$
+		\State $SLP_u := (-1, -1)$
 	\end{algorithmic}
 \end{algorithm}
 
 \begin{algorithm}
-	\caption{$\mathtt{REFLECTREFLEVEL}$}
+	\caption{$REFLECTREFLEVEL$}
 	\begin{algorithmic}
 		\State $height := (\tau, oid, 1, 0, nlts_u ,lid_u ,u)$
+		\State $SLP_u := (-1, -1)$
+	\end{algorithmic}
+\end{algorithm}
+\begin{algorithm}[h!]
+	\caption{$PROPAGATELARGESTREFLEVEL$}
+	\begin{algorithmic}
+		\State $ (\tau , oid^{i}, r^{i}) := max\left\lbrace (\tau ^{k},oid^{k},r^{k}) \vert k\in N\right\rbrace  $
+		\State $ \delta ^{i} := min \left\lbrace \delta ^{k} \quad \vert \quad k \in N \quad and \quad (\tau ^{i} , oid^{i}, r^{i}) = (\tau ^{k},oid^{k},r^{k})\right\rbrace - 1 $
+		\State $SLP_i := (-1,-1)$
 	\end{algorithmic}
 \end{algorithm}
 \begin{algorithm}
-	\caption{$ELECTSELF$}
+	\caption{$STARTNEWREFLEVEL$}
 	\begin{algorithmic}
-		\State $height[u] := (0,0,0,0,-\mathcal{T}_u ,u,u)$
+		\State $ height[i] := (\tau ,oid,1,0,nlts^{i},lid^i,i) $
+		\State $SLP_i := (-1,-1)$
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+	\caption{$ADOPTLPIFPRIORITY$}
+	\begin{algorithmic}
+		\If{$nlts^{j}<nlts^{i} \Or nlts^{j}=nlts^{i} \And lid^{j} < lid^{i}$}
+		\State $ height[i] := (\tau ^{j} ,oid^{j},r^{j},\delta ^{j}+1,nlts^{j},lid^j,i) $
+		\If{$ (\delta _{v} \quad mod \quad D \neq 0) $}
+		\State $ SLP_u = (lid^j, min \left\lbrace k \quad \vert \quad k\in N_i \quad and \quad \delta_k = \delta_j \right\rbrace  )$
+		\ElsIf{$ \delta_v = 0 $}
+		\State $ SLP_u = (j, -1)$
+		\Else
+		\State $ SLP_u = (j, j)$
+		\EndIf
+		\EndIf
+		
 	\end{algorithmic}
 \end{algorithm}
 
