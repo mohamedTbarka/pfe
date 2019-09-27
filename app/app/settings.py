@@ -130,21 +130,20 @@ STATICFILES_DIRS = (
 
 # search
 
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+#     },
+# }
+
 HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
-    },
+   'default': {
+       'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+       'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+       #'EXCLUDED_INDEXES': ['content.search_indexes.ArticleIndex'],
+   },
 }
 
-# HAYSTACK_CONNECTIONS = {
-#               'default': {
-#                     'ENGINE': 'haystack.backends.elasticsearch_backend.ElasticsearchSearchEngine',
-#                     'URL': 'http://127.0.0.1:9200/',
-#                     'INDEX_NAME': 'haystack_books',
-#               },
-#     }
-#
-# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 try:
     from app.local_settings import *
