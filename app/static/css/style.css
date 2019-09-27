@@ -531,16 +531,23 @@ float: right;
     text-align: center;
 }
 
-.carousel-control-prev {
-    /* left: 30px!important; */
+.prv-icon {
+    left: 30px!important;
 }
-#carouselContent{
+.carousel_widget .item {
+    color: #fff;
+}
+.cr-item{
+    margin-top: -150px;
+    position: fixed!important;
+}
+.arow{
+    margin-top: 100px;
+}
+.toside{
+    left: 10px!important;
+}
 
-}
-#carousel-item{
-    margin-top: -100px;
-    color: white!important;
-}
 
 
 

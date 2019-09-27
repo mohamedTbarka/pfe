@@ -70,25 +70,26 @@
 
 <div id="widget" class="widgethide">
         <div id="wid" class="icon">
-            <img src="/static/assets/dist/images/info.png" alt="">
+            <img src="{% static 'resources/info.png'%}" alt="">
         </div>
         <div class="container">
-                <div id="carouselContent" class="carousel slide" data-ride="carousel">
+                <div id="carouselContent" class="carousel slide toside" data-ride="carousel">
                         <div class="carousel-inner" role="listbox">
-                            <div id="carousel-item" class="carousel-item active text-center p-4">
-                                 <p>lorem ipsum (imagine longer text)</p>
+                            <div id="carousel-item" class="carousel-item active text-center p-4 cr-item">
+                                    <h4 class="t15 text-white">Titre</h4>
+                                 <p class="text-white">lorem ipsum (imagine longer text)</p>
                             </div>
-                            <div class="carousel-item text-center p-4">
-                                
-                                <p>lorem ipsum (imagine longer text)</p>
+                            <div class="carousel-item text-center p-4 cr-item">
+                                <h4 class="t15 text-white">Titre</h4>
+                                <p class="text-white">lorem ipsum (imagine longer text)</p>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <a class="carousel-control-prev prv-icon" href="#carouselContent" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon arow" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="carousel-control-next-icon arow" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
@@ -120,7 +121,7 @@
                   </div>
               </div>
           </div>
-          <div class="col-md-12 text-right px-0"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les marques</button></div>
+         <div class="col-md-12 text-right px-0"><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
     </div>
 </div>
 
