@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 14:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -596,7 +596,11 @@ File: test_1.png Graphic file (type png)
 <use test_1.png>
 Package pdftex.def Info: test_1.png  used on input line 199.
 (pdftex.def)             Requested size: 650.43pt x 401.352pt.
- [24 <./test_1.png>])
+
+
+LaTeX Warning: Float too large for page by 21.23201pt on input line 202.
+
+[24 <./test_1.png>])
 \openout2 = `correctness.aux'.
 
  (./correctness.tex
@@ -619,21 +623,50 @@ s v from both its Nu and formingu
  []
 
 [26 <./fig_1.png (PNG copy)>] [27] [28] [29] [30] [31] [32] [33] [34] [35]
-[36] [37] [38] [39] [40] [41]) [42] [43] [44] [45]
+Overfull \hbox (1.9474pt too wide) in paragraph at lines 92--93
+ [] \T1/cmr/m/n/12 Sup-pose u changes its height through $\OML/cmm/m/it/12 PROP
+AGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
+ []
+
+
+Overfull \hbox (29.73946pt too wide) in paragraph at lines 96--97
+\T1/cmr/m/n/12 have taken on RL pre-fix (t, p) by ex-e-cut-ing ei-ther $\OML/cm
+m/m/it/12 PROPAGATELARGESTREFLEVEL$
+ []
+
+[36] [37]
+Overfull \hbox (19.65648pt too wide) in paragraph at lines 109--110
+\T1/cmr/m/n/12 RL (t, p, 1) is by $\OML/cmm/m/it/12 REFLECTREFLEVEL$ \T1/cmr/m/
+n/12 or $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 . 
+ []
+
+
+Overfull \hbox (4.683pt too wide) in paragraph at lines 111--112
+ [] \T1/cmr/m/n/12 Sup-pose u takes on RL (t, p, 1) due to $\OML/cmm/m/it/12 PR
+OPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
+ []
+
+[38] [39] [40]
+Overfull \hbox (15.04796pt too wide) in paragraph at lines 152--153
+\T1/cmr/m/n/12 than (t, p, 0) in Ci-1 . By the pre-con-di-tion for $\OML/cmm/m/
+it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 ,
+ []
+
+[41] [42] [43] [44] [45]) [46]
 \openout2 = `leader_stability.aux'.
 
  (./leader_stability.tex
 Chapter 5.
-[46
+[47
 
 
 
-] [47] [48]) [49] [50]
+] [48] [49]) [50] [51]
 \openout2 = `implementation.aux'.
 
  (./implementation.tex
 Chapter 6.
-[51
+[52
 
 
 
@@ -644,14 +677,14 @@ File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
- [52]
-[53]
-<fig_2.png, id=224, 352.31625pt x 107.65219pt>
+ [53]
+[54]
+<fig_2.png, id=227, 352.31625pt x 107.65219pt>
 File: fig_2.png Graphic file (type png)
 <use fig_2.png>
 Package pdftex.def Info: fig_2.png  used on input line 34.
 (pdftex.def)             Requested size: 303.53267pt x 92.74661pt.
-<fig_3.png, id=225, 291.33844pt x 204.01219pt>
+<fig_3.png, id=228, 291.33844pt x 204.01219pt>
 File: fig_3.png Graphic file (type png)
 <use fig_3.png>
 Package pdftex.def Info: fig_3.png  used on input line 42.
@@ -660,101 +693,86 @@ Package pdftex.def Info: fig_3.png  used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[54 <./fig_2.png (PNG copy)>] [55 <./fig_3.png (PNG copy)>] [56] [57]
-<fig_4.png, id=238, 688.07062pt x 190.46156pt>
+[55 <./fig_2.png (PNG copy)>] [56 <./fig_3.png (PNG copy)>] [57] [58]
+<fig_4.png, id=242, 688.07062pt x 190.46156pt>
 File: fig_4.png Graphic file (type png)
 <use fig_4.png>
-Package pdftex.def Info: fig_4.png  used on input line 78.
+Package pdftex.def Info: fig_4.png  used on input line 84.
 (pdftex.def)             Requested size: 433.62pt x 120.02917pt.
- [58 <./fig_4.png (PNG copy)>]
-<fig_5.png, id=243, 455.45157pt x 179.92218pt>
+ [59 <./fig_4.png (PNG copy)>]
+<fig_5.png, id=246, 455.45157pt x 179.92218pt>
 File: fig_5.png Graphic file (type png)
 <use fig_5.png>
-Package pdftex.def Info: fig_5.png  used on input line 118.
+Package pdftex.def Info: fig_5.png  used on input line 124.
 (pdftex.def)             Requested size: 303.53267pt x 119.9103pt.
- [59] [60 <./fig_5.png (PNG copy)>]
-<fig_6.png, id=250, 464.4853pt x 412.54124pt>
+ [60] [61 <./fig_5.png (PNG copy)>]
+<fig_6.png, id=253, 464.4853pt x 412.54124pt>
 File: fig_6.png Graphic file (type png)
 <use fig_6.png>
-Package pdftex.def Info: fig_6.png  used on input line 129.
+Package pdftex.def Info: fig_6.png  used on input line 135.
 (pdftex.def)             Requested size: 303.53267pt x 269.59645pt.
- [61 <./fig_6.png (PNG copy)>] [62] [63]
-<fig_7.png, id=260, 648.17157pt x 284.56313pt>
+ [62 <./fig_6.png (PNG copy)>] [63] [64] [65]
+<fig_7.png, id=267, 648.17157pt x 284.56313pt>
 File: fig_7.png Graphic file (type png)
 <use fig_7.png>
-Package pdftex.def Info: fig_7.png  used on input line 159.
+Package pdftex.def Info: fig_7.png  used on input line 207.
 (pdftex.def)             Requested size: 303.53267pt x 133.25836pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Citation `26' on page 64 undefined on input line 167.
-
-[64] [65 <./fig_7.png (PNG copy)>]
-<performance_test.png, id=268, 1157.32375pt x 475.7775pt>
+ [66 <./fig_7.png (PNG copy)>]
+<performance_test.png, id=271, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
-Package pdftex.def Info: performance_test.png  used on input line 213.
+Package pdftex.def Info: performance_test.png  used on input line 261.
 (pdftex.def)             Requested size: 462.9213pt x 190.30762pt.
 
-Overfull \hbox (29.3013pt too wide) in paragraph at lines 213--214
+Overfull \hbox (29.3013pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-) [66 <./performance_test.png>]
+) [67] [68 <./performance_test.png>]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 7.
-) [67
+[69
 
 
 
-] (./ociamthesismain.bbl
+] [70
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [68
-
-
-] (./ociamthesismain.aux (./dedication.aux) (./acknowlegements.aux)
-(./abstract.aux) (./introduction.aux) (./preliminaries.aux) (./algorithm.aux)
-(./correctness.aux) (./leader_stability.aux) (./implementation.aux)
-(./conclusions.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] [71]) [72] (./ociamthesismain.aux (./dedication.aux)
+(./acknowlegements.aux) (./abstract.aux) (./introduction.aux)
+(./preliminaries.aux) (./algorithm.aux) (./correctness.aux)
+(./leader_stability.aux) (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
- 6335 strings out of 492615
- 85951 string characters out of 6131390
- 358920 words of memory out of 5000000
- 10030 multiletter control sequences out of 15000+600000
+ 6358 strings out of 492615
+ 86002 string characters out of 6131390
+ 361920 words of memory out of 5000000
+ 10056 multiletter control sequences out of 15000+600000
  20313 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,72p,3236b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/
-share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/en
-c/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
-re/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1
-/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfb
-x2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
-1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on ociamthesismain.pdf (77 pages, 1739278 bytes).
+ 41i,14n,72p,2592b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/sha
+re/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/share/texmf
+/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
+super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/incons
+olata/Inconsolata-zi4r.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfti1440.pfb>
+Output written on ociamthesismain.pdf (81 pages, 1759111 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
+ 354 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

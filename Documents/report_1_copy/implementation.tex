@@ -47,8 +47,8 @@ Figure 2 illustrates a purely ad hoc scenario, whereby a hetero- geneous swarm o
 \subparagraph{}Besides nodes and links, the concept of topology is central in JB OT S IM. Topologies can be thought of as containers for nodes and links, together with dedicated operations like updating wireless links. They also play a central role in JB OT S IM’s event architec- ture, as explained later on.
 \subparagraph{Distributed vs. centralized algorithms}
 \subparagraph{}JB OT S IM supports the manipulation of centralized or distributed algorithms (possibly simultaneously). The natural way to imple- ment a distributed algorithm is by extending the Node class, in which the desired behavior is implemented. Centralized algorithms are not constrained to a particular model, they can take the form of any standard java class.
-\subparagraph{Distributed algorithm}JB OT S IM comes with a default type of node that is implemented in the Node class. This class provides the most general features a node could have, including primitives for moving, exchanging messages, or tuning basic parameters (e.g. communication range and sensing range). Distributed algorithms are naturally imple- mented through adding specific features to this class. Listing 2 provides a basic example in which the nodes are endowed with self-mobility. The class relies on a key mechanism in JB OT S IM: performing periodic operations that are triggered by the pulse of the system clock. This is done by overriding the onClock() method, which is called periodically by JBotSim’s engine (by default, at every pulse of the clock). The rest of the code is responsible for moving the node, setting a random direction at construction time (in radian), then moving in this direction periodically. (More de- tails about the movement API can be found online.) Once this class is defined, new nodes of this type can be added to the topology in the same way as if they were of class Node, as il- lustrated in Listing 3. Here, a new topology is created first, then 10 nodes of the desired type (here, MovingNode) are added through the addNode() method at random locations (using -1 for x- coordinate or y-coordinate generates a random location for that co- ordinate; here both are random). In order to use MovingNode through the GUI, for instance when clicking with the mouse to add new nodes, this class must be registered as a node model. This is done by calling method setDefaultNodeModel() with the class itself as an argument, as shown on Listing 4. JB OT S IM will create new instances on the fly, using reflexivity. Several models can be registered simultaneously, using setNodeModel() with an additional argument that corresponds to the model name. If sev- eral models exist, JB OT S IM’s GUI (the viewer) displays a selec- tion list when a node is added by the user (in this example, only one model is set and it is used by default). In the scenario of Fig-ure 1, however, left-clicking on the surface would give the choice between car, tower, and server, the names of the three registered models for that scenario.
-\begin{lstlisting} [caption=HelloWorld with JBOTSIM,captionpos=b]
+\subparagraph{Distributed algorithm}JB OT S IM comes with a default type of node that is implemented in the Node class. This class provides the most general features a node could have, including primitives for moving, exchanging messages, or tuning basic parameters (e.g. communication range and sensing range). Distributed algorithms are naturally implemented through adding specific features to this class. Listing 2 provides a basic example in which the nodes are endowed with self-mobility. The class relies on a key mechanism in JB OT S IM: performing periodic operations that are triggered by the pulse of the system clock. This is done by overriding the onClock() method, which is called periodically by JBotSim’s engine (by default, at every pulse of the clock). The rest of the code is responsible for moving the node, setting a random direction at construction time (in radian), then moving in this direction periodically. (More de- tails about the movement API can be found online.) Once this class is defined, new nodes of this type can be added to the topology in the same way as if they were of class Node, as illustrated in Listing 3. Here, a new topology is created first, then 10 nodes of the desired type (here, MovingNode) are added through the addNode() method at random locations (using -1 for x- coordinate or y-coordinate generates a random location for that co- ordinate; here both are random). In order to use MovingNode through the GUI, for instance when clicking with the mouse to add new nodes, this class must be registered as a node model. This is done by calling method setDefaultNodeModel() with the class itself as an argument, as shown on Listing 4. JB OT S IM will create new instances on the fly, using reflexivity. Several models can be registered simultaneously, using setNodeModel() with an additional argument that corresponds to the model name. If several models exist, JB OT S IM’s GUI (the viewer) displays a selection list when a node is added by the user (in this example, only one model is set and it is used by default). In the scenario of Fig-ure 1, however, left-clicking on the surface would give the choice between car, tower, and server, the names of the three registered models for that scenario.
+\begin{lstlisting} [caption=Extending the Node class,captionpos=b]
 import jbotsim.Node;
 public class MovingNode extends Node{
 	public MovingNode(){
@@ -60,16 +60,22 @@ public class MovingNode extends Node{
 }
 \end{lstlisting}
 
-\begin{lstlisting} [caption=HelloWorld with JBOTSIM,captionpos=b]
-public static void main(String[] args){ Topology tp = new Topology(400, 300); tp.setDefaultNodeModel(MovingNode.class); new JViewer(tp); }
+\begin{lstlisting} [caption=Adding nodes manually,captionpos=b]
+public static void main(String[] args){
+	Topology tp = new Topology(400, 300); tp.setDefaultNodeModel(MovingNode.class);
+	new JViewer(tp);
+}
 \end{lstlisting}
 
-\begin{lstlisting}
-public static void main(String[] args){ Topology tp = new Topology(400, 300); tp.setDefaultNodeModel(MovingNode.class); new JViewer(tp); }
+\begin{lstlisting}[caption=Using a defined node as default, captionpos=b]
+public static void main(String[] args){
+	Topology tp = new Topology(400, 300); tp.setDefaultNodeModel(MovingNode.class);
+	new JViewer(tp);
+}
 \end{lstlisting}
 
 
-\subparagraph{Centralized algorithms}There are many reasons why a centralized algorithm can be pre- ferred over a distributed one. The object of study might be central- ized in itself (e.g. network optimization, scheduling, graph algo- rithms in general). It may also be simpler to simulate distributed things in a centralized way. Listing 5 implements such a version of the random waypoint mobility model, in which nodes repeat- edly move toward a randomly selected destination, called target. Unlike a distributed implementation, the movements of nodes are here driven by a global loop at every pulse of the clock. For each node, a target is created if it does not exists yet or if it has just been reached; then the node’s direction is set accordingly and the node is moved (by default, by 1 unit of distance). For convenience, the main() method is included in the same class. Notice the use of setProperty() and getProperty() in this example. These methods allow to store any object directly into a node, using a key/value scheme (where key is a string). Both Link and Topology objects offer the same feature.
+\subparagraph{Centralized algorithms}There are many reasons why a centralized algorithm can be preferred over a distributed one. The object of study might be centralized in itself (e.g. network optimization, scheduling, graph algorithms in general). It may also be simpler to simulate distributed things in a centralized way. Listing 5 implements such a version of the random waypoint mobility model, in which nodes repeatedly move toward a randomly selected destination, called target. Unlike a distributed implementation, the movements of nodes are here driven by a global loop at every pulse of the clock. For each node, a target is created if it does not exists yet or if it has just been reached; then the node’s direction is set accordingly and the node is moved (by default, by 1 unit of distance). For convenience, the main() method is included in the same class. Notice the use of setProperty() and getProperty() in this example. These methods allow to store any object directly into a node, using a key/value scheme (where key is a string). Both Link and Topology objects offer the same feature.
 \subparagraph{Architecture of the event system}
 So far, we have seen one type of event: clock pulses, to be lis- tened to through the ClockListener interface. JB OT S IM offers a number of such events and interfaces, some of which become are ubiquitous. The main ones are depicted on Figure 3 on the fol- lowing page. This architecture allows one to specify dedicated op- erations in reaction to various events. For instance, one may ask to be notified whenever a link appears or disappears somewhere. Same for messages, which are typically listened to by the nodes themselves or can be watched at a global scale (e.g. to keep a log of all communications). In fact, every node is automatically noti- fied for its own events; it just needs to override the corresponding methods from the parent class Node in order to specify event han- dlings (e.g. onClock(), onMessage(), onLinkAdded(), onSensingIn(), onSelection(), etc.). Explicit listeners, on the other hand, like the ones in Figure 3, are meant to be used by centralized programs which do not extend class Node. Listing 6 gives one such example, consisting of a mobility trace recorder. This program listens to topological events of various kinds, including appearance or disappearance of nodes or links, and movements of the nodes. Upon each of these events, it outputs a string representation of the event using a dedicated human readable format called DGS [7]. Similar code could be written for Gephi [3]. Other events exist besides those represented in Figure 3, such as the SelectionListener interface, which makes it possible to be notified when a node is selected (middle-click) and make it initiate some tasks, for instance broadcast, distinguished role, etc.
 \subparagraph{Single threading: why and how?}It seems convenient at first, to assign every node a dedicated thread, however JB OT S IM was designed differently. JB OT S IM is single-threaded, and definitely so. This section explains the why and the how. Understanding these aspects are instrumental in de- veloping well-organized and bug-free programs.
@@ -80,7 +86,7 @@ So far, we have seen one type of event: clock pulses, to be lis- tened to throug
 	\label{fig:fig4}
 \end{figure}
 
-\begin{lstlisting}
+\begin{lstlisting}[caption=Centralized version of Random Waypoint, captionpos=b]
 public class MyRecorder implements TopologyListener, ConnectivityListener, MovementListener{
 	public MyRecorder(Topology tp){
 		tp.addTopologyListener(this);
@@ -133,25 +139,67 @@ public class MyRecorder implements TopologyListener, ConnectivityListener, Movem
 \paragraph{A zoom on selected features}This section provides more details on a handful of selected fea- tures. It covers, namely, the topics of message passing, graph-level algorithms, and java applets for online web demos.
 \subparagraph{Exchanging messages}The way messages are used in JB OT S IM is independent from the communication technology considered. Indeed, the API is quite simple, messages are sent directly by the sender, through calling the send() method on its own instance (inherited from Node). Mes- sages are typically received through overriding the onMessage() method (also from class Node). Another way to receive messages, which is not event-based, is for a node to check its mailbox man- ually through the getMailbox() method, for instance when it is executing the onClock() method (this is the natural way to implement round-based communication models). \subparagraph{}Listing 7 shows a message-based implementation of the flood- ing principle. Initially, none of the nodes are informed. Then, if a node is selected (either through middle-click or through direct call to the selectNode() method), then this node is notified in the onSelection() method and initiates a basic broadcast scheme. Here, the algorithm consists in retransmitting the received message upon first reception to all the local neighbors (sendAll()). In this example, the message is empty, however in general any ob- ject can be inserted in the message (no copy is made and the very same object is to be delivered, unless a copy is made at sending time). By default, a message takes one time unit to be transmitted (i.e. it is delivered at the next clock pulse). The delivery happens only for those links which exist by the time of reception. Since any object can be used as message content, it often has to be cast upon reception. All these aspects correspond to JB OT S IM’s de- fault message engine. Other message engines can be written, and indeed some exist in the jbotsimx package. For instance, the DelayMessageEngine makes it possible to add deterministic or random delays to the delivery of messages, possibly even in a non FIFO manner.
 \subparagraph{Working at the graph level}
-\begin{lstlisting}
-public class FloodingNode extends Node{ boolean informed = false; @Override public void onSelection() { informed = true; sendAll(new Message()); } @Override public void onMessage(Message message) { if (!informed){ informed = true; sendAll(message); } } }
+\begin{lstlisting}[caption=Example of message passing algorithm, captionpos=b]
+public class FloodingNode extends Node{
+	boolean informed = false;
+	@Override 
+	public void onSelection() {
+		informed = true;
+		sendAll(new Message());
+	}
+	@Override
+	public void onMessage(Message message) {
+		if (!informed){
+			informed = true;
+			sendAll(message);
+		}
+	}
+}
 \end{lstlisting}
-\subparagraph{}Implementing an algorithm in the message passing model is some- times difficult. JB OT S IM makes it possible to sketch an idea, play with it, and share it with others, in minutes, thanks to working at a (more abstract) graph-level. This level of abstraction also is relevant in its own right, when the object of study is itself at the graph level, such as classical graph algorithms or distributed coarse-grain models like graph relabeling systems [9] or popula- tion protocols [2].
+\subparagraph{}Implementing an algorithm in the message passing model is some- times difficult. JB OT S IM makes it possible to sketch an idea, play with it, and share it with others, in minutes, thanks to working at a (more abstract) graph-level. This level of abstraction also is relevant in its own right, when the object of study is itself at the graph level, such as classical graph algorithms or distributed coarse-grain models like graph relabeling systems [9] or population protocols [2].
 \subparagraph{}To illustrate the simplicity of the graph level, let us consider a scenario where a type of node called SocialNode, dislikes being isolated. Such a node is happy (green) if it has at least one neigh- bor, unhappy (red) otherwise. In the message passing paradigm, this principle would require to send periodic messages (beacons) and track the reception of these messages, as well as using a timer to decide when a node becomes isolated. Listing 8 shows a possi- ble implementation at the graph level, which is pretty concise and self-explanatory. Topological events are directly detected by the nodes, which can update their status. (These events could also be listened to globally through the ConnectivityListener() interface. This is the way one might want to implement centralized dynamic graph algorithms.) Of course, from a message passing perspective, this implementation is cheating. Thus, methods like onLinkAdded(), hasNeighbors(), or getNeighbors() should not be used in a message-passing setting.
 
-\begin{lstlisting}
-public class SocialNode extends Node{ public SocialNode(){ setColor(Color.red); } public void onLinkAdded(Link l){ setColor(Color.green); } public void onLinkRemoved(Link l){ if (!hasNeighbors()) setColor(Color.red); } }
+\begin{lstlisting}[caption=Example of graph-based algorithm, captionpos=b]
+public class SocialNode extends Node{
+	public SocialNode(){
+		setColor(Color.red);
+	}
+	public void onLinkAdded(Link l){
+		setColor(Color.green);
+	}
+	public void onLinkRemoved(Link l){
+		if (!hasNeighbors())
+			setColor(Color.red);
+		}
+	}
 \end{lstlisting}
-\subparagraph{Embedding JBOTSIM in a java applet}One of the features of JB OT S IM’s viewer is to create a win- dowed frame automatically for the topology. This is the default behavior of JViewer’s constructor when a single parameter of type Topology or JTopology is used. Other behaviors can be obtained by using different versions of the constructor. In partic- ular, one can specify that no windowed frame should be created, and the JTopology object be plugged manually into a different container. This feature enables the customization of JB OT S IM’s UI at will, as well as the creation of java applets.
+\subparagraph{Embedding JBOTSIM in a java applet}One of the features of JB OT S IM’s viewer is to create a windowed frame automatically for the topology. This is the default behavior of JViewer’s constructor when a single parameter of type Topology or JTopology is used. Other behaviors can be obtained by using different versions of the constructor. In particular, one can specify that no windowed frame should be created, and the JTopology object be plugged manually into a different container. This feature enables the customization of JB OT S IM’s UI at will, as well as the creation of java applets.
 \subparagraph{}Listing 9 shows an example java applet corresponding to the HelloWorld program from Listing 1. Here, a JTopology object (which is a JPanel) is created manually from the topology. Its reference is then used to augment it with standard viewer features, and finally added to the applet container. Another important step is to pause the clock in the destroy() method (otherwise JBot- Sim’s engine would keep running in background).
 
-\begin{lstlisting}
-import javax.swing.JApplet; import jbotsim.Clock; import jbotsim.Topology; import jbotsim.ui.JTopology; import jbotsim.ui.JViewer; @SuppressWarnings("serial") public class HelloWorld_Applet extends JApplet{ Topology tp; public void init(){ tp = new Topology(); JTopology jtp = new JTopology(tp); new JViewer(jtp, false); this.add(jtp); } public void destroy(){ tp.pause(); } }
+\begin{lstlisting}[caption=Embedding a JB OT S IM demo into a java applet, captionpos=b]
+import javax.swing.JApplet;
+import jbotsim.Clock;
+import jbotsim.Topology;
+import jbotsim.ui.JTopology;
+import jbotsim.ui.JViewer;
+@SuppressWarnings("serial")
+public class HelloWorld_Applet extends JApplet{
+	Topology tp;
+	public void init(){
+		tp = new Topology();
+		JTopology jtp = new JTopology(tp);
+		new JViewer(jtp, false);
+		this.add(jtp);
+	}
+	public void destroy(){
+		tp.pause();
+	}
+}
 \end{lstlisting}
 
-\paragraph{Concluding remarks}I my view, JB OT S IM is a kernel, in the sense that it encapsu- lates a number of generic features whose purpose is to be used by higher programs. As of today, the plan is to keep it this way and try containing the growth of the number of features, to the profit of quality and simplicity. This does not mean, of course, that JB OT- S IM should not be extended externally.
-\paragraph{}In particular, JB OT S IM’s distribution already incorporates an ex- tension package called jbotsimx, in which more specific fea- tures could be found. For instance, it incorporates a static class called Tikz that makes it possible to export the current topol- ogy as a TikZ picture – a powerful format for drawing pictures in LATEX documents. Figure 6 illustrates this with two pictures that I have generated. The Tikz class is composed of a single method, exportAsTikz(), which takes a mandatory Topology argu- ment, and an optional scaling argument.
-\paragraph{}Other extensions include basic topology algorithms for testing, e.g., if a given topology is connected or 2-connected, if a given node is critical (its removal would disconnect the graph) or compute the diameter. A set of extensions dedicated to dynamic graph are cur- rently being developped (by myself and others). For instance, the EMEGPlayer takes as input a birth rate, death rate, and an un- derlying graph (given as a Topology), and generates an edge- markovian dynamic graph based on these parameters, the dynamics of which can be listened to through the ConnectivityListener interface.
+\paragraph{Concluding remarks}I my view, JB OT S IM is a kernel, in the sense that it encapsulates a number of generic features whose purpose is to be used by higher programs. As of today, the plan is to keep it this way and try containing the growth of the number of features, to the profit of quality and simplicity. This does not mean, of course, that JB OT- S IM should not be extended externally.
+\paragraph{}In particular, JB OT S IM’s distribution already incorporates an ex- tension package called jbotsimx, in which more specific features could be found. For instance, it incorporates a static class called Tikz that makes it possible to export the current topology as a TikZ picture – a powerful format for drawing pictures in LATEX documents. Figure 6 illustrates this with two pictures that I have generated. The Tikz class is composed of a single method, exportAsTikz(), which takes a mandatory Topology argument, and an optional scaling argument.
+\paragraph{}Other extensions include basic topology algorithms for testing, e.g., if a given topology is connected or 2-connected, if a given node is critical (its removal would disconnect the graph) or compute the diameter. A set of extensions dedicated to dynamic graph are currently being developped (by myself and others). For instance, the EMEGPlayer takes as input a birth rate, death rate, and an underlying graph (given as a Topology), and generates an edge- markovian dynamic graph based on these parameters, the dynamics of which can be listened to through the ConnectivityListener interface.
 \paragraph{}Contributions are most welcome, as well as suggestions of im- provement or feature requests.
 
 \begin{figure}[h]
