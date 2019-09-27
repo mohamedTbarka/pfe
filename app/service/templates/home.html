@@ -56,14 +56,25 @@
                 <div class="col-md-4  line_right" ></div>
               </div>
         </div>
-        <div class="col-md-12  px-0">
+        <div class="col-md-12  px-0 hide_mobile">
               <div class="row ">
-                  <a href="{%url 'promotions'%}"><div  style=" background-image: url('static/resources/promotions.jpg');" class="col-md-2 nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22_65">promotions</h3></div></a>
-                  <a href="{%url 'evenements'%}"><div style="background-image: url('static/resources/evenement.jpg');" class="col-md-2 nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22_65">Evènements</h3></div></a>
-                  <a href="{%url 'compagnes'%}"><div style="background-image: url('static/resources/compain.jpg');" class="col-md-4 nv3"><h3 class="text-white text-uppercase txt_img t22_65">campagne</h3></div></a>
+                 <div onclick="location.href='{%url 'promotions'%}';" style=" background-image: url('static/resources/promotions.jpg');" class=" col-sm-12 col-md-2 nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22_65">promotions</h3></div>
+                  <div onclick="location.href='{%url 'promotions'%}';" style="background-image: url('static/resources/evenement.jpg');" class="col-sm-12 col-md-2 nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22_65">Evènements</h3></div>
+                  <div onclick="location.href='{%url 'promotions'%}';" style="background-image: url('static/resources/compain.jpg');" class="col-sm-12 col-md-4 nv3"><h3 class="text-white text-uppercase txt_img t22_65">campagne</h3></div>
               </div>
           </div>
-          <div class="col-md-12 text-right px-0 "><a href="{%url 'nouveautes'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les nouveautés</button></div></a>
+
+          <!-- For mobile version -->
+          <div class="col-md-12  px-0 hide_desktop">
+                <div class="row ">
+                   <div onclick="location.href='{%url 'promotions'%}';"  style=" background-image: url('static/resources/promotions.jpg');" class=" col-md-12 nv1_mobile text-center"><h3 class="text-white text-uppercase txt_img_mobile t22_65">promotions</h3></div>
+                   <div onclick="location.href='{%url 'evenements'%}';" style="background-image: url('static/resources/evenement.jpg');" class="col-md-12  nv2_mobile "><h3 class="text-white text-uppercase txt_img_mobile t22_65">Evènements</h3></div>
+                    <div onclick="location.href='{%url 'compagnes'%}';" style="background-image: url('static/resources/compain.jpg');" class="col-md-12  nv3_mobile"><h3 class="text-white text-uppercase txt_img_mobile t22_65">campagne</h3></div>
+                </div>
+            </div>
+          <!-- for  mobile  version  --- END -->
+
+          <div class="col-md-12 text-center px-0 "><a href="{%url 'nouveautes'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les nouveautés</button></div></a>
     </div>
 </div>
 
@@ -154,11 +165,11 @@
                   <div class="row  pt-5 pb-3">
                       {%for service in  services%}
                       {%if not service.principal%}
-                        <div class="col md-2">
-                            <a class="text-dark" href="{{service.url}}"><div class="service_icon">
+                        <div class="col md-2 ">
+                            <a class="text-dark"  {%if service.url %} href="{{service.url}}" {% endif %}><div class="service_icon">
                                 <img src="media/{{service.icon}}" alt="">
                             </div>
-                            <h3 class="text-uppercase t22_65">{{service.title}}</h3></a>
+                            <h3 class="text-uppercase t22_65 pt-4">{{service.title}}</h3></a>
                         </div>
 
                         {%endif%}
