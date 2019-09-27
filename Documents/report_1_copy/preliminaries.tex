@@ -1,7 +1,8 @@
 \chapter{Preliminaries}
 \section{System Model}
-\paragraph{}We assume a system consisting of a set P of computing nodes and a set $\chi$ of directed communication channels from one node to another node. $\chi$ consists of one channel for each ordered pair of nodes, i.e., every possible channel is represented. The nodes are assumed to be completely reliable. The channels between nodes go up and down, due to the movement of the nodes. While a channel is up, the communication across it is in first-in-first-out order and is reliable but asynchronous (see below for more details).
+\paragraph{}We assume a system consisting of a set $\mathcal{P}$ of computing nodes and a set $\chi$ of directed communication channels from one node to another node. $\chi$ consists of one channel for each ordered pair of nodes, i.e., every possible channel is represented. The nodes are assumed to be completely reliable. The channels between nodes go up and down, due to the movement of the nodes. While a channel is up, the communication across it is in first-in-first-out order and is reliable but asynchronous (see below for more details).
 \paragraph{}We model the whole system as a set of (infinite) state machines that interact through shared events (a specialization of the IOA model [17]). Each node and each channel is modeled as a separate state machine. The events shared by a node and one of its outgoing channels are notifications that the channel is going up or going down and the sending of a message by the node over the channel; the channel up/down notifications are initiated by the channel and responded to by the node, while the message sends are initiated by the node and responded to by the channel. The events shared by a node and one of its incoming channels are notifications that a message is being delivered to the node from the channel; these events are initiated by the channel and responded to by the node.
+\newpage
 \section{Modeling Asynchronous Dynamic Links}
 \paragraph{}We now specify in more detail how communication is assumed to occur over the dynamic links. The state of $Channel(u, v)$, which models the communication channel from node $u$ to node $v$, consists of a statusuv variable and a queue $mqueueuv$ of messages.
 \paragraph{}The possible values of the $status_{uv}$ variable are $Up$ and $Down$. The channel transitions between the two values of its $status_{uv}$ variable through $ChannelUp_{uv}$ and $ChannelDown_{uv}$ events, called the “topology change” events. We assume that the $ChannelUp$ and $ChannelDown$ events for the channel alternate. The $ChannelUp$ and $ChannelDown$ events for the channel from $u$ to $v$ occur simultaneously at node $u$ and the channel, but do not occur at node $v$.
@@ -36,6 +37,24 @@ The causal clocks at all the nodes, collectively denoted T , must satisfy the fo
 	\item $\mathcal{T}$ preserves the happens-before relation [16] on events; i.e., if event $e_i$ happens before event $e_j$, then $\mathcal{T}(e_i) < \mathcal{T}(e_j)$.
 \end{list}
 Our description and proof of the algorithm assume that nodes have access to causal clocks. One way to implement causal clocks is to use perfect clocks, which ensure that $\mathcal{T}_u(t) = t$ for each node $u$ and global time $t$. Since an event that causes another event must occur before it in real time, perfect clocks capture causality. Perfect clocks could be provided by, say a GPS service, and were assumed in the preliminary version of this paper [15]. Another way to implement causal clocks is to use Lamport’s logical clocks [16], which were specifically designed to capture causality.
+\newpage
 \section{Problem Definition}
-\paragraph{}Each node $u$ in the system has a local variable $lid_u$ to hold the identifier of the node currently considered by u to be the leader of the connected component containing $u$.
-\paragraph{}In every execution that includes a finite number of topology change events, we require that the following eventually holds: Every connected component $CC$ of the final final topology graph $G_chan$ contains a node $l$, the leader, such that $lid_u = l$ for all nodes $u \in CC$, including $l$ itself.
+\paragraph{}Each node $u$ in the system has a local variable $lid_{u}$ to hold the identifier of the node currently considered by u to be the supreme leaders of the connected component containing u, and another local variable $slid_u$ to hold the identifier of the node currently considered by u to be the sub-leader in such a way that the distance to this subèleader does not exceed a certain constant d (the remoteness constraint).
+\paragraph{}The set of all the leaders including the supreme one forms a spanning tree as subgraph of the DAG established.
+In every execution that includes a finite number of topology changes, we require that the following eventually holds:
+\begin{itemize}
+	\item Every connected component $CC$ of the final topology contains a node $l$, the supreme leader, such that $l$ is the only node which verifies $ lid_{l} = l $.
+	\item For each node u of each component $CC$, different from the supreme leader, a node v exists such as $slid_{u} = v$ and $d_{u,v} < D$ ($D$ is the maximum remoteness towards a leader and the $ d_{u,v} $ is the shortest distance between $u$ and $v$)
+\end{itemize}
+
+\paragraph{}In a more formal way, one can state the problem as follows:\\
+In every execution that includes a finite number of topology changes, we require that the following eventually holds:
+
+\begin{itemize}
+	\item For each node $u$ of every connected component $CC$ of the final topology:
+	$u$ selects $(slid_u, pre_u)$, ${(slid_u, pre_u) \in N_u \times N_u}$ such that ${(slid_u, pred_u)}_{u \in CC}$ is a spanning tree $T$ ($slid_u$ (resp. $pred_u$) is the sub-leader (resp. the predecessor to reach $lid_u$) considered as such by i.
+	\item For each node $u$, different from the root of $T$, of every connected component $CC$ of the final topology:\\
+	if $ (k-1)D < depth_T (i) <= kD, k \in IN $, then $ depth_T(lid_i)=(k-1)D$ ($depth_T(u)$ is the depth of u in T)
+\end{itemize}
+
+\paragraph{}Our algorithm also ensures that eventually each link in the system has a direction imposed on it by virtue of the data stored at each endpoint such that each connected component CC is a leader-oriented DAG containing a spanning tree, i.e., every node has a directed path to its local leader respecting, among the other leaders, a certain hierarchy containing one supreme leader.

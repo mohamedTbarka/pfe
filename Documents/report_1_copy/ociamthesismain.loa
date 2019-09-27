@@ -1,6 +1,6 @@
-\contentsline {algorithm}{\numberline {1}{\ignorespaces When $ChannelDown_{uv}$ event occurs:}}{16}% 
-\contentsline {algorithm}{\numberline {2}{\ignorespaces When $ChannelUp_{uv}$ event occurs:}}{16}% 
-\contentsline {algorithm}{\numberline {3}{\ignorespaces When node $u$ receives $Update(h)$ from node $v \in forming \cup N$:}}{21}% 
-\contentsline {algorithm}{\numberline {4}{\ignorespaces $ELECTSELF$}}{21}% 
-\contentsline {algorithm}{\numberline {5}{\ignorespaces $\mathtt {REFLECTREFLEVEL}$}}{21}% 
-\contentsline {algorithm}{\numberline {6}{\ignorespaces $ELECTSELF$}}{21}% 
+\contentsline {algorithm}{\numberline {1}{\ignorespaces When $ChannelDown_{uv}$ event occurs:}}{17}% 
+\contentsline {algorithm}{\numberline {2}{\ignorespaces When $ChannelUp_{uv}$ event occurs:}}{17}% 
+\contentsline {algorithm}{\numberline {3}{\ignorespaces When node $u$ receives $Update(h)$ from node $v \in forming \cup N$:}}{22}% 
+\contentsline {algorithm}{\numberline {4}{\ignorespaces $ELECTSELF$}}{22}% 
+\contentsline {algorithm}{\numberline {5}{\ignorespaces $\mathtt {REFLECTREFLEVEL}$}}{22}% 
+\contentsline {algorithm}{\numberline {6}{\ignorespaces $ELECTSELF$}}{22}% 

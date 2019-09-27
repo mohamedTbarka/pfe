@@ -83,7 +83,133 @@ So far, we have seen one type of event: clock pulses, to be lis- tened to throug
 \begin{lstlisting}
 public class MyRecorder implements TopologyListener, ConnectivityListener, MovementListener{
 	public MyRecorder(Topology tp){
-		tp.addTopologyListener(this); tp.addConnectivityListener(this); tp.addMovementListener(this);
+		tp.addTopologyListener(this);
+		tp.addConnectivityListener(this);
+		tp.addMovementListener(this);
 	}
-	// TopologyListener public void onNodeAdded(Node node) { 	println("an " + node.hashCode() + " x:" + node.getX() + " y:" + node.getY()); } public void onNodeRemoved(Node node) { println("dn " + node.hashCode()); } // ConnectivityListener public void onLinkAdded(Link link) { println("ae " + link.hashCode() + " " + link.endpoint(0) + " " + link.endpoint(1)); } public void onLinkRemoved(Link link) { println("de " + link.hashCode()); } // MovementListener public void onNodeMoved(Node node) { println("cn " + node.hashCode() + " x:" + node.getX() + " y:" + node.getY()); } }
+	// TopologyListener
+	public void onNodeAdded(Node node) {
+	 	println("an " + node.hashCode() +
+	 		" x:" + node.getX() + " y:" + node.getY());
+	 }
+	 
+	 public void onNodeRemoved(Node node) {
+	 	println("dn " + node.hashCode());
+	 }
+	 // ConnectivityListener
+	 public void onLinkAdded(Link link) {
+	 	println("ae " + link.hashCode() + " " +
+	 		link.endpoint(0) + " " + link.endpoint(1));
+	 }
+	 public void onLinkRemoved(Link link) {
+	 	println("de " + link.hashCode());
+	 }
+	 // MovementListener
+	 public void onNodeMoved(Node node) {
+	 	println("cn " + node.hashCode() +
+	 		" x:" + node.getX() + " y:" + node.getY());
+	 	}
+	 }
 \end{lstlisting}
+\subparagraph{}In JB OT S IM, all the nodes, and in fact all of JB OT S IM’s life (GUI excepted) is articulated around a single thread, which is driven by the central clock. The clock pulses at regular interval (whose period can be tuned) and notifies its listeners in a specific order. JB OT S IM’s internal engines, such as the message engine, are served first. Then come those nodes whose wait period has expired (re- mind that nodes can choose to register to the clock with different periods). These nodes are notified in a random order. Hence, if all nodes listen to the clock at a rate of 1 (the default value), they will all be notified in a random order in each round, which makes JB OT S IM’s scheduler a non-deterministic 2-bounded fair sched- uler. (Other policies will be available eventually.) A simplified version of the current scheduling process is depicted on Figure 4.
+\subparagraph{}One consequence of single-threading is that all computations (GUI excepted) take place in a sequential order that makes it pos- sible to use unsynchronized data structures and simpler code. This also improves the scalability of JB OT S IM when the number of nodes grows large. One can rely on other user-defined threads in the program, however one should be careful that these thread do not interfer with JB OT S IM’s. The canonical example is when a sce-nario is set up by program from within the thread of the main() method. If the initialization makes extensive use of JB OT S IM’s API from within that thread and the clock starts triggering events at the same time, then problems might occur (and a Concurrent ModificationException be raised). The easy way around is to pause the clock before executing these instructions and to re- sume it after (using the pause() and the resume() methods on the topology, respectively).
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\linewidth]{fig_5}
+	\caption[Simplified version of the internal scheduler.]{Simplified version of the internal scheduler.}
+	\label{fig:fig5}
+\end{figure}
+\subparagraph{Interactivity}I designed JB OT S IM with a clear separation in mind between GUI and internal features. In particular, it can be run without GUI (i.e. without creating the JViewer object), and things will work exactly the same, though invisibly. As such, JB OT S IM can be used to perform batch simulations (e.g. sequences of unattended runs that log the effects of some varying parameter). This also enables to withstand heavier simulations in terms of the number of nodes and links.
+\subparagraph{}This being said, one of the most distinctive features of JB OT S IM remains interactivity, e.g., the ability to challenge the algorithm in difficult configurations through adding, removing, or moving nodes during the execution. This approach proves useful to think of a problem visually and intuitively. It also makes it possible to explain someone an algorithm through showing its behavior.
+\subparagraph{}The architecture of JB OT S IM’s viewer is depicted on Figure 5. As one can see, the viewer relies heavily on events related to nodes, links, and topology. The influence also goes the other way, with mouse actions being translated into topological operations. These features are realized by a class called JTopology. This class can often be ignored by the developer, which creates and manip- ulates the viewer through the higher JViewer class. The latter adds external features such as tuning slide bars, popup menus, or self-containment in a system window. 
+\subparagraph{}While natural to JB OT S IM’s users, the viewer remains, in all technical aspects, an independent piece of software. Alternative viewers could very well be designed with specific uses in mind.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\linewidth]{fig_6}
+	\caption[Internals of JBotSim’s GUI]{Internals of JBotSim’s GUI}
+	\label{fig:fig6}
+\end{figure}
+\paragraph{A zoom on selected features}This section provides more details on a handful of selected fea- tures. It covers, namely, the topics of message passing, graph-level algorithms, and java applets for online web demos.
+\subparagraph{Exchanging messages}The way messages are used in JB OT S IM is independent from the communication technology considered. Indeed, the API is quite simple, messages are sent directly by the sender, through calling the send() method on its own instance (inherited from Node). Mes- sages are typically received through overriding the onMessage() method (also from class Node). Another way to receive messages, which is not event-based, is for a node to check its mailbox man- ually through the getMailbox() method, for instance when it is executing the onClock() method (this is the natural way to implement round-based communication models). \subparagraph{}Listing 7 shows a message-based implementation of the flood- ing principle. Initially, none of the nodes are informed. Then, if a node is selected (either through middle-click or through direct call to the selectNode() method), then this node is notified in the onSelection() method and initiates a basic broadcast scheme. Here, the algorithm consists in retransmitting the received message upon first reception to all the local neighbors (sendAll()). In this example, the message is empty, however in general any ob- ject can be inserted in the message (no copy is made and the very same object is to be delivered, unless a copy is made at sending time). By default, a message takes one time unit to be transmitted (i.e. it is delivered at the next clock pulse). The delivery happens only for those links which exist by the time of reception. Since any object can be used as message content, it often has to be cast upon reception. All these aspects correspond to JB OT S IM’s de- fault message engine. Other message engines can be written, and indeed some exist in the jbotsimx package. For instance, the DelayMessageEngine makes it possible to add deterministic or random delays to the delivery of messages, possibly even in a non FIFO manner.
+\subparagraph{Working at the graph level}
+\begin{lstlisting}
+public class FloodingNode extends Node{ boolean informed = false; @Override public void onSelection() { informed = true; sendAll(new Message()); } @Override public void onMessage(Message message) { if (!informed){ informed = true; sendAll(message); } } }
+\end{lstlisting}
+\subparagraph{}Implementing an algorithm in the message passing model is some- times difficult. JB OT S IM makes it possible to sketch an idea, play with it, and share it with others, in minutes, thanks to working at a (more abstract) graph-level. This level of abstraction also is relevant in its own right, when the object of study is itself at the graph level, such as classical graph algorithms or distributed coarse-grain models like graph relabeling systems [9] or popula- tion protocols [2].
+\subparagraph{}To illustrate the simplicity of the graph level, let us consider a scenario where a type of node called SocialNode, dislikes being isolated. Such a node is happy (green) if it has at least one neigh- bor, unhappy (red) otherwise. In the message passing paradigm, this principle would require to send periodic messages (beacons) and track the reception of these messages, as well as using a timer to decide when a node becomes isolated. Listing 8 shows a possi- ble implementation at the graph level, which is pretty concise and self-explanatory. Topological events are directly detected by the nodes, which can update their status. (These events could also be listened to globally through the ConnectivityListener() interface. This is the way one might want to implement centralized dynamic graph algorithms.) Of course, from a message passing perspective, this implementation is cheating. Thus, methods like onLinkAdded(), hasNeighbors(), or getNeighbors() should not be used in a message-passing setting.
+
+\begin{lstlisting}
+public class SocialNode extends Node{ public SocialNode(){ setColor(Color.red); } public void onLinkAdded(Link l){ setColor(Color.green); } public void onLinkRemoved(Link l){ if (!hasNeighbors()) setColor(Color.red); } }
+\end{lstlisting}
+\subparagraph{Embedding JBOTSIM in a java applet}One of the features of JB OT S IM’s viewer is to create a win- dowed frame automatically for the topology. This is the default behavior of JViewer’s constructor when a single parameter of type Topology or JTopology is used. Other behaviors can be obtained by using different versions of the constructor. In partic- ular, one can specify that no windowed frame should be created, and the JTopology object be plugged manually into a different container. This feature enables the customization of JB OT S IM’s UI at will, as well as the creation of java applets.
+\subparagraph{}Listing 9 shows an example java applet corresponding to the HelloWorld program from Listing 1. Here, a JTopology object (which is a JPanel) is created manually from the topology. Its reference is then used to augment it with standard viewer features, and finally added to the applet container. Another important step is to pause the clock in the destroy() method (otherwise JBot- Sim’s engine would keep running in background).
+
+\begin{lstlisting}
+import javax.swing.JApplet; import jbotsim.Clock; import jbotsim.Topology; import jbotsim.ui.JTopology; import jbotsim.ui.JViewer; @SuppressWarnings("serial") public class HelloWorld_Applet extends JApplet{ Topology tp; public void init(){ tp = new Topology(); JTopology jtp = new JTopology(tp); new JViewer(jtp, false); this.add(jtp); } public void destroy(){ tp.pause(); } }
+\end{lstlisting}
+
+\paragraph{Concluding remarks}I my view, JB OT S IM is a kernel, in the sense that it encapsu- lates a number of generic features whose purpose is to be used by higher programs. As of today, the plan is to keep it this way and try containing the growth of the number of features, to the profit of quality and simplicity. This does not mean, of course, that JB OT- S IM should not be extended externally.
+\paragraph{}In particular, JB OT S IM’s distribution already incorporates an ex- tension package called jbotsimx, in which more specific fea- tures could be found. For instance, it incorporates a static class called Tikz that makes it possible to export the current topol- ogy as a TikZ picture – a powerful format for drawing pictures in LATEX documents. Figure 6 illustrates this with two pictures that I have generated. The Tikz class is composed of a single method, exportAsTikz(), which takes a mandatory Topology argu- ment, and an optional scaling argument.
+\paragraph{}Other extensions include basic topology algorithms for testing, e.g., if a given topology is connected or 2-connected, if a given node is critical (its removal would disconnect the graph) or compute the diameter. A set of extensions dedicated to dynamic graph are cur- rently being developped (by myself and others). For instance, the EMEGPlayer takes as input a birth rate, death rate, and an un- derlying graph (given as a Topology), and generates an edge- markovian dynamic graph based on these parameters, the dynamics of which can be listened to through the ConnectivityListener interface.
+\paragraph{}Contributions are most welcome, as well as suggestions of im- provement or feature requests.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{fig_7}
+	\caption[Two examples of pictures whose underlying topology was generated using JB OT S IM Tikz extension. The topology on the left was created by adding and moving nodes using the mouse; the topology on the right was generated by program. Once exported as a Tikz picture, they were twicked manually to add shading, color, etc.]{Two examples of pictures whose underlying topology was generated using JB OT S IM Tikz extension. The topology on the left was created by adding and moving nodes using the mouse; the topology on the right was generated by program. Once exported as a Tikz picture, they were twicked manually to add shading, color, etc.}
+	\label{fig:fig7}
+\end{figure}
+
+
+\section{Performance Analysis}
+
+This section presents performance characteristics of our algorithm measured through simulations using JBOTSIM\cite{26} tool. We consider the following metrics defined for any component of size $n$.
+
+\begin{enumerate}
+	\item \textbf{Latency} $l$. The number of rounds necessary for a component to elect a leader (become stable) after a topology change (average over all initial topologies).
+	
+	\item \textbf{Sensitivity} $s$. The number of nodes that updated their heights in response to a topology change (average over all possible topology changes).
+	
+	\item \textbf{Resilience} $r$. The maximal fraction of links which can go down in a stable component without reelecting the current leader.
+	
+\end{enumerate}
+
+We have measured these parameters using simulations of several scenarios (Figures 6(a) and 6(b)), and we summarize them below:
+
+\begin{itemize}
+	\item Merging two stable components:
+	
+	\begin{itemize}
+		\item Given two fully connected (every two nodes are neighbours) components: $l \simeq 2$.
+		\item Given two poorly connected (a node can have not more than two neighbours) components: $l \simeq n$.
+	\end{itemize}
+	
+	\item Partitioning a stable component:
+	
+	\begin{itemize}
+		\item Getting two fully connected component: $l = 2$.
+		\item Getting two poorly connected component: $l = 2n$.
+	\end{itemize}
+	
+	\item Topology change in a “small world-like” stable component (every node has O(log n) neighbours) without partitioning:
+	\begin{itemize}
+		\item Latency $l$ = $O(1)$.
+		\item Sensitivity $s$ = $O(log(n))$.
+	\end{itemize}
+	
+	\item Resilience of a stable component:
+	
+	\begin{itemize}
+		\item Given a fully connected component: $r \approx 1 - 2/n$.
+		\item Given a “small world-like” component: $r \approx 1 - 2/log(n)$.
+	\end{itemize}
+	
+\end{itemize}
+
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[scale=.4]{performance_test.png}
+	\caption{Simulation results}
+\end{figure}

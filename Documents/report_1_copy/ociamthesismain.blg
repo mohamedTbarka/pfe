@@ -8,14 +8,15 @@ A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: preliminaries.aux
 A level-1 auxiliary file: algorithm.aux
 A level-1 auxiliary file: correctness.aux
+A level-1 auxiliary file: leader_stability.aux
 A level-1 auxiliary file: implementation.aux
 A level-1 auxiliary file: conclusions.aux
 The style file: plain.bst
-I found no \citation commands---while reading file ociamthesismain.aux
 Database file #1: refs.bib
+Warning--I didn't find a database entry for "26"
 You've used 0 entries,
             2118 wiz_defined-function locations,
-            506 strings with 4146 characters,
+            508 strings with 4168 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
@@ -54,4 +55,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 2
-(There was 1 error message)
+(There was 1 warning)
