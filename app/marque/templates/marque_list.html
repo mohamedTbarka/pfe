@@ -85,21 +85,21 @@
 
     <div class="container">
             <div class="row ">
-                {% for marque in marque_list%}
+                {% for marq in marque_list%}
                 <div class="col-md-4 pb-4
                   px-4">
                     <div class="row border-dark border">
                         <div class="col-md-4 d-flex align-items-center
                         ">
-                            <img src="../media/{{marque.logo}}" alt="" style="max-width: 100px;max-height: 110px">
+                            <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" style="max-width: 100px;max-height: 110px"></a>
                         </div>
                         <div class="col-md-8">
-                            <h2 class="t15_65 pt-3 text-uppercase">{{marque.name}}</h2>
-                            <h5 class="t15">{{marque.open_hours|safe}}</h5>
-                            <h5 class="t15 pb-2">{{marque.phone}}</h5>
+                            <h2 class="t15_65 pt-3 text-uppercase">{{marq.name}}</h2>
+                            <h5 class="t15">{{marq.open_hours|safe}}</h5>
+                            <h5 class="t15 pb-2">{{marq.phone}}</h5>
                         </div>
                         <div class="col-md-12 px-0">
-                            <h5 class="text-center border-dark border-top t15 pt-2"><img src="{% static 'resources/position.png'%}" alt=""> {{marque.floor}}</h5>
+                            <h5 class="text-center border-dark border-top t15 pt-2"><img src="{% static 'resources/position.png'%}" alt=""> {{marq.floor}}</h5>
                         </div>
                     </div>
                 </div>
