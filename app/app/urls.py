@@ -28,6 +28,7 @@ urlpatterns = [
                   path('', include('nouveaute.urls')),
                   path('', include('service.urls')),
                   path('', include('contact.urls')),
+                  path('search/', include('haystack.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))
+# urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))
