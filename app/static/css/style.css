@@ -650,7 +650,7 @@ float: right;
 }
 
 .hide_desktop{
-    display: none!important;
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -682,6 +682,9 @@ float: right;
     }
     .hide_mobile{
         display: none!important;
+    }
+    .showmobile{
+        display: block!important;
     }
    
 }
