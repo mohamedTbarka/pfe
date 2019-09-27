@@ -341,7 +341,9 @@
     max-width: 220px!important;
     
 }
-
+.v-plus:hover{
+    color: black!important;
+}
 input#example-search-input::placeholder {
     color: #93a896;
    
