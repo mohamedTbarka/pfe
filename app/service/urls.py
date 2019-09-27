@@ -5,5 +5,7 @@ from service import views
 urlpatterns = [
     path('service/<int:pk>/', views.ServiceDetailView.as_view(), name='service_detail'),
     path('decouvrir/', views.DiscoverListView.as_view(), name='discovers'),
+    path('plan/', views.Plan.as_view(), name='plan'),
+
 
 ]

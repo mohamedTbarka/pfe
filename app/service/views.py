@@ -39,3 +39,12 @@ class DiscoverListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         context['now'] = timezone.now()
         return context
+
+
+class Plan(generic.TemplateView):
+    """
+    Plan page
+    """
+    template_name = 'plan.html'
+
+    

@@ -18,80 +18,127 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 
 
 
   </head>
  
   <body>
-      <nav id="nav1" class="navbar navbar-expand-sm bg_green ">
+      <nav id="nav1" class="navbar navbar-fixed-top navbar-expand-sm bg_green sticky-top">
         <!-- Toggler/collapsibe Button -->
          
           
-          <div class=" navbar-collapse justify-content-center" >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">découvrir arribat center</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">actus & offres</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">horaires & accés</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">plan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">bureaux</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white px-4 text-uppercase t13" href="#">hôtel</a>
-            </li>
-          </ul>
+          <div class=" navbar-collapse justify-content-center " >
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13"  href="{%url 'discovers'%}">découvrir arribat center</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13" href="{%url 'home'%}#offres">actus & offres</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13" href="{%url 'home'%}#services">services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13" href="horaires-et-acces/">horaires & accés</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13" href="#">plan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13"  href="bureaux/">bureaux</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white px-4 text-uppercase t13" href="hotel/">hôtel</a>
+                  </li>
+                </ul>
           </div>
         </nav>
         <!-- nav for  mobile version -->
-
-        <nav id="nav_mobile" class="navbar navbar-expand-sm bg_green ">
-            <!-- Toggler/collapsibe Button -->
-            <div class=" text-center pl-0 d-flex justify-content-between">
-                <img src="{{preference.get_logo}}" alt="">  
-              
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon  "></span>
-              </button>
-            </div>
-              <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <section id="nav_mobile">
+           <!-- Toggler/collapsibe Button -->
+           <div class=" text-center pl-0 d-flex justify-content-between">
+              <a href="{%url 'home'%}"><img src="{{preference.get_logo}}" alt=""> </a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon  "></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+        <nav  class="navbar navbar-expand-sm bg_green justify-content-center ">
+           
+             
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link text-white px-4 text-uppercase t13" href="#">découvrir arribat center</a>
+                  <a class="nav-link text-white px-4 text-uppercase t13"  href="{%url 'discovers'%}">découvrir arribat center</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white px-4 text-uppercase t13" href="#">actus & offres</a>
+                  <a class="nav-link text-white px-4 text-uppercase t13" href="{%url 'home'%}#offres">actus & offres</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white px-4 text-uppercase t13" href="#">services</a>
+                  <a class="nav-link text-white px-4 text-uppercase t13" href="{%url 'home'%}#services">services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white px-4 text-uppercase t13" href="#">horaires & accés</a>
+                  <a class="nav-link text-white px-4 text-uppercase t13" href="horaires-et-acces/">horaires & accés</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-white px-4 text-uppercase t13" href="#">plan</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white px-4 text-uppercase t13" href="#">bureaux</a>
+                  <a class="nav-link text-white px-4 text-uppercase t13"  href="bureaux/">bureaux</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white px-4 text-uppercase t13" href="#">hôtel</a>
+                  <a class="nav-link text-white px-4 text-uppercase t13" href="hotel/">hôtel</a>
                 </li>
               </ul>
-              </div>
+              
             </nav>
+             
+              <div id="search_mobile" class="col-md-12  ">
+                  <div class="input-group  search_input  pt-2 d-flex justify-content-center">
+                      
+                      <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" id="example-search-input">
+                      <span class="input-group-prepend ">
+                          <div class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" style=""></div>
+                      </span>
+                  </div>
+                </div>
 
+             
+            <hr class="mb-0 mt-0">
+            <nav class="navbar navbar-expand-sm justify-content-center sticky-top bg-white" style="top: 50px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link txt_green px-4 text-uppercase t15 " href="{%url 'marques'%}?group=3">Hypermarché</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link txt_green px-4 text-uppercase t15 " href="{%url 'marques'%}?group=4">Cinéma</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link txt_green px-4 text-uppercase t15 " href="{%url 'marques'%}?group=1">Shopping</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link txt_green px-4 text-uppercase t15 " href="{%url 'marques'%}?group=2">Restauration</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link txt_green px-4 text-uppercase t15 " href="{%url 'marques'%}?group=5">Culture & Loisirs</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link txt_green px-4 text-uppercase t15 " >Ouverture prochaine</a>
+                    </li>
+                   
+                  </ul>
+            </nav>
+            <div id="social" class="col-md-2 text-center pt-2">
+                <a href="{{preference.facebook}}"><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
+                <a href="{{preference.instagram}}"><img class="img_grey px-2" src="{% static 'resources/insta.png'%}" alt=""></a>
+                <a href="{{preference.youtube}}"><img class="img_grey px-2" src="{% static 'resources/youtube.png'%}" alt=""></a>
+                <a href="{{preference.twitter}}"><img class="img_grey px-2" src="{% static 'resources/twitter.png'%}" alt=""></a>
+             </div>
+          </div>
+          </section>
 
         <!-- nav for  mobile version -- END -->
 
@@ -103,7 +150,7 @@
                   <div class="col-md-12 d-flex justify-content-around mt-3">
                     
                       <div id="logo" class="col-md-2 offset-md-2 text-center pl-0">
-                        <img src="{{preference.get_logo}}" alt="">  
+                          <a href="{%url 'home'%}"><img src="{{preference.get_logo}}" alt=""> </a>
                       </div>
                       <div id="search_responsive" class="col-md-3  text-center" style="margin-left:  120px!important;">
                         <div class="input-group  search_input  pt-2 ">
@@ -115,7 +162,7 @@
                         </div>
                       </div>
                       
-                      <div id="social" class="col-md-2 text-center pt-2">
+                      <div id="social" class="col-md-2 text-center pt-2 hide_mobile">
                          <a href="{{preference.facebook}}"><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
                          <a href="{{preference.instagram}}"><img class="img_grey px-2" src="{% static 'resources/insta.png'%}" alt=""></a>
                          <a href="{{preference.youtube}}"><img class="img_grey px-2" src="{% static 'resources/youtube.png'%}" alt=""></a>
@@ -123,41 +170,29 @@
                       </div>
                       <div class="col-md-2 extra"></div>
                   </div>
-                   <!-- for mobile version  -->
-
-                   <div id="search_mobile" class="col-md-12  ">
-                      <div class="input-group  search_input  pt-2 d-flex justify-content-center">
-                          
-                          <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" id="example-search-input">
-                          <span class="input-group-prepend ">
-                              <div class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" style=""></div>
-                          </span>
-                      </div>
-                    </div>
-
-                   <!-- for mobile version -- END -->   
+                 
               </div>
           </div>
         <hr class="mb-0 mt-0">
-        <nav class="navbar navbar-expand-sm justify-content-center">
+        <nav class="navbar navbar-expand-sm justify-content-center sticky-top bg-white hide_mobile" style="top: 50px;">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="#">Hypermarché</a>
+              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="{%url 'marques'%}/?group=3">Hypermarché</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="#">Cinéma</a>
+              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="{%url 'marques'%}/?group=4">Cinéma</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="#">Shopping</a>
+              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="{%url 'marques'%}/?group=1">Shopping</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="#">Restauration</a>
+              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="{%url 'marques'%}/?group=2">Restauration</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="#">Culture & Loisirs</a>
+              <a class="nav-link txt_green px-4 text-uppercase t15 afterr" href="{%url 'marques'%}/?group=5">Culture & Loisirs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link txt_green px-4 text-uppercase t15 " href="#">Ouverture prochaine</a>
+              <a class="nav-link txt_green px-4 text-uppercase t15 " >Ouverture prochaine</a>
             </li>
            
           </ul>
@@ -276,7 +311,8 @@
     </div>
 
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   <script>
     $("#search").val();
     console.log($("#search").val());
@@ -312,10 +348,43 @@
   </script>
 
   <script>
-  $('#widget').click(function() {
-    $(this).toggleClass('widgethide');
+  $('#wid').click(function() {
+    $('#widget').toggleClass('widgethide');
 });
   </script>
+
+<script>
+$(document).ready(function() {
+  // slick carousel
+  $('.slider').slick({
+    dots: true,
+    vertical: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
