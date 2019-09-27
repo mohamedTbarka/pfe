@@ -368,7 +368,21 @@ $(document).ready(function() {
 </script>
 
 
+<script>
+$(document).on('submit','#new_user_form',function(e){
+  e.preventDefault();
+  $.ajax({
+    type:'post',
+    url:'{%url 'subscribe'%}',
+    data:{
+      email:$('#email').val(),
+    },
+    success:function(){
 
+    }
+  })
+})
+</script>
 
 
 
