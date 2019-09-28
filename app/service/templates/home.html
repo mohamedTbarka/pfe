@@ -52,15 +52,15 @@
         <div class="col-ms-12 ">
            <div class="row d-flex justify-content-between  py-4">
                 <div class="col-md-4 line_left pl-0"> </div>
-                <div class="col-md-2 mr-4  "><h2 class="title text-uppercase">Nouveautés</h2></div>
+                <div class="col-md-2 mr-4 padding-mobile "><h2 class="title text-uppercase">Nouveautés</h2></div>
                 <div class="col-md-4  line_right" ></div>
               </div>
         </div>
         <div class="col-md-12  px-0 hide_mobile">
               <div class="row ">
-                 <div onclick="location.href='{%url 'promotions'%}';" style=" background-image: url('static/resources/promotions.jpg');" class=" col-sm-12 col-md-2 nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22_65">promotions</h3></div>
-                  <div onclick="location.href='{%url 'promotions'%}';" style="background-image: url('static/resources/evenement.jpg');" class="col-sm-12 col-md-2 nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22_65">Evènements</h3></div>
-                  <div onclick="location.href='{%url 'promotions'%}';" style="background-image: url('static/resources/compain.jpg');" class="col-sm-12 col-md-4 nv3"><h3 class="text-white text-uppercase txt_img t22_65">campagne</h3></div>
+                 <div onclick="location.href='{%url 'promotions'%}';" style=" background-image: url('static/resources/promotions.jpg');" class="  nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22_65">promotions</h3></div>
+                  <div onclick="location.href='{%url 'promotions'%}';" style="background-image: url('static/resources/evenement.jpg');" class=" nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22_65">Evènements</h3></div>
+                  <div onclick="location.href='{%url 'promotions'%}';" style="background-image: url('static/resources/compain.jpg');" class=" nv3"><h3 class="text-white text-uppercase txt_img t22_65">campagne</h3></div>
               </div>
           </div>
 
@@ -80,7 +80,7 @@
 </div>
 
 
-<div id="widget" class="widgethide">
+<div id="widget" class="widgethide hide_mobile">
         <div id="wid" class="icon">
             <img src="{% static 'resources/info.png'%}" alt="">
         </div>
@@ -133,7 +133,9 @@
                   </div>
               </div>
           </div>
-         <div class="col-md-12 text-right px-0"><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
+         <div class="col-md-12 text-right px-0 mb_pos hide_mobile"><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
+
+         <div class="col-md-12 text-center px-0 mb_pos  hide_desktop showmobile "><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
     </div>
 </div>
 
