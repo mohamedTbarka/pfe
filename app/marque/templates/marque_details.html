@@ -35,12 +35,22 @@
                 <p class="t15">{{marque.week_open_hours|safe}}</p>
     
                 <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_phone.png'%}" alt=""> téléphone</h4>
+                {%ifequal marque.phone None %}
+                <p class="t15"></p>
+                {%else%}
                 <p class="t15">{{marque.phone}} <br> {{marque.phone_second}}</p>
-    
-                <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_email.png'%}" alt=""> e-mail</h4>
+                
+                {%endifequal%}
+                <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_email.png'%}" alt="">e-mail</h4>
+                {%ifequal marque.email None %}
+                <p class="t15"></p>
+                {%else%}
                 <p class=" t15">{{marque.email}}</p>
+                
+                {%endifequal%}
+                
                 {%ifequal marque.pk 2 %}
-                <button class="btn btn-success">Get cinema list</button>
+                <button href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" class="btn btn-success">Télécharger le programme (PDF)</button>
                 {%endifequal%}
                 <div class="pt-5">
                     <a href="{{preference.facebook}}"><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
