@@ -743,4 +743,22 @@ float: right;
 img.w-100 {
     width: 350%!important;
 }
+
+.alphab{
+    font-size: 15px!important;
+    
+}
+.up {
+    position: absolute;
+    right: 120px;
+}
+#widget .icon {
+    height: 100%;
+    width: 50px;
+    float: left;
+    line-height: 150px;
+    text-align: center;
+    background-color: #246630;
+    cursor: pointer;
+}
 }

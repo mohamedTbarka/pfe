@@ -31,25 +31,29 @@
 
 <div class="container pt-0">
         <div class="row">
-            <div class="col-md-12 px-0 pb-3 showmobile hide_desktop">
-                    <!-- for mobile -->
-                    <select class="form-control" id="exampleFormControlSelect1">
-                            <option disabled selected> Categories</option>
-                            <option>Tout&nbsp;voir</option>
-                            {%for  cat  in categories%}
-                            <option>{{cat.name}}</option>
-                            {%endfor%}
-                          </select>
-                    <!-- for  mobile ---  END -->
-                
-                <nav class="navbar navbar-expand-sm justify-content-start px-0 hide_mobile">
+            <form method="GET" action="{{ HTTP_HOST }}/marques" class="col-md-12 showmobile hide_desktop pb-3">
+              <!-- for mobile -->
+                    
+              <select name="cat" class="form-control" id="exampleFormControlSelect1" onChange="this.form.submit()">
+                   
+                    <option  value="">Tout&nbsp;voir</option>
+                    {%for  cat  in categories%}
+                    <option value={{cat.pk}} >{{cat.name}}</option>
+                    {%endfor%}
+                  </select>
+                </form>
+            <!-- for  mobile ---  END -->
+               
+            <div class="col-md-12 px-0 pb-3 hide_mobile">
+                  
+                <nav class="navbar navbar-expand-sm justify-content-start px-0 ">
                     <ul class="navbar-nav mara_mobile">
                         <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">Tout&nbsp;voir</a>
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="{%url 'marques'%}">Tout&nbsp;voir</a>
                         </li>
                         {%for  cat  in categories%}
                         <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">{{cat.name}}</a>
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="{%url 'marques'%}?group={{cat.pk}}">{{cat.name}}</a>
                         </li>
                        {%endfor%}
                     </ul>
@@ -62,11 +66,11 @@
             <div class="col-md-12 pb-2">
                 <div class="row">
                 <div class="col-md-2 px-0">
-                    <a href="?alpha" class="text-uppercase text-dark px-1 t20">A - Z</a>
+                    <a href="?alpha" class="text-uppercase text-dark px-1 t20 alphab">A - Z</a>
                 </div>
                 <div class="col-md-10 alph px-0">
                     {%for  alpha in alphabet%}
-                    <a class="text-uppercase  px-1 t20{%if  alpha.value%} text-dark {%else%} text-secondary {%endif%} " {%if  alpha.value%} href="?alpha={{alpha.key}}" {%endif%}>{{alpha.key}}</a>
+                    <a class="alphab text-uppercase  px-1 t20{%if  alpha.value%} text-dark {%else%} text-secondary {%endif%} " {%if  alpha.value%} href="?alpha={{alpha.key}}" {%endif%}>{{alpha.key}}</a>
                     {%endfor%}
                 </div>
             </div>
