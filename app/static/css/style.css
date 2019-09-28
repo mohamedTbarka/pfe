@@ -53,7 +53,7 @@
 }
 .t79{
     font-family: 'Sequel100Wide-45Wide';
-    font-size: 79px!important;
+    font-size: 52px!important;
 }
 .t50{
     font-family: 'Sequel100Wide-65Wide';
@@ -89,7 +89,12 @@
    background-size: cover;
 }
 .bg_white{
-    background-color: rgba(255, 255, 255, 0.473)
+    background-color: rgba(255, 255, 255, 0.473);
+    top: 7%;
+    right: 15%!important;
+    bottom: 20px!important;
+    left: 15%!important;
+   
 }
 
 .nv1{
@@ -702,6 +707,7 @@ float: right;
    }
 
    .bg_white{
+        top: 5%;
        right: 0!important;
        bottom: 0;
        left: 0!important;
