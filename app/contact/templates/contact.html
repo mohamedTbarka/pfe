@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+        <div style="background-image:  url('../../media/{{flatpage.image}}');" class="row bg_simple">
+            <div class="col-md-12">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Contactez-nous</h4>
+            </div>
+            
+        </div>
+    </div>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-white pl-0">
+                      <li class="breadcrumb-item active" aria-current="page">Home</li>
+                      <li class="breadcrumb-item active" aria-current="page">contact</li>
+                    </ol>
+                  </nav>
+            </div>
+            
+        </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+            <form  method="POST">
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Objet">
+                    </div>
+                    <div class="form-group">
+                       
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nom et  prénom">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email addresse">
+                    </div>
+                    <div class="form-group">
+                       
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Télephone">
+                    </div>
+                
+                   
+                    <div class="form-group">
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" onclick="" class="btn btn-success">Envoyé</button>
+                    </div>
+                  </form>
+
+    </div>
+</div>
+
+    
+
+
+{% endblock %}

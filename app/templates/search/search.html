@@ -28,8 +28,20 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h4 class="t17">Résultats de recherche pour « {{}} »</h4>
+            <h4 class="text-dark t20">Résultats de recherche pour « {{query}} »</h4>
+           
         </div>
+        {% if query %}
+        {% for result in page.object_list %}
+        <div class="col-md-12 pt-3">
+            <h4 class="t17 txt_green" ><a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a></h4>
+            <p class="t15 text-dark">{{result.object.content}}</p>
+        </div>
+        <hr>
+        {% empty %}
+        <p>No results found.</p>
+        {% endfor %}
+        {%endif%}
     </div>
 </div>
 
@@ -57,8 +69,7 @@
 
             {% for result in page.object_list %}
                 <p>
-                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.name }}</a>
-                    <span>{{ result.object.content|safe|striptags  }}</span>
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
                 </p>
             {% empty %}
                 <p>No results found.</p>
