@@ -798,7 +798,7 @@ img.w-100 {
 
 
 
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
     #nav1 {
      display: none;
     }
@@ -903,7 +903,7 @@ img.w-100 {
 .line_right {
     width: 388px!important;
 }
-}
+} */
 
 
 
