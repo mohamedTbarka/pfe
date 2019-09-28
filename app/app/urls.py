@@ -32,3 +32,6 @@ urlpatterns = [
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))
+
+handler404 = 'service.views.handler404'
+handler500 = 'service.views.handler500'
