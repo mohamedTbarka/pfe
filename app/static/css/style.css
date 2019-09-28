@@ -726,4 +726,8 @@ float: right;
     padding-top: 35px;
 }
 
+#widget.widgethide {
+    right: 0px!important;
+}
+
 }
