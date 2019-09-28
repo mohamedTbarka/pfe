@@ -175,7 +175,7 @@
                       <div style="background-image: url('static/resources/restauration.jpg');" class="offr2 mb-2" onclick="location.href='{%url 'marques'%}?group=2';" > <h3 class="txt_img2 text-white text-uppercase t22_65">Restauration</h3> </div>
                       <div style="background-image: url('static/resources/hypermarche.jpg');" class="offr3 mt-3" onclick="location.href='{%url 'marque_detail' 1%}';"> <h3 class="txt_img2 text-white text-uppercase t22_65">hypermarché</h3> </div>
                   </div>
-                  <div class="col-md-5 pl-0 padding-mobile ">
+                  <div id="removepadding" class="col-md-5 remove_padding padding-mobile2 ">
                       <div  style="background-image: url('static/resources/cinema.jpg');" class="offr4  mb-2" onclick="location.href='{%url 'marque_detail' 2%}';"> <h3 class="txt_img2 text-white text-uppercase t22_65">cinéma</h3> </div>
                       <div style="background-image: url('static/resources/culture_loisirs.jpg');" class="offr5 mt-3 " onclick="location.href='{%url 'marques'%}?group=5';"> <h3 class="txt_img2 text-white text-uppercase t22_65">Culture & Loisirs</h3> </div>
                   </div>
@@ -216,7 +216,7 @@
                   <div class="row  pt-5 pb-3">
                       {%for service in  services%}
                       {%if not service.principal%}
-                        <div class="col md-2 ">
+                        <div class="col-md-2 ">
                             <a class="text-dark"  {%if  service.url %} href="{{service.url}}" {%else%} href="#" {% endif %}><div class="service_icon">
                                 <img src="media/{{service.icon}}" alt="">
                             </div>
