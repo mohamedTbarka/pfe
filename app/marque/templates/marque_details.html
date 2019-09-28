@@ -39,7 +39,9 @@
     
                 <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_email.png'%}" alt=""> e-mail</h4>
                 <p class=" t15">{{marque.email}}</p>
-    
+                {%ifequal marque.pk 2 %}
+                <button class="btn btn-success">Get cinema list</button>
+                {%endifequal%}
                 <div class="pt-5">
                     <a href="{{preference.facebook}}"><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
                     <a href="{{preference.instagram}}"><img class="img_grey px-2" src="{% static 'resources/insta.png'%}" alt=""></a>
