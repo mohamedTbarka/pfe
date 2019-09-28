@@ -31,9 +31,19 @@
 
 <div class="container pt-0">
         <div class="row">
-            <div class="col-md-12 px-0 pb-3">
-                <nav class="navbar navbar-expand-sm justify-content-start px-0">
-                    <ul class="navbar-nav">
+            <div class="col-md-12 px-0 pb-3 showmobile hide_desktop">
+                    <!-- for mobile -->
+                    <select class="form-control" id="exampleFormControlSelect1">
+                            <option disabled selected> Categories</option>
+                            <option>Tout&nbsp;voir</option>
+                            {%for  cat  in categories%}
+                            <option>{{cat.name}}</option>
+                            {%endfor%}
+                          </select>
+                    <!-- for  mobile ---  END -->
+                
+                <nav class="navbar navbar-expand-sm justify-content-start px-0 hide_mobile">
+                    <ul class="navbar-nav mara_mobile">
                         <li class="nav-item">
                         <a class="nav-link txt_green text-uppercase t15 afterr" href="#">Tout&nbsp;voir</a>
                         </li>
@@ -75,11 +85,11 @@
                 <div class="col-md-4 pb-4
                   px-4">
                     <div class="row border-dark border">
-                        <div class="col-md-4 d-flex align-items-center
+                        <div class="col-4 col-sm-4 d-flex align-items-center
                         ">
                             <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" style="max-width: 100px;max-height: 110px"></a>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-8 col-sm-6">
                             <h2 class="t15_65 pt-3 text-uppercase">{{marq.name}}</h2>
                             <h5 class="t15">{{marq.open_hours|safe}}</h5>
                             <h5 class="t15 pb-2">{{marq.phone}}</h5>
