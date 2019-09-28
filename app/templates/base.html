@@ -164,7 +164,7 @@
                           </form>
                       </div>
                       
-                      <div id="social" class="col-md-2 text-center pt-2 hide_mobile">
+                      <div id="social" class="col-md-3 text-center pt-2 hide_mobile">
                          <a href="{{preference.facebook}} target='_blank' "><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
                          <a href="{{preference.instagram}} target='_blank' "><img class="img_grey px-2" src="{% static 'resources/insta.png'%}" alt=""></a>
                          <a href="{{preference.youtube}} target='_blank' "><img class="img_grey px-2" src="{% static 'resources/youtube.png'%}" alt=""></a>
@@ -229,9 +229,9 @@
           </div>
           <hr class="bg-white">
    
-          <div class="col-md-12 px-0 ">
+          <div class="col-md-12 px-0 " style="bottom: 20px">
               <nav class="navbar navbar-expand-sm bg_green d-flex justify-content-start ">
-                  <ul class="navbar-nav">
+                  <ul class="navbar-nav ">
                     <li class="nav-item">
                       <a class="nav-link text-white text-uppercase t13_65 text-center" href="http://c705-arribatcenter-website.wbc-prod.com/mentions-legales/">mentions légales</a>
                     </li>
@@ -241,8 +241,8 @@
                     <li class="nav-item">
                       <a class="nav-link text-white text-uppercase t13_65 text-center" href="#">Nous contacter</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white text-uppercase t13_65 text-center" href="#">© 2019 arribat center - tous droits réservés</a>
+                    <li class="nav-item ">
+                      <a class="nav-link text-white text-uppercase t13_65 text-center " href="#">© 2019 arribat center - tous droits réservés</a>
                     </li>
                   </ul>
                 </nav>
@@ -314,7 +314,7 @@ $(document).on('submit','#new_user_form',function(e){
       email:$('#email').val(),
     },
     success:function(){
-      
+
     }
   })
 })
