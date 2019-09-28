@@ -705,12 +705,16 @@ float: right;
        right: 0!important;
        bottom: 0;
        left: 0!important;
+       top: 50px!important;
      
    }
    .t79{
     font-family: 'Sequel100Wide-45Wide';
-    font-size: 35px!important;
-    
+    font-size: 30px!important;  
+}
+.t22{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size:16px!important;  
 }
 .offr1,.offr2,.offr3,.offr4,.offr5{
     max-height: 100px!important;
@@ -735,5 +739,8 @@ float: right;
 }
 .pd_event{
     padding-left: 15px!important;
+}
+img.w-100 {
+    width: 350%!important;
 }
 }

@@ -12,7 +12,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{% static 'resources/bg1.jpg'%}" class="" alt="...">
+              <img src="{% static 'resources/bg1.jpg'%}" class="d-block w-100" alt="...">
               <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
                 <h1 class="text-uppercase text-dark t79">ouverture<br> prochaine</h1>
                 <p class="t22 text-dark">45 000m² d’espace shopping, plus de <br>80 marques de prêt à porter, 11 salles de <br>cinéma, 1000m² d’espace de restauration</p>
@@ -20,7 +20,7 @@
             </div>
             </div>
             <div class="carousel-item">
-              <img src="{% static 'resources/bg1.jpg'%}" class="" alt="...">
+              <img src="{% static 'resources/bg1.jpg'%}" class="d-block w-100" alt="...">
               <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
                     <h1 class="text-uppercase text-dark t79">ouverture<br> prochaine</h1>
                     <p class="t22 text-dark">45 000m² d’espace shopping, plus de <br>80 marques de prêt à porter, 11 salles de <br>cinéma, 1000m² d’espace de restauration</p>
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-              <img src="{% static 'resources/bg1.jpg'%}" class="" alt="...">
+              <img src="{% static 'resources/bg1.jpg'%}" class="d-block w-100" alt="...">
               <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
                     <h1 class="text-uppercase text-dark t79">ouverture<br> prochaine</h1>
                     <p class="t22 text-dark">45 000m² d’espace shopping, plus de <br>80 marques de prêt à porter, 11 salles de <br>cinéma, 1000m² d’espace de restauration</p>
@@ -46,6 +46,20 @@
           </a>
         </div>
       </div>
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
 
 <div class="container ">
     <div class="row d-flex justify-content-around text-center">
@@ -75,7 +89,7 @@
             <div class="col-md-12 text-center px-0 hide_desktop showmobile "><a href="{%url 'nouveautes'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les nouveautés</button></div></a>
           <!-- for  mobile  version  --- END -->
 
-          <div class="col-md-12 text-right px-0 hide_mobile"><a href="{%url 'nouveautes'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 ">toutes les nouveautés</button></div></a>
+          <div class="col-md-12 text-right px-0 hide_mobile "><a href="{%url 'nouveautes'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4  t15 ">toutes les nouveautés</button></div></a>
     </div>
 </div>
 
@@ -128,19 +142,19 @@
                       <div style="background-image: url('static/resources/hypermarche.jpg');" class="offr3 mt-3" onclick="location.href='{%url 'marque_detail' 1%}';"> <h3 class="txt_img2 text-white text-uppercase t22_65">hypermarché</h3> </div>
                   </div>
                   <div class="col-md-5 pl-0 padding-mobile ">
-                      <div  style="background-image: url('static/resources/cinema.jpg');" class="offr4 padding-mobile mb-2" onclick="location.href='{%url 'marque_detail' 2%}';"> <h3 class="txt_img2 text-white text-uppercase t22_65">cinéma</h3> </div>
+                      <div  style="background-image: url('static/resources/cinema.jpg');" class="offr4  mb-2" onclick="location.href='{%url 'marque_detail' 2%}';"> <h3 class="txt_img2 text-white text-uppercase t22_65">cinéma</h3> </div>
                       <div style="background-image: url('static/resources/culture_loisirs.jpg');" class="offr5 mt-3 " onclick="location.href='{%url 'marques'%}?group=5';"> <h3 class="txt_img2 text-white text-uppercase t22_65">Culture & Loisirs</h3> </div>
                   </div>
               </div>
           </div>
          <div class="col-md-12 text-right px-0 mb_pos hide_mobile"><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
 
-         <div class="col-md-12 text-center px-0 mb_pos  hide_desktop showmobile "><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
+         <div class="col-md-12 text-center px-0 mb_pos  hide_desktop showmobile mt-3"><a href="{%url 'marques'%}"><button class="btn btn-outline-dark my-3 mx-2 t_btn text-uppercase px-4 t15 " >toutes les marques</button></a></div>
     </div>
 </div>
 
 <!-- background paralex -->
-<div  style=" background-image: url('{{preference.get_background_image}}');" id="paral" class="parallax-window" ></div>
+<div  style=" background-image: url('{{preference.get_background_image}}');" id="paral" class="parallax-window mt-4" ></div>
 
 
 <div id="services" class="container">
