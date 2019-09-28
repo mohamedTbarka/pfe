@@ -97,7 +97,7 @@
             </nav>
              
               <div id="search_mobile" class="col-md-12  ">
-                  <form action="http://c705-arribatcenter-website.wbc-prod.com/search/" method="GET" class="input-group  search_input  pt-2 d-flex justify-content-center">
+                  <form action="{{ HTTP_HOST }}/search/"  method="GET" class="input-group  search_input  pt-2 d-flex justify-content-center">
                       
                       <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
                       <span class="input-group-prepend ">
@@ -153,7 +153,7 @@
                           <a href="{%url 'home'%}"><img src="{{preference.get_logo}}" alt=""> </a>
                       </div>
                       <div id="search_responsive" class="col-md-3  text-center" style="margin-left:  120px!important;">
-                        <form action="http://c705-arribatcenter-website.wbc-prod.com/search/" method="GET" class="input-group  search_input  pt-2 ">
+                        <form   action="{{ HTTP_HOST }}/search/" method="GET" class="input-group  search_input  pt-2 ">
                             
                             <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
                             <span class="input-group-prepend ">
