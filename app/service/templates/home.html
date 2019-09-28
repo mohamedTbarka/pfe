@@ -94,7 +94,7 @@
 </div>
 
 
-<div id="widget" class="widgethide">
+<div id="widget" class="widgethide hide_mobile">
         <div id="wid" class="icon">
             <img src="{% static 'resources/info.png'%}" alt="">
         </div>
@@ -122,6 +122,40 @@
         </div>
         
     </div>
+<!-- widget mobile -->
+<div class="container hide_desktop showmobile fixed-bottom" >
+    <div class="row">
+        <div id="wid_mobile_content" class="col-md-12 bg-dark" style="display: none">
+                <div id="carouselContent" class="carousel slide" data-ride="carousel" >
+                        <div class="carousel-inner" role="listbox" >
+                            <div class="carousel-item active text-center p-4">
+                                <h4 class="text-white t17">lorem ipsum</h4>
+                                 <p class="text-white t15">lorem ipsum (lorem ipsum lorem ipsum)</p>
+                            </div>
+                            <div class="carousel-item text-center p-4">
+                                
+                                    <h4 class="text-white t17">lorem ipsum 2</h4>
+                                    <p class="text-white t15">lorem ipsum (lorem ipsum lorem ipsum)</p>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+        </div>
+        <div id="wid_mobile" class="col-md-12  bg_green text-center py-2"><img src="{% static 'resources/info.png'%}"  alt=""></div>
+    </div>
+</div>
+
+
+
+
+
 
 
 

@@ -29,10 +29,10 @@
  
   <body>
       <nav id="nav1" class="navbar navbar-fixed-top navbar-expand-sm bg_green sticky-top">
-        <!-- Toggler/collapsibe Button -->
+       
          
           
-          <div class=" navbar-collapse justify-content-center " >
+          <div class=" navbar-collapse d-flex justify-content-center " >
               <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link text-white text-uppercase t13"  href="{%url 'discovers'%}">découvrir arribat center</a>
@@ -314,7 +314,7 @@ $(document).on('submit','#new_user_form',function(e){
       email:$('#email').val(),
     },
     success:function(){
-
+      
     }
   })
 })
@@ -322,7 +322,14 @@ $(document).on('submit','#new_user_form',function(e){
 
 
 
+<script>
+    $(document).ready(function(){
+    $("#wid_mobile").click(function(){        
+      $("#wid_mobile_content").toggle("slow");
+    });
 
+  });
+  </script>
 
 
 
