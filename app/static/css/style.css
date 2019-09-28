@@ -672,6 +672,9 @@ float: right;
     padding-left: 0;
 }
 @media only screen and (max-width: 600px) {
+    .bot{
+        padding-bottom: 25px!important;
+    }
     .t22_65{
         font-size: 
     }

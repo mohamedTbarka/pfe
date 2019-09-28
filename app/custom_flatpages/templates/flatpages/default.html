@@ -30,30 +30,10 @@
             </div>
             
         </div>
-        <div style=" background-image:  url({% static 'resources/newsletter.png'%});" class="row bg_newsletter ">
-            <div class="col-md-12 pb-0  pt-5">
-                <h1 class="text-white text-uppercase text-center t50">newsletter</h1>
-             </div>
-             <div class="col-md-6 offset-md-3">
-                <p class="text-white text-uppercase text-center t22">Restez à l’ecoute ! <br><span class="text-lowercase">Inscrivez-vous 
-                    à notre newsletter pour ne rien rater </span></p>
-             </div>
-             <div class="col-ms-6 offset-md-4 mb-3 ">
-                    <form method="POST" action="{{ HTTP_HOST }}/subscribe" class="input-group  search_input ">
-                        
-                        <input type="email" placeholder="Adresse email" name="email" id="email" class=" bg-white form-control  border-right-0 form-control-sm  text-uppercase text-white border-dark newsletter btn_contactUs " >
-                        <span class="input-group-prepend  ">
-                            <div class=" bg-white input-group-text  border-left-0 pb-0 pt-0 text-dark border-dark btn_contactUs t15_65">ok</div>
-                        </span>
-                      </form>
-                </div>
-                    
-                 
 
-            </div>
-        </div>
+
         {%if flatpage.gallery%}
-        <div id="slide" class="col-md-12 px-0">
+        <div id="slide" class="col-md-8 offset-md-3 px-0">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                        
@@ -81,6 +61,32 @@
             </div>
             {%endif%}
 
+
+
+
+        <div style=" background-image:  url({% static 'resources/newsletter.png'%});" class="row bg_newsletter ">
+            <div class="col-md-12 pb-0  pt-5">
+                <h1 class="text-white text-uppercase text-center t50">newsletter</h1>
+             </div>
+             <div class="col-md-6 offset-md-3">
+                <p class="text-white text-uppercase text-center t22">Restez à l’ecoute ! <br><span class="text-lowercase">Inscrivez-vous 
+                    à notre newsletter pour ne rien rater </span></p>
+             </div>
+             <div class="col-ms-6 offset-md-4 mb-3 ">
+                    <form method="POST" action="{{ HTTP_HOST }}/subscribe" class="input-group  search_input ">
+                        
+                        <input type="email" placeholder="Adresse email" name="email" id="email" class=" bg-white form-control  border-right-0 form-control-sm  text-uppercase text-white border-dark newsletter btn_contactUs " >
+                        <span class="input-group-prepend  ">
+                            <div class=" bg-white input-group-text  border-left-0 pb-0 pt-0 text-dark border-dark btn_contactUs t15_65">ok</div>
+                        </span>
+                      </form>
+                </div>
+                    
+                 
+
+            </div>
+        </div>
+        
     
 
 
