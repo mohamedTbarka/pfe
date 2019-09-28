@@ -593,11 +593,10 @@ float: right;
 .toside{
     left: 10px!important;
 }
-
-
-
-
-
+.active.carousel-item-left, .carousel-item-prev:not(.carousel-item-right){
+    transform: translateX(20%)!important;
+    color: transparent!important;
+}
 
 
 
@@ -730,4 +729,11 @@ float: right;
     right: 0px!important;
 }
 
+.t_business {
+    font-size: 30px!important;
+    padding-top: 38%!important;
+}
+.pd_event{
+    padding-left: 15px!important;
+}
 }

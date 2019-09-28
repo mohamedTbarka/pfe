@@ -37,30 +37,11 @@
                         <li class="nav-item">
                         <a class="nav-link txt_green text-uppercase t15 afterr" href="#">Tout&nbsp;voir</a>
                         </li>
+                        {%for  cat  in categories%}
                         <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">mode&nbsp;femme</a>
+                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">{{cat.name}}</a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">mode&nbsp;homme</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">mode&nbsp;enfants</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">lingerie</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr " href="#">chaussures</a>
-                        </li>
-                         <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">maroquinerie</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="#">accessories</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 " href="?cat=1">bijoux</a>
-                        </li>
+                       {%endfor%}
                     </ul>
                     </nav>
             </div>
@@ -85,7 +66,12 @@
 
     <div class="container">
             <div class="row ">
+               
                 {% for marq in marque_list%}
+
+            
+               
+
                 <div class="col-md-4 pb-4
                   px-4">
                     <div class="row border-dark border">
@@ -104,6 +90,7 @@
                     </div>
                 </div>
                {%endfor%}
+               
             </div>
         </div>
 
