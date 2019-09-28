@@ -124,7 +124,7 @@
     </div>
 <!-- widget mobile -->
 <div class="container hide_desktop showmobile fixed-bottom" >
-    <div class="row">
+    <div class="row bottom1">
         <div id="wid_mobile_content" class="col-md-12 bg-dark" style="display: none">
                 <div id="carouselContent" class="carousel slide" data-ride="carousel" >
                         <div class="carousel-inner" role="listbox" >
@@ -202,7 +202,7 @@
              </div>
              {%for service in  services%} 
              {%if service.principal%}
-            <div class="col-md-12 px-0">
+            <div class="col-md-12 move_middle px-0">
                   <div class="row bg3" style="background-image:  url('media/{{service.background_image}}');">  
                     <div class="col-md-12 pt-5"><h2 class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
                     <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> 
