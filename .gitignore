@@ -24,3 +24,4 @@ migrations/
 !packages/*
 whoosh_index/*
 */whoosh_index/*
+app/app/whoosh_index/*
