@@ -11,5 +11,6 @@ router.register(r'contact_us', views.ContactAPIView)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('contact/', views.Contact.as_view(), name="contact"),
 
 ]

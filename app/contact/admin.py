@@ -35,5 +35,5 @@ def _register(model, admin_class):
     admin.site.register(model, admin_class)
 
 
-_register(models.Contact, ContactAdmin)
+_register(models.Contacts, ContactAdmin)
 _register(models.Newsletter, NewsletterAdmin)

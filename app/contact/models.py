@@ -9,10 +9,11 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class Contact(BaseModel):
-    name = models.CharField(max_length=100,)
+class Contacts(BaseModel):
+    name = models.CharField(max_length=100, )
     email = models.EmailField()
     object = models.CharField(max_length=150)
+    phone = models.CharField(max_length=20)
     content = models.TextField()
 
 
