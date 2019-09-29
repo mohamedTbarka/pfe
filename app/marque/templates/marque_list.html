@@ -45,19 +45,18 @@
             <!-- for  mobile ---  END -->
                
             <div class="col-md-12 px-0 pb-3 hide_mobile">
+                <div class="row ">
+                    <div class="col-md-1 mx-2 pl-0">
+                        <a href="" > <h1 class="nav-link txt_green text-uppercase t15 ">Tout&nbsp;voir</h1> </a>
+                    </div>
+                    {%for  cat  in categories%}
+                    <div class="col-md-1 mx-2">
+                            <a href="" > <h1 class="nav-link txt_green text-uppercase t15 ">{{cat.name}}</h1> </a>
+                    </div>
+                    {%endfor%}
+                </div>
                   
-                <nav class="navbar navbar-expand-sm justify-content-start px-0 ">
-                    <ul class="navbar-nav mara_mobile">
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="{%url 'marques'%}">Tout&nbsp;voir</a>
-                        </li>
-                        {%for  cat  in categories%}
-                        <li class="nav-item">
-                        <a class="nav-link txt_green text-uppercase t15 afterr" href="{%url 'marques'%}?group={{cat.pk}}">{{cat.name}}</a>
-                        </li>
-                       {%endfor%}
-                    </ul>
-                    </nav>
+               
             </div>
         </div>
     </div>
@@ -93,7 +92,7 @@
                         ">
                             <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" style="max-width: 100px;max-height: 110px"></a>
                         </div>
-                        <div class="col-8 col-sm-6">
+                        <div class="col-8 col-sm-6" style="min-height: 77px!important">
                             <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"><h2 class="t15_65 pt-3 text-uppercase text-dark">{{marq.name}}</h2></a>
                             <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"> <h5 class="t15 text-dark">{{marq.open_hours|safe}}</h5></a>
                             <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"><h5 class="t15 pb-2">{{marq.phone}}</h5></a>
