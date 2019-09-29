@@ -370,16 +370,20 @@ $(document).ready(function() {
 
 
 <script>
-$(document).on('submit','#new_user_form',function(e){
+$(document).on('click','#sub_btn',function(e){
   e.preventDefault();
+  console.log("{{ HTTP_HOST }}/subscribe/");
+  
   $.ajax({
-    type:'post',
-    url:'http://127.0.0.1:8000/subscribe',
+    url:'{{ HTTP_HOST }}/subscribe/',
+    method:'GET',
     data:{
       email:$('#email').val(),
+      
     },
     success:function(){
-
+      console.log("working");
+      
     }
   })
 })
