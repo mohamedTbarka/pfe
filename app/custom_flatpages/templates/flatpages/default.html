@@ -73,13 +73,13 @@
                     à notre newsletter pour ne rien rater </span></p>
              </div>
              <div class="col-ms-6 offset-md-4 mb-3 ">
-                    <form method="POST" action="{{ HTTP_HOST }}/subscribe" class="input-group  search_input ">
-                        
+                    <div   class="input-group  search_input" id="new_user_form">
+                      {% csrf_token %}
                         <input type="email" placeholder="Adresse email" name="email" id="email" class=" bg-white form-control  border-right-0 form-control-sm  text-uppercase text-white border-dark newsletter btn_contactUs " >
                         <span class="input-group-prepend  ">
-                            <div class=" bg-white input-group-text  border-left-0 pb-0 pt-0 text-dark border-dark btn_contactUs t15_65">ok</div>
+                            <button  id="sub_btn" class=" bg-white input-group-text  border-left-0 pb-0 pt-0 text-dark border-dark btn_contactUs t15_65">ok</button>
                         </span>
-                      </form>
+                      </div>
                 </div>
                     
                  
