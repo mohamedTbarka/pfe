@@ -734,16 +734,24 @@ float: right;
     font-family: 'Sequel100Wide-45Wide';
     font-size:16px!important;  
 }
-.offr1.offr2,.offr3,.offr4,.offr5{
+.offr2,.offr3,.offr4,.offr5{
     max-height: 100px!important;
-    min-height: 100px;
+    min-height: 100px!important;
     max-width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 400px;   
     transition: all .5s ease-in;
 }
-
+.offr1{
+    max-height: 100px!important;
+    min-height: 100px!important;
+    max-width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;   
+    transition: all .5s ease-in;
+}
 .txt_img,.txt_img2 {
     padding-top: 35px;
 }
