@@ -33,7 +33,7 @@
 \contentsline {paragraph}{}{11}% 
 \contentsline {paragraph}{}{11}% 
 \contentsline {paragraph}{}{11}% 
-\contentsline {chapter}{\numberline {3}Leader Election Algorithm}{12}% 
+\contentsline {chapter}{\numberline {3}Hierarchical Leader Election Algorithm}{12}% 
 \contentsline {paragraph}{}{12}% 
 \contentsline {section}{\numberline {3.1}Informal Description}{12}% 
 \contentsline {paragraph}{}{12}% 
@@ -46,16 +46,16 @@
 \contentsline {paragraph}{}{14}% 
 \contentsline {section}{\numberline {3.3}Initial States}{15}% 
 \contentsline {paragraph}{}{15}% 
-\contentsline {paragraph}{}{15}% 
+\contentsline {paragraph}{}{16}% 
 \contentsline {section}{\numberline {3.4}Goal of the Algorithm}{16}% 
 \contentsline {paragraph}{}{16}% 
 \contentsline {section}{\numberline {3.5}Description of the Algorithm}{16}% 
 \contentsline {paragraph}{}{16}% 
-\contentsline {paragraph}{}{16}% 
 \contentsline {paragraph}{}{17}% 
 \contentsline {paragraph}{}{17}% 
-\contentsline {paragraph}{}{18}% 
-\contentsline {paragraph}{}{18}% 
+\contentsline {paragraph}{}{17}% 
+\contentsline {paragraph}{}{17}% 
+\contentsline {paragraph}{}{17}% 
 \contentsline {paragraph}{}{18}% 
 \contentsline {paragraph}{}{19}% 
 \contentsline {section}{\numberline {3.6}Sample execution}{19}% 
@@ -250,3 +250,4 @@
 \contentsline {paragraph}{}{66}% 
 \contentsline {section}{\numberline {6.2}Performance Analysis}{67}% 
 \contentsline {chapter}{\numberline {7}Conclusion}{69}% 
+\contentsline {paragraph}{Acknowledgments}{69}% 

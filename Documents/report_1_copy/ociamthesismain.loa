@@ -1,4 +1,4 @@
-\contentsline {algorithm}{\numberline {1}{\ignorespaces When $ChannelDown_{uv}$ event occurs:}}{17}% 
+\contentsline {algorithm}{\numberline {1}{\ignorespaces When $ChannelDown_{uv}$ event occurs:}}{18}% 
 \contentsline {algorithm}{\numberline {2}{\ignorespaces When $ChannelUp_{uv}$ event occurs:}}{18}% 
 \contentsline {algorithm}{\numberline {3}{\ignorespaces When node $u$ receives $Update(h)$ from node $v \in forming \cup N$:}}{22}% 
 \contentsline {algorithm}{\numberline {4}{\ignorespaces $ELECTSELF$}}{22}% 

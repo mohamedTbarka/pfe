@@ -1,22 +1,15 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2019.8.1)  6 AUG 2019 21:23
- restricted system commands enabled.
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  27 SEP 2019 09:47
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **paper.tex
 (./paper.tex
 LaTeX2e <2018-12-01>
-[\directlua]:1: module 'luaotfload-main' not found:
-	no field package.preload['luaotfload-main']
-	[kpse lua searcher] file not found: 'luaotfload-main'
-	[kpse C searcher] file not found: 'luaotfload-main'
-Error in luaotfload: reverting to OT1
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 54.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
+)
 \c@part=\count80
 \c@section=\count81
 \c@subsection=\count82
@@ -60,8 +53,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks15
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
-
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
 \f@nch@headwidth=\skip43
 \f@nch@O@elh=\skip44
 \f@nch@O@erh=\skip45
@@ -79,21 +72,13 @@ Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-
-
-Package inputenc Warning: inputenc package ignored with utf8 based engines.
-
-) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
-
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
@@ -101,31 +86,29 @@ Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
+
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX detected.
+Package ifluatex Info: LuaTeX not detected.
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: luatex-loader 2016/05/16 v0.6 Lua module loader (HO)
-
-(/usr/share/texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
-
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks18
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
-
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -151,6 +134,8 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count93
 
@@ -188,17 +173,17 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \c@Item=\count97
 \c@Hfootnote=\count98
 )
-Package hyperref Info: Driver (autodetected): hluatex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hluatex.def
-File: hluatex.def 2018/11/30 v6.88e Hyperref driver for luaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count99
 \c@bookmark@seq@number=\count100
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
-2.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
 \Hy@SectionHShift=\skip54
 )
@@ -224,7 +209,7 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks19
+\@emptytoks=\toks18
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -240,44 +225,43 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2019/02/28 v2.7b Micro-typographical refinements (RS)
-\MT@toks=\toks20
+Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
+\MT@toks=\toks19
 \MT@count=\count105
-LaTeX Info: Redefining \textls on input line 790.
+LaTeX Info: Redefining \textls on input line 793.
 \MT@outer@kern=\dimen128
-LaTeX Info: Redefining \textmicrotypecontext on input line 1336.
+LaTeX Info: Redefining \textmicrotypecontext on input line 1339.
 \MT@listname@count=\count106
 
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-luatex.def
-File: microtype-luatex.def 2019/02/28 v2.7b Definitions specific to luatex (RS)
-LaTeX Info: Redefining \lsstyle on input line 681.
-LaTeX Info: Redefining \lslig on input line 681.
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2018/01/14 v2.7a Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 913.
+LaTeX Info: Redefining \lslig on input line 913.
 \MT@outer@space=\skip58
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
+File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2019-07-01 L3 programming layer (loader) 
+Package: expl3 2019-02-15 L3 programming layer (loader) 
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2019-07-01 L3 programming layer (code)
-\ucharcat@table=\catcodetable5
+Package: expl3 2019-02-15 L3 programming layer (code)
 \c_max_int=\count107
 \l_tmpa_int=\count108
 \l_tmpb_int=\count109
 \g_tmpa_int=\count110
 \g_tmpb_int=\count111
 \g__kernel_prg_map_int=\count112
-\c__ior_term_ior=\count113
-\c_log_iow=\count114
-\l_iow_line_count_int=\count115
-\l__iow_line_target_int=\count116
-\l__iow_one_indent_int=\count117
-\l__iow_indent_int=\count118
+\c_log_iow=\count113
+\l_iow_line_count_int=\count114
+\l__iow_line_target_int=\count115
+\l__iow_one_indent_int=\count116
+\l__iow_indent_int=\count117
 \c_zero_dim=\dimen129
 \c_max_dim=\dimen130
 \l_tmpa_dim=\dimen131
@@ -296,19 +280,20 @@ Package: expl3 2019-07-01 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count119
-\l__intarray_loop_int=\count120
+\l_keys_choice_int=\count118
+\l__intarray_loop_int=\count119
 \c__intarray_sp_dim=\dimen135
-\g__intarray_font_int=\count121
-\c__fp_leading_shift_int=\count122
-\c__fp_middle_shift_int=\count123
-\c__fp_trailing_shift_int=\count124
-\c__fp_big_leading_shift_int=\count125
-\c__fp_big_middle_shift_int=\count126
-\c__fp_big_trailing_shift_int=\count127
-\c__fp_Bigg_leading_shift_int=\count128
-\c__fp_Bigg_middle_shift_int=\count129
-\c__fp_Bigg_trailing_shift_int=\count130
+\g__intarray_font_int=\count120
+\c__fp_leading_shift_int=\count121
+\c__fp_middle_shift_int=\count122
+\c__fp_trailing_shift_int=\count123
+\c__fp_big_leading_shift_int=\count124
+\c__fp_big_middle_shift_int=\count125
+\c__fp_big_trailing_shift_int=\count126
+\c__fp_Bigg_leading_shift_int=\count127
+\c__fp_Bigg_middle_shift_int=\count128
+\c__fp_Bigg_trailing_shift_int=\count129
+\c__kernel_randint_max_int=\count130
 \g__fp_array_int=\count131
 \l__fp_array_loop_int=\count132
 \l__sort_length_int=\count133
@@ -322,50 +307,51 @@ Package: expl3 2019-07-01 L3 programming layer (code)
 \l__sort_A_int=\count141
 \l__sort_B_int=\count142
 \l__sort_C_int=\count143
-\l__str_internal_int=\count144
-\l__tl_analysis_normal_int=\count145
-\l__tl_analysis_index_int=\count146
-\l__tl_analysis_nesting_int=\count147
-\l__tl_analysis_type_int=\count148
-\l__regex_internal_a_int=\count149
-\l__regex_internal_b_int=\count150
-\l__regex_internal_c_int=\count151
-\l__regex_balance_int=\count152
-\l__regex_group_level_int=\count153
-\l__regex_mode_int=\count154
-\c__regex_cs_in_class_mode_int=\count155
-\c__regex_cs_mode_int=\count156
-\l__regex_catcodes_int=\count157
-\l__regex_default_catcodes_int=\count158
-\c__regex_catcode_L_int=\count159
-\c__regex_catcode_O_int=\count160
-\c__regex_catcode_A_int=\count161
-\c__regex_all_catcodes_int=\count162
-\l__regex_show_lines_int=\count163
-\l__regex_min_state_int=\count164
-\l__regex_max_state_int=\count165
-\l__regex_left_state_int=\count166
-\l__regex_right_state_int=\count167
-\l__regex_capturing_group_int=\count168
-\l__regex_min_pos_int=\count169
-\l__regex_max_pos_int=\count170
-\l__regex_curr_pos_int=\count171
-\l__regex_start_pos_int=\count172
-\l__regex_success_pos_int=\count173
-\l__regex_curr_char_int=\count174
-\l__regex_curr_catcode_int=\count175
-\l__regex_last_char_int=\count176
-\l__regex_case_changed_char_int=\count177
-\l__regex_curr_state_int=\count178
-\l__regex_step_int=\count179
-\l__regex_min_active_int=\count180
-\l__regex_max_active_int=\count181
-\l__regex_replacement_csnames_int=\count182
-\l__regex_match_count_int=\count183
-\l__regex_min_submatch_int=\count184
-\l__regex_submatch_int=\count185
-\l__regex_zeroth_submatch_int=\count186
-\g__regex_trace_regex_int=\count187
+\l__tl_analysis_normal_int=\count144
+\l__tl_analysis_index_int=\count145
+\l__tl_analysis_nesting_int=\count146
+\l__tl_analysis_type_int=\count147
+\l__regex_internal_a_int=\count148
+\l__regex_internal_b_int=\count149
+\l__regex_internal_c_int=\count150
+\l__regex_balance_int=\count151
+\l__regex_group_level_int=\count152
+\l__regex_mode_int=\count153
+\c__regex_cs_in_class_mode_int=\count154
+\c__regex_cs_mode_int=\count155
+\l__regex_catcodes_int=\count156
+\l__regex_default_catcodes_int=\count157
+\c__regex_catcode_D_int=\count158
+\c__regex_catcode_S_int=\count159
+\c__regex_catcode_L_int=\count160
+\c__regex_catcode_O_int=\count161
+\c__regex_catcode_A_int=\count162
+\c__regex_all_catcodes_int=\count163
+\l__regex_show_lines_int=\count164
+\l__regex_min_state_int=\count165
+\l__regex_max_state_int=\count166
+\l__regex_left_state_int=\count167
+\l__regex_right_state_int=\count168
+\l__regex_capturing_group_int=\count169
+\l__regex_min_pos_int=\count170
+\l__regex_max_pos_int=\count171
+\l__regex_curr_pos_int=\count172
+\l__regex_start_pos_int=\count173
+\l__regex_success_pos_int=\count174
+\l__regex_curr_char_int=\count175
+\l__regex_curr_catcode_int=\count176
+\l__regex_last_char_int=\count177
+\l__regex_case_changed_char_int=\count178
+\l__regex_curr_state_int=\count179
+\l__regex_step_int=\count180
+\l__regex_min_active_int=\count181
+\l__regex_max_active_int=\count182
+\l__regex_replacement_csnames_int=\count183
+\l__regex_match_count_int=\count184
+\l__regex_min_submatch_int=\count185
+\l__regex_submatch_int=\count186
+\l__regex_zeroth_submatch_int=\count187
+\g__regex_trace_regex_int=\count188
 \c_empty_box=\box27
 \l_tmpa_box=\box28
 \l_tmpb_box=\box29
@@ -395,37 +381,35 @@ Package: expl3 2019-07-01 L3 programming layer (code)
 \l_tmpb_coffin=\box38
 \g_tmpa_coffin=\box39
 \g_tmpb_coffin=\box40
-\l__coffin_bounding_shift_dim=\dimen151
-\l__coffin_left_corner_dim=\dimen152
-\l__coffin_right_corner_dim=\dimen153
-\l__coffin_bottom_corner_dim=\dimen154
-\l__coffin_top_corner_dim=\dimen155
-\l__coffin_scaled_total_height_dim=\dimen156
-\l__coffin_scaled_width_dim=\dimen157
 \c__coffin_empty_coffin=\box41
 \l__coffin_display_coffin=\box42
 \l__coffin_display_coord_coffin=\box43
 \l__coffin_display_pole_coffin=\box44
-\l__coffin_display_offset_dim=\dimen158
-\l__coffin_display_x_dim=\dimen159
-\l__coffin_display_y_dim=\dimen160
+\l__coffin_display_offset_dim=\dimen151
+\l__coffin_display_x_dim=\dimen152
+\l__coffin_display_y_dim=\dimen153
 \g__file_internal_ior=\read1
-\l__seq_internal_a_int=\count188
-\l__seq_internal_b_int=\count189
-\c__deprecation_minus_one=\count190
+\l__coffin_bounding_shift_dim=\dimen154
+\l__coffin_left_corner_dim=\dimen155
+\l__coffin_right_corner_dim=\dimen156
+\l__coffin_bottom_corner_dim=\dimen157
+\l__coffin_top_corner_dim=\dimen158
+\l__coffin_scaled_total_height_dim=\dimen159
+\l__coffin_scaled_width_dim=\dimen160
+\l__seq_internal_a_int=\count189
+\l__seq_internal_b_int=\count190
 )
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2019-04-06 v L3 Experimental backend support: PDF mo
-de
-\l__kernel_color_stack_int=\count191
-\l__pdf_internal_box=\box45
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2019-02-15 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count191
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2019-05-28 L3 Experimental document command parser
+Package: xparse 2018-10-17 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count192
 \g__xparse_grabber_int=\count193
 \l__xparse_m_args_int=\count194
-\l__xparse_v_nesting_int=\count195
+\l__xparse_mandatory_args_int=\count195
+\l__xparse_v_nesting_int=\count196
 )
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -434,12 +418,12 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count196
+\c@AlgoLine=\count197
 \algocf@hangindent=\skip65
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count197
+\c@checkoddpage=\count198
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -462,26 +446,26 @@ Package: relsize 2013/03/29 ver 4.1
 \interspacealgoruled=\dimen165
 \interspacetitleboxruled=\dimen166
 \algocf@ruledwidth=\skip74
-\algocf@inoutbox=\box46
-\algocf@inputbox=\box47
+\algocf@inoutbox=\box45
+\algocf@inputbox=\box46
 \AlCapSkip=\skip75
 \AlCapHSkip=\skip76
 \algoskipindent=\skip77
-\algocf@nlbox=\box48
-\algocf@hangingbox=\box49
-\algocf@untilbox=\box50
+\algocf@nlbox=\box47
+\algocf@hangingbox=\box48
+\algocf@untilbox=\box49
 \algocf@skipuntil=\skip78
-\algocf@capbox=\box51
+\algocf@capbox=\box50
 \algocf@lcaptionbox=\skip79
 \algoheightruledefault=\skip80
 \algoheightrule=\skip81
 \algotitleheightruledefault=\skip82
 \algotitleheightrule=\skip83
-\c@algocfline=\count198
-\c@algocfproc=\count199
-\c@algocf=\count266
-\algocf@algoframe=\box52
-\algocf@algobox=\box53
+\c@algocfline=\count199
+\c@algocfproc=\count266
+\c@algocf=\count267
+\algocf@algoframe=\box51
+\algocf@algobox=\box52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -495,24 +479,24 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: luatex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/luatex.def
-File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen167
 \Gin@req@width=\dimen168
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
+Package: enumitem 2019/02/04 v3.8 Customized lists
 \labelindent=\skip84
 \enit@outerparindent=\dimen169
-\enit@toks=\toks21
-\enit@inbox=\box54
-\enit@count@id=\count267
-\enitdp@description=\count268
+\enit@toks=\toks20
+\enit@inbox=\box53
+\enit@count@id=\count268
+\enitdp@description=\count269
 ) (./paper.aux)
-\openout1 = paper.aux
+\openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
@@ -521,8 +505,6 @@ LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
 LaTeX Font Info:    ... okay on input line 55.
@@ -536,9 +518,9 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 55.
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
-*geometry* detected driver: luatex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: luatex
+* driver: pdftex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -570,7 +552,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 *geometry* verbose mode - [ newgeometry ] result:
-* driver: luatex
+* driver: pdftex
 * paper: letterpaper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -601,7 +583,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box55
+\AtBeginShipoutBox=\box54
 Package hyperref Info: Link coloring OFF on input line 55.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -609,7 +591,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count269
+\c@section@level=\count270
 )
 LaTeX Info: Redefining \ref on input line 55.
 LaTeX Info: Redefining \pageref on input line 55.
@@ -617,8 +599,8 @@ LaTeX Info: Redefining \nameref on input line 55.
 
 (./paper.out) (./paper.out)
 \@outlinefile=\write3
+\openout3 = `paper.out'.
 
-\openout3 = paper.out
 LaTeX Info: Redefining \microtypecontext on input line 55.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -627,45 +609,45 @@ Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
 Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of spacing.
-Package microtype Info: No adjustment of kerning.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
 
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count270
+\scratchcounter=\count271
 \scratchdimen=\dimen170
-\scratchbox=\box56
-\nofMPsegments=\count271
-\nofMParguments=\count272
-\everyMPshowfont=\toks22
-\MPscratchCnt=\count273
+\scratchbox=\box55
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count274
 \MPscratchDim=\dimen171
-\MPnumerator=\count274
-\makeMPintoPDFobject=\count275
-\everyMPtoPDFconversion=\toks23
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 43
-8.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
-,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
-RS)
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 57.
 
@@ -685,13 +667,13 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 57.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 57.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 57.
 
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: T1).
+(microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
@@ -703,80 +685,108 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-] [2
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-] [3
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
-<screenshot.png, id=215, 462.72874pt x 229.85875pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+<screenshot.png, id=213, 462.72874pt x 229.85875pt>
 File: screenshot.png Graphic file (type png)
 <use screenshot.png>
-Package luatex.def Info: screenshot.png  used on input line 242.
-(luatex.def)             Requested size: 277.63939pt x 137.91629pt.
+Package pdftex.def Info: screenshot.png  used on input line 242.
+(pdftex.def)             Requested size: 277.63939pt x 137.91629pt.
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 257.
+
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 257.
-Missing character: There is no ≥ (U+2265) in font cmr10!
-Missing character: There is no ≥ (U+2265) in font cmr10!
+
+
+! Package inputenc Error: Unicode character ≥ (U+2265)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.268 ...lobal time gt to each event $e_i$, $i ≥
+                                                   1$, such that $gt(e_i) < ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 Underfull \vbox (badness 1062) has occurred while \output is active []
 
- [4
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-<./screenshot.png>] [5] [6] [7
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-] [8
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
- [9
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-Missing character: There is no − (U+2212) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-] [10
-Missing character: There is no − (U+2212) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-] [11] [12]
-<sample_execution.png, id=351, 977.6525pt x 603.25375pt>
+ [4 <./screenshot.png>] [5] [6] [7] [8]
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 337.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 346.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.361 ...d $SLP(-1,-1)$, set its $\delta $ to $−
+                                                  1$, ensuring that its heig...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 ...nd $SLP(-1,-1)$ with $\delta $set to $−
+                                                  2$, update their logical c...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.368 ... $(1,G,1)$ and set their $\delta $ to −
+                                                  1, causing their heights t...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[9]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.372 ... but set their $\delta $ variables to −
+                                                  2. As a result from the me...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[10] [11] [12]
+<sample_execution.png, id=348, 977.6525pt x 603.25375pt>
 File: sample_execution.png Graphic file (type png)
 <use sample_execution.png>
-Package luatex.def Info: sample_execution.png  used on input line 497.
-(luatex.def)             Requested size: 488.82506pt x 301.62613pt.
+Package pdftex.def Info: sample_execution.png  used on input line 497.
+(pdftex.def)             Requested size: 488.82506pt x 301.62613pt.
 
 Overfull \hbox (19.07007pt too wide) in paragraph at lines 497--499
  [][] 
@@ -784,381 +794,1479 @@ Overfull \hbox (19.07007pt too wide) in paragraph at lines 497--499
 
 [13
 
-Missing character: There is no – (U+2013) in font ptmr8t!
-<./sample_execution.png>]
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no ≤ (U+2264) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
+ <./sample_execution.png>]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.519 ...f $u$’s height, and $h_1, ..., h_{m −
+                                                   1}$ is the sequence of he...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.525 ...m If $h$ is in transit, then $nlts(h) ≤
+                                                   T$ and $\tau (h) \leq T$ ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 526.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.531 ...rty holds through configuration $C_{i −
+                                                   1}$ and show it remains t...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.532 The event following configuration $C_{i −
+                                                  1}$, $e_i$, can be trigger...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.534 ...y the inductive hypothesis (i), in C i−
+                                                  1 , nlts(h v ) ≤ LC v an...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.534 ...pothesis (i), in C i−1 , nlts(h v ) ≤
+                                                   LC v and τ (h v ) ≤ LC...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.534 ..., in C i−1 , nlts(h v ) ≤ LC v and τ
+                                                   (h v ) ≤ LC v . In conf...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.534 ...1 , nlts(h v ) ≤ LC v and τ (h v ) ≤
+                                                   LC v . In configuration $...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 534.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.534 ...$ in the previous configuration $C_{i −
+                                                   1}$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.539 of u during configuration $C_{i −
+                                          1}$ . Since $LC_{u'} \leq LC_u$, t...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 538--540
-[]\T1/ptm/bx/n/10 Case1.1[] $\OML/cmm/m/it/10 PROPAGATELARGESTREFLEVEL$\T1/ptm/
-m/n/10 , $\OML/cmm/m/it/10 ADOPTLPIFPRIORITY$\T1/ptm/m/n/10 ,
+ []\T1/ptm/b/n/10 Case1.1[] $\OML/cmm/m/it/10 PROPAGATELARGESTREFLEVEL$\T1/ptm/
+m/n/10 (+20) , $\OML/cmm/m/it/10 ADOPTLPIFPRIORITY$\T1/ptm/m/n/10 (+20) ,
  []
 
 [14
 
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no − (U+2212) in font ptmr8t!
-Missing character: There is no ≤ (U+2264) in font ptmr8t!
-Missing character: There is no τ (U+03C4) in font ptmr8t!
-Missing character: There is no ≤ (U+2264) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
 ]
-Missing character: There is no τ (U+03C4) in font cmmi10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no τ (U+03C4) in font cmmi10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no ≤ (U+2264) in font cmr10!
-Missing character: There is no ≤ (U+2264) in font cmr10!
- [15
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no − (U+2212) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ≤ (U+2264) in font ptmr8t!
-Missing character: There is no τ (U+03C4) in font ptmr8t!
-Missing character: There is no ≤ (U+2264) in font ptmr8t!
-]
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
- [16
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.547 ... is true that $nlts(h) \leq LC_u$ and $τ
+                                                   (h) \leq LC_u$ . In the a...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.561 ...operty holds through configuration C i−
+                                                  1 and show it remains true...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.562 The event following configuration $C_{i −
+                                                  1}$, $e_i$, can be trigger...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 564.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564 ...he inductive hypothesis (i), in $C_{i −
+                                                   1}$ , $nlts(h_v) \leq LC_...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564 ...$ in the previous configuration $C_{i −
+                                                   1}$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.565 ...ve hypothesis, $nlts(h_v) \leq T$ and $τ
+                                                   (h_v) \leq T$ , we can co...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.565 ... T$ , we can conclude that nlts(h v ) ≤
+                                                   LC u and τ (h v ) ≤ LC...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character τ (U+03C4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.565 ... conclude that nlts(h v ) ≤ LC u and τ
+                                                   (h v ) ≤ LC u , which i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.565 ...hat nlts(h v ) ≤ LC u and τ (h v ) ≤
+                                                   LC u , which is exactly w...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.569 ...ock of $u$ during configuration $C_{i −
+                                                   1}$ Since $LC_{u'} \leq L...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.571 ...e of $LC_u$ never decreases, $nlts(h) ≤
+                                                   LC_u$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character ≤ (U+2264)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.573 ...$C_i$, it remains true that $\tau (h) ≤
+                                                   LC_u$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[15]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...nfiguration in the execution. For $LP(−
+                                                  s, l)$, where $LC_l(t) = s...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...and $t \geq t_LTC$, let $LP$ tree $LT(−
+                                                  s, l)$ be the subgraph of ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...t of all nodes that have taken on $LP(−
+                                                  s, l)$ in the execution (e...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...irs $(u, v)$ such that $v$ adopts $LP(−
+                                                  s, l)$ due to the receipt ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...lar $LP$ only once by Property B, $LT(−
+                                                  s, l)$ is a tree rooted at...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.593 ...token for some node $u$. If $LP(h) = (−
+                                                  s, l)$, where $LC_l(t) = s...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.593 ...d $\delta (h)$ is the distance in $LT(−
+                                                  s, l)$ from $l$ to $u$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ...when the first height tokens with $LP(−
+                                                  s, l)$ are created. By the...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ...operty is true in configuration $C_{i −
+                                                   1}$, with $i − 1 \geq j...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.596 ... configuration $C_{i − 1}$, with $i −
+                                                   1 \geq j$, and show it is...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ...ting the $LP$ in $h$, where $LP(h) = (−
+                                                  s, l)$. By the inductive h...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ...s the distance from $l$ to $v$ in $LT(−
+                                                  s, l)$ in $C_{i − 1}$. B...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ... $l$ to $v$ in $LT(−s, l)$ in $C_{i −
+                                                   1}$. By Property B, since...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ...}$. By Property B, since $u$ adopts $(−
+                                                  s, l)$, it must be that $u...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ...t be that $u$'s $LP$ is larger than $(−
+                                                  s, l)$ in $C_{i − 1}$, a...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ...$ is larger than $(−s, l)$ in $C_{i −
+                                                   1}$, and thus $v$ is $u$'...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ... and thus $v$ is $u$'s parent in $LT (−
+                                                  s, l)$. By the code, $u$ s...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.597 ...t this is exactly the distance in $LT(−
+                                                  s, l)$ from $l$ to $u$. So...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ...s a sink and $u$'s new height has $LP(−
+                                                  s, l)$. Since, by Property...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ...ht of $u$, call it $h'$, also has $LP(−
+                                                  s, l)$. Since $u$ becomes ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ...es a sink, all its neighbors have $LP(−
+                                                  s, l)$ in $u$'s view, and ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.598 ...e $u$’s parent in the $LP$-tree $LT(−
+                                                  s, l)$ and let $d$ be the ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[16]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.603 Any node $u$ that adopts leader pair $(−
+                                                s, l)$ for any $l$ and any $...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...radiction that u adopts leader pair $(−
+                                                  s, l)$ at time $t_1 > s$ a...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.606 ...der pairs would all be smaller than $(−
+                                                  s, j)$ by Property B, and ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.607 ...he parent of $u$ in the $LP$-tree $LT(−
+                                                  s, l)$. Immediately after ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 607.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 607.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.607 ...0, 0)$ in $(t_1, t_2)$ and $u$’s \delta
+                                                   stays the same in the int...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 607.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.607 ...nk $(u, v)$ can reverse direction in $(t_
+                                                  1, t_2)$ is due to the rec...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.607 ...ange after $v$ takes on leader pair $(−
+                                                  s, l)$ ? One possibility i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.607 ...ce $v$’s leader pair has timestamp $−
+                                                  s$ with $LC_l (t) = s$ and...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 607.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 607.
+
+
+Overfull \hbox (68.39853pt too wide) in paragraph at lines 606--608
+\OML/cmm/m/it/10 ^^Nstaysthesameintheinterval:Thatis;$\T1/ptm/m/n/10 (-20) u$[]
+\OML/cmm/m/it/10 sheightdoesnotchange; andinparticulardoesnotlower:Thustheonlyw
+aythatthelink$\T1/ptm/m/n/10 (-20) (u,
+ []
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.616 ...mps, at some point $u$ will adopt $LP(−
+                                                  s, l)$ where $LC_l(t) =s$ ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.616 ...ecome a sink after it has adopted $LP(−
+                                                  s, l)$ and thus it cannot ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 622--624
 
  []
 
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-[17
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.626 ...y is true through configuration $C_{i −
+                                                   1}$ and show it is still ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ...same $RL$ and $LP$ but conflicting \delta
+                                                   s. The next definition an...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.629 ... configuration in the execution after $t_
+                                                  LTC$. For $t' \geq t_LTC$,...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (692.89005pt too wide) in paragraph at lines 626--630
+\OML/cmm/m/it/10 ^^Ns:Thenextdefinitionanditsrelatedpropertiesarekeytounderstan
+dinghowunreflectedandreflectedreferencelevelsspreadthroughouttheconnectedcompon
+entafterthelasttopologychange:Definethefollowingwithrespecttoanyconfigurationin
+theexecutionafter$\T1/ptm/m/n/10 (-20) t$[]\OML/cmm/m/it/10 TC$\T1/ptm/m/n/10 (
+-20) .
+ []
+
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 632--633
 
  []
 
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr10!
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...en with $RL$ prefix $(t, p)$ in $C_{j −
+                                                   1}$ , so the only height ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...y is true through configuration $C_{i −
+                                                   1}$ and show it is true i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...pothesis, $v$ is in $RD(t, p)$. Let $(−
+                                                  s, l)$ be $LP(h)$. When $v...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...$ prefix $(t, p)$, it already has $LP(−
+                                                  s, l)$. To see why, consid...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...t'$, all the neighbors of $p$ had $LP(−
+                                                  s, l)$ and $RL$ prefix low...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...started a new reference level for $LP(−
+                                                  s, l)$. Since the neighbor...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...$. Since the neighbors of $p$ had $LP(−
+                                                  s, l)$, they would have se...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...to their neighbors containing the $LP(−
+                                                  s, l)$ and so on. In short...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ..., l)$ and so on. In short, if the $LP(−
+                                                  s, l)$ is adopted by any n...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...oken for $v$’s old height, with $LP(−
+                                                  s, l)$. Since the links ar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ...ht from $v$ before $e_i$. So in $C_{i −
+                                                   1}$, $u$ has a $LP$ that ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.634 ..._{i − 1}$, $u$ has a $LP$ that is $(−
+                                                  s, l)$ or smaller already,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 637--638
 
  []
 
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-[18
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.640 ... A, there is no height token in $C_{j −
+                                                   1}$ with $RL(t, p, 1)$, a...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.640 ...y is true through configuration $C_{i −
+                                                   1}$ and show it is true i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 640.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.641 ...Thus there is a height token in $C_{i −
+                                                   1}$
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.642 ...interval), $u$'s $RL$ prefix in $C_{i −
+                                                   1}$ is at least $(t, p)$....
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.642 ...ent $e_i$, $u$'s $RL$ prefix in $C_{i −
+                                                   1}$ is at most $(t, p)$, ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.642 ...$, so it is exactly $(t, p)$ in $C_{i −
+                                                   1}$. Since $u$ is a sink,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[18]
 Underfull \hbox (badness 10000) in paragraph at lines 647--648
 
  []
 
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.664 ...By Property A, in configuration $C_{j −
+                                                   1}$ , there are no height...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.666 ...rty holds through configuration $C_{i −
+                                                   1}$ and show it is true i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.667 ...e same $RL$ and $LP$ but different \delta
+                                                   s. Suppose new height tok...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.667 ... are created by node $u$ during event $e_
+                                                  i$. The only ways this can...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.670 ...prefix is less than $(t, p)$ in $C_{i −
+                                                   1}$. Suppose in contradic...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.670 ...iction $u$ has $RL(t, p, 0)$ in $C_{i −
+                                                   1}$. By the inductive hyp...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.672 ... at some previous time $t'' < gt(C_{i −
+                                                   1})$, $u$ executed $PROPA...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.677 ...nce $u$ is not in $RD(t, p)$ in $C_{i −
+                                                   1}$, Property G implies t...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 Underfull \hbox (badness 1874) in paragraph at lines 674--678
-[]\T1/ptm/m/n/10 This must be how $\OML/cmm/m/it/10 u$ \T1/ptm/m/n/10 took on $
-\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; p; \OT1/cmr/m/n/10 0)$ \T1/ptm/m/n/10 sinc
-e, by Prop-erty F, $\OML/cmm/m/it/10 u$ \T1/ptm/m/n/10 can-not take on $\OML/cm
-m/m/it/10 RL\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; p; \OT1/cmr/m/n/10 0)$ \T1/ptm
-/m/n/10 by run-ning
+[]\T1/ptm/m/n/10 (+20) This must be how $\OML/cmm/m/it/10 u$ \T1/ptm/m/n/10 (+2
+0) took on $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; p; \OT1/cmr/m/n/10 0)$ \T1/ptm
+/m/n/10 (+20) since, by Prop-erty F, $\OML/cmm/m/it/10 u$ \T1/ptm/m/n/10 (+20) 
+can-not take on $\OML/cmm/m/it/10 RL\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t; p; \OT
+1/cmr/m/n/10 0)$ \T1/ptm/m/n/10 (+20) by run-ning
  []
 
-[19
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr10!
+[19]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.682 ...s $RL$ less than $(t, p, 0)$ in $C_{i −
+                                                   1}$. By the precondition ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.695 ... its $RL$ prefix is $(t, p)$ in $C_{i −
+                                                   1}$. So all neighbors (in...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.695 ...$ must be a successor of $u$ in $C_{i −
+                                                   1}$. Consider any neighbo...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.695 ...must be a predecessor of $u$ in $C_{i −
+                                                   1}$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character δ (U+03B4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.704 ... By the code, u’s new height h has a δ
+                                                   calculated so that h ' > h.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.721 ... some point in time it will adopt $LP(−
+                                                  s, l)$ where $LC_l(t) = s$...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
 
 Underfull \vbox (badness 1546) has occurred while \output is active []
 
- [20
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no δ (U+03B4) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
-Missing character: There is no − (U+2212) in font cmr7!
+ [20]
 
-[21
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-]
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ∈ (U+2208) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no − (U+2212) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
- [22
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmr8t!
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-]
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
-Missing character: There is no ’ (U+2019) in font cmr10!
- [23] [24
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-Missing character: There is no “ (U+201C) in font ptmr8t!
-Missing character: There is no ” (U+201D) in font ptmr8t!
-]
-<performance_test.png, id=453, 1157.32375pt x 475.7775pt>
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.731 ...omponent at or after $t_{LTC}$, say $(−
+                                                  s, l)$.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.738 ...ed component has the same $LP$, say $(−
+                                                  s, l)$. \textit{Lemma 3} s...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.739 ...ponent associated with the common $LP(−
+                                                  s, l)$. Let $t$ be sometim...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.752 ...operty is true in configuration $C_{i −
+                                                   1}$ and show it is true i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.758 ...operty is true in configuration $C_{i −
+                                                   1}$ and show it is true i...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[21]
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.767 ...e component have the same $LP$, say $(−
+                                                  s, l)$. By \textit{Lemma 6...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 775.
+
+
+! Package inputenc Error: Unicode character ∈ (U+2208)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.788 Induction. $d > 0$. Consider $a$ node $a ∈
+                                                   A$ at distance $d$ from $...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! Package inputenc Error: Unicode character − (U+2212)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.788 ...hbor $a'$ whose distance to $l$ is $d −
+                                                   1$ such that the link bet...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 789.
+
+[22]
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 795.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 796.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 798.
+
+
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 798.
+
+[23] [24]
+<performance_test.png, id=449, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
-Package luatex.def Info: performance_test.png  used on input line 848.
-(luatex.def)             Requested size: 462.9213pt x 190.30762pt.
+Package pdftex.def Info: performance_test.png  used on input line 848.
+(pdftex.def)             Requested size: 462.9213pt x 190.30762pt.
  [25
 
-<./performance_test.png>]
+ <./performance_test.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 999.
- [26
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-Missing character: There is no ’ (U+2019) in font ptmri8t!
-Missing character: There is no – (U+2013) in font ptmr8t!
-]
+ [26]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 999.
  (./paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 999.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 999.
-Package rerunfilecheck Info: File `paper.out' has not changed.
-(rerunfilecheck)             Checksum: C33E6079443D56FA4EBE5ED010ED944B;2622.
+
+
+Package rerunfilecheck Warning: File `paper.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `paper.out':
+(rerunfilecheck)             Before: C33E6079443D56FA4EBE5ED010ED944B;2622
+(rerunfilecheck)             After:  A7DCBE552A96695918181624685343C1;2621.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 999.
-)
-
-Here is how much of LuaTeX's memory you used:
- 19506 strings out of 494291
- 100000,662416 words of node,token memory allocated
- 2457 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 4 glue, 388 kern, 75 glue_spec, 1 write nodes
-   avail lists: 2:24,3:408,4:78,5:333,6:74,7:8471,8:90,9:394,10:35,11:380
- 23022 multiletter control sequences out of 65536+600000
- 89 fonts using 7896711 bytes
- 40i,11n,63p,2137b,465s stack positions out of 5000i,500n,10000p,200000b,100000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/fon
-ts/enc/dvips/lm/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (26 pages, 568036 bytes).
-
-PDF statistics: 537 PDF objects out of 1000 (max. 8388607)
- 485 compressed objects within 5 object streams
- 239 named destinations out of 1000 (max. 131072)
- 313 words of extra memory for PDF output out of 10000 (max. 100000000)
+ ) 
+Here is how much of TeX's memory you used:
+ 19072 strings out of 492615
+ 335360 string characters out of 6131390
+ 574776 words of memory out of 5000000
+ 22364 multiletter control sequences out of 15000+600000
+ 592163 words of font info for 214 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,11n,63p,2149b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf/
+fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/t
+imes/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (26 pages, 564684 bytes).
+PDF statistics:
+ 576 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
+ 239 named destinations out of 1000 (max. 500000)
+ 25928 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -1,6 +1,8 @@
 \chapter{Conclusion}
 
-We have described and proved correct a leader election algorithm for dynamic net- works. To provide for the temporal ordering of events that the algorithm requires, we use a generic notion of time–causal clocks–which can be implemented using, for instance, perfect clocks or logical clocks. Note that the algorithm is correct in the case of complete synchrony between clocks (perfect clocks) and also in the case of clocks with no bound on skew (logical clocks), but it is not correct for approximately synchronized clocks (which assume an upper bound on skew) unless they preserve causality. Notably, our definition of causal clocks does not include vector clocks (e.g., [8]), since vector clock values do not form a totally-ordered set in order to capture non-causality as well as causality1 An open question is how to extend our algorithm and its analysis to handle a wider range of clocks, such as approximately synchro- nized clocks and vector clocks. We identified different sets of circumstances under which the algorithm does not elect a leader unnecessarily. Depending on the types of clocks used to implement causal time and the amount of synchrony they provide, however, these circumstances tend to be different. It would be interesting to introduce different types of clocks, which not only preserve causality but also have some upper bound on skew, and see how they affect the stability condition of the algorithm. Moreover, an analysis of the time and message complexity needs to be performed, taking into account that using some clocks to implement causal time will be more efficient compared to others. Acknowledgements We thank Bernadette Charron-Bost, Antoine Gaillard, Nick Neumann, Lyn Pierce, Srikanth Sastry and Josef Widder for helpful conversations, and the anonymous reviewers for comments that improved the presentation.
+We have described and proved correct a leader election algorithm for dynamic net- works. To provide for the temporal ordering of events that the algorithm requires, we use a generic notion of time–causal clocks–which can be implemented using, for instance, perfect clocks or logical clocks. Note that the algorithm is correct in the case of complete synchrony between clocks (perfect clocks) and also in the case of clocks with no bound on skew (logical clocks), but it is not correct for approximately synchronized clocks (which assume an upper bound on skew) unless they preserve causality. Notably, our definition of causal clocks does not include vector clocks (e.g., [8]), since vector clock values do not form a totally-ordered set in order to capture non-causality as well as causality1 An open question is how to extend our algorithm and its analysis to handle a wider range of clocks, such as approximately synchro- nized clocks and vector clocks. We identified different sets of circumstances under which the algorithm does not elect a leader unnecessarily. Depending on the types of clocks used to implement causal time and the amount of synchrony they provide, however, these circumstances tend to be different. It would be interesting to introduce different types of clocks, which not only preserve causality but also have some upper bound on skew, and see how they affect the stability condition of the algorithm. Moreover, an analysis of the time and message complexity needs to be performed, taking into account that using some clocks to implement causal time will be more efficient compared to others.
+
+\paragraph{Acknowledgments}We thank Petr Kuznetsov, Ada Diaconescu and Sanaa EL FKIHI for helpful conversations, and the anonymous reviewers for comments that improved the presentation.
 
 \begin{thebibliography}{1}
 	
@@ -134,6 +136,55 @@ We have described and proved correct a leader election algorithm for dynamic net
 	A. Casteigts.
 	\newblock JBotSim: a Tool for Fast Prototyping of Distributed Algorithms in Dynamic Networks
 	\newblock , 2010.
+	
+	\bibitem{27}
+	JBOTSIM’s website: http://jbotsim.sf.net/.
+	
+	
+	\bibitem{28}
+	D. Angluin, J. Aspnes, Z. Diamadi, M. J. Fischer, and R. Per- alta.
+	\newblock Computation in networks of passively mobile finite-state sensors
+	\newblock, vol. 18, no. 4, pp. 235–253, 2006.
+	
+	\bibitem{29}
+	M. Bastian, S. Heymann, and M. Jacomy, “Gephi.
+	\newblock An open source software for exploring and manipulating networks.
+	\newblock In {\em International AAAI conference on weblogs and social media}, vol. 2. AAAI Press Menlo Park, CA, 2009.
+	
+	\bibitem{30}
+	M. Bauderon and M. Mosbah.
+	\newblock A unified framework for de- signing, implementing and visualizing distributed algorithms.
+	\newblock {\em Electr. Notes Theor. Comput. Sci.}, vol. 72, no. 3, pp. 13–24, 2003.
+	
+	\bibitem{31}
+	Collective Authors.
+	\newblock The NS-3 network simulator.
+	\newblock , http:// www.nsnam.org/, 2009.
+	
+	\bibitem{32}
+	B. Derbel.
+	\newblock A Brief Introduction to ViSiDiA.
+	\newblock , USTL, Tech. Rep., 2007.
+	
+	\bibitem{33}
+	A. Dutot, F. Guinand, D. Olivier, and Y. Pigné.
+	\newblock GraphStream: A Tool for bridging the gap between Complex Systems and Dynamic Graphs.
+	\newblock {\em  EPNACS: Emergent Properties in Natural and Artificial Complex Systems}, 2007.
+	
+	\bibitem{34}
+	A. Keränen, J. Ott, and T. Kärkkäinen.
+	\newblock The one simulator for dtn protocol evaluation.
+	\newblock In {\em IProceedings of the 2nd In- ternational Conference on Simulation Tools and Techniques}, ICST (Institute for Computer Sciences, Social-Informatics and Telecommunications Engineering), 2009, p. 55.
+
+	\bibitem{35}
+	I. Litovsky, Y. Métivier, and É. Sopena.
+	\newblock Graph relabelling sys- tems and distributed algorithms.
+	\newblock {\em Handbook of graph gram- mars and computing by graph transformation}, vol. 3, pp. 1–56, 1999.
+
+	\bibitem{36}
+	A. Varga et al.
+	\newblock The OMNeT++ discrete event simulation system.
+	\newblock In {\em  Proceedings of the European Simulation Multi-conference (ESM’01)},2001, pp. 319–324.
 	
 	
 \end{thebibliography}
