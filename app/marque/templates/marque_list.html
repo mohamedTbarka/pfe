@@ -44,14 +44,14 @@
                 </form>
             <!-- for  mobile ---  END -->
                
-            <div class="col-md-12 px-0 pb-3 hide_mobile">
+            <div id="mark" class="col-md-12 px-0 pb-3 hide_mobile">
                 <div class="row ">
                     <div >
                         <a href="" > <h1 class="nav-link txt_green text-uppercase t15 ">Tout&nbsp;voir</h1> </a>
                     </div>
                     {%for  cat  in categories%}
                     <div >
-                            <a href="" > <h1 class="nav-link txt_green text-uppercase t15 ">{{cat.name}}</h1> </a>
+                            <a href="{%url 'marque_detail' cat.pk%}" > <h1 class="nav-link txt_green text-uppercase t15 ">{{cat.name}}</h1> </a>
                     </div>
                     {%endfor%}
                 </div>
