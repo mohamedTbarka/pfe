@@ -42,18 +42,18 @@
                       
 
                       <div class="carousel-item  {% if not forloop.counter0 %}active{%endif%}">
-                        <img class="d-block w-100" src="{{slide.get_image_url}}" alt="First slide">
+                        <img src="{{slide.get_image_url}}" alt="First slide" style="width:100%">
                       </div>
                     
                       {%endfor%}
 
 
                     </div>
-                    <a class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev" style="margin-left: -100px">
+                    <a id="default_left" class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev" style="margin-left: -100px">
                      <img src="{% static 'resources/arrow_left.png'%}" alt="">
                       <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="margin-right: -100px">
+                    <a id="default_right" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" style="margin-right: -100px">
                         <img src="{% static 'resources/arrow-right.png'%}" alt="">
                       <span class="sr-only">Next</span>
                     </a>

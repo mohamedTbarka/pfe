@@ -802,6 +802,12 @@ img.w-100 {
     width: 100%!important;
     
 }
+#default_left{
+    margin-left: 0px!important;
+}
+#default_right{
+    margin-right: 0px!important;
+}
 }
 
 
