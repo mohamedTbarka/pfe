@@ -51,7 +51,7 @@
                     </div>
                     {%for  cat  in categories%}
                     <div >
-                            <a href="{%url 'marque_detail' cat.pk%}" > <h1 class="nav-link txt_green text-uppercase t15 ">{{cat.name}}</h1> </a>
+                            <a href="{%url 'marques' cat.pk%}" > <h1 class="nav-link txt_green text-uppercase t15 ">{{cat.name}}</h1> </a>
                     </div>
                     {%endfor%}
                 </div>
