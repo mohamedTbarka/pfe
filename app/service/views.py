@@ -7,6 +7,9 @@ from django.views import generic
 from marque.models import Group
 from service.models import Service, Info, Slider, Discover
 
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
 
 class Home(generic.TemplateView):
     """
@@ -47,4 +50,14 @@ class Plan(generic.TemplateView):
     """
     template_name = 'plan.html'
 
-    
+
+def handler404(request, exception, template_name="404.html"):
+    response = render_to_response("404.html")
+    response.status_code = 404
+    return response
+
+
+def handler500(request, *args, **argv):
+    response = render_to_response('500.html', {}, RequestContext(request))
+    response.status_code = 500
+    return response
