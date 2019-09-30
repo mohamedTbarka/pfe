@@ -21,7 +21,7 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"/>
+    <link rel="javascript" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"/>
 
     
 
@@ -216,14 +216,14 @@
               <div class="col-md-2"><p class="text-white text-center t15"><img src="{% static 'resources/watch.png'%}" alt="">  {{preference.get_open_hour}} - {{preference.get_close_hour}}</p></div>
               <div class="col-md-3">
 
-                <div class="input-group  search_input ">
+                <form method="POST" id="new_user_form2" class="input-group  search_input ">
                     <span ><img class="mx-2" src="{% static 'resources/email.png'%}" alt=""></span>
-                    
-                  <input class=" bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 " type="search" placeholder="Adresse Email" id="example-search-input">
+                    {% csrf_token %}
+                  <input type="email" placeholder="Adresse email" name="email2" id="email2" class=" bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 " >
                   <span class="input-group-prepend  ">
-                      <div class=" bg-transparent input-group-text  border-left-0 pb-0 pt-0 text-white t15 ">ok</div>
+                      <button id="sub_btn2" type="submit" class=" bg-transparent input-group-text  border-left-0 pb-0 pt-0 text-white t15 ">ok</button>
                   </span>
-              </div>
+                </form>
 
               </div>
               <a href="#top"><img  class="up hide_mobile" src="{% static 'resources/up.png'%}" alt=""></a>
@@ -382,6 +382,7 @@ $(document).on('click','#sub_btn',function(e){
     method:'POST',
     data:{
       email:$('#email').val(), 
+      csrfmiddlewaretoken: '{{ csrf_token }}',
     },
     success:function(){
       console.log("working");
@@ -393,6 +394,30 @@ $(document).on('click','#sub_btn',function(e){
   })
 })
 </script>
+
+<!-- subscribe  -->
+<script>
+    $(document).on('click','#sub_btn2',function(e){
+      e.preventDefault();
+      console.log("{{ HTTP_HOST }}/subscribe/");
+      
+      $.ajax({
+        url:'{{ HTTP_HOST }}/subscribe/',
+        method:'POST',
+        data:{
+          email:$('#email2').val(), 
+          csrfmiddlewaretoken: '{{ csrf_token }}',
+        },
+        success:function(){
+          console.log("working");
+          
+        },
+        error:function(){
+          console.log($('#email2').val());
+        }
+      })
+    })
+    </script>
 
 
 

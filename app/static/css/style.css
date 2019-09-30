@@ -395,11 +395,11 @@
 .v-plus:hover{
     color: black!important;
 }
-input#example-search-input::placeholder {
+input#email2::placeholder {
     color: #93a896;
    
 }
-input#example-search-input{
+input#email2{
     border-width: 2px;
     
 }
