@@ -72,6 +72,10 @@
     font-family: 'Sequel100Wide-65Wide';
     font-size: 15px!important;
 }
+.t_large{ 
+    font-family: 'Sequel100Wide-65Wide';
+    font-size: 134px!important;
+}
 /* backgrounds */
 .bg_green_light{
     background-color: #e6fff0;
