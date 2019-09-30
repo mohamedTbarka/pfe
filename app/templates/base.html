@@ -21,6 +21,9 @@
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"/>
+
+    
 
 
 
@@ -368,7 +371,7 @@ $(document).ready(function() {
 });
 </script>
 
-
+<!-- subscribe  -->
 <script>
 $(document).on('click','#sub_btn',function(e){
   e.preventDefault();
@@ -378,12 +381,14 @@ $(document).on('click','#sub_btn',function(e){
     url:'{{ HTTP_HOST }}/subscribe/',
     method:'POST',
     data:{
-      email:$('#email').val(),
-      
+      email:$('#email').val(), 
     },
     success:function(){
       console.log("working");
       
+    },
+    error:function(){
+      console.log($('#email').val());
     }
   })
 })
