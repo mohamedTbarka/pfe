@@ -376,7 +376,7 @@ $(document).on('click','#sub_btn',function(e){
   
   $.ajax({
     url:'{{ HTTP_HOST }}/subscribe/',
-    method:'GET',
+    method:'POST',
     data:{
       email:$('#email').val(),
       
