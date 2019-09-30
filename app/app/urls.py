@@ -31,8 +31,7 @@ urlpatterns = [
                   path('', include('contact.urls')),
                   path('search/', include('haystack.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+handler500 = service.views.error_500
+handler404 = service.views.error_404
 
 urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))
-
-handler404 = service.views.handler404
-handler500 = 'service.views.handler500'
