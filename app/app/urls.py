@@ -17,6 +17,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+import service
 from app import settings
 from custom_flatpages.views import flatpage
 from service.views import Home
@@ -33,5 +34,5 @@ urlpatterns = [
 
 urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))
 
-handler404 = 'service.views.handler404'
+handler404 = service.views.handler404
 handler500 = 'service.views.handler500'
