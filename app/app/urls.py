@@ -17,6 +17,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+import service
 from app import settings
 from custom_flatpages.views import flatpage
 from service.views import Home
@@ -31,7 +32,7 @@ urlpatterns = [
                   path('search/', include('haystack.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))
+handler500 = service.views.error_500
+handler404 = service.views.error_404
 
-handler404 = 'service.views.handler404'
-handler500 = 'service.views.handler500'
+urlpatterns.append(path('<path:url>', flatpage, name='flatpage'))

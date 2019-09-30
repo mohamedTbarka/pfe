@@ -51,13 +51,9 @@ class Plan(generic.TemplateView):
     template_name = 'plan.html'
 
 
-def handler404(request, exception, template_name="404.html"):
-    response = render_to_response("404.html")
-    response.status_code = 404
-    return response
+def error_404(request, exception):
+    return render(request, '404.html', status=404)
 
 
-def handler500(request, *args, **argv):
-    response = render_to_response('500.html', {}, RequestContext(request))
-    response.status_code = 500
-    return response
+def error_500(request):
+    return render(request, '500.html', status=500)
