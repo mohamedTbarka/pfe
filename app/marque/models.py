@@ -22,19 +22,21 @@ class Group(BaseModel):
 
 class Category(BaseModel):
     name = models.CharField(max_length=100, unique=True)
-    sup_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, )
+    # sup_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, )
+    group = models.ForeignKey(Group, null=True, blank=True, on_delete=models.SET_NULL)
 
     class Meta:
         verbose_name_plural = "categories"
 
-    def can_add(self):
-        cat = self.sup_category
-        while cat:
-            if self == cat:
-                return False
-            else:
-                cat = cat.sup_category
-        return True
+    #
+    # def can_add(self):
+    #     cat = self.sup_category
+    #     while cat:
+    #         if self == cat:
+    #             return False
+    #         else:
+    #             cat = cat.sup_category
+    #     return True
 
     # def ancestors(self):
     #     cat = self.sup_category
@@ -44,9 +46,9 @@ class Category(BaseModel):
     #         cat = cat.sup_category
     #     return ancestor
 
-    def clean(self):
-        if not self.can_add():
-            raise ValidationError("Can't have you as ancestor of yourself")
+    # def clean(self):
+    #     if not self.can_add():
+    #         raise ValidationError("Can't have you as ancestor of yourself")
 
     def __str__(self):
         return self.name
@@ -63,10 +65,10 @@ class Marque(BaseModel):
     name = models.CharField(max_length=100, unique=True)
     logo = models.ImageField(upload_to="./uploads/marque/img")
     categories = models.ManyToManyField(Category, null=True, blank=True, )
-    group = models.ForeignKey(Group, null=True, blank=True, on_delete=models.SET_NULL)
     phone = models.CharField(max_length=15, default="", blank=True, )
     phone_second = models.CharField(max_length=15, null=True, blank=True, )
     email = models.EmailField(null=True, blank=True, )
+    website = models.URLField(null=True, blank=True, )
     localisation = models.ImageField(upload_to="./uploads/marque/img", null=True, blank=True, )
     floor = models.CharField(max_length=50, default="", blank=True, )
     open_hours = models.TextField(default="", blank=True, )
