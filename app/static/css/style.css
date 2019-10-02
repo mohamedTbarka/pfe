@@ -80,7 +80,7 @@ html {
 }
 /* backgrounds */
 .bg_lightgrey{
-    background-color: #DCDCDC;
+    background-color: rgb(238, 238, 238);
 }
 .bg_green{
     background-color: #246630!important;
