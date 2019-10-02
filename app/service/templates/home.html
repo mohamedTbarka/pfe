@@ -6,9 +6,10 @@
 <div class="bd-example">
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                {% for  slide in  slides%}
+            <li data-target="#carouselExampleCaptions" data-slide-to="{{forloop.counter0}}" class="{% if not forloop.counter0 %}active{%endif%}"></li>
+            
+            {% endfor %}
           </ol>
           <div class="carousel-inner">
                 {% for  slide in  slides%}
@@ -17,9 +18,15 @@
                  {% if slide.title or slide.description or  slide.url or slide.url_text %}
                 <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
                     <div>
+                        {% if slide.title != None %}
                     <h1 class="text-uppercase text-dark t79">{{slide.title}}</h1>
+                        {% endif %}
+                        {% if slide.description != None %}
                     <p class="t20 text-dark"> {{slide.description|safe}} </p>
+                        {% endif %}
+                    {% if slide.url_text != None %}
                     <a href="{{slide.url}}"><button class="btn btn-sm text-white bg_green text-uppercase t_btn mb-3 p-2 px-3 mt-4">{{slide.url_text}}</button></a>
+                    {% endif %}
                 </div>
                 </div>
                 {%endif%}
@@ -225,5 +232,5 @@
         </div>
     </div>
     <!-- background paralex -->
-<div  style=" background-image: url('{{preference.get_background_image}}');" id="paral2" class="parallax-window mt-4" ></div>
+<div  style=" background-image: url('{{preference.get_background_image2}}');" id="paral2" class="parallax-window mt-4" ></div>
 {% endblock %}

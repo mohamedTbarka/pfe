@@ -18,7 +18,9 @@
   
 
 
-
+html {
+    scroll-behavior: smooth;
+  }
 
 
 
@@ -341,7 +343,7 @@
     /* background-position: 0; */
     /* background-repeat: no-repeat; */
     -webkit-background-size: 400px;
-    background-size: 200%;
+    background-size: 100%;
 
     -moz-transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
@@ -354,7 +356,7 @@
     /* background-position: 0; */
     /* background-repeat: no-repeat; */
     -webkit-background-size: 400px;
-    background-size:280%;
+    background-size:100%;
 
     -moz-transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);

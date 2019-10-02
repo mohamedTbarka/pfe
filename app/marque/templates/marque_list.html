@@ -88,15 +88,15 @@
                 <div class="col-md-4 pb-4
                   px-4"  >
                     <div class="row border-dark border">
-                        <div class="col-4 col-sm-4 d-flex align-items-center
-                        ">
-                            <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" style="max-width: 100px;max-height: 110px"></a>
+                        <div class="col-12 col-sm-12  text-center pt-1">
+                            <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" style="height: 70px"></a>
+                        
+                        <div class="col-12 col-sm-12 pt-4"  style="min-height: 77px!important">
+                           
+                            <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"> <h5 class="t15 text-dark text-center">{{marq.open_hours|safe}}</h5></a>
+                            <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"><h5 class="t15 pb-2 text-center">{{marq.phone}}</h5></a>
                         </div>
-                        <div class="col-8 col-sm-6" style="min-height: 77px!important">
-                            <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"><h2 class="t15_65 pt-3 text-uppercase text-dark">{{marq.name}}</h2></a>
-                            <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"> <h5 class="t15 text-dark">{{marq.open_hours|safe}}</h5></a>
-                            <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"><h5 class="t15 pb-2">{{marq.phone}}</h5></a>
-                        </div>
+                    </div>
                         <div class="col-md-12 px-0">
                             <h5 class="text-center border-dark border-top t15 pt-2"><img src="{% static 'resources/position.png'%}" alt=""> {{marq.floor}}</h5>
                         </div>
