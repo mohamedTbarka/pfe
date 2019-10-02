@@ -31,10 +31,40 @@
   </head>
  
   <body id="top">
-      <nav id="nav1" class="navbar navbar-fixed-top navbar-expand-sm bg_green sticky-top">
-       
-         
-          
+    <div class="container-fluid bg_green sticky-top">
+        <div id="nav1" class="container ">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row   d-flex justify-content-between">
+                  <div class="nav2">
+                      <a class="nav-link text-white text-uppercase t13 px-4"  href="{%url 'discovers'%}">découvrir arribat center</a>
+                  </div>
+                  <div class="nav2">
+                      <a class="nav-link text-white text-uppercase t13 px-4" href="{%url 'home'%}#nouv">actus & offres</a>
+                  </div>
+                  <div class="nav2">
+                      <a class="nav-link text-white text-uppercase t13 px-4" href="{%url 'home'%}#services">services</a>
+                  </div>
+                  <div class="nav2">
+                      <a class="nav-link text-white text-uppercase t13 px-4" href="{{ HTTP_HOST }}/horaires-et-acces">horaires & accés</a>
+                      
+                  </div>
+                  <div class="nav2">
+                      <a class="nav-link text-white text-uppercase t13 px-4"  href="{{ HTTP_HOST }}/bureaux/">bureaux</a>
+                  </div>
+                  <div class="nav2">
+                      <a class="nav-link text-white text-uppercase t13 px-4" href="{{ HTTP_HOST }}/hotel/">hôtel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+      
+
+
+
+      <!-- <nav id="nav1" class="navbar navbar-fixed-top navbar-expand-sm bg_green sticky-top">
           <div class=" navbar-collapse  d-flex justify-content-center " >
               <ul class="navbar-nav">
                   <li class="nav-item">
@@ -49,9 +79,9 @@
                   <li class="nav-item">
                     <a class="nav-link text-white text-uppercase t13 px-4" href="{{ HTTP_HOST }}/horaires-et-acces">horaires & accés</a>
                   </li>
-                  <!-- <li class="nav-item">
+                  <li class="nav-item">
                     <a class="nav-link text-white text-uppercase t13 px-4">plan</a>
-                  </li> -->
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link text-white text-uppercase t13 px-4"  href="{{ HTTP_HOST }}/bureaux/">bureaux</a>
                   </li>
@@ -60,7 +90,7 @@
                   </li>
                 </ul>
           </div>
-        </nav>
+        </nav> -->
         <!-- nav for  mobile version -->
         <section id="nav_mobile">
            <!-- Toggler/collapsibe Button -->
@@ -150,35 +180,66 @@
 
 
         
-        <div class="container-fluid">
+        <div class="container">
               <div class="row">
-                  <div class="col-md-12 d-flex justify-content-around mt-3">
+                  <div class="col-md-12 ">
+                    <div class="row d-flex justify-content-between mt-3">
                     
-                      <div id="logo" class="col-md-2 offset-md-2 text-center pl-0">
+                      <div id="logo" class="col-md-4  text-left ">
                           <a href="{%url 'home'%}"><img src="{{preference.get_logo}}" alt=""> </a>
                       </div>
-                      <div id="search_responsive" class="col-md-3  text-center" style="margin-left:  120px!important;">
+                      <div id="search_responsive" class="col-md-4  text-center" >
                         <form   action="{{ HTTP_HOST }}/search/" method="GET" class="input-group  search_input  pt-2 ">
                             
-                            <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
+                            <input class="form-control  border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
                             <span class="input-group-prepend ">
-                                <button type="submit" class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" style=""></button>
+                                <button type="submit" class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" ></button>
                             </span>
                           </form>
                       </div>
                       
-                      <div id="social" class="col-md-3 text-center pt-2 hide_mobile">
+                      <div id="social" class="col-md-4 text-right pt-2 hide_mobile">
                          <a href="{{preference.facebook}}" target='_blank'><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
                          <a href="{{preference.instagram}}"  target='_blank'><img class="img_grey px-2" src="{% static 'resources/insta.png'%}" alt=""></a>
                          <a href="{{preference.youtube}}" target='_blank'><img class="img_grey px-2" src="{% static 'resources/youtube.png'%}" alt=""></a>
                          <a href="{{preference.twitter}}" target='_blank'><img class="img_grey px-2" src="{% static 'resources/twitter.png'%}" alt=""></a>
                       </div>
-                      <div class="col-md-2 extra"></div>
+                    </div>
                   </div>
                  
               </div>
           </div>
         <hr class="mb-0 mt-0">
+        <div class="container-fluid  sticky-top bg-white hide_mobile" style="top: 35px;" >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row   d-flex justify-content-between">
+                <div class="nav2">
+                    <a class="nav-link txt_green  text-uppercase t15 afterr " href="{%url 'marque_detail' 1%}">Hypermarché</a>
+                </div>
+                <div class="nav2">
+                    <a class="nav-link txt_green  text-uppercase t15 afterr " href="{%url 'marque_detail' 2%}">Cinéma</a>
+                </div>
+                <div class="nav2">
+                    <a class="nav-link txt_green  text-uppercase t15 afterr " href="{%url 'marques'%}?group=1">Shopping</a>
+                </div>
+                <div class="nav2">
+                    <a class="nav-link txt_green  text-uppercase t15 afterr " href="{%url 'marques'%}?group=2">Restauration</a>
+                </div>
+                <div class="nav2">
+                    <a class="nav-link txt_green  text-uppercase t15 afterr " href="{%url 'marques'%}?group=5">Culture & Loisirs</a>
+                </div>
+                <div class="nav2">
+                    <a class="nav-link txt_green  text-uppercase t15 " href="{%url 'marques'%}?group=6" >Ouverture prochaine</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- 
         <nav class="navbar navbar-expand-sm justify-content-center sticky-top bg-white hide_mobile" style="top: 50px;">
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -201,7 +262,7 @@
             </li>
            
           </ul>
-        </nav>
+        </nav> -->
 
       <!-- End  of  navication -->
       {% block content %} 
@@ -358,6 +419,8 @@
 });
   </script>
 
+
+<!-- slick slider -->
 <script>
 $(document).ready(function() {
   // slick carousel
@@ -367,6 +430,8 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1,
     verticalSwiping: true,
+    prevArrow: false,
+    nextArrow: false
   });
 });
 </script>
@@ -395,7 +460,7 @@ $(document).on('click','#sub_btn',function(e){
 })
 </script>
 
-<!-- subscribe  -->
+<!-- subscribe- footer  -->
 <script>
     $(document).on('click','#sub_btn2',function(e){
       e.preventDefault();
@@ -408,12 +473,15 @@ $(document).on('click','#sub_btn',function(e){
           email:$('#email2').val(), 
           csrfmiddlewaretoken: '{{ csrf_token }}',
         },
-        success:function(){
+        success:function(result){
           console.log("working");
           
         },
-        error:function(){
+        error:function(result){
           console.log($('#email2').val());
+          console.log(result.responseText);
+          // var final_result =  results.responseText.email;
+          // if final_result = ""
         }
       })
     })

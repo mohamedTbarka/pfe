@@ -331,7 +331,9 @@
     padding-right: 0px!important;
 }
 
-
+.nav2{
+    position: relative;
+}
 
 
 #paral {
@@ -718,7 +720,7 @@ float: right;
        margin-top: 20px!important;  
    }
    .padding-mobile2{
-    padding-left: 15px!important;
+    /* padding-left: 15px!important; */
     margin-top: 20px!important;  
    }
    
@@ -741,19 +743,19 @@ float: right;
 .offr2,.offr3,.offr4,.offr5{
     max-height: 100px!important;
     min-height: 100px!important;
-    max-width: 100%;
+    width: 100%!important;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px;   
+    background-size: 100%;   
     transition: all .5s ease-in;
 }
 .offr1{
     max-height: 100px!important;
     min-height: 100px!important;
-    max-width: 100%;
+    width: 100%!important;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 400px;   
+    background-size: 100%;   
     transition: all .5s ease-in;
 }
 .txt_img,.txt_img2 {
@@ -802,7 +804,7 @@ img.w-100 {
     margin-right: 0px!important;
 }
 .bg3{
-    margin-left: 3px!important;
+    /* margin-left: 3px!important; */
     width: 100%!important;
     
 }

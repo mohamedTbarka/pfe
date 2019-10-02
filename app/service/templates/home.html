@@ -63,7 +63,7 @@
 
 <div class="container ">
     <div class="row d-flex justify-content-around text-center">
-        <div class="col-ms-12 ">
+        <div class="col-md-12 ">
            <div class="row d-flex justify-content-between  py-4">
                 <div class="col-md-4 line_left pl-0"> </div>
                 <div class="col-md-2 mr-4 padding-mobile "><h2 class="title text-uppercase">Nouveautés</h2></div>
@@ -130,7 +130,7 @@
 <div class="container hide_desktop showmobile fixed-bottom" >
     <div class="row bottom1">
         <div id="wid_mobile_content" class="col-md-12 bg-dark" style="display: none">
-                <div id="carouselContent2" class="carousel slide" data-ride="carousel" >
+                <div id="carouselContent" class="carousel slide" data-ride="carousel" >
                         <div class="carousel-inner" role="listbox" >
                             <div class="carousel-item active text-center p-4">
                                 <h4 class="text-white t15">Magasins </h4>
@@ -147,11 +147,11 @@
                                     <p class="text-white t13"> 13h-2h</p>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselContent2" role="button" data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselContent2" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -170,7 +170,7 @@
 
 <div id="offres" class="container">
     <div class="row d-flex justify-content-around text-center">
-        <div class="col-ms-12 ">
+        <div class="col-md-12 ">
             <div class="row d-flex justify-content-between  py-4">
                  <div class="col-md-4 line_left"> </div>
                  <div class="col-md-3 padding-mobile "><h2 class="title text-uppercase">nos offres</h2></div>
@@ -179,7 +179,9 @@
          </div>
         <div class="col-md-12 px-0">
               <div class="row ">
-               <a href="{%url 'marques'%}?group=1"   class="col-md-2 offr1" style="background-image: url('static/resources/shopping.jpg');text-decoration: none;"> <div  class="col-md-2 offr1"  onclick="location.href='{%url 'marques'%}?group=1';"> <h3 class="txt_img text-white text-uppercase t22_65">Shopping</h3></div></a> 
+                  <div class="col-md-2 offr1" style="background-image: url('static/resources/shopping.jpg');">
+               <a href="{%url 'marques'%}?group=1"   class="col-md-2 offr1" style="text-decoration: none;"> <div    onclick="location.href='{%url 'marques'%}?group=1';"> <h3 class="txt_img text-white text-uppercase t22_65">Shopping</h3></div></a>
+                 </div>
                 <div class="col-md-5 padding-mobile ">
                     <a href="{%url 'marques'%}?group=2" style="text-decoration: none;">  <div style="background-image: url('static/resources/restauration.jpg');" class="offr2 mb-2" onclick="location.href='{%url 'marques'%}?group=2';" > <h3 class="txt_img2 text-white text-uppercase t22_65">Restauration</h3> </div></a>
                     <a href="{%url 'marque_detail' 1%}" style="text-decoration: none;"><div style="background-image: url('static/resources/hypermarche.jpg');" class="offr3 mt-3" onclick="location.href='{%url 'marque_detail' 1%}';"> <h3 class="txt_img2 text-white text-uppercase t22_65">hypermarché</h3> </div></a>
@@ -202,7 +204,7 @@
 <div id="services" style="display: hidden;  margin-top: -100px;margin-bottom: 100px" ></div>
 <div id="" class="container">
         <div class="row d-flex justify-content-around text-center">
-            <div class="col-ms-12 ">
+            <div class="col-md-12 ">
                 <div class="row d-flex justify-content-between  py-4">
                      <div class="col-md-4 line_left"> </div>
                      <div class="col-md-3 padding-mobile  "><h2 class="title text-uppercase">Nos services</h2></div>
@@ -216,7 +218,7 @@
                     <div class="col-md-12 pt-5"><h2 class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
                     <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> 
                    
-                        <!-- <div class="col-md-12"> <a   class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div> -->
+                        <div class="col-md-12"> <a   class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div>
                   </div>
               </div>
               {%endif%}
