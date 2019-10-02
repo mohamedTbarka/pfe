@@ -16,9 +16,11 @@
               <img src="{% static 'resources/bg1.jpg'%}" class="d-block w-100" alt="...">
                  {% if slide.title or slide.description or  slide.url or slide.url_text %}
                 <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
+                    <div>
                     <h1 class="text-uppercase text-dark t79">{{slide.title}}</h1>
                     <p class="t20 text-dark"> {{slide.description|safe}} </p>
                     <a href="{{slide.url}}"><button class="btn btn-sm text-white bg_green text-uppercase t_btn mb-3 p-2 px-3 mt-4">{{slide.url_text}}</button></a>
+                </div>
                 </div>
                 {%endif%}
             </div>
