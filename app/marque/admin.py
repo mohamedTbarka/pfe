@@ -12,9 +12,8 @@ class GroupAdmin(admin.ModelAdmin):
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'sup_category', 'created', 'updated',)
+    list_display = ('id', 'name', 'created', 'updated',)
     list_filter = (
-        'sup_category',
         'created',
         'updated',
     )
@@ -27,8 +26,8 @@ class SlideAdmin(admin.ModelAdmin):
 
 
 class MarqueAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'group', 'email', 'phone', 'localisation', 'created', 'updated',)
-    list_filter = ('group', 'created', 'updated',)
+    list_display = ('id', 'name',  'floor',  'email', 'phone',  'created', 'updated',)
+    list_filter = ('created', 'updated',)
     filter_horizontal = ('categories',)
     search_fields = ('name',)
     form = MarqueForm

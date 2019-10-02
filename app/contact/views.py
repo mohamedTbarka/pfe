@@ -26,7 +26,7 @@ class Contact(generic.TemplateView):
 
     def get_context_data(self, **kwargs):
         context = {}
-        context['success'] = False
+        context['success'] = None
         if "email" in self.request.GET:
             name = self.request.GET.get('nom')
             email = self.request.GET.get('email')
@@ -36,11 +36,14 @@ class Contact(generic.TemplateView):
 
             if name and email and phone and objet and content:
                 c = Contacts(name=name,
-                            email=email,
-                            phone=phone,
-                            object=objet,
-                            content=content,
-                            )
+                             email=email,
+                             phone=phone,
+                             object=objet,
+                             content=content,
+                             )
                 c.save()
                 context['success'] = True
+            else:
+                context['success'] = False
+
         return context
