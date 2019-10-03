@@ -1,9 +1,10 @@
+\babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Simple execution when leader H becomes disconnected (a), with time increasing from (a)\IeC {\textendash }(l). With no other link changes, every node in the connected component will eventually adopt G as its leader and a new leaders' hierarchy will be established.}}{24}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The status of the channel from u to v remains Up, but the status of the channel from v to u fluctuates.}}{26}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The status of the channel from $u$ to $v$ remains $Up$, but the status of the channel from $v$ to $u$ fluctuates.}}{26}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces A highway scenario composed of vehicles, road-side units, and central servers. Part of the network is ad hoc (and wireless); the rest is infrastructured (and wired).}}{55}% 

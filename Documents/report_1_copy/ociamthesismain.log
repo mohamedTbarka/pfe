@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  28 SEP 2019 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  3 OCT 2019 05:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -348,6 +348,62 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/11/13 3.27 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
+phy)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
+aphy)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/11/13 3.27 Babel common definitions
+\babel@savecnt=\count114
+\U@D=\dimen115
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count115
+)
+Package babel Info: Making " an active character on input line 121.
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2019/01/30 v3.5d French support from the babel system
+\l@acadian = a dialect from \language\l@french 
+\FB@nonchar=\count116
+Package babel Info: Making : an active character on input line 414.
+Package babel Info: Making ; an active character on input line 415.
+Package babel Info: Making ! an active character on input line 416.
+Package babel Info: Making ? an active character on input line 417.
+\FBguill@level=\count117
+\FBold@everypar=\toks27
+\FB@Mht=\dimen116
+\mc@charclass=\count118
+\mc@charfam=\count119
+\mc@charslot=\count120
+\std@mcc=\count121
+\dec@mcc=\count122
+\c@FBcaption@count=\count123
+\listindentFB=\dimen117
+\descindentFB=\dimen118
+\labelindentFB=\dimen119
+\labelwidthFB=\dimen120
+\leftmarginFB=\dimen121
+\parindentFFN=\dimen122
+\FBfnindent=\dimen123
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
@@ -357,23 +413,23 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count114
+\lst@mode=\count124
 \lst@gtempboxa=\box32
-\lst@token=\toks27
-\lst@length=\count115
-\lst@currlwidth=\dimen115
-\lst@column=\count116
-\lst@pos=\count117
-\lst@lostspace=\dimen116
-\lst@width=\dimen117
-\lst@newlines=\count118
-\lst@lineno=\count119
-\lst@maxwidth=\dimen118
+\lst@token=\toks28
+\lst@length=\count125
+\lst@currlwidth=\dimen124
+\lst@column=\count126
+\lst@pos=\count127
+\lst@lostspace=\dimen125
+\lst@width=\dimen126
+\lst@newlines=\count128
+\lst@lineno=\count129
+\lst@maxwidth=\dimen127
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count120
-\lst@skipnumbers=\count121
+\c@lstnumber=\count130
+\lst@skipnumbers=\count131
 \lst@framebox=\box33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -390,38 +446,38 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 (./conclusions.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 66.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    ... okay on input line 78.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen119
+\scratchcounter=\count132
+\scratchdimen=\dimen128
 \scratchbox=\box34
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen120
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks29
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen129
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -477,11 +533,14 @@ e
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@lstlisting=\count128
+LaTeX Info: Redefining \degres on input line 78.
+LaTeX Info: Redefining \dots on input line 78.
+LaTeX Info: Redefining \up on input line 78.
+\c@lstlisting=\count138
 <oxlogo.png, id=1, 1505.625pt x 602.25pt>
 File: oxlogo.png Graphic file (type png)
 <use oxlogo.png>
-Package pdftex.def Info: oxlogo.png  used on input line 77.
+Package pdftex.def Info: oxlogo.png  used on input line 89.
 (pdftex.def)             Requested size: 91.04881pt x 36.4183pt.
  [1
 
@@ -507,13 +566,15 @@ Package pdftex.def Info: oxlogo.png  used on input line 77.
 
 
 
+] [5
+
 ]) (./ociamthesismain.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 19.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -597,7 +658,7 @@ cmm/m/it/12 STARTNEWTREFLEVEL$
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [22] [23]
-<test_1.png, id=123, 977.6525pt x 603.25375pt>
+<test_1.png, id=126, 977.6525pt x 603.25375pt>
 File: test_1.png Graphic file (type png)
 <use test_1.png>
 Package pdftex.def Info: test_1.png  used on input line 199.
@@ -611,7 +672,7 @@ LaTeX Warning: Float too large for page by 21.23201pt on input line 202.
 
  (./correctness.tex
 Chapter 4.
-<fig_1.png, id=128, 743.02594pt x 147.55125pt>
+<fig_1.png, id=131, 743.02594pt x 147.55125pt>
 File: fig_1.png Graphic file (type png)
 <use fig_1.png>
 Package pdftex.def Info: fig_1.png  used on input line 9.
@@ -623,15 +684,24 @@ Package pdftex.def Info: fig_1.png  used on input line 9.
 
 
 ]
-Overfull \hbox (1.73473pt too wide) in paragraph at lines 15--16
- \T1/cmr/bx/n/12 Proof[] \T1/cmr/m/n/12 When Chan-nel-Downuv oc-curs, u re-move
-s v from both its Nu and formingu
+Overfull \hbox (8.38837pt too wide) in paragraph at lines 15--16
+ \T1/cmr/bx/n/12 Proof[] \T1/cmr/m/n/12 When $\OML/cmm/m/it/12 ChannelDown[]$ \
+T1/cmr/m/n/12 oc-curs, $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 re-moves $\OML/cmm/m
+/it/12 v$ \T1/cmr/m/n/12 from both its $\OML/cmm/m/it/12 N[]$ \T1/cmr/m/n/12 an
+d $\OML/cmm/m/it/12 forming[]$
  []
 
-[26 <./fig_1.png (PNG copy)>] [27] [28] [29] [30] [31] [32] [33] [34] [35]
-Overfull \hbox (1.9474pt too wide) in paragraph at lines 92--93
- [] \T1/cmr/m/n/12 Sup-pose u changes its height through $\OML/cmm/m/it/12 PROP
-AGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
+[26 <./fig_1.png (PNG copy)>] [27] [28] [29] [30] [31] [32] [33] [34]
+Overfull \hbox (56.4245pt too wide) in paragraph at lines 89--90
+ [] \T1/cmr/m/n/12 Sup-pose $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 changes its hei
+ght through $\OML/cmm/m/it/12 ELECTSELF$ \T1/cmr/m/n/12 (resp., $\OML/cmm/m/it/
+12 STARTNEWREFLEVEL$\T1/cmr/m/n/12 ).
+ []
+
+[35]
+Overfull \hbox (2.10864pt too wide) in paragraph at lines 92--93
+ [] \T1/cmr/m/n/12 Sup-pose $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 changes its hei
+ght through $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
  []
 
 
@@ -647,15 +717,22 @@ n/12 or $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (4.683pt too wide) in paragraph at lines 111--112
- [] \T1/cmr/m/n/12 Sup-pose u takes on RL (t, p, 1) due to $\OML/cmm/m/it/12 PR
-OPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
+Overfull \hbox (4.84424pt too wide) in paragraph at lines 111--112
+ [] \T1/cmr/m/n/12 Sup-pose $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 takes on RL (t,
+ p, 1) due to $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
  []
 
-[38] [39] [40]
-Overfull \hbox (15.04796pt too wide) in paragraph at lines 152--153
-\T1/cmr/m/n/12 than (t, p, 0) in Ci-1 . By the pre-con-di-tion for $\OML/cmm/m/
-it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 ,
+[38]
+Overfull \hbox (84.53447pt too wide) in paragraph at lines 125--126
+ [] \T1/cmr/m/n/12 Then at some pre-vi-ous time t '' < gt(Ci-1 ), $\OML/cmm/m/i
+t/12 u$ \T1/cmr/m/n/12 ex-e-cuted $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$
+ []
+
+[39] [40]
+Overfull \hbox (10.87035pt too wide) in paragraph at lines 152--153
+\T1/cmr/m/n/12 than $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; p; \OT1/cmr/m/n/12 0)
+$ \T1/cmr/m/n/12 in $\OML/cmm/m/it/12 C[]$\T1/cmr/m/n/12 . By the pre-con-di-ti
+on for $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 ,
  []
 
 [41] [42] [43] [44] [45]) [46]
@@ -685,12 +762,12 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
  [53]
 [54]
-<fig_2.png, id=227, 352.31625pt x 107.65219pt>
+<fig_2.png, id=230, 352.31625pt x 107.65219pt>
 File: fig_2.png Graphic file (type png)
 <use fig_2.png>
 Package pdftex.def Info: fig_2.png  used on input line 34.
 (pdftex.def)             Requested size: 303.53267pt x 92.74661pt.
-<fig_3.png, id=228, 291.33844pt x 204.01219pt>
+<fig_3.png, id=231, 291.33844pt x 204.01219pt>
 File: fig_3.png Graphic file (type png)
 <use fig_3.png>
 Package pdftex.def Info: fig_3.png  used on input line 42.
@@ -700,31 +777,31 @@ Package pdftex.def Info: fig_3.png  used on input line 42.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [55 <./fig_2.png (PNG copy)>] [56 <./fig_3.png (PNG copy)>] [57] [58]
-<fig_4.png, id=242, 688.07062pt x 190.46156pt>
+<fig_4.png, id=245, 688.07062pt x 190.46156pt>
 File: fig_4.png Graphic file (type png)
 <use fig_4.png>
 Package pdftex.def Info: fig_4.png  used on input line 84.
 (pdftex.def)             Requested size: 433.62pt x 120.02917pt.
  [59 <./fig_4.png (PNG copy)>]
-<fig_5.png, id=246, 455.45157pt x 179.92218pt>
+<fig_5.png, id=249, 455.45157pt x 179.92218pt>
 File: fig_5.png Graphic file (type png)
 <use fig_5.png>
 Package pdftex.def Info: fig_5.png  used on input line 124.
 (pdftex.def)             Requested size: 303.53267pt x 119.9103pt.
  [60] [61 <./fig_5.png (PNG copy)>]
-<fig_6.png, id=253, 464.4853pt x 412.54124pt>
+<fig_6.png, id=256, 464.4853pt x 412.54124pt>
 File: fig_6.png Graphic file (type png)
 <use fig_6.png>
 Package pdftex.def Info: fig_6.png  used on input line 135.
 (pdftex.def)             Requested size: 303.53267pt x 269.59645pt.
  [62 <./fig_6.png (PNG copy)>] [63] [64] [65]
-<fig_7.png, id=267, 648.17157pt x 284.56313pt>
+<fig_7.png, id=270, 648.17157pt x 284.56313pt>
 File: fig_7.png Graphic file (type png)
 <use fig_7.png>
 Package pdftex.def Info: fig_7.png  used on input line 207.
 (pdftex.def)             Requested size: 303.53267pt x 133.25836pt.
  [66 <./fig_7.png (PNG copy)>]
-<performance_test.png, id=271, 1157.32375pt x 475.7775pt>
+<performance_test.png, id=274, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
 Package pdftex.def Info: performance_test.png  used on input line 261.
@@ -750,13 +827,13 @@ Chapter 7.
 (./preliminaries.aux) (./algorithm.aux) (./correctness.aux)
 (./leader_stability.aux) (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
- 6368 strings out of 492615
- 86042 string characters out of 6131390
- 361920 words of memory out of 5000000
- 10066 multiletter control sequences out of 15000+600000
+ 7727 strings out of 492615
+ 106020 string characters out of 6131390
+ 392781 words of memory out of 5000000
+ 11393 multiletter control sequences out of 15000+600000
  20313 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,14n,72p,2592b,1659s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,14n,72p,2593b,1656s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/sha
 re/texlive/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}{/usr/share/texmf
 /fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-
@@ -775,10 +852,10 @@ ts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></
 usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/font
 s/type1/public/cm-super/sfti1440.pfb>
-Output written on ociamthesismain.pdf (82 pages, 1762926 bytes).
+Output written on ociamthesismain.pdf (83 pages, 1774275 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 240 compressed objects within 3 object streams
+ 360 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
