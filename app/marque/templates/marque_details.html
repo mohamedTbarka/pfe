@@ -8,9 +8,8 @@
 <div class="container-fluid">
         <div style=" background-image:  url('../../static/resources/bg_shopping.jpg');"  class="row bg_marque">
             <div class="col-md-12">
-                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Marque</h4>
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{marque.name}}</h4>
             </div>
-            
         </div>
     </div>
 
@@ -30,24 +29,28 @@
             </div>
             <div class="row">
             <div class="col-md-4 ">
-                <img src="../../media/{{marque.logo}}" class="mb-3" alt="">
-                <h4 class="text-uppercase t15_65 pt-5"><img src="{% static 'resources/marque_watch.png'%}" alt=""> Horaires d’ouverture</h4>
-                <p class="t15">{{marque.week_open_hours|safe}}</p>
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <img src="../../media/{{marque.logo}}" class="mb-3" alt="">
+                </div>
+              </div>
+                <h4 class="text-uppercase t15_65 pt-5"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
+                <p class="t15 ">{{marque.week_open_hours|safe}}</p>
     
-                <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_phone.png'%}" alt=""> téléphone</h4>
+                <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>
                 {%ifequal marque.phone None %}
-                <p class="t15"></p>
+                <p class="t15 pr-1"></p>
                 {%else%}
-                <p class="t15">{{marque.phone}}</p>
+                <p class="t15 pr-1">{{marque.phone}}</p>
                 {%endifequal%}
-                {%ifequal marque.phone None %}
-                <p class="t15"></p>
+                {%ifequal marque.phone2 None %}
+                <p class="t15 pr-1"></p>
                 {%else%}
-                <p class="t15">{{marque.phone}} </p>
+                <p class="t15 pr-1">{{marque.phone}} </p>
                 {%endifequal%}
 
 
-                <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_email.png'%}" alt="">e-mail</h4>
+                <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_email.png'%}" class="pr-1" alt=""> Website</h4>
                 {%ifequal marque.email None %}
                 <p class="t15"></p>
                 {%else%}
@@ -58,6 +61,7 @@
                 {%ifequal marque.pk 2 %}
                <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>
                 {%endifequal%}
+
                 
             </div>
             <div class="col-md-8 pl-5">
@@ -73,7 +77,7 @@
                               
         
                               <div class="carousel-item  {% if not forloop.counter0 %}active{%endif%}">
-                                <img class="d-block w-100" src="{{slide.get_image_url}}" alt="First slide">
+                                <img class="d-block w-100" src="{{slide.get_image_url}}" alt="First slide"  height="250px">
                               </div>
                             
                               {%endfor%}
@@ -91,11 +95,16 @@
                           </div>
                     </div>
                     {%endif%}
-                   
-                    <div class="col-md-12 text-right px-0">
+                    <div class="col-md-6 text-right px-0">
+                        {%ifequal marque.pk 2 %}
+                        <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>
+                         {%endifequal%}         
+                      </div>
+                    <div class="col-md-6 text-right px-0">
                       {%if marque.localisation %}
-                      <button type="bUTTON" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">localiser la marque</button>
+                      <button type="bUTTON" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">localiser {{marque.name}}</button>
                       {%endif%}
+                    </div>
                          <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
@@ -124,7 +133,7 @@
                     </div>
                   </div>
                     
-                    </div>
+                   
               
             </div>
             

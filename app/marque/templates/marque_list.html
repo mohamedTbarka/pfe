@@ -6,12 +6,25 @@
 
 
 <div class="container-fluid">
+       
+       
+        {% if group %}
+      
+        <div style=" background-image:  url('../../media/{{categories.0.group.backgroud_image}}');" class="row bg_shopping">
+            <div class="col-md-12">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{categories.0.group.name}}</h4>
+            </div>
+        </div>
+        
+        {% else %}
         <div style=" background-image:  url('../../static/resources/bg_shopping.jpg');" class="row bg_shopping">
             <div class="col-md-12">
                     <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Nos Marques</h4>
             </div>
-            
         </div>
+        
+        {% endif %}
+        
 </div>
 
 <div class="container">
@@ -21,7 +34,9 @@
                     <ol class="breadcrumb bg-white pl-0">
                       <li class="breadcrumb-item active" aria-current="page"><a class="text-dark t15" href="" >Accueil</a></li>
                       <li class="breadcrumb-item active" aria-current="page"> <a class="text-dark t15"  href="">Nos marques</a></li>
-                      <li class="breadcrumb-item " aria-current="page"><a class="text-secondary t15"  href="">Shopping</a></li>
+                      {% if group %}
+                      <li class="breadcrumb-item " aria-current="page"><a class="text-secondary t15"  href="">{{categories.0.group.name}}</a></li>
+                      {% endif %}
                     </ol>
                   </nav>
             </div>
@@ -37,8 +52,8 @@
               <select name="cat" class="form-control" id="exampleFormControlSelect1" onChange="this.form.submit()">
                    
                     <option  value="">Tout&nbsp;voir</option>
-                    {%for  cat  in categories%}
-                    <option value={{cat.pk}}>{{cat.name}}</option>
+                    {%for  caty  in categories%}
+                    <option value={{caty.pk}} {%ifequal caty.pk cat%} selected{% endifequal %}>{{caty.name}}</option>
                     {%endfor%}
                   </select>
                 </form>
@@ -91,9 +106,9 @@
                         <div class="col-12 col-sm-12  text-center pt-1 px-0">
                             <div class="row px-0">
 
-                            <div class="col-12 col-sm-12  text-center px-5"  style="height: 120px;widows:120px;align-content: center;">
+                            <div class="col-12 col-sm-12  text-center px-5 pt-2"  style="height: 120px;width:120px;align-content: center;">
 
-                                <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" ></a>
+                                <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" max-height="100px" ></a>
                             </div>
                         
                         <div class="col-12 col-sm-12 pt-4 "  style="min-height: 77px!important">
