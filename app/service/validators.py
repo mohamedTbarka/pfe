@@ -9,14 +9,14 @@ def minimum_size(image, width=None, height=None):
     image_info = {}
     errors = []
     image_info['width'], image_info['height'] = get_image_dimensions(image)
-
-    if width is not None and image_info['width'] <= width:
+    if width and image_info['width'] < width:
         errors.append('Image Width should be > {} px.'.format(width))
-    if height is not None and image_info['height'] <= height:
+    if height and image_info['height'] < height:
         errors.append('Image Height should be > {} px.'.format(height))
     if not (round(height / width, 1) == round(image_info['height'] / image_info['width'], 1)):
         errors.append('Image Height/Width ratio should be > {}.'.format(height / width))
-    raise ValidationError(errors)
+    if errors:
+        raise ValidationError(errors)
 
 
 def exact_size(width=None, height=None):
