@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from app import settings
+from service.validators import minimum_size
 
 
 class BaseModel(models.Model):
@@ -110,7 +111,7 @@ class Preference(models.Model):
 
 
 class Slider(BaseModel):
-    image = models.ImageField(upload_to="./uploads/slider/img")
+    image = models.ImageField(upload_to="./uploads/slider/img", )
     title = models.CharField(max_length=100, null=True, blank=True)
     url = models.CharField(max_length=100, null=True, blank=True)
     url_text = models.CharField(max_length=100, null=True, blank=True)
@@ -123,6 +124,19 @@ class Slider(BaseModel):
         if self.image:
             return "{0}{1}".format(settings.MEDIA_URL, self.image)
         return ""
+
+    def clean(self):
+        # Then call the clean() method of the super  class
+        cleaned_data = super(Slider, self).clean()
+        # ... do some cross-fields validation for the subclass
+        width = 1600
+        height = 600
+        # if not self.image.is_image():
+        #     raise ValidationError('File should be image.')
+        if self.image:
+            minimum_size(self.image, width, height)
+        # Finally, return the cleaned_data
+        return cleaned_data
 
 
 class Discover(BaseModel):
