@@ -606,10 +606,10 @@ float: right;
 .toside{
     left: 10px!important;
 }
-.active.carousel-item-left, .carousel-item-prev:not(.carousel-item-right){
+/* .active.carousel-item-left, .carousel-item-prev:not(.carousel-item-right){
     transform: translateX(20%)!important;
     color: transparent!important;
-}
+} */
 
 
 
@@ -679,7 +679,11 @@ float: right;
 #removepadding.remove_padding{
     padding-left: 0;
 }
+
 @media only screen and (max-width: 600px) {
+    .row{
+        margin-right: 0px!important;
+    }
     .bot{
         padding-bottom: 25px!important;
     }
