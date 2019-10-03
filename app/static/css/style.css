@@ -154,7 +154,7 @@ html {
    
     max-height: 100px!important;
     min-height: 100px;
-    max-width: 97%;
+    max-width: 100%;
     background-position: center;
    background-repeat: no-repeat;
    background-size: 580px;
@@ -169,7 +169,7 @@ html {
     
     max-height: 100px!important;
     min-height: 100px;
-    max-width: 97%;
+    max-width: 100%;
     background-position: center;
    background-repeat: no-repeat;
    background-size: 580px;
@@ -182,7 +182,7 @@ html {
 .nv3_mobile{
     max-height: 100px!important;
     min-height: 100px;
-    max-width: 97%;
+    max-width: 100%;
   
     background-position: center;
    background-repeat: no-repeat;
@@ -682,6 +682,9 @@ float: right;
 }
 
 @media only screen and (max-width: 600px) {
+    .pad_rm{
+        padding-right: 0px!important;
+    }
     .row_mob{
         margin-right: 0px!important;
     }
@@ -810,11 +813,7 @@ img.w-100 {
 .bottom1{
     margin-right: 0px!important;
 }
-.bg3{
-    /* margin-left: 3px!important; */
-    width: 100%!important;
-    
-}
+
 #default_left{
     margin-left: 0px!important;
 }
