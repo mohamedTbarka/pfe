@@ -34,7 +34,7 @@
         {% if query %}
         {% for result in page.object_list %}
         <div class="col-md-12 pt-3">
-            <h4 class="t17 txt_green" ><a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a></h4>
+            <h4 class="t17 txt_green" ><a class="t17 txt_green" href="{{result.object.get_absolute_url}}">{{result.object.name}}</a></h4>
             <p class="t15 text-dark">{{result.object.content|safe}}</p>
         </div>
         <hr>

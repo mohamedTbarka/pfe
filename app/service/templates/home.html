@@ -204,12 +204,12 @@
              {%for service in  services%} 
              {%if service.principal%}
             <div class="col-md-12 move_middle px-0">
-                  <div class="row bg3" style="background-image:  url('media/{{service.background_image}}');">  
-                    <div class="col-md-12 pt-5"><h2 class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
-                    <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> 
+                    <a style="margin: auto;text-decoration: none;" href="{{ HTTP_HOST }}/parking/"> <div class="row bg3" style="background-image:  url('media/{{service.background_image}}');">  
+                    <div style="align-self: center;" class="col-md-12"><h2  class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
+                    <!-- <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> 
                    
-                        <div class="col-md-12"> <a   class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div>
-                  </div>
+                        <div class="col-md-12"> <a  href="{{ HTTP_HOST }}/parking/" class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div> -->
+                  </div></a>
               </div>
               {%endif%}
               {%endfor%}
