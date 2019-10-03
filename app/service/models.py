@@ -111,7 +111,8 @@ class Preference(models.Model):
 
 
 class Slider(BaseModel):
-    image = models.ImageField(upload_to="./uploads/slider/img", )
+    image = models.ImageField(upload_to="./uploads/slider/img",
+                              help_text=u'width>=1600px height>=600px ratio:"height/width"≍0.3')
     title = models.CharField(max_length=100, null=True, blank=True)
     url = models.CharField(max_length=100, null=True, blank=True)
     url_text = models.CharField(max_length=100, null=True, blank=True)
@@ -131,8 +132,6 @@ class Slider(BaseModel):
         # ... do some cross-fields validation for the subclass
         width = 1600
         height = 600
-        # if not self.image.is_image():
-        #     raise ValidationError('File should be image.')
         if self.image:
             minimum_size(self.image, width, height)
         # Finally, return the cleaned_data
