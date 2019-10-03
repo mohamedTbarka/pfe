@@ -51,16 +51,16 @@
 
 
                 <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_email.png'%}" class="pr-1" alt=""> Website</h4>
-                {%ifequal marque.email None %}
+                {%ifequal marque.website None %}
                 <p class="t15"></p>
                 {%else%}
-                <p class=" t15">{{marque.email}}</p>
+                <p class=" t15">{{marque.website}}</p>
                 
                 {%endifequal%}
                 
-                {%ifequal marque.pk 2 %}
+                {% comment %} {%ifequal marque.pk 2 %}
                <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>
-                {%endifequal%}
+                {%endifequal%} {% endcomment %}
 
                 
             </div>
@@ -95,7 +95,7 @@
                           </div>
                     </div>
                     {%endif%}
-                    <div class="col-md-6 text-right px-0">
+                    <div class="col-md-6 text-left px-0">
                         {%ifequal marque.pk 2 %}
                         <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>
                          {%endifequal%}         
