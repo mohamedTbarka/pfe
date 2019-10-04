@@ -44,6 +44,16 @@ class Service(BaseModel):
         super(Service, self).__init__(*args, **kwargs)
         self.old_principal = self.principal
 
+    def get_icon_url(self):
+        if self.icon:
+            return "{0}{1}".format(settings.MEDIA_URL, self.icon)
+        return ""
+
+    def get_background_image_url(self):
+        if self.background_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.background_image)
+        return ""
+
     def save(self, *args, **kwargs):
         if self.old_principal != self.principal and self.principal:
             Service.objects.all().update(principal=False)
@@ -145,3 +155,8 @@ class Discover(BaseModel):
 
     def __str__(self):
         return u"%s" % self.title
+
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""

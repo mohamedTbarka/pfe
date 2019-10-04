@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 
+from app import settings
 from nouveaute.models import Gallery
 
 
@@ -19,11 +20,22 @@ class Group(BaseModel):
     def __str__(self):
         return self.name
 
+    def get_image_url(self):
+        if self.backgroud_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.backgroud_image)
+        return ""
+
 
 class Category(BaseModel):
     name = models.CharField(max_length=100, unique=True)
     # sup_category = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, )
     group = models.ForeignKey(Group, null=True, blank=True, on_delete=models.SET_NULL)
+    banner = models.ImageField(upload_to="./uploads/category/img", blank=True, null=True)
+
+    def get_banner_url(self):
+        if self.banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.banner)
+        return ""
 
     class Meta:
         verbose_name_plural = "categories"
@@ -60,6 +72,11 @@ class Slide(BaseModel):
     # link = models.CharField(max_length=100, )
     image = models.ImageField(upload_to="./uploads/marque/slide/img")
 
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
+
 
 class Marque(BaseModel):
     name = models.CharField(max_length=100, unique=True)
@@ -78,3 +95,13 @@ class Marque(BaseModel):
 
     def __str__(self):
         return self.name
+
+    def get_logo_url(self):
+        if self.logo:
+            return "{0}{1}".format(settings.MEDIA_URL, self.logo)
+        return ""
+
+    def get_localisation_url(self):
+        if self.localisation:
+            return "{0}{1}".format(settings.MEDIA_URL, self.localisation)
+        return ""
