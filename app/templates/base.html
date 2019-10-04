@@ -485,7 +485,11 @@ $(document).on('click','#sub_btn',function(e){
         },
         error:function(result){
           console.log($('#email2').val());
-          console.log(result.responseText);
+          var bad_call = result.responseText;
+          if(bad_call == '{"email":["newsletter with this email already exists."]}'){
+            alert('newsletter with this email already exists.');
+          }
+          //{"email":["newsletter with this email already exists."]}
           // var final_result =  results.responseText.email;
           // if final_result = ""
         }
