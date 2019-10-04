@@ -82,6 +82,22 @@ class DiscoverAdmin(admin.ModelAdmin):
     form = DiscoverForm
 
 
+class HotelAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image', 'title', 'content', 'created', 'updated',)
+    list_filter = (
+        'created',
+        'updated',
+    )
+
+
+class BureauAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image', 'title', 'content', 'created', 'updated',)
+    list_filter = (
+        'created',
+        'updated',
+    )
+
+
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
 
@@ -90,3 +106,5 @@ _register(models.Service, ServiceAdmin)
 _register(models.Info, InfoAdmin)
 _register(models.Slider, SliderAdmin)
 _register(models.Discover, DiscoverAdmin)
+_register(models.Hotel, HotelAdmin)
+_register(models.Bureau, BureauAdmin)
