@@ -34,7 +34,7 @@ class EventListView(generic.ListView):
     Event list page
     """
     model = Event
-    paginate_by = 50  # if pagination is desired
+    # paginate_by = 50  # if pagination is desired
     template_name = "evenements.html"
 
     def get_context_data(self, **kwargs):
@@ -56,7 +56,7 @@ class CompagneListView(generic.ListView):
     Compagne list page
     """
     model = Compagne
-    paginate_by = 50  # if pagination is desired
+    # paginate_by = 50  # if pagination is desired
     template_name = "compagne.html"
 
     def get_context_data(self, **kwargs):
