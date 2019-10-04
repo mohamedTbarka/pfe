@@ -160,3 +160,38 @@ class Discover(BaseModel):
         if self.image:
             return "{0}{1}".format(settings.MEDIA_URL, self.image)
         return ""
+
+
+class Hotel(BaseModel):
+    image = models.ImageField(upload_to="./uploads/hotel/img")
+    title = models.CharField(max_length=100, )
+    content = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return u"%s" % self.title
+
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
+
+    class Meta:
+        verbose_name_plural = u'Hôtels'
+        verbose_name = u'Hôtel'
+
+
+class Bureau(BaseModel):
+    image = models.ImageField(upload_to="./uploads/bureau/img")
+    title = models.CharField(max_length=100, )
+    content = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return u"%s" % self.title
+
+    def get_image_url(self):
+        if self.image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.image)
+        return ""
+
+    class Meta:
+        verbose_name_plural = u'Bureaux'
