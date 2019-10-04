@@ -1,0 +1,51 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% load preference_tags %}
+
+{% block content %} 
+<div class="container-fluid pb-4">
+        <div style=" background-image:  url('../../static/resources/hotel.png');" class="row bg_simple">
+            <div class="col-md-12 dg">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Hotel</h4>
+            </div>
+            
+        </div>
+    </div>
+    
+    <section class="content all-the-way page_services">
+        <div class="container flex-xs-column-reverse">
+            
+            {%for  hotel in hotel_list%}
+            {%if forloop.counter|divisibleby:2 %}
+            <div class="row mb-3 flex-row-reverse bg_lightgrey ">
+                <div class="col-sm-12 col-md-6">
+                    <h2 class="t20 pt-4">{{hotel.title}}</h2>
+                    <p>
+                       {{hotel.content|safe}}
+                    </p>
+                </div>
+                   
+                <div class="col-sm-12 col-md-6 pl-0" style=" background-image:  url('../../media/{{hotel.image}}');background-position: 100% 0;  background-size:auto 100%;background-repeat: no-repeat">
+                <img src="../../media/{{hotel.image}}" alt="" class="img-fluid float-left showmobile hide_desktop" />
+                </div>
+            </div>
+            {%else%}
+            <div class="row mb-3 bg_lightgrey">
+                <div class="col-sm-12 col-md-6 ">
+                    <h2 class="t20 pt-4">{{hotel.title}}</h2>
+                    <p>
+                            {{hotel.content|safe}}
+                    </p>
+                </div>
+                <div class="col-sm-12 col-md-6 pr-0" style=" background-image:  url('../../media/{{hotel.image}}');background-position: 100% 0;  background-size:auto 100%;background-repeat: no-repeat">
+                    <img src="../../media/{{hotel.image}}" alt="" class="img-fluid float-right showmobile hide_desktop" /> 
+                </div>
+            </div>
+            {%endif%}
+            {%endfor%}
+         
+        </div>
+    </section>
+  
+{%endblock%}

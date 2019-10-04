@@ -302,6 +302,9 @@ html {
 
 
 /* Positions  & Spacing*/
+.dg {
+    margin: auto;
+}
 .pd1{ 
     padding-top: 4%;
 }
@@ -450,7 +453,7 @@ input#email2{
 }
 .t_business{
     font-size: 50px;
-    padding-top: 6%;
+    
 }
 .bs-example{
     margin: 20px;        
@@ -667,27 +670,49 @@ float: right;
 -webkit-transform: translate3d(0,-100%, 0)!important;
         transform: translate3d(0,-100%, 0)!important;
 }
-
-/* .number_indi ol {
-    position: absolute!important;
-    bottom: 0!important;
-    margin: 0!important;
-    left: 500px!important;
-    right: 0!important;
-    width: auto!important;
-
+ul.slick-dots {
+    position: absolute;
+    top: 50%;
+    list-style-type: none;
 }
-.number_indi li, .number_indi li.active {
-    float: left;
-    width: 33%;
-    height: 10px;
-    margin: 0;
-    border-radius: 0;
-    border: 0;
-    background: transparent;
-  } */
+ul.slick-dots > li {
+   padding-bottom: 10px;
+}
+ul.slick-dots > li > button {
+    background-color: #246630;
+    height:40px;
+    width:40px;
+    border: transparent; 
+    color: white;
+    font-family: 'Sequel100Wide-65Wide';
+    font-size: 15px;
+    transition: 0.4 linear;
+ }
+ ul.slick-dots > li > button:hover {
+    background-color: #246630d5;
+    
+ }
+
+
+/* magnifier */
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
   
-/* Vertical  slider ---- END*/
+}
+
+.img-magnifier-glass{
+  
+  position: absolute;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 150px;
+  height: 150px;
+}
+
 
 /* ----------  Slick carousel  ------------ END*/
 /* Mobile responsive */
@@ -806,7 +831,7 @@ float: right;
 
 .t_business {
     font-size: 30px!important;
-    padding-top: 38%!important;
+   
 }
 .pd_event{
     padding-left: 15px!important;
@@ -933,7 +958,7 @@ font-size: 42px!important;
 
 .t_business {
     font-size: 30px!important;
-    padding-top: 38%!important;
+   
 }
 .pd_event{
     padding-left: 15px!important;
