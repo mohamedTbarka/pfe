@@ -53,10 +53,10 @@
                       <a class="nav-link text-white text-uppercase t13 px-4" href="{{ HTTP_HOST }}/horaires-et-acces/">horaires & accés</a>
                   </div>
                   <div class="nav2">
-                      <a class="nav-link text-white text-uppercase t13 px-4"  href="{{ HTTP_HOST }}/bureaux/">bureaux</a>
+                      <a class="nav-link text-white text-uppercase t13 px-4"  href= "{%url 'bureaux'%}">bureaux</a>
                   </div>
                   <div class="nav2">
-                      <a class="nav-link text-white text-uppercase t13 px-4" href="{{ HTTP_HOST }}/hotel/">hôtel</a>
+                      <a class="nav-link text-white text-uppercase t13 px-4"  href= "{%url 'hotels'%}">hôtel</a>
                   </div>
                 </div>
               </div>
@@ -128,10 +128,10 @@
                   <a class="nav-link text-white text-uppercase t13">plan</a>
                 </li> -->
                 <li class="nav-item">
-                  <a class="nav-link text-white text-uppercase t13"  href="{{ HTTP_HOST }}/bureaux/">bureaux</a>
+                  <a class="nav-link text-white text-uppercase t13"   href= "{%url 'bureaux'%}">bureaux</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white text-uppercase t13" href="{{ HTTP_HOST }}/hotel/">hôtel</a>
+                  <a class="nav-link text-white text-uppercase t13"  href= "{%url 'hotels'%}">hôtel</a>
                 </li>
               </ul>
               
@@ -303,10 +303,10 @@
                       <a class="nav-link text-white text-uppercase t13 px-0" href="{{ HTTP_HOST }}/horaires-et-acces/">horaires & accés</a>
                   </div>
                   <div class="">
-                      <a class="nav-link text-white text-uppercase t13 px-0"  href="{{ HTTP_HOST }}/bureaux/">bureaux</a>
+                      <a class="nav-link text-white text-uppercase t13 px-0"  href= "{%url 'bureaux'%}">bureaux</a>
                   </div>
                   <div class="">
-                      <a class="nav-link text-white text-uppercase t13 px-0" href="{{ HTTP_HOST }}/hotel/">hôtel</a>
+                      <a class="nav-link text-white text-uppercase t13 px-0" href="{%url 'hotels'%}">hôtel</a>
                   </div>
                 </div>
               </div>
@@ -344,15 +344,15 @@
           </div>
         </div>
 
-    <div class="container">
-      <hr class="bg-white">   
+    <div class="container pb-4">
+      <hr class="bg-white hide_mobile" >   
     </div>
 
-     <div class="container">
-          <div class="row">
-            <div class="col-md-12 px-0">
-              <div class="row   d-flex justify-content-between ">
-              <div class="nav2">
+     <div class="container"  >
+          <div class="row" >
+            <div class="col-md-12 px-0"  style="bottom: 30px" >
+              <div class="row   d-flex justify-content-between  ">
+              <div class="nav2" >
                                          <a class="nav-link text-white text-uppercase t13_65 text-center" href="{{ HTTP_HOST }}/mentions-legales/">mentions légales</a>
 
                 </div>
@@ -504,21 +504,7 @@
   </script>
 
 
-<!-- slick slider -->
-<script>
-$(document).ready(function() {
-  // slick carousel
-  $('.slider').slick({
-    dots: true,
-    vertical: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    verticalSwiping: true,
-    prevArrow: false,
-    nextArrow: false
-  });
-});
-</script>
+
 
 <!-- subscribe  -->
 <script>
@@ -585,8 +571,6 @@ $(document).on('click','#sub_btn',function(e){
 
   });
   </script>
-
-
 
 
 

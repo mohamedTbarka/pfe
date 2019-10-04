@@ -7,9 +7,9 @@
 	<div class="row">
 		<div class="col-md-12 ">
 			<div class="row slider ">
-                        <div class="col-md-12 img-magnifier-container "><img id="myimage" class="img-fluid" src="{% static 'resources/plan0.jpg'%}" alt="" ></div>
-                        <div class="col-md-12 img-magnifier-container "><img id="myimage2"class="img-fluid" src="{% static 'resources/plan0.jpg'%}" alt=""></div>
-                        <div class="col-md-12 img-magnifier-container "><img id="myimage3" class="img-fluid" src="{% static 'resources/plan0.jpg'%}" alt=""></div>
+                        <div class="col-md-12 img-magnifier-container "><img id="myimage" class="img-fluid" src="{% static 'resources/niv-2.png'%}" alt="" ></div>
+                        <div class="col-md-12 img-magnifier-container "><img id="myimage2"class="img-fluid" src="{% static 'resources/niv-1.png'%}" alt=""></div>
+                        <div class="col-md-12 img-magnifier-container "><img id="myimage3" class="img-fluid" src="{% static 'resources/niv-0.png'%}" alt=""></div>
 			</div>
 		</div>
 	</div>
@@ -109,4 +109,26 @@ magnify("myimage2", 3);
 magnify("myimage3", 3);
 /* Specify the id of the image, and the strength of the magnifier glass: */
 </script>
+
+
+<!-- slick slider -->
+<script>
+$(document).ready(function() {
+  // slick carousel
+  $('.slider').slick({
+    dots: true,
+    vertical: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+    prevArrow: false,
+    nextArrow: false
+  });
+  $("#slick-slide-control00").html('2ème Étage'); //versions newer than 1.6
+   $("#slick-slide-control01").html('1er Étage'); //versions newer than 1.6
+    $("#slick-slide-control02").html('RDC'); //versions newer than 1.6
+});
+</script>
+
+
 {% endblock %}

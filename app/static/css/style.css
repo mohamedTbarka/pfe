@@ -681,12 +681,13 @@ ul.slick-dots > li {
 ul.slick-dots > li > button {
     background-color: #246630;
     height:40px;
-    width:40px;
+    width:150px;
     border: transparent; 
     color: white;
     font-family: 'Sequel100Wide-65Wide';
     font-size: 15px;
     transition: 0.4 linear;
+    border-radius: 5px;
  }
  ul.slick-dots > li > button:hover {
     background-color: #246630d5;
