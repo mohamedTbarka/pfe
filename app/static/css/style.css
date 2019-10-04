@@ -570,7 +570,7 @@ float: right;
     transform: translateY(-50%);
     height: 150px;
     width: 186px;
-    z-index: 4;
+    z-index: 15;
     background-color: #000;
     clear: both;
     transition: all .5s;
