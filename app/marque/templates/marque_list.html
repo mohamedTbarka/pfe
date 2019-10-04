@@ -111,7 +111,7 @@
                                 <a href="{% url 'marque_detail' marq.pk %}"><img src="../media/{{marq.logo}}" alt="" style="height: 80%;" ></a>
                             </div>
                         
-                        <div class="col-12 col-sm-12 pt-4 "  style="min-height: 77px!important">
+                        <div class="col-12 col-sm-12 pt-4 "  style="max-height: 77px!important">
                            
                             <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"> <h5 class="t15 text-dark text-center">{{marq.open_hours|safe}}</h5></a>
                             <a href="{% url 'marque_detail' marq.pk %}" style="text-decoration: none;"><h5 class="t15 pb-2 text-center">{{marq.phone}}</h5></a>
