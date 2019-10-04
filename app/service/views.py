@@ -35,7 +35,7 @@ class DiscoverListView(generic.ListView):
     Discover list page
     """
     model = Discover
-    paginate_by = 50  # if pagination is desired
+    # paginate_by = 50  # if pagination is desired
     template_name = "decouvrir.html"
 
     def get_context_data(self, **kwargs):
@@ -49,7 +49,7 @@ class HotelListView(generic.ListView):
     Hotel list page
     """
     model = Hotel
-    paginate_by = 50  # if pagination is desired
+    # paginate_by = 50  # if pagination is desired
     template_name = "hotel.html"
 
     def get_context_data(self, **kwargs):
@@ -63,7 +63,7 @@ class BureauListView(generic.ListView):
     Bureau list page
     """
     model = Bureau
-    paginate_by = 50  # if pagination is desired
+    # paginate_by = 50  # if pagination is desired
     template_name = "bureau.html"
 
     def get_context_data(self, **kwargs):
