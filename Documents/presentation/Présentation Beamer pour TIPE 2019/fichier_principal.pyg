@@ -1,9 +1,0 @@
-
-import scipy as sp
-import scipy.optimize
-
-def ma_fonction(x):
-    return []
-
-# À vous de remplir les choses adéquates...
-

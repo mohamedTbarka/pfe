@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{scipy} \PYG{k+kn}{as} \PYG{n+nn}{sp}
+\PYG{k+kn}{import} \PYG{n+nn}{scipy.optimize}
+
+\PYG{k}{def} \PYG{n+nf}{ma\PYGZus{}fonction}\PYG{p}{(}\PYG{n}{x}\PYG{p}{):}
+    \PYG{k}{return} \PYG{p}{[]}
+
+\PYG{c+c1}{\PYGZsh{} À vous de remplir les choses adéquates...}
+\end{Verbatim}
