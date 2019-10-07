@@ -35,7 +35,7 @@
                 </div>
               </div>
                 <h4 class="text-uppercase t15_65 pt-5"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
-                <p class="t15 ">{{marque.week_open_hours|safe}}</p>
+                <p class="t15 ">{{marque.open_hours|safe}}</p>
     
                 <h4 class="text-uppercase t15_65"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>
                 {%ifequal marque.phone None %}
