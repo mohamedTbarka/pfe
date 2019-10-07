@@ -250,9 +250,12 @@
       <!-- End  of  navication -->
       {% block content %} 
       {% endblock %}
+      
+      <div id="eror" class="alert alert-primary hidden mb-0 text-center" role="alert" >vous êtes déjà inscrit</div>
+      <div id="sucs" class="alert alert-success hidden mb-0 text-center" role="alert" style="">Merci de vous être inscrit</div>
        <!-- Start of footer -->
        <div class="container-fluid bg_green">
-        <div class="container px-0  mt-4 ">
+        <div class="container px-0   ">
           <div class="col-md-12 d-flex justify-content-around">
             <div class="row pt-4  ">
               <div class="col-md-5 earth "><span class="px-2"><img src=" {% static 'resources/earth.png'%}" alt=""></span><p class="text-white font-weight-light t15">  {{preference.address}}</p></div>
@@ -544,18 +547,29 @@ $(document).on('click','#sub_btn',function(e){
           csrfmiddlewaretoken: '{{ csrf_token }}',
         },
         success:function(result){
-          console.log("working");
+        $(document).ready(function () {
+            $("#sucs").addClass("visible");
+
+              setTimeout(function() {
+                  $("#sucs").removeClass("visible");
+                     }, 6000);
+            });
           
         },
         error:function(result){
           console.log($('#email2').val());
           var bad_call = result.responseText;
           if(bad_call == '{"email":["newsletter with this email already exists."]}'){
-            alert('newsletter with this email already exists.');
+           
+            $(document).ready(function () {
+            $("#eror").addClass("visible");
+
+              setTimeout(function() {
+                  $("#eror").removeClass("visible");
+                     }, 6000);
+            });
           }
-          //{"email":["newsletter with this email already exists."]}
-          // var final_result =  results.responseText.email;
-          // if final_result = ""
+        
         }
       })
     })
