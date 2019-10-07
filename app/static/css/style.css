@@ -343,6 +343,7 @@ html {
 
 .nav2{
     position: relative;
+    
 }
 
 
@@ -741,6 +742,10 @@ ul.slick-dots > li > button {
 }
 
 @media only screen and (max-width: 600px) {
+    .nav2{
+       
+        margin: auto;
+    }
     #carousel-inner {
         height: 400px;
     }
