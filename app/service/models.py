@@ -75,6 +75,8 @@ class Preference(models.Model):
     logo = models.ImageField(upload_to="./uploads/preference/logo", blank=True, null=True)
     background_image = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
     background_image2 = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
+    parallax_mobile_image = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
+    parallax_mobile_image2 = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
     facebook = models.CharField(max_length=250, null=True, blank=True)
@@ -104,6 +106,16 @@ class Preference(models.Model):
     def get_background_image2(self):
         if self.background_image:
             return "{0}{1}".format(settings.MEDIA_URL, self.background_image2)
+        return ""
+
+    def get_parallax_mobile_image(self):
+        if self.parallax_mobile_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.parallax_mobile_image)
+        return ""
+
+    def get_parallax_mobile_image2(self):
+        if self.parallax_mobile_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.parallax_mobile_image2)
         return ""
 
     def get_open_hour(self):
