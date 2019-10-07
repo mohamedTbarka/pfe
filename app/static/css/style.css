@@ -352,7 +352,7 @@ html {
     /* background-position: 0; */
     /* background-repeat: no-repeat; */
     -webkit-background-size: 400px;
-    background-size: 100%;
+    background-size: 120%;
     
     -moz-transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
@@ -366,7 +366,7 @@ html {
     /* background-position: 0; */
     /* background-repeat: no-repeat; */
     -webkit-background-size: 400px;
-    background-size:100%;
+    background-size:150%;
 
     -moz-transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
