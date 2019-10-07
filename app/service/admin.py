@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from service.forms import InfoForm, ServiceForm, SliderForm, DiscoverForm
+from service.forms import InfoForm, ServiceForm, SliderForm, DiscoverForm, BureauForm, HotelForm
 from . import models
 
 
@@ -83,19 +83,21 @@ class DiscoverAdmin(admin.ModelAdmin):
 
 
 class HotelAdmin(admin.ModelAdmin):
-    list_display = ('id', 'image', 'title', 'content', 'created', 'updated',)
+    list_display = ('id', 'title', 'created', 'updated',)
     list_filter = (
         'created',
         'updated',
     )
+    form = HotelForm
 
 
 class BureauAdmin(admin.ModelAdmin):
-    list_display = ('id', 'image', 'title', 'content', 'created', 'updated',)
+    list_display = ('id', 'title', 'created', 'updated',)
     list_filter = (
         'created',
         'updated',
     )
+    form = BureauForm
 
 
 def _register(model, admin_class):
