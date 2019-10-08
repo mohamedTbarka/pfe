@@ -488,6 +488,17 @@
     });
 });
   </script>
+    <script>
+  $(function() {
+    var $el = $('#paral_mobile');
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+             'background-position':'50%'+(.2*scroll)+'px'
+        });
+    });
+});
+  </script>
   <script>
     $(function() {
       var $el = $('#paral2');
@@ -499,7 +510,17 @@
         });
     });
   </script>
-
+ <script>
+    $(function() {
+      var $el = $('#paral2_mobile');
+        $(window).on('scroll', function () {
+            var scroll = $(document).scrollTop();
+            $el.css({
+                  'background-position':'10%'+(.2*scroll)+'px'
+            });
+        });
+    });
+  </script>
   <script>
   $('#wid').click(function() {
     $('#widget').toggleClass('widgethide');

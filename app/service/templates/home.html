@@ -181,7 +181,10 @@
 </div>
 
 <!-- background paralex -->
-<div  style=" background-image: url('{{preference.get_background_image}}');" id="paral" class="parallax-window mt-4" ></div>
+<div  style=" background-image: url('{{preference.get_background_image}}');" id="paral" class="parallax-window mt-4 hide_mobile" ></div>
+<!-- background paralex --- END -->
+<div  style=" background-image: url('{{preference.get_parallax_mobile_image}}');" id="paral_mobile" class="parallax-window mt-4 hide_desktop showmobile" ></div>
+
 
 <div id="services" style="display: hidden;  margin-top: -100px;margin-bottom: 100px" ></div>
 <div id="" class="container pad_rm">
@@ -224,9 +227,9 @@
         </div>
     </div>
     <!-- background paralex -->
-<div  style=" background-image: url('{{preference.get_background_image2}}');" id="paral2" class="parallax-window mt-4" ></div>
+<div  style=" background-image: url('{{preference.get_background_image2}}');" id="paral2" class="parallax-window mt-4 hide_desktop" ></div>
  <!-- background paralex --- Mobile -->
-<div  style=" background-image: url('{{preference.get_background_image2}}');" id="paral2_mobile" class="parallax-window mt-4" ></div>
+<div  style=" background-image: url('{{preference.get_parallax_mobile_image2}}');" id="paral2_mobile" class="parallax-window mt-4 hide_desktop showmobile" ></div>
 
 
 {% endblock %}
