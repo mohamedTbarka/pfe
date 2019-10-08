@@ -14,7 +14,7 @@
           <div id="carousel-inner" class="carousel-inner">
                 {% for  slide in  slides%}
             <div class="carousel-item {% if not forloop.counter0 %}active{%endif%}">
-              <img src="{% static 'resources/bg1.jpg'%}" class="w-100" alt="...">
+              <img src="{{slide.get_image_url}}" class="w-100" alt="...">
                  {% if slide.title or slide.description or  slide.url or slide.url_text %}
                 <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
                     <div>
