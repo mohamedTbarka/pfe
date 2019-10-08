@@ -17,8 +17,8 @@
   }
 
 .max_{
-   max-width:  224.5px;
-   min-width: 224.5px;
+   max-height:  224.5px;
+   min-height: 224.5px;
 }
  
 a.nav-link.txt_green.text-uppercase.t15:hover {
