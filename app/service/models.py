@@ -125,6 +125,21 @@ class Preference(models.Model):
             return "{0}{1}".format(settings.MEDIA_URL, self.parallax_mobile_image2)
         return ""
 
+    def get_rdc_image(self):
+        if self.rdc:
+            return "{0}{1}".format(settings.MEDIA_URL, self.rdc)
+        return ""
+
+    def get_1st_floor_image(self):
+        if self.first_floor:
+            return "{0}{1}".format(settings.MEDIA_URL, self.first_floor)
+        return ""
+
+    def get_2nd_floor_image(self):
+        if self.second_floor:
+            return "{0}{1}".format(settings.MEDIA_URL, self.second_floor)
+        return ""
+
     def get_open_hour(self):
         if self.open_hour:
             return self.open_hour.strftime("%Hh%M")
