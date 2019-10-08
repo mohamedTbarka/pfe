@@ -925,6 +925,14 @@ font-size: 42px!important;
     width: 326px!important;
     height: 50px!important;
 }
+ul.slick-dots > li > button {
+    height: 31px;
+    width: 99px;
+    font-size: 11px;
+}
+ul.slick-dots {
+    top: 71%;
+}
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
