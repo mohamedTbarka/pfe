@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 
 from app import settings
@@ -36,6 +37,9 @@ class Promotion(BaseModel):
             return "{0}{1}".format(settings.MEDIA_URL, self.image)
         return ""
 
+    def get_absolute_url(self):
+        return reverse('promotion_detail', kwargs={'pk': self.pk, })
+
 
 class Event(BaseModel):
     title = models.CharField(max_length=100, )
@@ -62,6 +66,9 @@ class Event(BaseModel):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('event_detail', kwargs={'pk': self.pk, })
+
 
 class Compagne(BaseModel):
     title = models.CharField(max_length=100, )
@@ -77,6 +84,9 @@ class Compagne(BaseModel):
         if self.image:
             return "{0}{1}".format(settings.MEDIA_URL, self.image)
         return ""
+
+    def get_absolute_url(self):
+        return reverse('compagne_detail', kwargs={'pk': self.pk, })
 
 
 class Display(BaseModel):

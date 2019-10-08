@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
 
 from app import settings
 from service.validators import minimum_size
@@ -59,6 +60,9 @@ class Service(BaseModel):
             Service.objects.all().update(principal=False)
         super(Service, self).save(*args, **kwargs)
 
+    def get_absolute_url(self):
+        return reverse('service_detail', kwargs={'pk': self.pk, })
+
 
 class Info(BaseModel):
     title = models.CharField(max_length=100, )
@@ -77,6 +81,9 @@ class Preference(models.Model):
     background_image2 = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
     parallax_mobile_image = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
     parallax_mobile_image2 = models.ImageField(upload_to="./uploads/preference/img", blank=True, null=True)
+    rdc = models.ImageField(upload_to="./uploads/preference/img/plan", blank=True, null=True)
+    first_floor = models.ImageField(upload_to="./uploads/preference/img/plan", blank=True, null=True)
+    second_floor = models.ImageField(upload_to="./uploads/preference/img/plan", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
     facebook = models.CharField(max_length=250, null=True, blank=True)

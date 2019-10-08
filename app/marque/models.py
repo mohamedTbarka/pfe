@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from django.urls import reverse
 
 from app import settings
 from nouveaute.models import Gallery
@@ -105,3 +106,6 @@ class Marque(BaseModel):
         if self.localisation:
             return "{0}{1}".format(settings.MEDIA_URL, self.localisation)
         return ""
+
+    def get_absolute_url(self):
+        return reverse('marque_detail', kwargs={'pk': self.pk,})
