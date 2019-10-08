@@ -765,6 +765,13 @@ ul.slick-dots > li > button {
 }
 
 @media only screen and (max-width: 600px) {
+    button.btn.btn-sm.text-white.bg_green.text-uppercase.t_btn.mb-3.p-2.px-3.mt-4 {
+        padding: 1px!important;
+        margin: 0!important;
+    }
+    p.t20.text-dark.mob_ {
+        font-size: 13px!important;
+    }
     .centering{
         text-align: center!important;
 
@@ -774,7 +781,7 @@ ul.slick-dots > li > button {
         margin: auto;
     }
     #carousel-inner {
-        height: 400px;
+        height: 231px!important;
     }
     .pad_l_rm{
         margin-left: 0px!important; 
@@ -841,7 +848,7 @@ ul.slick-dots > li > button {
    }
    .t79{
     font-family: 'Sequel100Wide-45Wide';
-    font-size: 30px!important;  
+    font-size: 19px!important;  
 }
 .t22{
     font-family: 'Sequel100Wide-45Wide';
@@ -881,7 +888,7 @@ ul.slick-dots > li > button {
     padding-left: 15px!important;
 }
 img.w-100 {
-    width: 350%!important;
+    width: 150%!important;
 }
 
 .alphab{
@@ -890,7 +897,7 @@ img.w-100 {
 }
 .up {
     position: absolute;
-    right: 120px;
+    right: -5%;
 }
 #widget .icon {
     height: 100%;
@@ -932,6 +939,14 @@ ul.slick-dots > li > button {
 }
 ul.slick-dots {
     top: 71%;
+}
+.carousel-caption.col-md-5.offset-md-3.text-center.bg_white {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    right: 50px!important;
+    left: -7px!important;
+    top: 12px!important;
+    bottom: 36px!important;
 }
 }
 
@@ -1116,7 +1131,7 @@ ul.slick-dots {
     padding-left: 15px!important;
 }
 img.w-100 {
-    width: 350%!important;
+    width: 150%!important;
 }
 
 .alphab{
@@ -1167,6 +1182,10 @@ ul.slick-dots > li > button {
 }
 ul.slick-dots {
     top: 71%;
+}
+.navbar-nav{
+    display: block!important;
+    text-align: center;
 }
 }
 

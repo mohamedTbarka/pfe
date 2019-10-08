@@ -34,29 +34,30 @@
                   <img src="../../media/{{marque.logo}}" class="mb-3" alt="">
                 </div>
               </div>
-                <h4 class="text-uppercase t15_65 pt-5 pl-2 centering"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
-                <p class="t15 pl-2">{{marque.open_hours|safe}}</p>
-    
-                <h4 class="text-uppercase t15_65 pl-2 centering"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>
+              {%if marque.open_hours%}
+                <h4 class=" text-dark text-uppercase t15_65 pt-5 pl-2 centering"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
+                <p class=" text-dark t15 pl-2">{{marque.open_hours|safe}}</p>
+              {% endif %}
+              {% if marque.phone %}
+                <h4 class=" text-dark text-uppercase t15_65 pl-2 centering"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>
                 {%ifequal marque.phone None %}
-                <p class="t15  pl-2 centering"></p>
+                <p class=" text-dark t15  pl-2 centering"></p>
                 {%else%}
-                <p class="t15  pl-2">{{marque.phone}}</p>
+                <p class=" text-dark t15  pl-2">{{marque.phone}}</p>
                 {%endifequal%}
+              {%endif%}
+              {%if marque.phone2%}
                 {%ifequal marque.phone2 None %}
-                <p class="t15  pl-2"></p>
+                <p class= "text-dark t15  pl-2"></p>
                 {%else%}
-                <p class="t15  pl-2">{{marque.phone}} </p>
+                <p class=" text-dark t15  pl-2">{{marque.phone}} </p>
                 {%endifequal%}
+              {%endif%}
 
-
-                <h4 class="text-uppercase t15_65 pl-2 centering"> <img src="{% static 'resources/marque_email.png'%}" class="pr-1" alt=""> Site web</h4>
-                {%ifequal marque.website None %}
-                <p class="t15 centering"></p>
-                {%else%}
-                <p class=" t15  centering">{{marque.website}}</p>
-                
-                {%endifequal%}
+                {%if marque.website %}
+                <a class="text-dark" href="{{marque.website}}"><h4 class="text-uppercase t15_65 pl-2 centering "> <img src="{% static 'resources/marque_email.png'%}" class="pr-1" alt=""> <ins>Accéder au site web<ins></h4></a>
+               
+                {%endif%}
                 
                 {% comment %} {%ifequal marque.pk 2 %}
                <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>

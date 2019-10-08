@@ -14,7 +14,7 @@
           <div id="carousel-inner" class="carousel-inner">
                 {% for  slide in  slides%}
             <div class="carousel-item {% if not forloop.counter0 %}active{%endif%}">
-              <img src="{% static 'resources/bg1.jpg'%}" class="d-block w-100" alt="...">
+              <img src="{% static 'resources/bg1.jpg'%}" class="w-100" alt="...">
                  {% if slide.title or slide.description or  slide.url or slide.url_text %}
                 <div class="carousel-caption col-md-5 offset-md-3 text-center bg_white  ">
                     <div>
@@ -22,7 +22,7 @@
                     <h1 class="text-uppercase text-dark t79">{{slide.title}}</h1>
                         {% endif %}
                         {% if slide.description != None %}
-                    <p class="t20 text-dark"> {{slide.description|safe}} </p>
+                    <p class="t20 text-dark mob_"> {{slide.description|striptags|safe }} </p>
                         {% endif %}
                     {% if slide.url_text != None %}
                     <a href="{{slide.url}}"><button class="btn btn-sm text-white bg_green text-uppercase t_btn mb-3 p-2 px-3 mt-4">{{slide.url_text}}</button></a>
