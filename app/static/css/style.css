@@ -959,6 +959,11 @@ ul.slick-dots {
 
 @media (min-width: 1024px) and (max-width: 1280px) {
 
+    .row.fl{
+        margin-right: -38px!important;
+        margin-left: -38px!important;
+    }
+
     a.nav-link.text-white.text-uppercase.t13 {
         font-size: 12px!important;
     } 
@@ -981,7 +986,14 @@ ul.slick-dots {
     }
 }
 
+
+
+
 @media (min-width: 768px) and (max-width: 1024px){
+    .row.fl{
+        margin-right: -38px!important;
+        margin-left: -38px!important;
+    }
     a.nav-link.text-white.text-uppercase.t13 {
         padding-left: 0px!important;
         padding-right: 4px!important;

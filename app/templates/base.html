@@ -258,10 +258,10 @@
         <div class="container px-0   ">
           <div class="col-md-12 d-flex justify-content-around">
             <div class="row pt-4  ">
-              <div class="col-md-5 earth "><span class="px-2"><img src=" {% static 'resources/earth.png'%}" alt=""></span><p class="text-white font-weight-light t15">  {{preference.address}}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="{% static 'resources/phone.png'%}" alt=""> {{preference.phone}}</p></div>
-              <div class="col-md-2"><p class="text-white text-center t15"><img src="{% static 'resources/watch.png'%}" alt="">  {{preference.get_open_hour}} - {{preference.get_close_hour}}</p></div>
-              <div class="col-md-3">
+              <div class="col-lg-5 col-md-12 col-sm-12 earth "><span class=""><img src=" {% static 'resources/earth.png'%}" alt=""></span><p class="text-white font-weight-light t15">  {{preference.address}}</p></div>
+              <div class="col-lg-2 col-md-6 col-sm-12 px-0"><p class="text-white text-center t15"><img src="{% static 'resources/phone.png'%}" alt=""> {{preference.phone}}</p></div>
+              <div class="col-lg-2 col-md-6 col-sm-12 px-0"><p class="text-white text-center t15"><img src="{% static 'resources/watch.png'%}" alt="">  {{preference.get_open_hour}} - {{preference.get_close_hour}}</p></div>
+              <div class="col-lg-3 col-md-12 col-sm-12">
 
                 <form method="POST" id="new_user_form2" class="input-group  search_input ">
                     <span ><img class="mx-2" src="{% static 'resources/email.png'%}" alt=""></span>
@@ -284,7 +284,7 @@
         </div>
         
     <div id="nav1" class="container hide_mobile">
-            <div class="row">
+            <div class="row fl">
               <div class="col-md-12">
                 <div class="row   d-flex justify-content-between">
                 <div class="">
@@ -318,8 +318,8 @@
 
 
           <div class="container hide_mobile">
-          <div class="row">
-            <div class="col-md-12 px-0">
+          <div class="row fl">
+            <div class="col-md-12 ">
               <div class="row   d-flex justify-content-between ">
               <div class="nav2">
                     <a class="nav-link text-white  text-uppercase t13  " href="{%url 'home'%}">Nos offres :</a>
