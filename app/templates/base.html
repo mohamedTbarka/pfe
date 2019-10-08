@@ -579,8 +579,10 @@ $(document).on('click','#sub_btn',function(e){
         },
         error:function(result){
           console.log($('#email2').val());
+          console.log("error", result);
+
           var bad_call = result.responseText;
-          if(bad_call == '{"email":["newsletter with this email already exists."]}'){
+          if(bad_call == '{"email":["Un objet newsletter avec ce champ email existe déjà."]}'){
            
             $(document).ready(function () {
             $("#eror").addClass("visible");
