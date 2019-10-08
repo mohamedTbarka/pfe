@@ -768,7 +768,9 @@ ul.slick-dots > li > button {
 #removepadding.remove_padding{
     padding-left: 0;
 }
-
+.up{
+    right: -5%;
+}
 @media only screen and (max-width: 600px) {
     button.btn.btn-sm.text-white.bg_green.text-uppercase.t_btn.mb-3.p-2.px-3.mt-4 {
         padding: 1px!important;
@@ -1145,7 +1147,7 @@ img.w-100 {
 }
 .up {
     position: absolute;
-    right: 120px;
+    right: -5%;
 }
 #widget .icon {
     height: 100%;
