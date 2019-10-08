@@ -1033,7 +1033,10 @@ ul.slick-dots {
 
 @media (min-width: 481px) and (max-width: 767px){
 
-
+    .row.fl{
+        margin-right: -38px!important;
+        margin-left: -38px!important;
+    }
     .centering{
         text-align: center!important;
 

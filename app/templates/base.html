@@ -32,7 +32,7 @@
   </head>
  
   <body id="top">
-    <div class="container-fluid bg_green sticky-top">
+    <div class="container-fluid bg_green sticky-top pb-1">
         <div id="nav1" class="container ">
             <div class="row">
               <div class="col-md-12">
@@ -189,12 +189,12 @@
         <div class="container">
               <div class="row">
                   <div class="col-md-12 ">
-                    <div class="row d-flex justify-content-between mt-3">
+                    <div class="row d-flex justify-content-between ">
                     
                       <div id="logo" class="col-md-4  text-left ">
-                          <a href="{%url 'home'%}"><img src="{{preference.get_logo}}" alt=""> </a>
+                          <a href="{%url 'home'%}"><img src="{{preference.get_logo}}" alt="" width="180px"> </a>
                       </div>
-                      <div id="search_responsive" class="col-md-4  text-center" >
+                      <div id="search_responsive" class="col-md-4  text-center mt-3" >
                         <form   action="{{ HTTP_HOST }}/search/" method="GET" class="input-group  search_input  pt-2 ">
                             
                             <input class="form-control  border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
@@ -204,7 +204,7 @@
                           </form>
                       </div>
                       
-                      <div id="social" class="col-md-4 text-right pt-2 hide_mobile">
+                      <div id="social" class="col-md-4 text-right pt-2 hide_mobile mt-3">
                          <a href="{{preference.facebook}}" target='_blank'><img class="img_grey px-2" src="{% static 'resources/fb.png'%}" alt=""></a>
                          <a href="{{preference.instagram}}"  target='_blank'><img class="img_grey px-2" src="{% static 'resources/insta.png'%}" alt=""></a>
                          <a href="{{preference.youtube}}" target='_blank'><img class="img_grey px-2" src="{% static 'resources/youtube.png'%}" alt=""></a>
@@ -288,7 +288,7 @@
               <div class="col-md-12">
                 <div class="row   d-flex justify-content-between">
                 <div class="">
-                      <a class="nav-link text-white text-uppercase t13 px-0 px-0"  href="{%url 'home'%}">Aribat center : </a>
+                      <a class="nav-link text-white text-uppercase t13 px-0"  href="{%url 'home'%}">Aribat center : </a>
                   </div>
                   <div class="">
                       <a class="nav-link text-white text-uppercase t13 px-0"  href="{%url 'discovers'%}">découvrir arribat center</a>
@@ -322,25 +322,25 @@
             <div class="col-md-12 ">
               <div class="row   d-flex justify-content-between ">
               <div class="nav2">
-                    <a class="nav-link text-white  text-uppercase t13  " href="{%url 'home'%}">Nos offres :</a>
+                    <a class="nav-link text-white  text-uppercase t13 px-0 " href="{%url 'home'%}">Nos offres :</a>
                 </div>
                 <div class="nav2">
-                    <a class="nav-link  text-white text-uppercase t13  " href="{%url 'marque_detail' 1%}">Hypermarché</a>
+                    <a class="nav-link  text-white text-uppercase t13 px-0 " href="{%url 'marque_detail' 1%}">Hypermarché</a>
                 </div>
                 <div class="nav2">
-                    <a class="nav-link  text-white text-uppercase t13  " href="{%url 'marque_detail' 2%}">Cinéma</a>
+                    <a class="nav-link  text-white text-uppercase t13 px-0 " href="{%url 'marque_detail' 2%}">Cinéma</a>
                 </div>
                 <div class="nav2">
-                    <a class="nav-link  text-white text-uppercase t13  " href="{%url 'marques'%}?group=1">Shopping</a>
+                    <a class="nav-link  text-white text-uppercase t13 px-0 " href="{%url 'marques'%}?group=1">Shopping</a>
                 </div>
                 <div class="nav2">
-                    <a class="nav-link  text-white text-uppercase t13  " href="{%url 'marques'%}?group=2">Restauration</a>
+                    <a class="nav-link  text-white text-uppercase t13 px-0 " href="{%url 'marques'%}?group=2">Restauration</a>
                 </div>
                 <div class="nav2">
-                    <a class="nav-link  text-white text-uppercase t13  " href="{%url 'marques'%}?group=5">Culture & Loisirs</a>
+                    <a class="nav-link  text-white text-uppercase t13 px-0 " href="{%url 'marques'%}?group=5">Culture & Loisirs</a>
                 </div>
                 <div class="nav2">
-                    <a class="nav-link text-white  text-uppercase t13 "  >Ouverture prochaine</a>
+                    <a class="nav-link text-white  text-uppercase t13 px-0"  >Ouverture prochaine</a>
                 </div>
               </div>
             </div>
