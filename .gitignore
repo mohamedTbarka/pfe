@@ -22,6 +22,4 @@ static_root/
 certs/
 migrations/
 !packages/*
-whoosh_index/*
-*/whoosh_index/*
-app/app/whoosh_index/*
+/app/app/whoosh_index/
