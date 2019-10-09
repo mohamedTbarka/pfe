@@ -15,7 +15,13 @@
     font-weight: normal;
     font-style: normal;
   }
-
+  .form-control-no-border:focus {
+    border-color:#ccc!important;
+    outline: 0!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+  }
+  
 .max_{
   
    min-height: 224.5px;
