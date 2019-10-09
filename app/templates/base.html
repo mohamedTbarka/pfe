@@ -1,3 +1,4 @@
+
 {% load static %}
 {% load preference_tags %}
 {% preference as  preference%}
@@ -32,6 +33,7 @@
   </head>
  
   <body id="top">
+    
     <div class="container-fluid bg_green sticky-top pb-1">
         <div id="nav1" class="container ">
             <div class="row">
@@ -140,9 +142,9 @@
               <div id="search_mobile" class="col-md-12  ">
                   <form action="{{ HTTP_HOST }}/search/"  method="GET" class="input-group  search_input  pt-2 d-flex justify-content-center">
                       
-                      <input class="form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
+                      <input class=" form-control-no-border form-control py-2 border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
                       <span class="input-group-prepend ">
-                          <button type="submit" class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" style=""></button>
+                          <button type="submit" class=" form-control-no-border bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" style=""></button>
                       </span>
                     </form>
                 </div>
@@ -197,9 +199,9 @@
                       <div id="search_responsive" class="col-md-4  text-center mt-3" >
                         <form   action="{{ HTTP_HOST }}/search/" method="GET" class="input-group  search_input  pt-2 ">
                             
-                            <input class="form-control  border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
+                            <input class="form-control-no-border form-control  border-top-0 border-left-0 border-right-0  form-control-sm  text-uppercase t13 search_top" type="search" id="search" placeholder="Recherche" name="q">
                             <span class="input-group-prepend ">
-                                <button type="submit" class=" bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" ></button>
+                                <button type="submit" class="  form-control-no-border bg-white input-group-text border-top-0 border-left-0 border-right-0 search_top pt-0 pb-0"><img src=" {% static 'resources/search.png'%}" alt="" ></button>
                             </span>
                           </form>
                       </div>
@@ -266,7 +268,7 @@
                 <form method="POST" id="new_user_form2" class="input-group  search_input ">
                     <span ><img class="mx-2" src="{% static 'resources/email.png'%}" alt=""></span>
                     {% csrf_token %}
-                  <input type="email" placeholder="Adresse email" name="email2" id="email2" class=" bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 " >
+                  <input type="email" placeholder="Adresse email" name="email2" id="email2" class=" form-control-no-border bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 " >
                   <span class="input-group-prepend  ">
                       <button id="sub_btn2" type="submit" class=" bg-transparent input-group-text  border-left-0 pb-0 pt-0 text-white t15 ">ok</button>
                   </span>
