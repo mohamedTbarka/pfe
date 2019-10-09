@@ -86,6 +86,7 @@ class Preference(models.Model):
     second_floor = models.ImageField(upload_to="./uploads/preference/img/plan", blank=True, null=True)
     bureau_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     hotel_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    decouvrir_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
     facebook = models.CharField(max_length=250, null=True, blank=True)
@@ -150,6 +151,11 @@ class Preference(models.Model):
     def get_hotel_banner_image(self):
         if self.hotel_banner:
             return "{0}{1}".format(settings.MEDIA_URL, self.hotel_banner)
+        return ""
+
+    def get_decouvrir_banner_image(self):
+        if self.decouvrir_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.decouvrir_banner)
         return ""
 
     def get_open_hour(self):
