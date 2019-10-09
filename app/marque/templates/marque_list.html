@@ -9,15 +9,27 @@
        
        
         {% if group %}
-      
-        <div style=" background-image:  url('../../media/{{categories.0.group.backgroud_image}}');" class="row bg_shopping">
-            <div class="col-md-12 dg">
-                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{categories.0.group.name}}</h4>
-            </div>
-        </div>
-        
+            {%if cat%}
+            
+                {%for caty in categories%}
+                    
+                    {%ifequal caty.pk|slugify cat%}
+                    <div style=" background-image:  url('{{caty.get_banner_url}}');" class="row bg_shopping">
+                        <div class="col-md-12 dg">
+                                <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{caty.name}}</h4>
+                        </div>
+                    </div>
+                    {%endifequal%}
+                {%endfor%}
+            {%else%}
+                <div style=" background-image:  url('../../media/{{categories.0.group.backgroud_image}}');" class="row bg_shopping">
+                    <div class="col-md-12 dg">
+                            <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{categories.0.group.name}}</h4>
+                    </div>
+                </div>
+            {%endif%}
         {% else %}
-        <div style=" background-image:  url('../../static/resources/bg_shopping.jpg');" class="row bg_shopping">
+        <div style=" background-image:  url('../../static/resources/shopping_bg.jpg');" class="row bg_shopping">
             <div class="col-md-12 dg">
                     <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Nos Marques</h4>
             </div>
