@@ -14,14 +14,17 @@ fieldsets_preferences = (
     }),
 
     (u"Réseaux Sociaux", {
+        'classes': ('collapse', 'extrapretty'),
         'fields': ("facebook", "twitter", "youtube", "instagram",)
     }),
 
     (u"Plan images", {
+        'classes': ('collapse', 'extrapretty'),
         'fields': ("rdc", "first_floor", "second_floor")
     }),
 
     (u"Parallax images", {
+        'classes': ('collapse', 'extrapretty'),
         'fields': ("background_image",
                    "background_image2",
                    "parallax_mobile_image",
@@ -29,9 +32,14 @@ fieldsets_preferences = (
     }),
 
     (u"Banners", {
+        'classes': ('collapse', 'extrapretty'),
         'fields': ("bureau_banner",
                    "hotel_banner",
-                   "decouvrir_banner",)
+                   "decouvrir_banner",
+                   "compagne_banner",
+                   "event_banner",
+                   "promotion_banner",
+                   )
     }),
 
 )
