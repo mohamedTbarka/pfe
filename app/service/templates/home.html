@@ -201,10 +201,10 @@
              {%if service.principal%}
             <div class="col-md-12 move_middle px-0 ">
                     <a style="margin: auto;text-decoration: none;"  {%if  service.url %} href="{{service.url}}" {%else%} href="{%url 'service_detail' service.pk %}"   {% endif %}> <div class="row row_mob bg3" style="background-image:  url('media/{{service.background_image}}');">  
-                    <div style="align-self: center;" class="col-md-12"><h2  class="t50 text-white text-uppercase pt-3">{{service.title}}</h2></div>
+                    <div style="align-self: center;" class="col-md-12"><h2  class="t50_45 text-white text-uppercase pt-3">{{service.title}}</h2></div>
                     <!-- <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> -->
                    
-                        <div class="col-md-12"> <a {%if  service.url %} href="{{service.url}}" {%else%} href="{%url 'service_detail' service.pk %}" {% endif %} class=" btn btn-outline-dark bg-white my-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div> 
+                        <div class="col-md-12"> <a {%if  service.url %} href="{{service.url}}" {%else%} href="{%url 'service_detail' service.pk %}" {% endif %} class=" btn btn-outline-dark bg-white mb-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div> 
                   </div></a>
               </div>
               {%endif%}

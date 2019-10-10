@@ -15,6 +15,10 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  h2.t50.text-white.text-uppercase.pt-3 {
+    padding-top: 16.5rem!important;
+}
   .form-control-no-border:focus {
     border-color:#ccc!important;
     outline: 0!important;
@@ -55,6 +59,11 @@ html {
     font-family: 'Sequel100Wide-45Wide';
     font-size: 13px!important;
 }
+
+.t16{
+    font-family: 'Sequel100Wide-45Wide';
+    font-size: 16px!important;
+}
 .t15{
     font-family: 'Sequel100Wide-45Wide';
     font-size: 15px!important;
@@ -77,6 +86,10 @@ html {
 }
 .t50{
     font-family: 'Sequel100Wide-65Wide';
+    font-size: 50px; 
+}
+.t50_45{
+    font-family: 'Sequel100Wide-45Wide';
     font-size: 50px; 
 }
 .t22_65{
@@ -794,7 +807,7 @@ ul.slick-dots > li > button {
         margin: auto;
     }
     #carousel-inner {
-        height: 231px!important;
+        height: 176px!important;
     }
     .pad_l_rm{
         margin-left: 0px!important; 

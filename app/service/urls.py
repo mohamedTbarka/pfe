@@ -8,5 +8,7 @@ urlpatterns = [
     path('hotel/', views.HotelListView.as_view(), name='hotels'),
     path('bureau/', views.BureauListView.as_view(), name='bureaux'),
     path('plan/', views.Plan.as_view(), name='plan'),
+    path('navigator/', views.Navigator.as_view(), name='navigator'),
+
 
 ]
