@@ -28,7 +28,7 @@ class Home(generic.TemplateView):
 
 class ServiceDetailView(generic.DetailView):
     model = Service
-
+    template_name = "service_detail.html"
 
 class DiscoverListView(generic.ListView):
     """

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+        <div style="background-image:  url('{{service.get_background_image_url}}');" class="row bg_simple">
+            <div class="col-md-12 dg">
+                    <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{service.title}}</h4>
+            </div>
+            
+        </div>
+    </div>
+<div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-white pl-0">
+                      <li class="breadcrumb-item active" aria-current="page">Home</li>
+                      <li class="breadcrumb-item active" aria-current="page">{{service.title}}</li>
+                    </ol>
+                  </nav>
+            </div>
+            <div class="col-md-12">
+                
+                <p class="t15 py-3">{{service.content|safe}}
+                </p>
+                
+            </div>
+            
+        </div>
+
+
+        </div>
+        
+    
+
+
+{% endblock %}
