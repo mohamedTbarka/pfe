@@ -90,11 +90,14 @@ class Preference(models.Model):
     compagne_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     event_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     promotion_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
-    shopping_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
-    restauration_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
-    cinema_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
-    culture_loisirs_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
-    hypermarche_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    shopping_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    restauration_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    cinema_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    culture_loisirs_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    hypermarche_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    promotion_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    event_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    compagne_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
     facebook = models.CharField(max_length=250, null=True, blank=True)
@@ -105,6 +108,34 @@ class Preference(models.Model):
     open_hour = models.TimeField()
     close_hour = models.TimeField()
     copyright = models.TextField(default="", null=True, blank=True)
+
+    def clean(self):
+        # Then call the clean() method of the super  class
+        cleaned_data = super(Preference, self).clean()
+        # ... do some cross-fields validation for the subclass
+        if self.promotion_image:
+            minimum_size(self.promotion_image, 280, 350)
+        if self.event_image:
+            minimum_size(self.event_image, 280, 350)
+        if self.compagne_image:
+            minimum_size(self.compagne_image, 575, 350)
+        # Finally, return the cleaned_data
+        return cleaned_data
+
+    def get_promotion_image(self):
+        if self.promotion_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.promotion_image)
+        return ""
+
+    def get_compagne_image(self):
+        if self.compagne_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.compagne_image)
+        return ""
+
+    def get_event_image(self):
+        if self.event_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.event_image)
+        return ""
 
     def get_logo(self):
         if self.logo:
@@ -181,29 +212,29 @@ class Preference(models.Model):
             return "{0}{1}".format(settings.MEDIA_URL, self.promotion_banner)
         return ""
 
-    def get_shopping_banner_image(self):
-        if self.shopping_banner:
-            return "{0}{1}".format(settings.MEDIA_URL, self.shopping_banner)
+    def get_shopping_image(self):
+        if self.shopping_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.shopping_image)
         return ""
 
-    def get_restauration_banner_image(self):
-        if self.restauration_banner:
-            return "{0}{1}".format(settings.MEDIA_URL, self.restauration_banner)
+    def get_restauration_image(self):
+        if self.restauration_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.restauration_image)
         return ""
 
-    def get_cinema_banner_image(self):
-        if self.cinema_banner:
-            return "{0}{1}".format(settings.MEDIA_URL, self.cinema_banner)
+    def get_cinema_image(self):
+        if self.cinema_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.cinema_image)
         return ""
 
-    def get_culture_loisirs_banner_image(self):
-        if self.culture_loisirs_banner:
-            return "{0}{1}".format(settings.MEDIA_URL, self.culture_loisirs_banner)
+    def get_culture_loisirs_image(self):
+        if self.culture_loisirs_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.culture_loisirs_image)
         return ""
 
-    def get_hypermarche_banner_image(self):
-        if self.hypermarche_banner:
-            return "{0}{1}".format(settings.MEDIA_URL, self.hypermarche_banner)
+    def get_hypermarche_image(self):
+        if self.hypermarche_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.hypermarche_image)
         return ""
 
     def get_open_hour(self):
