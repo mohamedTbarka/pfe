@@ -16,14 +16,14 @@ class BaseModel(models.Model):
 
 class Group(BaseModel):
     name = models.CharField(max_length=100, unique=True)
-    backgroud_image = models.ImageField(upload_to="./uploads/group/img", blank=True, null=True)
+    banner = models.ImageField(upload_to="./uploads/group/img", blank=True, null=True)
 
     def __str__(self):
         return self.name
 
     def get_image_url(self):
-        if self.backgroud_image:
-            return "{0}{1}".format(settings.MEDIA_URL, self.backgroud_image)
+        if self.banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.banner)
         return ""
 
 
@@ -108,4 +108,4 @@ class Marque(BaseModel):
         return ""
 
     def get_absolute_url(self):
-        return reverse('marque_detail', kwargs={'pk': self.pk,})
+        return reverse('marque_detail', kwargs={'pk': self.pk, })
