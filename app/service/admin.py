@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+from service.fieldsets import fieldsets_preferences
 from service.forms import InfoForm, ServiceForm, SliderForm, DiscoverForm, BureauForm, HotelForm
 from . import models
 
@@ -16,6 +17,7 @@ class PreferenceAdmin(admin.ModelAdmin):
         'close_hour',
         'copyright',
     )
+    fieldsets = fieldsets_preferences
 
     def has_add_permission(self, request):
         if models.Preference.objects.exists():
