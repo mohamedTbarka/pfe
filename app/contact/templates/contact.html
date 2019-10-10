@@ -57,12 +57,7 @@
 
             <div class="col-md-6 mb-5 ">
                 <button type="submit" onclick="" class="btn btn-success btn-block">Envoyer</button>
-            </div>
-        </div>
-        </form>
-
-    </div>
-    {% if success == True %}
+                 {% if success == True %}
                 <div id="message" class="response response_contact alert alert-success alert-dismissible fade show" role="alert">
                     <p ><strong>Message envoyé avec succès !</p>
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -77,6 +72,26 @@
                     </button>
                 </div>
                 {% endif %}
+            </div>
+        </div>
+        <div class="row">
+                        <div class="col-12">
+                            <p style="font-weight:200;color:#212529;">
+                                Conformément à la loi 09-08, vous disposez d'un droit d'accès, de rectification et d'opposition au traitement de vos données personnelles.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label>
+                                <input type="checkbox" name="conditions" required>
+                                <span class="txt_conditions">J’ai lu et j’accepte les <a href="{{HTTP_HOST}}/politique-de-confidentialite" target="_blank">conditions générales d’utilisation</a>, notamment la mention relative à la protection des données personnelles.</span></label>
+                        </div>
+                    </div>
+        </form>
+
+    </div>
+   
 </div>
 <div class="container">
     <div class="row">

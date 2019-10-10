@@ -413,7 +413,7 @@ html {
     /* background-position: 0; */
     /* background-repeat: no-repeat; */
     -webkit-background-size: 400px;
-    background-size:200%;
+    background-size:250%;
 
     -moz-transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
@@ -791,6 +791,9 @@ ul.slick-dots > li > button {
     right: -5%;
 }
 @media only screen and (max-width: 600px) {
+    a.carousel-control-prev.utu {
+        margin-left: 0px!important
+    }
     button.btn.btn-sm.text-white.bg_green.text-uppercase.t_btn.mb-3.p-2.px-3.mt-4 {
         padding: 1px!important;
         margin: 0!important;
@@ -951,7 +954,7 @@ img.w-100 {
     margin-right: 0px!important;
 }
 .t50{
-font-size: 42px!important;
+font-size: 30px!important;
    
 }
 .newsletter {
@@ -1229,4 +1232,5 @@ ul.slick-dots {
     text-align: center;
 }
 }
+
 
