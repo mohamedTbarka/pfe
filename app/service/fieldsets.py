@@ -39,6 +39,11 @@ fieldsets_preferences = (
                    "compagne_banner",
                    "event_banner",
                    "promotion_banner",
+                   "shopping_banner",
+                   "restauration_banner",
+                   "cinema_banner",
+                   "culture_loisirs_banner",
+                   "hypermarche_banner",
                    )
     }),
 

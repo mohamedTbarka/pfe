@@ -90,6 +90,11 @@ class Preference(models.Model):
     compagne_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     event_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     promotion_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    shopping_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    restauration_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    cinema_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    culture_loisirs_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    hypermarche_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
     facebook = models.CharField(max_length=250, null=True, blank=True)
@@ -174,6 +179,31 @@ class Preference(models.Model):
     def get_promotion_banner_image(self):
         if self.promotion_banner:
             return "{0}{1}".format(settings.MEDIA_URL, self.promotion_banner)
+        return ""
+
+    def get_shopping_banner_image(self):
+        if self.shopping_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.shopping_banner)
+        return ""
+
+    def get_restauration_banner_image(self):
+        if self.restauration_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.restauration_banner)
+        return ""
+
+    def get_cinema_banner_image(self):
+        if self.cinema_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.cinema_banner)
+        return ""
+
+    def get_culture_loisirs_banner_image(self):
+        if self.culture_loisirs_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.culture_loisirs_banner)
+        return ""
+
+    def get_hypermarche_banner_image(self):
+        if self.hypermarche_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.hypermarche_banner)
         return ""
 
     def get_open_hour(self):
