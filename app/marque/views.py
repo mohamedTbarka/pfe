@@ -1,5 +1,6 @@
 import string
 
+from django.db.models import Q
 from django.shortcuts import render
 
 # Create your views here.
@@ -21,12 +22,17 @@ class MarqueListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         alphas = list(string.ascii_lowercase)
         alphabet = []
-        for alpha in alphas:
-            alphabet.append({'key': alpha, "value": context["marque_list"].filter(name__istartswith=alpha).exists()})
-
-        alpha = self.request.GET.get('alpha', '')
         cat = self.request.GET.get('cat', '')
         group = self.request.GET.get('group', '')
+
+        for alpha in alphas:
+            alpha_dict = {'key': alpha, "value": Marque.objects.filter(name__istartswith=alpha, ).exists()}
+            if group or cat:
+                alpha_dict = {'key': alpha, "value": Marque.objects.filter(name__istartswith=alpha, ).filter(
+                    Q(categories__pk__in=cat) | Q(categories__group__pk__in=group)).exists()}
+            alphabet.append(alpha_dict)
+
+        alpha = self.request.GET.get('alpha', '')
 
         context['now'] = timezone.now()
         context['alphabet'] = alphabet
