@@ -22,7 +22,7 @@
                     {%endifequal%}
                 {%endfor%}
             {%else%}
-                <div style=" background-image:  url('../../media/{{categories.0.group.backgroud_image}}');" class="row bg_shopping">
+                <div style=" background-image:  url('{{categories.0.group.get_image_url}}');" class="row bg_shopping">
                     <div class="col-md-12 dg">
                             <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{categories.0.group.name}}</h4>
                     </div>

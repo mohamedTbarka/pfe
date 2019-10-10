@@ -63,9 +63,9 @@
         </div>
         <div class="col-md-12  px-0 hide_mobile">
               <div class="row row_mob "  >
-                 <a href="{%url 'promotions'%}" style="text-decoration: none;"><div  onclick="location.href='{%url 'promotions'%}';" style=" background-image: url('static/resources/promotions.jpg');" class="  nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22">promotions</h3></div></a>
-                 <a href="{%url 'evenements'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'evenements'%}';" style="background-image: url('static/resources/evenement.jpg');" class=" nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22">Evènements</h3></div></a>
-                    <a href="{%url 'compagnes'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'compagnes'%}';" style="background-image: url('static/resources/compain.jpg');" class=" nv3"><h3 class="text-white text-uppercase txt_img t22">campagne</h3></div></a>
+                 <a href="{%url 'promotions'%}" style="text-decoration: none;"><div  onclick="location.href='{%url 'promotions'%}';" style=" background-image: url('{{ preference.get_promotion_image }}');" class="  nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22">promotions</h3></div></a>
+                 <a href="{%url 'evenements'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'evenements'%}';" style="background-image: url('{{ preference.get_event_image }}');" class=" nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22">Evènements</h3></div></a>
+                    <a href="{%url 'compagnes'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'compagnes'%}';" style="background-image: url('{{ preference.get_compagne_image }}');" class=" nv3"><h3 class="text-white text-uppercase txt_img t22">campagne</h3></div></a>
               </div>
           </div>
 
