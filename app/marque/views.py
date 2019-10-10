@@ -18,11 +18,12 @@ class MarqueListView(generic.ListView):
     template_name = "marque_list.html"
 
     def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
         alphas = list(string.ascii_lowercase)
         alphabet = []
         for alpha in alphas:
-            alphabet.append({'key': alpha, "value": Marque.objects.filter(name__istartswith=alpha).exists()})
-        context = super().get_context_data(**kwargs)
+            alphabet.append({'key': alpha, "value": context["marque_list"].filter(name__istartswith=alpha).exists()})
+
         alpha = self.request.GET.get('alpha', '')
         cat = self.request.GET.get('cat', '')
         group = self.request.GET.get('group', '')
