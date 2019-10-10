@@ -335,7 +335,7 @@ html {
 .afterr::after{
     content: '|';
     position: absolute;
-    right: 0;
+    right: -5%;
 }
 
 .txt_img{
