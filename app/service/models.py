@@ -114,9 +114,9 @@ class Preference(models.Model):
         cleaned_data = super(Preference, self).clean()
         # ... do some cross-fields validation for the subclass
         if self.promotion_image:
-            minimum_size(self.promotion_image, 280, 350)
+            minimum_size(self.promotion_image, 275, 350)
         if self.event_image:
-            minimum_size(self.event_image, 280, 350)
+            minimum_size(self.event_image, 275, 350)
         if self.compagne_image:
             minimum_size(self.compagne_image, 575, 350)
         # Finally, return the cleaned_data
