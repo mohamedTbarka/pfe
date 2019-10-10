@@ -458,7 +458,7 @@ html {
     
 }
 .v-plus:hover{
-    color: black!important;
+    color: white!important;
 }
 input#email2::placeholder {
     color: #93a896;
@@ -1234,3 +1234,6 @@ ul.slick-dots {
 }
 
 
+.bg_black{
+    background-color: #000!important;
+}
