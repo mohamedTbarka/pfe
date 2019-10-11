@@ -262,10 +262,13 @@
                 <form method="POST" id="new_user_form2" class="input-group  search_input ">
                     <span ><img class="mx-2" src="{% static 'resources/email.png'%}" alt=""></span>
                     {% csrf_token %}
-                  <input type="email" placeholder="Adresse email" name="email2" id="email2" class=" form-control-no-border bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 " required>
+                  <input type="email" placeholder="Adresse email" name="email2" id="email2" class=" form-control-no-border bg-transparent form-control  border-right-0 form-control-sm  text-uppercase text-white t13 is-invalid" required>
                   <span class="input-group-prepend  ">
                       <button id="sub_btn2" type="submit" class=" form-control-no-border bg-transparent input-group-text  border-left-0 pb-0 pt-0 text-white t15 ">ok</button>
                   </span>
+                  <div class="invalid-feedback">
+          Please choose a username.
+        </div>
                 </form>
 
               </div>
@@ -596,9 +599,20 @@ $(document).on('click','#sub_btn',function(e){
                      }, 6000);
             });
           }
-        
+          if(bad_call == '{"email":["Saisissez une adresse de courriel valide."]}'){
+           
+            $(document).ready(function () {
+            $("#email2").addClass("is-invalid");
+              setTimeout(function() {
+                  $("#email2").removeClass("is-invalid");
+                     }, 6000);
+            
+            });
+          }
+
         }
       })
+
     })
     </script>
 
