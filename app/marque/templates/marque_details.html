@@ -20,8 +20,8 @@
                 <div class="col-md-12">
                     <nav aria-label="breadcrumb ">
                         <ol class="breadcrumb bg-white pl-0">
-                          <li class="breadcrumb-item active" aria-current="page"><a class="text-secondary" href="{%url 'home'%}">Home</a></li>
-                         <li class="breadcrumb-item active" aria-current="page"><a class="text-secondary" href="{%url 'marques'%}">marques</a></li>
+                          <li class="breadcrumb-item active" aria-current="page"><a class="text-secondary  text-uppercase" href="{%url 'home'%}">Home</a></li>
+                         <li class="breadcrumb-item active" aria-current="page"><a class="text-secondary text-uppercase" href="{%url 'marques'%}">marques</a></li>
                           <li class="breadcrumb-item " aria-current="page">{{marque.name}}</li>
                         </ol>
                       </nav>
@@ -36,7 +36,7 @@
               </div>
               {%if marque.open_hours%}
                 <h4 class=" text-dark text-uppercase t15_65 pt-5 pl-2 centering"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
-                <p class=" text-dark t15 pl-5 text-left">{{marque.open_hours|striptags}}</p>
+                <p class=" text-dark t15 pl-5 text-left">{{marque.open_hours|striptags|safe}}</p>
               {% endif %}
               {% if marque.phone %}
                 <h4 class=" text-dark text-uppercase t15_65 pl-2 centering"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>

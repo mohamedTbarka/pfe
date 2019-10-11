@@ -63,9 +63,18 @@
         </div>
         <div class="col-md-12  px-0 hide_mobile">
               <div class="row row_mob "  >
-                 <a href="{%url 'promotions'%}" style="text-decoration: none;"><div  onclick="location.href='{%url 'promotions'%}';" style=" background-image: url('{{ preference.get_promotion_image }}');" class="  nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22">promotions</h3></div></a>
-                 <a href="{%url 'evenements'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'evenements'%}';" style="background-image: url('{{ preference.get_event_image }}');" class=" nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22">Evènements</h3></div></a>
-                    <a href="{%url 'compagnes'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'compagnes'%}';" style="background-image: url('{{ preference.get_compagne_image }}');" class=" nv3"><h3 class="text-white text-uppercase txt_img t22">campagne</h3></div></a>
+                 <a href="{%url 'promotions'%}" style="text-decoration: none;"><div  onclick="location.href='{%url 'promotions'%}';" style="linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ), background-image: url('{{ preference.get_promotion_image }}');" class="  nv1 mr-2 text-center"><h3 class="text-white text-uppercase txt_img t22">promotions</h3></div></a>
+                 <a href="{%url 'evenements'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'evenements'%}';" style="linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ),background-image: url('{{ preference.get_event_image }}');" class=" nv2 mr-2"><h3 class="text-white text-uppercase txt_img t22">Evènements</h3></div></a>
+                    <a href="{%url 'compagnes'%}" style="text-decoration: none;"><div onclick="location.href='{%url 'compagnes'%}';" style="linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ),background-image: url('{{ preference.get_compagne_image }}');" class=" nv3"><h3 class="text-white text-uppercase txt_img t22">campagne</h3></div></a>
               </div>
           </div>
 
@@ -98,18 +107,12 @@
         <div id="widget_slick" class="container">
 
                 <div  class="wid_slick">
+                 {% for  info in  infos|dictsort:"order" %}
                         <div class="text-white t13 text-center"> 
-                            <h4 class="t15 text-white   ">Magasins</h4>
-                            <p class="text-white ">10h-22h</p>
+                            <h4 class="t15 text-white   ">{{info.title}}</h4>
+                            <p class="text-white ">{{info.description|safe}}</p>
                         </div>
-                       <div class="text-white t13  text-center"> 
-                            <h4 class="t15 text-white">Restaurants</h4>
-                            <p class="text-white">9h-23h</p>
-                        </div>
-                        <div class="text-white t13 text-center"> 
-                            <h4 class="t15 text-white">Cinema</h4>
-                            <p class="text-white">13h-2h</p>
-                        </div>
+                    {% endfor %}
                         
                       </div>
         </div>
@@ -121,20 +124,12 @@
         <div id="wid_mobile_content" class="col-md-12 bg-dark" style="display: none">
                 <div id="carouselContent" class="carousel slide" data-ride="carousel" >
                         <div class="carousel-inner" role="listbox" >
+                         {% for  info in  infos|dictsort:"order" %}
                             <div class="carousel-item active text-center p-4">
-                                <h4 class="text-white t15">Magasins </h4>
-                                 <p class="text-white t13">10h-22h</p>
+                               <h4 class="t15 text-white">{{info.title}}</h4>
+                            <p class="text-white ">{{info.description|safe}}</p>
                             </div>
-                            <div class="carousel-item text-center p-4">
-                                
-                                    <h4 class="text-white t15">Restaurants </h4>
-                                    <p class="text-white t13"> 9h-23h</p>
-                            </div>
-                            <div class="carousel-item text-center p-4">
-                                
-                                    <h4 class="text-white t15">Cinema</h4>
-                                    <p class="text-white t13"> 13h-2h</p>
-                            </div>
+                            {% endfor %}
                         </div>
                         <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>

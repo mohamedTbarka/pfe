@@ -5,7 +5,7 @@
 <div class="container-fluid pad_rm">
     <div style="background-image:  url('{{preference.get_promotion_banner_image}}');" class="row bg_galerie row_mob">
         <div class="col-md-12" style="margin:auto;">
-                <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Promotions</h4>
+                <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">{{promotion.title}}</h4>
         </div>
         
     </div>
@@ -16,9 +16,9 @@
         <div class="col-md-12">
             <nav aria-label="breadcrumb ">
                 <ol class="breadcrumb bg-white pl-0">
-                  <li class="t15 breadcrumb-item active" aria-current="page">Home</li>
-                  <li class="t15 breadcrumb-item active" aria-current="page"> <a class="text-secondary" href="{%url 'promotions'%}"> Promotions</a></li>
-                  <li class="t15 breadcrumb-item " aria-current="page">{{promotion.title}}</li>
+                <li class="breadcrumb-item active" aria-current="page"><a class="text-dark t15 text-uppercase" href="{%url 'home'%}" >Accueil</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"> <a class="text-dark t15 text-uppercase"  >Promotions</a></li>
+                       <li class="breadcrumb-item " aria-current="page"> <a class="text-dark t15 text-uppercase"  >{{promotion.title}}</a></li>
                 </ol>
               </nav>
         </div>

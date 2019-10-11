@@ -5,13 +5,27 @@
 
 {% block content %} 
 <div class="container-fluid pb-4">
-        <div style=" background-image:  url('../../static/resources/bureaux.jpg');" class="row bg_simple">
+        <div style=" background-image:  url('{{preference.get_bureau_banner_image}}');" class="row bg_simple">
             <div class="col-md-12 dg">
                     <h4 class="text-center t_business text-white text-uppercase t50 text-shadow">Bureaux</h4>
             </div>
             
         </div>
     </div>
+
+    
+        <div class="row">
+            <div class="col-md-12 ">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb bg-white pl-0">
+                      <li class="breadcrumb-item active" aria-current="page"><a class="text-dark t15 text-uppercase" href="{%url 'home'%}" >Accueil</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"> <a class="text-dark t15 text-uppercase"  >Bureaux</a></li>
+                    </ol>
+                  </nav>
+            </div>
+            
+        </div>
+
     
     <section class="content all-the-way page_services">
         <div class="container flex-xs-column-reverse">

@@ -60,8 +60,8 @@
             <div class="col-md-12 ">
                 <nav aria-label="breadcrumb ">
                     <ol class="breadcrumb bg-white pl-0">
-                      <li class="breadcrumb-item active" aria-current="page"><a class="text-dark t15"href="{%url 'home'%}" >Accueil</a></li>
-                      <li class="breadcrumb-item active" aria-current="page"> <a class="text-dark t15"  href="{%url 'marques'%}">Nos marques</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"><a class="text-dark t15 text-uppercase"href="{%url 'home'%}" >Accueil</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"> <a class="text-dark t15 text-uppercase"  href="{%url 'marques'%}">Nos marques</a></li>
                       {% if group %}
                       <li class="breadcrumb-item " aria-current="page"><a class="text-secondary t15"  >{{categories.0.group.name}}</a></li>
                       {% endif %}
@@ -80,7 +80,7 @@
               <select name="cat" class="form-control" id="exampleFormControlSelect1" onChange="this.form.submit()">
                    
                     <option  value="">Tout&nbsp;voir</option>
-                    {%for  caty  in categories%}
+                    {%for  caty  in categories|dictsort:"name" %}
                     <option value={{caty.pk}} {%ifequal caty.pk cat%} selected{% endifequal %}>{{caty.name}}</option>
                     {%endfor%}
                   </select>
@@ -92,7 +92,7 @@
                     <div>
                         <a href="{%url 'marques'%}#mark"> <h1 class="nav-link txt_green text-uppercase t15 ">Tout&nbsp;voir</h1> </a>
                     </div>
-                    {%for  cat  in categories%}
+                    {%for  cat  in categories|dictsort:"name" %}
                     <div >
                             <a href="{%url 'marques'%}?cat={{cat.pk}}&{%if group%}group={{group}}{%endif%}#mark"  > <h1 class="nav-link txt_green text-uppercase t15 ">{{cat.name}}</h1> </a>
                     </div>
@@ -123,7 +123,7 @@
     <div class="container">
             <div class="row ">
                
-                {% for marq in marque_list%}
+                {% for marq in marque_list|dictsort:"name" %}
 
             
                
