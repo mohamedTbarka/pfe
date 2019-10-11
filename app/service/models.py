@@ -90,6 +90,7 @@ class Preference(models.Model):
     compagne_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     event_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     promotion_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    nouveautes_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     shopping_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
     restauration_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
     cinema_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
@@ -210,6 +211,11 @@ class Preference(models.Model):
     def get_promotion_banner_image(self):
         if self.promotion_banner:
             return "{0}{1}".format(settings.MEDIA_URL, self.promotion_banner)
+        return ""
+
+    def get_nouveautes_banner_image(self):
+        if self.nouveautes_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.nouveautes_banner)
         return ""
 
     def get_shopping_image(self):
