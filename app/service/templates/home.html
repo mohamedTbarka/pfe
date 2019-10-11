@@ -72,8 +72,14 @@
           <!-- For mobile version -->
           <div class="col-md-12  px-0 hide_desktop showmobile">
                 <div class="row row_mob ">
-                   <div onclick="location.href='{%url 'promotions'%}';"  style=" background-image: url('{{ preference.get_promotion_image }}');" class=" my-3  col-md-12 nv1_mobile text-center"><h3 class="text-white text-uppercase txt_img_mobile t22">promotions</h3></div>
-                   <div onclick="location.href='{%url 'evenements'%}';"  style="background-image: url('{{ preference.get_event_image }}');" class=" my-3 col-md-12  nv2_mobile "><h3 class="text-white text-uppercase txt_img_mobile t22">Evènements</h3></div>
+                   <div onclick="location.href='{%url 'promotions'%}';"  style=" background-image:linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ), url('{{ preference.get_promotion_image }}');" class=" my-3  col-md-12 nv1_mobile text-center"><h3 class="text-white text-uppercase txt_img_mobile t22">promotions</h3></div>
+                   <div onclick="location.href='{%url 'evenements'%}';"  style="background-image:linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ), url('{{ preference.get_event_image }}');" class=" my-3 col-md-12  nv2_mobile "><h3 class="text-white text-uppercase txt_img_mobile t22">Evènements</h3></div>
                     <div onclick="location.href='{%url 'compagnes'%}';" style="background-image: url('{{ preference.get_compagne_image }}');" class=" my-3 col-md-12  nv3_mobile"><h3 class="text-white text-uppercase txt_img_mobile t22">campagne</h3></div>
                 </div>
             </div>
@@ -162,16 +168,31 @@
          </div>
         <div class="col-md-12 px-0">
               <div class="row row_mob ">
-                  <div class="col-md-2 offr1"style="background-image: url('{{ preference.get_shopping_image }}');">
-               <a href="{%url 'marques'%}?group=1"    style="text-decoration: none;"> <div    onclick="location.href='{%url 'marques'%}?group=1';"> <h3 class="txt_img text-white text-uppercase t22">Shopping</h3></div></a>
+                  <div class="col-md-2 offr1" style="background-image: linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ), url('{{ preference.get_shopping_image }}'); ">
+               <a href="{%url 'marques'%}?group=1"    style="text-decoration: none;" > <div    onclick="location.href='{%url 'marques'%}?group=1';"> <h3 class="txt_img text-white text-uppercase t22">Shopping</h3></div></a>
                  </div>
                 <div class="col-md-5 padding-mobile pad_rm">
-                    <a href="{%url 'marques'%}?group=2" style="text-decoration: none;">  <div style="background-image: url('{{ preference.get_restauration_image }}');" class="offr2 mb-2" onclick="location.href='{%url 'marques'%}?group=2';" > <h3 class="txt_img2 text-white text-uppercase t22">Restauration</h3> </div></a>
-                    <a href="{%url 'marque_detail' 1%}" style="text-decoration: none;"><div style="background-image: url('{{ preference.get_hypermarche_image }}');" class="offr3 mt-3" onclick="location.href='{%url 'marque_detail' 1%}';"> <h3 class="txt_img2 text-white text-uppercase t22">hypermarché</h3> </div></a>
+                    <a href="{%url 'marques'%}?group=2" style="text-decoration: none;">  <div style="background-image: linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ),url('{{ preference.get_restauration_image }}');" class="offr2 mb-2" onclick="location.href='{%url 'marques'%}?group=2';" > <h3 class="txt_img2 text-white text-uppercase t22">Restauration</h3> </div></a>
+                    <a href="{%url 'marque_detail' 1%}" style="text-decoration: none;"><div style="background-image: linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ),url('{{ preference.get_hypermarche_image }}');" class="offr3 mt-3" onclick="location.href='{%url 'marque_detail' 1%}';"> <h3 class="txt_img2 text-white text-uppercase t22">hypermarché</h3> </div></a>
                   </div>
                   <div id="removepadding" class="col-md-5 remove_padding padding-mobile2 pad_rm ">
-                     <a href="{%url 'marque_detail' 2%}" style="text-decoration: none;"> <div  style="background-image: url('{{ preference.get_cinema_image }}');" class="offr4  mb-2" onclick="location.href='{%url 'marque_detail' 2%}';"> <h3 class="txt_img2 text-white text-uppercase t22">cinéma</h3> </div></a>
-                     <a href="{%url 'marques'%}?group=5" style="text-decoration: none;"> <div style="background-image: url('{{ preference.get_culture_loisirs_image }}');" class="offr5 mt-3 " onclick="location.href='{%url 'marques'%}?group=5';"> <h3 class="txt_img2 text-white text-uppercase t22">Culture & Loisirs</h3> </div></a>
+                     <a href="{%url 'marque_detail' 2%}" style="text-decoration: none;"> <div  style="background-image: linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ),url('{{ preference.get_cinema_image }}');" class="offr4  mb-2" onclick="location.href='{%url 'marque_detail' 2%}';"> <h3 class="txt_img2 text-white text-uppercase t22">cinéma</h3> </div></a>
+                     <a href="{%url 'marques'%}?group=5" style="text-decoration: none;"> <div style="background-image: linear-gradient(
+        rgba(0, 0, 0, 0.30), 
+        rgba(0, 0, 0, 0.30)
+      ),url('{{ preference.get_culture_loisirs_image }}');" class="offr5 mt-3 " onclick="location.href='{%url 'marques'%}?group=5';"> <h3 class="txt_img2 text-white text-uppercase t22">Culture & Loisirs</h3> </div></a>
                   </div>
               </div>
           </div>
@@ -191,7 +212,7 @@
 <div id="" class="container pad_rm">
         <div class="row row_mob d-flex justify-content-around text-center">
             <div class="col-md-12 pad_rm">
-                <div class="row row_mob d-flex justify-content-between  py-4">
+                <div class="row row_mob d-flex justify-content-between  pb-4">
                      <div class="col-md-4 line_left"> </div>
                      <div class="col-md-3 padding-mobile  "><h2 class="title text-uppercase">Nos services</h2></div>
                      <div class="col-md-4  line_right" ></div>
@@ -201,10 +222,10 @@
              {%if service.principal%}
             <div class="col-md-12 move_middle px-0 ">
                     <a style="margin: auto;text-decoration: none;"  {%if  service.url %} href="{{service.url}}" {%else%} href="{%url 'service_detail' service.pk %}"   {% endif %}> <div class="row row_mob bg3" style="background-image:  url('media/{{service.background_image}}');">  
-                    <div style="align-self: center;" class="col-md-12"><h2  class="t50_45 text-white text-uppercase pt-3">{{service.title}}</h2></div>
+                    <div style="align-self: center;padding-top: 16rem!important;" class="col-md-12"><h2  class="t50_45 text-white text-uppercase " >{{service.title}}</h2></div>
                     <!-- <div class="col-md-12 t22"><p class="text-white">{{service.description|safe}}</p></div> -->
                    
-                        <div class="col-md-12"> <a {%if  service.url %} href="{{service.url}}" {%else%} href="{%url 'service_detail' service.pk %}" {% endif %} class=" btn btn-outline-dark bg-white mb-4 t_btn text-uppercase px-4 t15 v-plus ">voir plus</a></div> 
+                        <div class="col-md-12"> <a {%if  service.url %} href="{{service.url}}" {%else%} href="{%url 'service_detail' service.pk %}" {% endif %} class=" btn btn-dark border border-white mb-4 t_btn text-uppercase px-4 t15 v-plus bg_black ">voir plus</a></div> 
                   </div></a>
               </div>
               {%endif%}
