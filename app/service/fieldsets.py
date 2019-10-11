@@ -39,6 +39,7 @@ fieldsets_preferences = (
                    "compagne_banner",
                    "event_banner",
                    "promotion_banner",
+                   "nouveautes_banner",
                    )
     }),
 
