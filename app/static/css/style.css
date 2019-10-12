@@ -793,7 +793,7 @@ ul.slick-dots > li > button {
 }
 @media only screen and (max-width: 600px) {
     .bg_shopping {
-        height: 60px;
+        height: 300px;
         max-height: 60px!important;
         background-position: center;
         background-repeat: no-repeat;
