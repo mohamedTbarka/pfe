@@ -802,6 +802,9 @@ ul.slick-dots > li > button {
     a.carousel-control-prev.utu {
         margin-left: 0px!important
     }
+    a.carousel-control-next.utu {
+        margin-right: 0px!important
+    }
     button.btn.btn-sm.text-white.bg_green.text-uppercase.t_btn.mb-3.p-2.px-3.mt-4 {
         padding: 1px!important;
         margin: 0!important;
