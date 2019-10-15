@@ -96,18 +96,20 @@
                           </div>
                     </div>
                     {%endif%}
-                    <div class="col-md-6 text-left px-0">
-                        {%ifequal marque.pk 2 %}
-                        <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>
-                         {%endifequal%}         
-                      </div>
+                    <div class="col-md-12">
+	                    <div class="row">
+                        
+                          
 
-
-                    <div class="col-md-12  {%ifequal marque.pk 2 %} col-md-6  {%endifequal%} text-right px-0">
-                     
-                      <button type="bUTTON" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">localiser {{marque.name}}</button>
-                      
+                          <div class="col-md-12 text-right px-0">    
+                          {%ifequal marque.pk 3 %}
+                        <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">Télécharger le programme</button></a>
+                         {%endifequal%}                          
+                            <a href="{%url 'plan'%}" ><button type="bUTTON" class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">localiser {{marque.name}}</button></a>
+                          </div>
+	                    </div>
                     </div>
+                    
 
                     {% comment %} <div class="col-md-6 text-right px-0">
                       {%if marque.localisation %}
