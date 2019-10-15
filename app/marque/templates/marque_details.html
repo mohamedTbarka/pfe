@@ -36,7 +36,7 @@
               </div>
               {%if marque.open_hours%}
                 <h4 class="text-dark text-uppercase t15_65 pt-5 pl-2 centering"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
-                <div class="text-dark t15  text-center ">{{marque.open_hours|safe}}</div>
+                <p class="text-dark t15 pl-5 text-left ckeditor">{{marque.open_hours|safe}}</p>
               {% endif %}
               {% if marque.phone %}
                 <h4 class=" text-dark text-uppercase t15_65 pl-2 centering"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>
@@ -101,18 +101,13 @@
                         <a href="http://casablanca.megarama.ma/FR/programmation-cine?printAs=PDF&tk_source=site&tk_type=progpdf" target="_blank" > <button class="btn btn-success">Télécharger le programme (PDF)</button></a>
                          {%endifequal%}         
                       </div>
-                       <div class="col-md-12  {%ifequal marque.pk 2 %} col-md-6  {%endifequal%} text-right px-0">
-                    
-                      <a href="{%url 'plan'%}"><button type="bUTTON"  class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">localiser {{marque.name}}</button></a>
-                   
-                    </div>
-                    {% comment %} <div class="col-md-6 text-right px-0">
+                    <div class="col-md-6 text-right px-0">
                       {%if marque.localisation %}
                       <button type="bUTTON" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-dark my-4 py-3 t_btn text-uppercase px-4 t15_65 btn_contactUs">localiser {{marque.name}}</button>
                       {%endif%}
-                    </div> {% endcomment %}
+                    </div>
                          <!-- Modal -->
-                {% comment %} <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -141,7 +136,7 @@
                     
                    
               
-            </div> {% endcomment %}
+            </div>
             
         </div>
         </div>
