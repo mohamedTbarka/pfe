@@ -36,21 +36,21 @@
               </div>
               {%if marque.open_hours%}
                 <h4 class="text-dark text-uppercase t15_65 pt-5 pl-2 centering"><img src="{% static 'resources/marque_watch.png'%}" class="pr-1" alt=""> Horaires d’ouverture</h4>
-                <p class="text-dark t15 pl-5 text-left ckeditor">{{marque.open_hours|safe}}</p>
+                <div class="text-dark t13 pl-5 text-left ckeditor">{{marque.open_hours|safe}}</div>
               {% endif %}
               {% if marque.phone %}
                 <h4 class=" text-dark text-uppercase t15_65 pl-2 centering"> <img src="{% static 'resources/marque_phone.png'%}"  class="pr-1" alt=""> téléphone</h4>
                 {%ifequal marque.phone None %}
-                <p class=" text-dark t15  pl-2 centering"></p>
+                <div class=" text-dark t13  pl-2 centering"></div>
                 {%else%}
-                <p class=" text-dark t15  pl-2">{{marque.phone}}</p>
+                <div class=" text-dark t13  pl-2">{{marque.phone}}</div>
                 {%endifequal%}
               {%endif%}
               {%if marque.phone2%}
                 {%ifequal marque.phone2 None %}
-                <p class= "text-dark t15  pl-2"></p>
+                <div class= "text-dark t13  pl-2"></div>
                 {%else%}
-                <p class=" text-dark t15  pl-2">{{marque.phone}} </p>
+                <div class=" text-dark t13  pl-2">{{marque.phone}} </div>
                 {%endifequal%}
               {%endif%}
 
