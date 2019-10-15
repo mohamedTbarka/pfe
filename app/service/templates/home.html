@@ -127,7 +127,7 @@
                          {% for  info in  infos|dictsort:"order" %}
                             <div class="carousel-item  text-center p-4 {% if not forloop.counter0 %}active{%endif%}">
                                <h4 class="t15 text-white">{{info.title}}</h4>
-                            <p class="text-white ">{{info.description|safe}}</p>
+                            <div class="text-white ">{{info.description|safe}}</div>
                             </div>
                             {% endfor %}
                         </div>

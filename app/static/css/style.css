@@ -686,6 +686,8 @@ float: right;
     position: absolute;
     top: 100px;
     left: 85px;
+    z-index: 18;
+    
 }
 
 #widget_slick button.slick-next.slick-arrow::after {
@@ -988,6 +990,17 @@ ul.slick-dots {
     top: 12px!important;
     bottom: 36px!important;
 }
+
+.row.row_mob.d-flex.justify-content-between.py-4 {
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+}
+h2.title.text-uppercase {
+    font-size: 19px!important;
+}
+.col-md-4.line_right {
+    margin-top: 7px!important;
+}
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -1248,3 +1261,12 @@ ul.slick-dots {
 .bg_black{
     background-color: #000!important;
 }
+
+
+
+@media (min-width: 320px) {
+    img.mb-3.logo {
+        width: 85%;
+    }
+}
+
