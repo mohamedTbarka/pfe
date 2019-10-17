@@ -988,7 +988,8 @@ ul.slick-dots > li > button {
     font-size: 9px;
 }
 ul.slick-dots {
-    top: 71%;
+    top: 33%;
+    left: -8%;
 }
 .carousel-caption.col-md-5.offset-md-3.text-center.bg_white {
     padding-top: 5px;
