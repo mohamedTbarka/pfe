@@ -87,6 +87,8 @@ class Preference(models.Model):
     bureau_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     hotel_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     decouvrir_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    plan_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
+    horaires_acces_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     compagne_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     event_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
     promotion_banner = models.ImageField(upload_to="./uploads/preference/img/banner", blank=True, null=True)
@@ -196,6 +198,16 @@ class Preference(models.Model):
     def get_decouvrir_banner_image(self):
         if self.decouvrir_banner:
             return "{0}{1}".format(settings.MEDIA_URL, self.decouvrir_banner)
+        return ""
+
+    def get_plan_banner_image(self):
+        if self.plan_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.plan_banner)
+        return ""
+
+    def get_horaires_acces_banner_image(self):
+        if self.horaires_acces_banner:
+            return "{0}{1}".format(settings.MEDIA_URL, self.horaires_acces_banner)
         return ""
 
     def get_compagne_banner_image(self):
