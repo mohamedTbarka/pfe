@@ -792,6 +792,7 @@ ul.slick-dots > li > button {
 }
 .up{
     right: -5%;
+    top: -15%;
 }
 @media only screen and (max-width: 600px) {
     .bg_shopping {
@@ -940,6 +941,7 @@ img.w-100 {
 .up {
     position: absolute;
     right: -5%;
+    top: -15%;
 }
 #widget .icon {
     height: 100%;
@@ -974,10 +976,16 @@ font-size: 30px!important;
     width: 326px!important;
     height: 50px!important;
 }
-ul.slick-dots > li > button {
+/* ul.slick-dots > li > button {
     height: 31px;
     width: 99px;
     font-size: 11px;
+} */
+
+ul.slick-dots > li > button {
+    height: 22px;
+    width: 79px;
+    font-size: 9px;
 }
 ul.slick-dots {
     top: 71%;
@@ -1212,6 +1220,7 @@ img.w-100 {
 .up {
     position: absolute;
     right: -5%;
+    top: -15%;
 }
 #widget .icon {
     height: 100%;
