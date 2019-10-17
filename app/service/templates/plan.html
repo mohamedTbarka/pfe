@@ -19,9 +19,9 @@
 	<div class="row">
 		<div class="col-md-12 ">
 			<div class="row slider ">
-                        <div class="col-md-12 img-magnifier-container "><img id="myimage" class="img-fluid" src="{% static 'resources/niv-2.png'%}" alt="" ></div>
-                        <div class="col-md-12 img-magnifier-container "><img id="myimage2"class="img-fluid" src="{% static 'resources/niv-1.png'%}" alt=""></div>
-                        <div class="col-md-12 img-magnifier-container "><img id="myimage3" class="img-fluid" src="{% static 'resources/niv-0.png'%}" alt=""></div>
+                        <div class="col-md-12 img-magnifier-container "><img id="myimage" class="img-fluid" src="{{preference.get_2nd_floor_image}}" alt="" ></div>
+                        <div class="col-md-12 img-magnifier-container "><img id="myimage2"class="img-fluid" src="{{preference.get_1st_floor_image}}" alt=""></div>
+                        <div class="col-md-12 img-magnifier-container "><img id="myimage3" class="img-fluid" src="{{preference.get_rdc_image}}" alt=""></div>
 			</div>
 		</div>
 	</div>
