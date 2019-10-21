@@ -94,40 +94,36 @@
 \end{frame}
 
 \subsection{Configurations and Executions}
-\begin{frame}
+\begin{frame}{Configurations \& Executions}
+
+\begin{itemize}
+	\item The notion of configuration is used to capture an instantaneous snapshot of the state of the entire system.
+	\item A configuration is a vector of node states, one for each node in $P$, and a vector of channel states, one for each channel in $\chi$.
+\end{itemize}
 
 \end{frame}
 
 
 \subsection{Problem Definition}
 
-\begin{frame}{Heights}
-
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth.
-
+\begin{frame}{Problem Definition}
+Each node $u$ in the system has :
 \begin{itemize}
-	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
-	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$
-
+	\item a local variable $lid_{u}$ to hold the id of the supreme leader;
+	\item  another local variable $slid_u$ to hold the identifier of the sub-leader whose remoteness towards $u$ obeys the constraint.
 \end{itemize}
 
 \end{frame}
 
 % -----------------------------------------------------------------------------
-\section{Leader Election Algorithm}
+\section{H. Leader Election Algorithm}
 \subsection{Informal Description}
 \begin{frame}{Heights}
-
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth.
-
+After a leader is gone, the algorithm consists on three waves:
 \begin{itemize}
-	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
-	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$
-
+	\item First wave : initiated by one of the lost leader's neighbors looking for it;  
+	\item Second wave : initiated by the node located at the edge of the network if the search has hit a dead-end;
+	\item Third wave : initiated by the same node which initiated the first wave updating the other nodes' heights.
 \end{itemize}
 
 \end{frame}
