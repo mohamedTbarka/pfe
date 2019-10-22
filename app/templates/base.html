@@ -2,6 +2,8 @@
 {% load static %}
 {% load preference_tags %}
 {% preference as  preference%}
+{% load snakeoil %}
+{% get_seo_data %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,7 +14,8 @@
     <link rel="shortcut icon" type="image/png" href="{% static '/resources/favicon.png' %}"/>
 
     <meta name="format-detection" content="telephone=no">
-
+    <!--    <title>{{ seo.head_title }}</title>-->
+    <meta name="description" content="{{ seo.meta_description }}">
 
     <link rel="stylesheet" href="{%static 'css/style.css'%}#02">
     <!-- Bootstrap CSS -->
