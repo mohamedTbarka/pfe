@@ -15,7 +15,7 @@ fieldsets_preferences = (
 
     (u"Réseaux Sociaux", {
         'classes': ('collapse', 'extrapretty'),
-        'fields': ("facebook", "twitter", "youtube", "instagram",)
+        'fields': ("facebook", "twitter", "youtube", "instagram", "facebook_image")
     }),
 
     (u"Plan images", {
