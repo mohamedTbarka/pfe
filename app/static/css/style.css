@@ -1287,3 +1287,18 @@ ul.slick-dots {
     }
 }
 
+
+
+@media (max-width: 1280px) and (min-width: 1199px){ 
+.nv3 {
+    min-width: 575px!important;
+}
+.nv2 {
+    max-width: 250px!important;
+    min-width: 250px!important;
+}
+.nv1 {
+    min-height: 353px!important;
+    max-height: 353px!important;
+}
+}

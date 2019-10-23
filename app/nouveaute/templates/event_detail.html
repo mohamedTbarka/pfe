@@ -36,7 +36,7 @@
             <div class="col-md-4 offset-md-1"><p class="text-secondary text-center t13"><img src="{% static 'resources/watch.png'%}" alt=""> Du {{event.start_date|date:'m'}} au {{event.end_date|date:'m'}} a partir de {{event.start_date|date:'H'}}h</p></div>
 
         </div>
-        <p class="t15 pt-3">Emensis itaque difficultatibus multis et nive obrutis callibus plurimis ubi prope Rauracum ventum est ad supercilia fluminis Rheni, resistente multitudine Alamanna pontem suspendere navium conpage Romani vi nimia vetabantur ritu grandinis undique  </p>
+        <div class="t15 pt-3">{{event.content|safe}} </div>
         {%if event.gallery%}    
         <div id="slide" class="col-md-12 px-0">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
