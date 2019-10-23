@@ -101,6 +101,7 @@ class Preference(models.Model):
     promotion_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
     event_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
     compagne_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
+    facebook_image = models.ImageField(upload_to="./uploads/preference/img/", blank=True, null=True)
     address = models.CharField(max_length=250, null=True, blank=True)
     phone = models.CharField(max_length=250, null=True, blank=True)
     facebook = models.CharField(max_length=250, null=True, blank=True)
@@ -253,6 +254,11 @@ class Preference(models.Model):
     def get_hypermarche_image(self):
         if self.hypermarche_image:
             return "{0}{1}".format(settings.MEDIA_URL, self.hypermarche_image)
+        return ""
+
+    def get_facebook_image(self):
+        if self.facebook_image:
+            return "{0}{1}".format(settings.MEDIA_URL, self.facebook_image)
         return ""
 
     def get_open_hour(self):
