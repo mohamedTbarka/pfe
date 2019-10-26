@@ -40,7 +40,7 @@ Our description and proof of the algorithm assume that nodes have access to caus
 \newpage
 \section{Problem Definition}
 \paragraph{}Each node $u$ in the system has a local variable $lid_{u}$ to hold the identifier of the node currently considered by u to be the supreme leaders of the connected component containing u, and another local variable $slid_u$ to hold the identifier of the node currently considered by u to be the sub-leader in such a way that the distance to this sub-leader does not exceed a certain constant d (the remoteness constraint).
-\paragraph{}The set of all the leaders including the supreme one forms a spanning tree as subgraph of the DAG established.
+\paragraph{}The set of all the leaders including the supreme one forms a spanning tree as sub-graph of the DAG established.
 In every execution that includes a finite number of topology changes, we require that the following eventually holds:
 \begin{itemize}
 	\item Every connected component $CC$ of the final topology contains a node $l$, the supreme leader, such that $l$ is the only node which verifies $ lid_{l} = l $.

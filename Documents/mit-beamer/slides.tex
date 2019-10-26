@@ -8,6 +8,8 @@
 \usepackage{amsmath,amssymb,enumerate,epsfig,bbm,calc,color,ifthen,capt-of,float}
 \usepackage{algorithm2e}
 \usepackage{algorithmic}
+\usepackage{movie15}
+
 
 
 \usetheme{Berlin}
@@ -36,13 +38,14 @@
 
 \section[Outline]{}
 \begin{frame}{Outline}
+
   \tableofcontents
 \end{frame}
 
 % -----------------------------------------------------------------------------
 \section{Introduction}
-\subsection{What's Distributed Systems ?}
-\begin{frame}{What's Distributed Systems ?}
+\subsection{Definition Of A Distributed System}
+\begin{frame}{What's a Distributed System ?}
 	A distributed system is a network that consists of autonomous computers that are connected using a distribution middleware. They help in sharing different resources and capabilities to provide users with a single and integrated coherent network.
 \end{frame}
 \subsection{Election Algorithms}
@@ -51,8 +54,8 @@
   \pause
   \begin{itemize}
     \item <2-> $P$ sends an $ELECTION$ message to all processes with higher numbers.
-    \item <3-> If no one responds, P wins the election and becomes coordinator.
-    \item <4-> If one of the higher-ups answers, it takes over. P's job is done.
+    \item <3-> If no one responds, $P$ wins the election and becomes coordinator.
+    \item <4-> If one of the higher-ups answers, it takes over. $P$'s job is done.
   \end{itemize}
 \end{frame}
 
@@ -74,7 +77,7 @@
 
 \begin{itemize}
 	\item We assume a system consisting of a set $P$ of computing nodes and a set $\chi$ of directed communication channels from one node to another node. $\chi$ consists of one channel.
-	\item We model the whole system as a set of (infinite) state machines that interact through shared events (a specialization of the IOA model [17]).
+	\item We model the whole system as a set of (infinite) state machines that interact through shared events (a specialization of the IOA model).
 
 \end{itemize}
 
@@ -129,50 +132,38 @@ After a leader is gone, the algorithm consists on three waves:
 \end{frame}
 
 \subsection{Nodes, Neighbors and Heights}
-\begin{frame}{Heights}
+\begin{frame}{Nodes, Neighbors and Heights}
 
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth.
-
+The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth components are referred to as the leader pair (LP). In more detail, the components are defined as follows:
+\pause
 \begin{itemize}
 	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
 	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$
-
+	
 \end{itemize}
 
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
+	\item $\delta$ an integer that is set to ensure that links are directed appropriately to neighbors with the same first three components.
+\end{itemize}
+	
 \end{frame}
 
 \subsection{Initial State}
-\begin{frame}{Heights}
-
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth.
-
-\begin{itemize}
-	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
-	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$
-
-
-\end{itemize}
-
+\begin{frame}{Initial State}
+\begin{list}{--}
+	\item $forming_u$ is empty,
+	\item $N_u$ equals the set of neighbors of $u$ in $G^{init} _{chan}$
+	\item $height_u[u] = (0, 0, 0, \delta _u , 0, l, u)$ where $l$ is the $id$ of a fixed node in $u's$ connected component in $G^{init} _{chan}$ (the current leader), and $\delta _u$ equals the distance from $u$ to $l$ in $G^{init} _{chan}$,
+	\item for each $v$ in $N_u$, $height_u[v] = height_v[v]$ (i.e., $u$ has accurate information about $v$’s height), and
+	\item $\mathcal{T} _u$ is initialized properly with respect to the definition of causal clocks.
+\end{list}
 \end{frame}
-\subsection{Goal Of The Algorithm}
-\begin{frame}{Heights}
-
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth.
-
-\begin{itemize}
-	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
-	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$
 
 
-\end{itemize}
-
-\end{frame}
 \subsection{Description Of The Algorithm}
 \begin{frame}{Heights}
 
@@ -194,7 +185,7 @@ The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nl
 \begin{frame}{The Code triggered by Update Message}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\linewidth]{tcode_update.png}
+	\includegraphics[width=0.5\linewidth]{tcode_update.png}
 	%\caption{Code triggered by Update Message}
 	\label{fig:figure1}
 \end{figure}
@@ -221,24 +212,38 @@ The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nl
 % -----------------------------------------------------------------------------
 
 \section{Implementation}
-\subsection{What's JBotSim ?}
+\subsection{The Tool Used}
 
 \begin{frame}{What's JBotSim ?}
+JBoTSim is a java library that offers basic primitives for proto-typing, running, and visualizing distributed algorithms in dynamic networks.
+\end{frame}
+
+\subsection{Simulation}
+\begin{frame}
+
 
 \end{frame}
 
-%----------------------------------------------------------------------------
-\section{Conclusions}
-\subsection{Where can I learn more?}
-\begin{frame}{Questions and Answers}
-  Want to know more?
+\subsection{Performance Test}
+\begin{frame}{How is our algorithm's performance ?}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{performance_test}
+		\caption{Simulation Results}
+		\label{fig:performancetest}
+	\end{figure}
+	
+\end{frame}
 
-  \begin{itemize}
-    \item Browse \url{http://web.mit.edu/smoot/history.htm}.
-    \item Smoot's Legacy \url{http://alum.mit.edu/news/AlumniNews/Archive/smoots_legacy}.
-    \item Smoot Salute! \url{http://web.mit.edu/spotlight/smoot-salute}.
-  \end{itemize}
-  
+%----------------------------------------------------------------------------
+\section{Conclusion}
+\subsection{Is The Algorithm Perfect ?}
+\begin{frame}{Is The Algorithm Perfect ?}
+ An open question is how to extend our algorithm and its analysis to handle a wider range of clocks, such as approximately synchronized clocks and vector clocks.
+\end{frame}
+
+\begin{frame}{Question ?}
+	
 \end{frame}
 % -----------------------------------------------------------------------------
 \end{document}
