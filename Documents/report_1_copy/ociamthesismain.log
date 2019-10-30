@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  30 OCT 2019 14:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  30 OCT 2019 19:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -721,32 +721,50 @@ ght through $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (29.73946pt too wide) in paragraph at lines 98--99
-\T1/cmr/m/n/12 have taken on RL pre-fix (t, p) by ex-e-cut-ing ei-ther $\OML/cm
-m/m/it/12 PROPAGATELARGESTREFLEVEL$
- []
-
-[37] [38]
-Overfull \hbox (19.65648pt too wide) in paragraph at lines 111--112
-\T1/cmr/m/n/12 RL (t, p, 1) is by $\OML/cmm/m/it/12 REFLECTREFLEVEL$ \T1/cmr/m/
-n/12 or $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 . 
+Overfull \hbox (9.39201pt too wide) in paragraph at lines 98--99
+\T1/cmr/m/n/12 For global time $\OML/cmm/m/it/12 t[]$ $\OMS/cmsy/m/n/12 ^^U$ $\
+OML/cmm/m/it/12 t[]$\T1/cmr/m/n/12 , let the $\OML/cmm/m/it/12 RL$ \T1/cmr/m/n/
+12 DAG $\OML/cmm/m/it/12 RL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; u; \OT1/cmr/m/n
+/12 1)$\T1/cmr/m/n/12 , where $\OML/cmm/m/it/12 REFLECTREFLEVEL$\T1/cmr/m/n/12 
+.
  []
 
 
-Overfull \hbox (4.84424pt too wide) in paragraph at lines 113--114
- [] \T1/cmr/m/n/12 Sup-pose $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 takes on RL (t,
- p, 1) due to $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
+Overfull \hbox (2.10864pt too wide) in paragraph at lines 99--100
+ [] \T1/cmr/m/n/12 Sup-pose $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 changes its hei
+ght through $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
  []
 
-[39]
-Overfull \hbox (81.6378pt too wide) in paragraph at lines 127--128
+[37]
+Overfull \hbox (3.19102pt too wide) in paragraph at lines 103--104
+\T1/cmr/m/n/12 taken on $\OML/cmm/m/it/12 RL$ \T1/cmr/m/n/12 pre-fix $\OT1/cmr/
+m/n/12 (\OML/cmm/m/it/12 t; p\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 by ex-e-cut-ing 
+ei-ther $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$
+ []
+
+[38]
+Overfull \hbox (15.40659pt too wide) in paragraph at lines 116--117
+\OML/cmm/m/it/12 RL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; p; \OT1/cmr/m/n/12 1)$ 
+\T1/cmr/m/n/12 is by $\OML/cmm/m/it/12 REFLECTREFLEVEL$ \T1/cmr/m/n/12 or $\OML
+/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 . 
+ []
+
+
+Overfull \hbox (0.59435pt too wide) in paragraph at lines 118--119
+ [] \T1/cmr/m/n/12 Sup-pose $\OML/cmm/m/it/12 u$ \T1/cmr/m/n/12 takes on $\OML/
+cmm/m/it/12 RL\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; p; \OT1/cmr/m/n/12 1)$ \T1/c
+mr/m/n/12 due to $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 .
+ []
+
+[39] [40]
+Overfull \hbox (81.6378pt too wide) in paragraph at lines 132--133
  [] \T1/cmr/m/n/12 Then at some pre-vi-ous time $\OML/cmm/m/it/12 t[] < gt\OT1/
 cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , $\OML/cmm/m/
 it/12 u$ \T1/cmr/m/n/12 ex-e-cuted $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$
  []
 
-[40] [41]
-Overfull \hbox (10.87035pt too wide) in paragraph at lines 154--155
+[41]
+Overfull \hbox (10.87035pt too wide) in paragraph at lines 159--160
 \T1/cmr/m/n/12 than $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t; p; \OT1/cmr/m/n/12 0)
 $ \T1/cmr/m/n/12 in $\OML/cmm/m/it/12 C[]$\T1/cmr/m/n/12 . By the pre-con-di-ti
 on for $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 ,
@@ -754,23 +772,23 @@ on for $\OML/cmm/m/it/12 PROPAGATELARGESTREFLEVEL$\T1/cmr/m/n/12 ,
 
 [42]
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 177.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 182.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 179.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 184.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 179.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 184.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 179.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 184.
 
-[43] [44] [45] [46] [47] [48] [49] [50]) [51]
+[43] [44] [45] [46] [47] [48] [49] [50] [51]) [52]
 \openout2 = `implementation.aux'.
 
  (./implementation.tex
 Chapter 5.
-[52
+[53
 
 
 
@@ -781,14 +799,14 @@ File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
- [53]
-[54]
-<fig_2.png, id=231, 352.31625pt x 107.65219pt>
+ [54]
+[55]
+<fig_2.png, id=234, 352.31625pt x 107.65219pt>
 File: fig_2.png Graphic file (type png)
 <use fig_2.png>
 Package pdftex.def Info: fig_2.png  used on input line 34.
 (pdftex.def)             Requested size: 303.53267pt x 92.74661pt.
-<fig_3.png, id=232, 291.33844pt x 204.01219pt>
+<fig_3.png, id=235, 291.33844pt x 204.01219pt>
 File: fig_3.png Graphic file (type png)
 <use fig_3.png>
 Package pdftex.def Info: fig_3.png  used on input line 42.
@@ -797,32 +815,32 @@ Package pdftex.def Info: fig_3.png  used on input line 42.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[55 <./fig_2.png (PNG copy)>] [56 <./fig_3.png (PNG copy)>] [57] [58]
-<fig_4.png, id=246, 688.07062pt x 190.46156pt>
+[56 <./fig_2.png (PNG copy)>] [57 <./fig_3.png (PNG copy)>] [58] [59]
+<fig_4.png, id=249, 688.07062pt x 190.46156pt>
 File: fig_4.png Graphic file (type png)
 <use fig_4.png>
 Package pdftex.def Info: fig_4.png  used on input line 84.
 (pdftex.def)             Requested size: 433.62pt x 120.02917pt.
- [59 <./fig_4.png (PNG copy)>]
-<fig_5.png, id=250, 455.45157pt x 179.92218pt>
+ [60 <./fig_4.png (PNG copy)>]
+<fig_5.png, id=253, 455.45157pt x 179.92218pt>
 File: fig_5.png Graphic file (type png)
 <use fig_5.png>
 Package pdftex.def Info: fig_5.png  used on input line 124.
 (pdftex.def)             Requested size: 303.53267pt x 119.9103pt.
- [60] [61 <./fig_5.png (PNG copy)>]
-<fig_6.png, id=257, 464.4853pt x 412.54124pt>
+ [61] [62 <./fig_5.png (PNG copy)>]
+<fig_6.png, id=260, 464.4853pt x 412.54124pt>
 File: fig_6.png Graphic file (type png)
 <use fig_6.png>
 Package pdftex.def Info: fig_6.png  used on input line 135.
 (pdftex.def)             Requested size: 303.53267pt x 269.59645pt.
- [62 <./fig_6.png (PNG copy)>] [63] [64] [65]
-<fig_7.png, id=271, 648.17157pt x 284.56313pt>
+ [63 <./fig_6.png (PNG copy)>] [64] [65] [66]
+<fig_7.png, id=274, 648.17157pt x 284.56313pt>
 File: fig_7.png Graphic file (type png)
 <use fig_7.png>
 Package pdftex.def Info: fig_7.png  used on input line 207.
 (pdftex.def)             Requested size: 303.53267pt x 133.25836pt.
- [66 <./fig_7.png (PNG copy)>]
-<performance_test.png, id=275, 1157.32375pt x 475.7775pt>
+ [67 <./fig_7.png (PNG copy)>]
+<performance_test.png, id=278, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
 Package pdftex.def Info: performance_test.png  used on input line 261.
@@ -832,25 +850,25 @@ Overfull \hbox (29.3013pt too wide) in paragraph at lines 261--262
  [][] 
  []
 
-) [67] [68 <./performance_test.png>]
+) [68] [69 <./performance_test.png>]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
 Chapter 6.
-[69
+[70
 
 
 
-] [70
+] [71
 
-] [71] [72] [73]) [74] (./ociamthesismain.aux (./dedication.aux)
+] [72] [73] [74]) [75] (./ociamthesismain.aux (./dedication.aux)
 (./acknowlegements.aux) (./abstract.aux) (./introduction.aux)
 (./preliminaries.aux) (./algorithm.aux) (./correctness.aux)
 (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
  7734 strings out of 492615
  105919 string characters out of 6131390
- 393781 words of memory out of 5000000
+ 392781 words of memory out of 5000000
  11407 multiletter control sequences out of 15000+600000
  20313 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -874,10 +892,10 @@ lic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm120
 xmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440
 .pfb>
-Output written on ociamthesismain.pdf (84 pages, 1796228 bytes).
+Output written on ociamthesismain.pdf (85 pages, 1799933 bytes).
 PDF statistics:
- 367 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
+ 371 PDF objects out of 1000 (max. 8388607)
+ 250 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
