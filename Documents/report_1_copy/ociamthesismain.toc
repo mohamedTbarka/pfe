@@ -102,8 +102,8 @@
 \contentsline {subparagraph}{}{31}% 
 \contentsline {subparagraph}{}{31}% 
 \contentsline {subparagraph}{}{31}% 
-\contentsline {section}{\numberline {4.3}Bounding the Number of Elections}{31}% 
-\contentsline {paragraph}{}{31}% 
+\contentsline {section}{\numberline {4.3}Bounding the Number of Elections}{32}% 
+\contentsline {paragraph}{}{32}% 
 \contentsline {paragraph}{}{32}% 
 \contentsline {paragraph}{Porperty C:}{32}% 
 \contentsline {subparagraph}{Poof}{32}% 
@@ -111,20 +111,20 @@
 \contentsline {paragraph}{Property D:}{32}% 
 \contentsline {subparagraph}{Proof:}{32}% 
 \contentsline {subparagraph}{}{32}% 
-\contentsline {subparagraph}{}{32}% 
 \contentsline {subparagraph}{}{33}% 
 \contentsline {subparagraph}{}{33}% 
 \contentsline {subparagraph}{}{33}% 
 \contentsline {subparagraph}{}{33}% 
 \contentsline {subparagraph}{}{33}% 
-\contentsline {paragraph}{Lemma 2}{33}% 
+\contentsline {subparagraph}{}{33}% 
+\contentsline {paragraph}{Lemma 2}{34}% 
 \contentsline {subparagraph}{Proof}{34}% 
 \contentsline {subparagraph}{}{34}% 
 \contentsline {subparagraph}{}{34}% 
 \contentsline {subparagraph}{}{34}% 
 \contentsline {subparagraph}{}{34}% 
 \contentsline {subparagraph}{}{34}% 
-\contentsline {paragraph}{Lemma 3}{34}% 
+\contentsline {paragraph}{Lemma 3}{35}% 
 \contentsline {subparagraph}{Proof}{35}% 
 \contentsline {subparagraph}{}{35}% 
 \contentsline {subparagraph}{}{35}% 
