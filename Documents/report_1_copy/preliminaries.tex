@@ -8,43 +8,43 @@
 \paragraph{}The possible values of the $status_{uv}$ variable are $Up$ and $Down$. The channel transitions between the two values of its $status_{uv}$ variable through $ChannelUp_{uv}$ and $ChannelDown_{uv}$ events, called the “topology change” events. We assume that the $ChannelUp$ and $ChannelDown$ events for the channel alternate. The $ChannelUp$ and $ChannelDown$ events for the channel from $u$ to $v$ occur simultaneously at node $u$ and the channel, but do not occur at node $v$.
 \paragraph{}The variable $mqueue_{uv}$ holds messages in transit from $u$ to $v$. An attempt by node $u$ to send a message to node $v$ results in the message being appended to $mqueue_{uv}$ if the channel’s status is $Up$; otherwise there is no effect. When the channel is $Up$, the message at the head of $mqueue_{uv}$ can be delivered to node $v$; when a message is delivered, it is removed from $mqueue_{uv}$. Thus, messages are delivered in FIFO order.
 \paragraph{}When a $ChannelDown_{uv}$ event occurs, $mqueue_{uv}$ is emptied. Neither $u$ nor $v$ is alerted to which messages in transit have been lost. Thus, the messages delivered to node $v$ from node $u$ during a (maximal-length) interval when the channel is $Up$ form a prefix of the messages sent by node $u$ to node $v$ during that interval.
-\section{Configurations and Executions}
+	\section{Configurations and Executions}
 The notion of configuration is used to capture an instantaneous snapshot of the state of the entire system. A configuration is a vector of node states, one for each node in $\mathcal{P}$, and a vector of channel states, one for each channel in $\chi$ . In an initial configuration:
-\begin{list}{--}{spacing}
+\begin{list}{--}{}
 	\item each node is in an initial state (according to its algorithm),
 	\item for each channel $Channel(u, v)$, $mqueue_{uv}$ is empty, and
 	\item for all nodes $u$ and $v$, $status_{uv} = status_{vu}$ (i.e., either both channels between $u$ and $v$ are up, or both are down).
 \end{list}
 Define an execution as an infinite sequence $C_0, e_1 ,C_1, e_2 ,C_2,...$ of alternating configurations and events, starting with an initial configuration and, if finite, ending with a configuration such that the sequence satisfies the following conditions:
-\begin{list}{--}{spacing}
+\begin{list}{--}{}
 \item  $C_0$ is an initial configuration.
-\item The preconditions for event ei are true in $C_{i-1}$ for all $i\geq 1$.
-\item $C_i$ is the result of executing event $e_i$ on configuration $C_{i-1}$ , for all $i\geq 1$ (only the node and channel involved in an event change state, and they change according to their state machine transitions).
-\item If a channel remains Up for infinitely long, then every message sent over the channel during this Up interval is eventually delivered.
-\item For all nodes u and v, Channel(u, v) experiences infinitely many topology change events if and only if Channel(v, u) experiences infinitely many topology change events; if they both experience finitely many, then after the last one, $status_{uv} = status_{vu}$.
+\item The preconditions for event $e_i$ are true in $C_{i-1}$ for all $i\geq 1$.
+\item $C_i$ is the result of executing event $e_i$ on configuration $C_{i-1}$, for all $i\geq 1$ (only the node and channel involved in an event change state, and they change according to their state machine transitions).
+\item If a channel remains $Up$ for infinitely long, then every message sent over the channel during this $Up$ interval is eventually delivered.
+\item For all nodes $u$ and $v$, $Channel(u, v)$ experiences infinitely many topology change events if and only if $Channel(v, u)$ experiences infinitely many topology change events; if they both experience finitely many, then after the last one, $status_{uv} = status_{vu}$.
 \end{list}
-\paragraph{}Given a configuration of an execution, define an undirected graph $G_{chan}$ as follows: the vertices are the nodes, and there is an (undirected) edge between vertices $u$ and $v$ if and only if at least one of $Channel_{uv}$ and $Channel_{vu}$ is $Up$. Thus $G_{chan}$ indicates all pairs of nodes $u$ and $v$ such that either $u$ can send messages to $v$ or $v$ can send messages to $u$. If the execution has a finite number of topology change events, then $G_{chan}$ never changes after the last such event, and we denote the final version of final final $G_{chan}$ as $G_{chan}$ . By the last bullet point above, an edge in $G_{chan}$ indicates bidirectional communication ability between the two endpoints.
-\paragraph{}We also assign a positive real-valued global time $gt$ to each event $e_i$ , $i \geq 1$, such that $gt(ei) < gt(e_{i+1})$ and, if the execution is infinite, the global times increase without bound. Each configuration inherits the global time of its preceding event, so $gt(C_i) = gt(e_i)$ for $i \geq 1$; we define $gt(C_0)$ to be $0$. We assume that the nodes do not have access to $gt$.
-\paragraph{}Instead, each node u has a causal clock $\mathcal{T}_u$ , which provides it with a non-negative real number at each event in an execution. $\mathcal{T}_u$ is a function from global time (i.e., positive reals) to causal clock times; given an execution, for convenience we sometimes use the notation $\mathcal{T}_u(e_i)$ or $\mathcal{T}_u(C_i)$ as shorthand for $\mathcal{T}_u(gt(e_i))$ or $\mathcal{T}_u(gt(C_i))$. The key idea of causal clocks is that if one event potentially can cause another event, then the clock value assigned to the first event is less than the clock value assigned to the second event. We use the notion of happens-before to capture the concept of potential causality. Recall that an event $e_1$ is defined to happen before [16] another event $e_2$ if one of the following conditions is true:
+\paragraph{}Given a configuration of an execution, define an undirected graph $G_{chan}$ as follows: the vertices are the nodes, and there is an (undirected) edge between vertices $u$ and $v$ if and only if at least one of $Channel_{uv}$ and $Channel_{vu}$ is $Up$. Thus $G_{chan}$ indicates all pairs of nodes $u$ and $v$ such that either $u$ can send messages to $v$ or $v$ can send messages to $u$. If the execution has a finite number of topology change events, then $G_{chan}$ never changes after the last such event, and we denote the final version of $G_{chan}$ as $G_{chan} ^{final}$ . By the last bullet point above, an edge in $G_{chan}$ indicates bidirectional communication ability between the two endpoints.
+\paragraph{}We also assign a positive real-valued global time $gt$ to each event $e_i$ , $i \geq 1$, such that $gt(e_i) < gt(e_{i+1})$ and, if the execution is infinite, the global times increase without bound. Each configuration inherits the global time of its preceding event, so $gt(C_i) = gt(e_i)$ for $i \geq 1$; we define $gt(C_0)$ to be $0$. We assume that the nodes do not have access to $gt$.
+\paragraph{}Instead, each node $u$ has a causal clock $\mathcal{T}_u$ , which provides it with a non-negative real number at each event in an execution. $\mathcal{T}_u$ is a function from global time (i.e., positive reals) to causal clock times; given an execution, for convenience we sometimes use the notation $\mathcal{T}_u(e_i)$ or $\mathcal{T}_u(C_i)$ as shorthand for $\mathcal{T}_u(gt(e_i))$ or $\mathcal{T}_u(gt(C_i))$. The key idea of causal clocks is that if one event potentially can cause another event, then the clock value assigned to the first event is less than the clock value assigned to the second event. We use the notion of happens-before to capture the concept of potential causality. Recall that an event $e_1$ is defined to happen before [16] another event $e_2$ if one of the following conditions is true:
 \begin{enumerate}
 	\item Both events happen at the same node, and $e_1$ occurs before $e_2$ in the execution.
 	\item $e_1$ is the send event of some message from node $u$ to node $v$, and $e_2$ is the receive event of that message by node $v$.
 	\item There exists an event $e$ such that $e_1$ happens before $e$ and $e$ happens before $e_2$.
 \end{enumerate}
-The causal clocks at all the nodes, collectively denoted T , must satisfy the following properties:
-\begin{list}{--}{spacing}
+The causal clocks at all the nodes, collectively denoted $\mathcal{T}$, must satisfy the following properties:
+\begin{list}{--}{}
 	\item For each node $u$, the values of $\mathcal{T}_u$ are increasing, i.e., if $e_i$ and $e_j$ are events involving $u$ in the execution with $i < j$, then $\mathcal{T}_u(e_i) < \mathcal{T}_u(e_j)$. In particular, if there is an infinite number of events involving $u$, then $\mathcal{T}_u$ increases without bound.
 	\item $\mathcal{T}$ preserves the happens-before relation [16] on events; i.e., if event $e_i$ happens before event $e_j$, then $\mathcal{T}(e_i) < \mathcal{T}(e_j)$.
 \end{list}
 Our description and proof of the algorithm assume that nodes have access to causal clocks. One way to implement causal clocks is to use perfect clocks, which ensure that $\mathcal{T}_u(t) = t$ for each node $u$ and global time $t$. Since an event that causes another event must occur before it in real time, perfect clocks capture causality. Perfect clocks could be provided by, say a GPS service, and were assumed in the preliminary version of this paper [15]. Another way to implement causal clocks is to use Lamport’s logical clocks [16], which were specifically designed to capture causality.
 \newpage
 \section{Problem Definition}
-\paragraph{}Each node $u$ in the system has a local variable $lid_{u}$ to hold the identifier of the node currently considered by u to be the supreme leaders of the connected component containing u, and another local variable $slid_u$ to hold the identifier of the node currently considered by u to be the sub-leader in such a way that the distance to this sub-leader does not exceed a certain constant d (the remoteness constraint).
+\paragraph{}Each node $u$ in the system has a local variable $lid_{u}$ to hold the identifier of the node currently considered by $u$ to be the supreme leader of the connected component containing $u$, and another local variable $slid_u$ to hold the identifier of the node currently considered by $u$ to be the sub-leader in such a way that the distance to this sub-leader does not exceed a certain constant $d$ (the remoteness constraint).
 \paragraph{}The set of all the leaders including the supreme one forms a spanning tree as sub-graph of the DAG established.
 In every execution that includes a finite number of topology changes, we require that the following eventually holds:
 \begin{itemize}
 	\item Every connected component $CC$ of the final topology contains a node $l$, the supreme leader, such that $l$ is the only node which verifies $ lid_{l} = l $.
-	\item For each node u of each component $CC$, different from the supreme leader, a node v exists such as $slid_{u} = v$ and $d_{u,v} < D$ ($D$ is the maximum remoteness towards a leader and the $ d_{u,v} $ is the shortest distance between $u$ and $v$)
+	\item For each node $u$ of each component $CC$, different from the supreme leader, a node $v$ exists such as $slid_{u} = v$ and $d_{u,v} < D$ ($D$ is the maximum remoteness towards a leader and the $ d_{u,v} $ is the shortest distance between $u$ and $v$)
 \end{itemize}
 
 \paragraph{}In a more formal way, one can state the problem as follows:\\
@@ -52,9 +52,9 @@ In every execution that includes a finite number of topology changes, we require
 
 \begin{itemize}
 	\item For each node $u$ of every connected component $CC$ of the final topology:
-	$u$ selects $(slid_u, pre_u)$, ${(slid_u, pre_u) \in N_u \times N_u}$ such that ${(slid_u, pred_u)}_{u \in CC}$ is a spanning tree $T$ ($slid_u$ (resp. $pred_u$) is the sub-leader (resp. the predecessor to reach $lid_u$) considered as such by i.
+	$u$ selects ${(slid_u, pred_u) \in N_u \times N_u}$ such that ${(slid_u, pred_u)}_{u \in CC}$ is a spanning tree $T$ ($slid_u$ (resp. $pred_u$) is the sub-leader (resp. the predecessor to reach $slid_u$) considered as such by $u$.
 	\item For each node $u$, different from the root of $T$, of every connected component $CC$ of the final topology:\\
 	if $ (k-1)D < depth_T (i) <= kD, k \in IN $, then $ depth_T(lid_i)=(k-1)D$ ($depth_T(u)$ is the depth of u in T)
 \end{itemize}
 
-\paragraph{}Our algorithm also ensures that eventually each link in the system has a direction imposed on it by virtue of the data stored at each endpoint such that each connected component CC is a leader-oriented DAG containing a spanning tree, i.e., every node has a directed path to its local leader respecting, among the other leaders, a certain hierarchy containing one supreme leader.
+\paragraph{}Our algorithm also ensures that eventually each link in the system has a direction imposed on it by virtue of the data stored at each endpoint such that each connected component $CC$ is a leader-oriented DAG containing a spanning tree, i.e., every node has a directed path to its local leader respecting, among the other leaders, a certain hierarchy containing one supreme leader.
