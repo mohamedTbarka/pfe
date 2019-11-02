@@ -106,7 +106,7 @@
 \contentsline {paragraph}{}{32}% 
 \contentsline {paragraph}{}{32}% 
 \contentsline {paragraph}{Porperty C:}{32}% 
-\contentsline {subparagraph}{Poof}{32}% 
+\contentsline {subparagraph}{Proof}{32}% 
 \contentsline {subparagraph}{}{32}% 
 \contentsline {paragraph}{Property D:}{32}% 
 \contentsline {subparagraph}{Proof:}{32}% 
