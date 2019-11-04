@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  3 NOV 2019 22:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.15)  4 NOV 2019 20:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -867,43 +867,39 @@ Package pdftex.def Info: fig_3.png  used on input line 55.
 <fig_4.png, id=252, 688.07062pt x 190.46156pt>
 File: fig_4.png Graphic file (type png)
 <use fig_4.png>
-Package pdftex.def Info: fig_4.png  used on input line 97.
-(pdftex.def)             Requested size: 303.53267pt x 84.01839pt.
+Package pdftex.def Info: fig_4.png  used on input line 124.
+(pdftex.def)             Requested size: 433.62pt x 120.02917pt.
 
-[61 <./fig_4.png (PNG copy)>]
-<fig_5.png, id=256, 455.45157pt x 179.92218pt>
+[61 <./fig_4.png (PNG copy)>] [62]
+<fig_5.png, id=259, 455.45157pt x 179.92218pt>
 File: fig_5.png Graphic file (type png)
 <use fig_5.png>
-Package pdftex.def Info: fig_5.png  used on input line 137.
+Package pdftex.def Info: fig_5.png  used on input line 164.
 (pdftex.def)             Requested size: 303.53267pt x 119.9103pt.
- [62 <./fig_5.png (PNG copy)>]
-<fig_6.png, id=260, 464.4853pt x 412.54124pt>
+ [63 <./fig_5.png (PNG copy)>]
+<fig_6.png, id=264, 464.4853pt x 412.54124pt>
 File: fig_6.png Graphic file (type png)
 <use fig_6.png>
-Package pdftex.def Info: fig_6.png  used on input line 148.
+Package pdftex.def Info: fig_6.png  used on input line 175.
 (pdftex.def)             Requested size: 303.53267pt x 269.59645pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[63] [64 <./fig_6.png (PNG copy)>] [65] [66] [67]
-<fig_7.png, id=277, 648.17157pt x 284.56313pt>
+ [64 <./fig_6.png (PNG copy)>] [65] [66] [67] [68]
+<fig_7.png, id=280, 648.17157pt x 284.56313pt>
 File: fig_7.png Graphic file (type png)
 <use fig_7.png>
-Package pdftex.def Info: fig_7.png  used on input line 222.
+Package pdftex.def Info: fig_7.png  used on input line 249.
 (pdftex.def)             Requested size: 303.53267pt x 133.25836pt.
- [68 <./fig_7.png (PNG copy)>]
-<performance_test.png, id=281, 1157.32375pt x 475.7775pt>
+ [69 <./fig_7.png (PNG copy)>]
+<performance_test.png, id=285, 1157.32375pt x 475.7775pt>
 File: performance_test.png Graphic file (type png)
 <use performance_test.png>
-Package pdftex.def Info: performance_test.png  used on input line 276.
+Package pdftex.def Info: performance_test.png  used on input line 303.
 (pdftex.def)             Requested size: 462.9213pt x 190.30762pt.
 
-Overfull \hbox (29.3013pt too wide) in paragraph at lines 276--277
+Overfull \hbox (29.3013pt too wide) in paragraph at lines 303--304
  [][] 
  []
 
-) [69] [70 <./performance_test.png>]
+) [70 <./performance_test.png>]
 \openout2 = `conclusions.aux'.
 
  (./conclusions.tex
@@ -919,10 +915,10 @@ Chapter 6.
 (./preliminaries.aux) (./algorithm.aux) (./correctness.aux)
 (./implementation.aux) (./conclusions.aux)) ) 
 Here is how much of TeX's memory you used:
- 7734 strings out of 492615
- 105919 string characters out of 6131390
+ 7747 strings out of 492615
+ 106093 string characters out of 6131390
  398781 words of memory out of 5000000
- 11407 multiletter control sequences out of 15000+600000
+ 11420 multiletter control sequences out of 15000+600000
  20313 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,14n,72p,2601b,1650s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -945,7 +941,7 @@ lic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm120
 xmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440
 .pfb>
-Output written on ociamthesismain.pdf (86 pages, 1803598 bytes).
+Output written on ociamthesismain.pdf (86 pages, 1804099 bytes).
 PDF statistics:
  374 PDF objects out of 1000 (max. 8388607)
  252 compressed objects within 3 object streams
