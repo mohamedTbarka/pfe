@@ -228,35 +228,35 @@
 \contentsline {subparagraph}{}{55}% 
 \contentsline {subparagraph}{Sources of documentation}{55}% 
 \contentsline {subparagraph}{}{55}% 
-\contentsline {paragraph}{Features and Architecture}{55}% 
+\contentsline {paragraph}{Features and Architecture}{56}% 
 \contentsline {subparagraph}{Basic features of nodes and links}{56}% 
 \contentsline {subparagraph}{}{56}% 
 \contentsline {subparagraph}{}{56}% 
 \contentsline {subparagraph}{}{57}% 
-\contentsline {subparagraph}{Distributed vs. centralized algorithms}{57}% 
-\contentsline {subparagraph}{}{57}% 
-\contentsline {subparagraph}{Distributed algorithm}{57}% 
+\contentsline {subparagraph}{Distributed vs. centralized algorithms}{58}% 
+\contentsline {subparagraph}{}{58}% 
+\contentsline {subparagraph}{Distributed algorithm}{58}% 
 \contentsline {subparagraph}{Centralized algorithms}{59}% 
-\contentsline {subparagraph}{Architecture of the event system}{59}% 
+\contentsline {subparagraph}{Architecture of the event system}{60}% 
 \contentsline {subparagraph}{Single threading: why and how?}{60}% 
-\contentsline {subparagraph}{}{61}% 
 \contentsline {subparagraph}{}{62}% 
-\contentsline {subparagraph}{Interactivity}{62}% 
 \contentsline {subparagraph}{}{62}% 
+\contentsline {subparagraph}{Interactivity}{63}% 
+\contentsline {subparagraph}{}{63}% 
 \contentsline {subparagraph}{}{63}% 
 \contentsline {subparagraph}{}{63}% 
 \contentsline {paragraph}{A zoom on selected features}{63}% 
 \contentsline {subparagraph}{Exchanging messages}{63}% 
 \contentsline {subparagraph}{}{64}% 
-\contentsline {subparagraph}{Working at the graph level}{64}% 
+\contentsline {subparagraph}{Working at the graph level}{65}% 
 \contentsline {subparagraph}{}{65}% 
 \contentsline {subparagraph}{}{65}% 
 \contentsline {subparagraph}{Embedding JBOTSIM in a java applet}{66}% 
 \contentsline {subparagraph}{}{66}% 
-\contentsline {paragraph}{Concluding remarks}{66}% 
+\contentsline {paragraph}{Concluding remarks}{67}% 
 \contentsline {paragraph}{}{67}% 
 \contentsline {paragraph}{}{67}% 
-\contentsline {paragraph}{}{67}% 
+\contentsline {paragraph}{}{68}% 
 \contentsline {section}{\numberline {5.2}Performance Analysis}{68}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{70}% 
-\contentsline {paragraph}{Acknowledgments}{70}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{71}% 
+\contentsline {paragraph}{Acknowledgments}{71}% 
