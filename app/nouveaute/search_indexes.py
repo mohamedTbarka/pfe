@@ -5,7 +5,7 @@ from nouveaute.models import Event, Compagne, Promotion
 
 
 class EventIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True)
+    text = indexes.NgramField(document=True, use_template=True)
     name = indexes.EdgeNgramField(model_attr='title')
     content = indexes.EdgeNgramField(model_attr='content')
 
@@ -14,7 +14,7 @@ class EventIndex(indexes.SearchIndex, indexes.Indexable):
 
 
 class CompagneIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True)
+    text = indexes.NgramField(document=True, use_template=True)
     name = indexes.EdgeNgramField(model_attr='title')
     content = indexes.EdgeNgramField(model_attr='content')
 
@@ -23,7 +23,7 @@ class CompagneIndex(indexes.SearchIndex, indexes.Indexable):
 
 
 class PromotionIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.CharField(document=True, use_template=True)
+    text = indexes.NgramField(document=True, use_template=True)
     name = indexes.EdgeNgramField(model_attr='title')
     content = indexes.EdgeNgramField(model_attr='content')
 
