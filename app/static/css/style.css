@@ -348,7 +348,7 @@ html {
 .afterr::after{
     content: '|';
     position: absolute;
-    right: -5%;
+    right: -10%;
 }
 
 .txt_img{
@@ -1292,8 +1292,9 @@ ul.slick-dots {
 
 
 @media (max-width: 1280px) and (min-width: 1199px){ 
+    /* .container { max-width: 100%!important;} */
 .nv3 {
-    min-width: 575px!important;
+    min-width: 522px!important;
 }
 .nv2 {
     max-width: 250px!important;
@@ -1303,4 +1304,9 @@ ul.slick-dots {
     min-height: 353px!important;
     max-height: 353px!important;
 }
+
 }
+@media (min-width: 1200px) and (max-width: 1280px){ 
+.container.pad_rm {
+    max-width: 980px!important;
+}}
