@@ -1310,3 +1310,17 @@ ul.slick-dots {
 .container.pad_rm {
     max-width: 980px!important;
 }}
+
+
+@media (max-width: 1199px) and (min-width: 1025px){ 
+
+    .afterr::after {right: -4%;}
+}
+@media (max-width: 1280px) and (min-width: 1200px){ 
+
+    .afterr::after {right: -15%;}
+}
+@media (max-width: 1024px) and (min-width: 992px){ 
+
+    .afterr::after {right: -33%!important;}
+}
