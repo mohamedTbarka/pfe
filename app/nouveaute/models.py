@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.text import slugify
 
 from app import settings
 
@@ -28,6 +29,15 @@ class Promotion(BaseModel):
     content = models.TextField()
     date = models.DateTimeField()
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
+    slug = models.CharField(max_length=100, unique=True, )
+
+    def clean(self):
+        'here we go'
+        if self.slug:
+            self.slug = slugify(self.slug)
+        else:
+            self.slug = slugify(self.title)
+        super(Promotion, self).clean()
 
     def __str__(self):
         return self.title
@@ -48,6 +58,7 @@ class Event(BaseModel):
     end_date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/event/img")
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
+    slug = models.CharField(max_length=100, unique=True)
 
     def get_image_url(self):
         if self.image:
@@ -69,6 +80,14 @@ class Event(BaseModel):
     def get_absolute_url(self):
         return reverse('event_detail', kwargs={'pk': self.pk, })
 
+    def clean(self):
+        'here we go'
+        if self.slug:
+            self.slug = slugify(self.slug)
+        else:
+            self.slug = slugify(self.title)
+        super(Event, self).clean()
+
 
 class Compagne(BaseModel):
     title = models.CharField(max_length=100, )
@@ -76,6 +95,15 @@ class Compagne(BaseModel):
     date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/compagne/img")
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
+    slug = models.CharField(max_length=100, unique=True)
+
+    def clean(self):
+        'here we go'
+        if self.slug:
+            self.slug = slugify(self.slug)
+        else:
+            self.slug = slugify(self.title)
+        super(Compagne, self).clean()
 
     def __str__(self):
         return self.title

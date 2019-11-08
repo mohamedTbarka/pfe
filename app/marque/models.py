@@ -1,6 +1,7 @@
 from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
+from django.utils.text import slugify
 
 from app import settings
 from nouveaute.models import Gallery
@@ -93,6 +94,7 @@ class Marque(BaseModel):
     week_open_hours = models.TextField(default="", blank=True, )
     content = models.TextField(default="", blank=True, )
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
+    slug = models.CharField(max_length=100, null=True,)
 
     def __str__(self):
         return self.name
@@ -109,3 +111,11 @@ class Marque(BaseModel):
 
     def get_absolute_url(self):
         return reverse('marque_detail', kwargs={'pk': self.pk, })
+
+    def clean(self):
+        'here we go'
+        if self.slug:
+            self.slug = slugify(self.slug)
+        else:
+            self.slug = slugify(self.name)
+        super(Marque, self).clean()

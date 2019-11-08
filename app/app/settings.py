@@ -138,13 +138,20 @@ STATICFILES_DIRS = (
 # }
 
 HAYSTACK_CONNECTIONS = {
-   'default': {
-       'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-       'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
-       #'EXCLUDED_INDEXES': ['content.search_indexes.ArticleIndex'],
-   },
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+        # 'EXCLUDED_INDEXES': ['content.search_indexes.ArticleIndex'],
+    },
+    'autocomplete': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
+        'STORAGE': 'file',
+        'POST_LIMIT': 128 * 1024 * 1024,
+        'INCLUDE_SPELLING': True,
+        'BATCH_SIZE': 100,
+    },
 }
-
 
 try:
     from app.local_settings import *
