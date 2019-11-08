@@ -29,7 +29,7 @@ class Promotion(BaseModel):
     content = models.TextField()
     date = models.DateTimeField()
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
-    slug = models.CharField(max_length=100, null=True,)
+    slug = models.CharField(max_length=100, unique=True, )
 
     def clean(self):
         'here we go'
@@ -58,7 +58,7 @@ class Event(BaseModel):
     end_date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/event/img")
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
-    slug = models.CharField(max_length=100, null=True,)
+    slug = models.CharField(max_length=100, unique=True)
 
     def get_image_url(self):
         if self.image:
@@ -88,13 +88,14 @@ class Event(BaseModel):
             self.slug = slugify(self.title)
         super(Event, self).clean()
 
+
 class Compagne(BaseModel):
     title = models.CharField(max_length=100, )
     content = models.TextField()
     date = models.DateTimeField()
     image = models.ImageField(upload_to="./uploads/compagne/img")
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
-    slug = models.CharField(max_length=100, null=True,)
+    slug = models.CharField(max_length=100, unique=True)
 
     def clean(self):
         'here we go'
