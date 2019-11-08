@@ -65,3 +65,5 @@ class MarqueListView(generic.ListView):
 class MarqueDetailView(generic.DetailView):
     model = Marque
     template_name = "marque_details.html"
+    slug_url_kwarg = 'slug'
+    slug_field = 'slug'

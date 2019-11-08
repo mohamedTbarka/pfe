@@ -94,7 +94,7 @@ class Marque(BaseModel):
     week_open_hours = models.TextField(default="", blank=True, )
     content = models.TextField(default="", blank=True, )
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, null=True, blank=True)
-    slug = models.CharField(max_length=100, null=True,)
+    slug = models.CharField(max_length=100, unique=True,)
 
     def __str__(self):
         return self.name
@@ -110,7 +110,7 @@ class Marque(BaseModel):
         return ""
 
     def get_absolute_url(self):
-        return reverse('marque_detail', kwargs={'pk': self.pk, })
+        return reverse('marque_detail', kwargs={'slug': self.slug, })
 
     def clean(self):
         'here we go'
