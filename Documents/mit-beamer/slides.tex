@@ -44,11 +44,25 @@
 
 % -----------------------------------------------------------------------------
 \section{Introduction}
-\subsection{Definition Of A Distributed System}
-\begin{frame}{What's a Distributed System ?}
-	A distributed system is a network that consists of autonomous computers that are connected using a distribution middleware. They help in sharing different resources and capabilities to provide users with a single and integrated coherent network.
+\subsection{Leader Election Problem}
+\begin{frame}{What is the problem of leader election ?}
+Leader election is an important primitive for distributed computing, useful as a sub-routine for any application that requires the selection of a unique processor among multiple candidate processors (video conferencing, multi-player games, ...).
 \end{frame}
-\subsection{Election Algorithms}
+
+\begin{frame}{What is distributed computing ?}
+Distributed computing is a model in which components of a software system are shared among multiple computers to improve efficiency and performance.
+\end{frame}
+
+\subsection{State of art}
+\begin{frame}{State of art}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{../state_of_art}
+		\caption{}
+		\label{fig:stateofart}
+	\end{figure}
+\end{frame}
+\iffalse
 \begin{frame}{The Bully Algorithm}
   As a first example, consider the bully algorithm devised by Garcia-Molina (1982). When any process notices that the coordinator is no longer responding to requests, it initiates an election. A process, P, holds an election as follows:
   \pause
@@ -66,9 +80,8 @@
 		\caption{Bully Algorithm}
 		\label{fig:bullyalgorithm}
 	\end{figure}
-	
 \end{frame}
-
+\fi
 % -----------------------------------------------------------------------------
 \section{Preliminaries}
 \subsection{System Model}
@@ -76,15 +89,22 @@
 \begin{frame}{System Model}
 
 \begin{itemize}
-	\item We assume a system consisting of a set $P$ of computing nodes and a set $\chi$ of directed communication channels from one node to another node. $\chi$ consists of one channel.
-	\item We model the whole system as a set of (infinite) state machines that interact through shared events (a specialization of the IOA model).
+	\item The system is consisting of a set $P$ of computing nodes and a set $\chi$ of directed communication channels from one node to another node.
+	\item The whole system as a set of (infinite) state machines that interact through shared events.
 
 \end{itemize}
 
 \end{frame}
 
+\begin{frame}{System Model}
 
-\subsection{Modeling Asynchronous Dynamic Links}
+\begin{itemize}
+	\item The system is consisting of a set $P$ of computing nodes and a set $\chi$ of directed communication channels from one node to another node.
+	\item The whole system as a set of (infinite) state machines that interact through shared events.
+	
+\end{itemize}
+
+\end{frame}
 \begin{frame}{Asynchronous Dynamic Links' Model}
 
 	The state of Channel(u, v), which models the communication channel from node u to node v, consists of:
