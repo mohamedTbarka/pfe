@@ -107,7 +107,7 @@ Distributed computing is a model in which components of a software system are sh
 \end{frame}
 \begin{frame}{Asynchronous Dynamic Links' Model}
 
-	The state of Channel(u, v), which models the communication channel from node u to node v, consists of:
+	The state of $Channel(u, v)$, which models the communication channel from node u to node v, consists of:
 	\begin{itemize}
 		\item a $status_{uv}$ variable;
 		\item and a queue $mqueue_{uv}$ of messages.
@@ -116,7 +116,6 @@ Distributed computing is a model in which components of a software system are sh
 
 \end{frame}
 
-\subsection{Configurations and Executions}
 \begin{frame}{Configurations \& Executions}
 
 \begin{itemize}
@@ -126,50 +125,50 @@ Distributed computing is a model in which components of a software system are sh
 
 \end{frame}
 
+\begin{frame}{Configurations \& Executions}
+In an initial configuration:
+\begin{itemize}
+	\item each node is in an initial state (according to its algorithm), \item for each channel $Channel(u, v)$, $mqueue_{uv}$ is empty, and \item for all nodes $u$ and $v$, $status_{uv} = status_{vu}$ (i.e., either both channels between $u$ and $v$ are up, or both are down).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Configurations \& Executions}
+	An execution is an infinite sequence $C_0, e_1 ,C_1, e_2, C_2 , ...$ of alternating configurations and events, starting with an initial configuration and, if finite, ending with a configuration.
+\end{frame}
+
 
 \subsection{Problem Definition}
-
 \begin{frame}{Problem Definition}
 Each node $u$ in the system has :
 \begin{itemize}
-	\item a local variable $lid_{u}$ to hold the id of the supreme leader;
-	\item  another local variable $slid_u$ to hold the identifier of the sub-leader whose remoteness towards $u$ obeys the constraint.
+	\item a local variable $lid_{u}$ to hold the $id$ of the supreme leader;
+	\item another local variable $slid_u$ to hold the identifier of the sub-leader whose remoteness towards $u$ obeys the constraint.
 \end{itemize}
-
 \end{frame}
 
 % -----------------------------------------------------------------------------
 \section{H. Leader Election Algorithm}
 \subsection{Informal Description}
-\begin{frame}{Heights}
+\begin{frame}{Informal description}
 After a leader is gone, the algorithm consists on three waves:
 \begin{itemize}
-	\item First wave : initiated by one of the lost leader's neighbors looking for it;  
+	\item First wave : initiated by one of the lost leader's neighbors looking for it;
 	\item Second wave : initiated by the node located at the edge of the network if the search has hit a dead-end;
-	\item Third wave : initiated by the same node which initiated the first wave updating the other nodes' heights.
+	\item Third wave : initiated by the same node which initiated the first wave updating the other nodes' heights and constructing the spanning tree.
 \end{itemize}
 
 \end{frame}
 
 \subsection{Nodes, Neighbors and Heights}
+
 \begin{frame}{Nodes, Neighbors and Heights}
-
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth components are referred to as the leader pair (LP). In more detail, the components are defined as follows:
-\pause
 \begin{itemize}
-	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
-	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	
+	\item When a node $u$ gets a $ChannelUp$ event for the channel from $u$ to $v$, it puts $v$ in a local set variable called $forming_u$.
+	\item When $u$ subsequently receives a message from $v$, it moves $v$ from its $forming_u$ set to a local set variable called $N_u$ ($N$ for neighbor).
+	\item If $u$ gets a message from a node which is neither in its forming set, nor in $N_u$, it ignores that message.
+	\item And when u gets a $ChannelDown$ event for the channel from $u$ to $v$, it removes $v$ from $forming_u$ or $N_u$ , as appropriate. 
 \end{itemize}
-
-\end{frame}
-
-\begin{frame}
-\begin{itemize}
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$ an integer that is set to ensure that links are directed appropriately to neighbors with the same first three components.
-\end{itemize}
-	
+   And when u gets a ChannelDown event for the channel from u to v, it
 \end{frame}
 
 \subsection{Initial State}
