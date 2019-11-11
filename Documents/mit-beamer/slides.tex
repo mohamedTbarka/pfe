@@ -168,9 +168,30 @@ After a leader is gone, the algorithm consists on three waves:
 	\item If $u$ gets a message from a node which is neither in its forming set, nor in $N_u$, it ignores that message.
 	\item And when u gets a $ChannelDown$ event for the channel from $u$ to $v$, it removes $v$ from $forming_u$ or $N_u$ , as appropriate. 
 \end{itemize}
-   And when u gets a ChannelDown event for the channel from u to v, it
 \end{frame}
 
+\begin{frame}{Nodes, Neighbors and Heights}
+	\begin{itemize}
+		\item Nodes assign virtual directions to their links using variables called heights.
+		\item For each link $(u, v)$ of node $u$, $u$ considers the link as incoming if the height that $u$ has recorded for $v$ is larger than $u’s$ own height; otherwise u considers the link as outgoing (directed from u to v).
+		\item Heights are compared using lexicographic ordering.
+	\end{itemize}
+\end{frame}
+\begin{frame}{Nodes, Neighbors and Heights}
+		The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta , (nlts, lid), id)$ where :
+		\begin{itemize}
+			\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
+			\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
+			\item $r$, a bit that is set to $0$ when the current search is initiated and set to $1$ when the current search hits a dead end.
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Nodes, Neighbors and Heights}
+		\item $\delta$, an integer that is set to ensure that links are directed appropriately to neighbors with the same first three components.
+	\item $nlts$, a non-positive timestamp whose absolute value is the causal clock time when the current leader was elected.
+	\item $lid$, the $id$ of the current leader.
+	\item $id$, the node’s unique ID.
+\end{frame}
 \subsection{Initial State}
 \begin{frame}{Initial State}
 \begin{list}{--}
