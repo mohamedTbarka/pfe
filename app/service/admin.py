@@ -73,6 +73,7 @@ class SliderAdmin(admin.ModelAdmin):
         'updated',
     )
     form = SliderForm
+    list_editable = ('order',)
 
 
 class DiscoverAdmin(admin.ModelAdmin):
