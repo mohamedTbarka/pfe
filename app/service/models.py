@@ -275,8 +275,8 @@ class Preference(models.Model):
         return u"%s" % self.title
 
 
-# def get_slider_default_order():
-#     return Slider.objects.count() + 1
+def get_slider_default_order():
+    return Slider.objects.count() + 1
 
 
 class Slider(BaseModel):
@@ -286,10 +286,10 @@ class Slider(BaseModel):
     url = models.CharField(max_length=100, null=True, blank=True)
     url_text = models.CharField(max_length=100, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
-    # order = models.PositiveSmallIntegerField(default=get_slider_default_order)
+    order = models.PositiveSmallIntegerField(default=get_slider_default_order)
 
-    # def __str__(self):
-    #     return self.title
+    def __str__(self):
+        return "%s" % (self.title if self.title else self.pk)
 
     def get_image_url(self):
         if self.image:
