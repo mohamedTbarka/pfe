@@ -5,7 +5,7 @@ from service.models import Service
 
 
 class ServiceIndex(indexes.SearchIndex, indexes.Indexable):
-    text = indexes.NgramField(document=True, use_template=True)
+    text = indexes.EdgeNgramField(document=True, use_template=True)
     name = indexes.EdgeNgramField(model_attr='title')
     content = indexes.EdgeNgramField(model_attr='content')
 
