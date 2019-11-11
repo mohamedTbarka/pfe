@@ -65,6 +65,7 @@ class SliderAdmin(admin.ModelAdmin):
         'title',
         'url',
         'url_text',
+        'order',
         'created',
         'updated',
     )
