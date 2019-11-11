@@ -13,7 +13,7 @@
             {% endfor %}
           </ol>
           <div id="carousel-inner" class="carousel-inner">
-                {% for  slide in  slides%}
+                {% for  slide in  slides|dictsort:"order"%}
             <div class="carousel-item {% if not forloop.counter0 %}active{%endif%}">
               <img src="{{slide.get_image_url}}" class="w-100" alt="...">
                  {% if slide.title or slide.description or  slide.url or slide.url_text %}
