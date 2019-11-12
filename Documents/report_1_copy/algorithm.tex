@@ -2,7 +2,7 @@
 \paragraph{}In this section, we present our hierarchical leader election algorithm. The pseudo-code for the algorithm is presented in Figures 1, 2 and 3. First, we provide an informal description of the algorithm, then, we present the details of the algorithm and the pseudo-code, and finally, we provide an example execution. In the rest of this section, variable $var$ of node $u$ will be indicated as $var_u$ . For brevity, in the pseudo-code for node $u$, variable $var_u$ is denoted by just $var$.
 \section{Informal Description}
 \paragraph{}Each node in the system has a 7-tuple of integers called a height and another 2-tuple of integers called sub-leader pair. The directions of the edges in the graph are determined by comparing the heights of neighboring nodes: an edge is directed from a node with a larger height to a node with a smaller height. The spanning tree is defined using the sub-leader pairs: each sub-leader defines a certain level of hierarchy of the concerned spanning tree and each predecessor defines how to move on through the spanning tree. Due to topology changes, nodes may lose some of their incident links, or get new ones throughout the execution. Whenever a node loses its last outgoing link because of a topology change, it has no path to the current leader, so it reverses all of its incident edges. Reversing all incident edges acts as the start of a search mechanism (called a reference level) for the current leader. Each node that receives the newly started reference level reverses the edges to some of its neighbors and in effect propagates the search throughout the connected component. Once a node becomes a sink and all of its neighbors are already participating in the same search, it means that the search has hit a dead end and the current leader is not present in this part of the connected component. Such dead-end information is then propagated back towards the originator of the search. When a node which started a search receives such dead- end messages from all of its neighbors, it concludes that the current leader is not present in the connected component, and so the originator of the search elects itself as the new leader. Finally, this new leader information propagates throughout the network via an extra “wave” of propagation of messages.
-\paragraph{}In our algorithm, two of the components of a node’s height are timestamps record- ing the time when a new “search” for the leader is started, and the time when a leader is elected. In the algorithm in [15], these timestamps are obtained from a global clock accessible to all nodes in the system. In this paper, we use the notion of causal clocks (defined in Section 2.3) instead.
+\paragraph{}In our algorithm, two of the components of a node’s height are timestamps record- ing the time when a new “search” for the leader is started, and the time when a leader is elected. In the algorithm in [15], these timestamps are obtained from a global clock accessible to all nodes in the system. In this document, we use the notion of causal clocks (defined in Section 2.3) instead.
 \paragraph{}One difficulty that arises in solving leader election in dynamic networks is dealing with the partitioning and merging of connected components. For example, when a connected component is partitioned from the current leader due to links going down, the above algorithm ensures that a new leader is elected using the mechanism of waves searching for the leader and converge-casting back to the originator. On the other hand, it is also possible that two connected components merge together resulting in two leaders in the new connected component. When the different heights of the two leaders are being propagated in the new connected component, eventually, some node needs to compare both and decide which one to adopt and continue propagating. Recall that when a new leader is elected, a component of the height of the leader records the time of the election which can be used to determine the more recent of two elections. Therefore, when a node receives a height with a different leader information from its own, it adopts the one corresponding to the more recent election.
 \paragraph{}Similarly, if two reference levels are being propagated in the same connected component, whenever a node receives a height with a reference level different from its current one, it adopts the reference level with the more recent timestamp and continues propagating it. Therefore, even though conflicting information may be propagating in the same connected component, eventually the algorithm ensures that as long as topology changes stop, each connected component has a unique leader.
 \paragraph{}
@@ -63,8 +63,12 @@ A consequence of each connected component being leader-oriented is that the lead
 		\ElsIf {$SINK$}
 		\State $STARTNEWREFLEVEL$
 		\State send Update($height[u]$) to all $w \in (N \cup forming))$
-		\ElsIf {$j = pred_i$}
-		\State $pred_i = \min \left\lbrace  k~|~k \in N_i~and~\delta _k = \delta _j \right\rbrace  $
+		\ElsIf {$id^v = pred^u$ \textbf{and} $id^v = slid^u$}
+		\State $pred^u = \min \left\lbrace  k~|~k \in N^u~and~\delta ^k = \delta ^u \right\rbrace  $
+		\State $slid^u =  \min \left\lbrace  k~|~k \in N^u~and~\delta ^k = \delta ^u \right\rbrace$
+		\ElsIf {$id^v = pred^u$ \textbf{and} $id^v \neq slid^u$}
+		\State $pred^u = \min \left\lbrace  k~|~k \in N_u~and~\delta ^k = \delta ^u \right\rbrace  $
+		\State $slid^u = slid^{~\min \left\lbrace  k~|~k~\in~ N_u~and~\delta ^k~=~\delta ^u \right\rbrace}$
 		\EndIf
 		
 		%\EndProcedure
@@ -93,10 +97,10 @@ A consequence of each connected component being leader-oriented is that the lead
 \end{enumerate}
 \paragraph{}Finally, whenever a node changes its height, it sends a message with its new height to all of its neighbors. Additionally, whenever a node $u$ receives a message from a node $v$ indicating that $v$ has different leader information from u, then either if $u$ adopts $v$’s $LP$ or not, $u$ sends an update message to $v$ with its new (possibly same as old) height. This step is required due to the weak level of coordination in neighbor discovery.
 \section{Sample execution}
-Next, we provide an example which illustrates a particular algorithm execution. Figure 4, parts (a)-(h), show the main stages of the execution. In the picture for each stage, a message in transit over a channel is indicated by a light grey arrow. The recipient of the message has not yet taken a step and so, in its view, the link is not yet reversed.
+Next, we provide an example which illustrates a particular algorithm execution. Figure 4, parts (a)-(h), show the main stages of the execution. In the picture for each stage, a message in transit over a channel is indicated by a light gray arrow. The recipient of the message has not yet taken a step and so, in its view, the link is not yet reversed.
 \begin{enumerate}[label=\alph*)]
 	\item A quiescent network is a leader-oriented DAG in which node H is the current leader. The height of each node is displayed in parenthesis. Link direction in this figure is shown using solid-headed arrows and messages in transit are indicated by light grey arrows.
-	\item The link between nodes $G$ and $H$ goes down triggering action $ChannelDown$ at node $G$ (and node $H$). When non-leader node G loses its last outgoing link due to the loss of the link to node H, G executes subroutine $STARTNEWTREFLEVEL$ (because it is a sink and it has other neighbors besides H), and sets the $RL$ and $\delta$ parts of its height to $(1,G,0)$ and $\delta = 0$. Then node $G$ sends messages with its new height to all its neighbors. By raising its height in this way, $G$ has started a search for leader H.
+	\item The link between nodes $G$ and $H$ goes down triggering action $ChannelDown$ at node $G$ (and node $H$). When non-leader node G loses its last outgoing link due to the loss of the link to node H, G executes subroutine $STARTNEWTREFLE$-$VEL$ (because it is a sink and it has other neighbors besides H), and sets the $RL$ and $\delta$ parts of its height to $(1,G,0)$ and $\delta = 0$. Then node $G$ sends messages with its new height to all its neighbors. By raising its height in this way, $G$ has started a search for leader H.
 	\item Nodes D, E, and F receive the messages sent from node G, messages that cause each of these nodes to become sinks because G’s new RL causes its incident edges to be directed away from G. Next, nodes $D$, E, and F compare their neighbors’ RL’s and propagate G’s RL (since nodes B and C have lower heights than node G) by executing $PROPAGATELARGESTREFLEVEL$. Thus, they take on $RL (1,G,0)$ and set their $\delta$ values to $-1$, ensuring that their heights are lower than G’s but higher than the other neighbors’. Then $D$, $E$ and $F$ send messages to their neighbors.
 	\item Node $B$ has received messages from both $E$ and $D$ with the new $RL (1,G,0)$, and $C$ has received a message from $F$ with $RL (1,G,0)$; as a result, $B$ and $C$ execute subroutine $PROPAGATELARGESTREFLEVEL$, which causes them to take on $RL (1,G,0)$ with $\delta$ set to $-2$ (they propagate the RL because it is more recent than all of their neighbors’ $RL$’s), and send messages to their neighbors.
 	\item Node $A$ has received message from both nodes $B$ and $C$. In this situation, node $A$ is connected only to nodes that are participating in the search started by node $G$ for leader $H$. In other words, all neighbors of node $A$ have the same $RL$ with $\delta > 0$ and $r = 0$, which indicates that $A$ has detected a dead end for this search. In this case, node $A$ executes subroutine $REFLECTREFLEVEL$, i.e., it “reflects” the search by setting the reflection bit in the $(1,G,*)$ reference level to 1, resetting its $\delta$ to 0, and sending its new height to its neighbors.
@@ -127,7 +131,7 @@ Next, we provide an example which illustrates a particular algorithm execution. 
 		\ElsIf {$(\tau > 0)~and~(r = 1)~and~(oid = u)$}
 		\State $ELECTSELF$
 		
-		\Else \Comment $(\tau = 0)~or~(\tau > 0~and~r = 1~and~oid \neq u)$
+		\Else \Comment $(\tau = 0)~or~(\tau > 0~\textbf{and}~r = 1~and~oid \neq u)$
 		\State $STARTNEWREFLEVEL$
 		\EndIf
 	\Else \Comment neighbors have different ref levels
@@ -151,7 +155,7 @@ Next, we provide an example which illustrates a particular algorithm execution. 
 
 \begin{algorithm}
 	\caption{$ELECTSELF$}
-	\begin{algorithmic}
+	\begin{algorithmic}[1]
 		\State $height[u] := (0,0,0,0,-\mathcal{T}_u ,u,u)$
 		\State $SLP_u := (-1, -1)$
 	\end{algorithmic}
@@ -159,38 +163,38 @@ Next, we provide an example which illustrates a particular algorithm execution. 
 
 \begin{algorithm}
 	\caption{$REFLECTREFLEVEL$}
-	\begin{algorithmic}
-		\State $height := (\tau, oid, 1, 0, nlts_u ,lid_u ,u)$
+	\begin{algorithmic}[1]
+		\State $height[u] := (\tau, oid, 1, 0, nlts^u ,lid^u ,u)$
 		\State $SLP_u := (-1, -1)$
 	\end{algorithmic}
 \end{algorithm}
 \begin{algorithm}[h!]
 	\caption{$PROPAGATELARGESTREFLEVEL$}
-	\begin{algorithmic}
-		\State $ (\tau , oid^{i}, r^{i}) := max\left\lbrace (\tau ^{k},oid^{k},r^{k})~\vert~k\in N\right\rbrace  $
-		\State $ \delta ^{i} := min \left\lbrace \delta ^{k} \quad \vert \quad k \in N \quad and \quad (\tau ^{i} , oid^{i}, r^{i}) = (\tau ^{k},oid^{k},r^{k})\right\rbrace - 1 $
-		\State $SLP_i := (-1,-1)$
+	\begin{algorithmic}[1]
+		\State $ (\tau^u , oid^{u}, r^{u}) := max\left\lbrace (\tau ^{k},oid^{k},r^{k})~\vert~k\in N\right\rbrace  $
+		\State $ \delta ^{u} := min \left\lbrace \delta ^{k} \quad \vert \quad k \in N \quad and \quad (\tau ^{u} , oid^{u}, r^{u}) = (\tau ^{k},oid^{k},r^{k})\right\rbrace - 1 $
+		\State $SLP_u := (-1,-1)$
 	\end{algorithmic}
 \end{algorithm}
 \begin{algorithm}
 	\caption{$STARTNEWREFLEVEL$}
-	\begin{algorithmic}
-		\State $ height[i] := (\tau ,oid,1,0,nlts^{i},lid^i,i) $
-		\State $SLP_i := (-1,-1)$
+	\begin{algorithmic}[1]
+		\State $ height[u] := (\tau ,oid,1,0,nlts^{u},lid^u,u) $
+		\State $SLP_u := (-1,-1)$
 	\end{algorithmic}
 \end{algorithm}
 
 \begin{algorithm}
-	\caption{$ADOPTLPIFPRIORITY$}
-	\begin{algorithmic}
-		\If{$nlts^{j}<nlts^{i}~\Or~nlts^{j}=nlts^{i}~\textbf{and}~lid^{j} < lid^{i}$}
-		\State $ height[i] := (\tau ^{j} ,oid^{j},r^{j},\delta ^{j}+1,nlts^{j},lid^j,i) $
-		\If{$ (\delta _{v} \quad mod \quad D \neq 0) $}
-		\State $ SLP_u = (lid^j, min \left\lbrace k \quad \vert \quad k\in N_i \quad and \quad \delta_k = \delta_j \right\rbrace  )$
-		\ElsIf{$ \delta_v = 0 $}
-		\State $SLP_u = (j, -1)$
+	\caption{$ADOPTLPIFPRIORITY(v)$}
+	\begin{algorithmic}[1]
+		\If{$nlts^{v}<nlts^{u}~\Or~nlts^{v}=nlts^{u}~\textbf{and}~lid^{v} < lid^{u}$}
+		\State $ height[u] := (\tau ^{v} ,oid^{v},r^{v},\delta ^{v}+1,nlts^{v},lid^v,u) $
+		\If{$ (\delta ^{v} \quad \textbf{mod} \quad D \neq 0) $}
+		\State $ SLP_u = (lid^v, id^{~\textbf{min} \left\lbrace k \quad \vert \quad k\in N^u \quad \textbf{and} \quad \delta^k = \delta^v \right\rbrace  })$
+		\ElsIf{$ \delta^v = 0 $}
+		\State $SLP_u = (v, -1)$
 		\Else
-		\State $SLP_u = (j, j)$
+		\State $SLP_u = (v, v)$
 		\EndIf
 		\EndIf
 		

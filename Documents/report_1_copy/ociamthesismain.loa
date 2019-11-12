@@ -5,4 +5,4 @@
 \contentsline {algorithm}{\numberline {5}{\ignorespaces $REFLECTREFLEVEL$}}{23}% 
 \contentsline {algorithm}{\numberline {6}{\ignorespaces $PROPAGATELARGESTREFLEVEL$}}{24}% 
 \contentsline {algorithm}{\numberline {7}{\ignorespaces $STARTNEWREFLEVEL$}}{24}% 
-\contentsline {algorithm}{\numberline {8}{\ignorespaces $ADOPTLPIFPRIORITY$}}{24}% 
+\contentsline {algorithm}{\numberline {8}{\ignorespaces $ADOPTLPIFPRIORITY(v)$}}{24}% 

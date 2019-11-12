@@ -31,6 +31,7 @@
 \contentsline {paragraph}{}{9}% 
 \contentsline {paragraph}{}{9}% 
 \contentsline {paragraph}{}{10}% 
+\contentsline {subparagraph}{}{10}% 
 \contentsline {section}{\numberline {2.4}Problem Definition}{11}% 
 \contentsline {paragraph}{}{11}% 
 \contentsline {paragraph}{}{11}% 
@@ -61,9 +62,9 @@
 \contentsline {paragraph}{}{17}% 
 \contentsline {paragraph}{}{18}% 
 \contentsline {paragraph}{}{18}% 
-\contentsline {paragraph}{}{18}% 
 \contentsline {paragraph}{}{19}% 
-\contentsline {section}{\numberline {3.6}Sample execution}{19}% 
+\contentsline {paragraph}{}{19}% 
+\contentsline {section}{\numberline {3.6}Sample execution}{20}% 
 \contentsline {paragraph}{}{21}% 
 \contentsline {paragraph}{}{22}% 
 \contentsline {chapter}{\numberline {4}Correctness}{26}% 
