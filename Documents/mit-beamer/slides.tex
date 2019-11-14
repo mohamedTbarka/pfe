@@ -9,6 +9,12 @@
 \usepackage{algorithm2e}
 \usepackage{algorithmic}
 \usepackage{movie15}
+\usepackage{animate}
+\usepackage{xmpmulti}
+\usepackage{movie15}
+\usepackage{graphicx}
+\usepackage{grffile}
+
 
 
 
@@ -96,15 +102,7 @@ Distributed computing is a model in which components of a software system are sh
 
 \end{frame}
 
-\begin{frame}{System Model}
 
-\begin{itemize}
-	\item The system is consisting of a set $P$ of computing nodes and a set $\chi$ of directed communication channels from one node to another node.
-	\item The whole system as a set of (infinite) state machines that interact through shared events.
-	
-\end{itemize}
-
-\end{frame}
 \begin{frame}{Asynchronous Dynamic Links' Model}
 
 	The state of $Channel(u, v)$, which models the communication channel from node u to node v, consists of:
@@ -139,7 +137,7 @@ In an initial configuration:
 
 \subsection{Problem Definition}
 \begin{frame}{Problem Definition}
-Each node $u$ in the system has :
+Each node $u$ in the system should have after the last topology change :
 \begin{itemize}
 	\item a local variable $lid_{u}$ to hold the $id$ of the supreme leader;
 	\item another local variable $slid_u$ to hold the identifier of the sub-leader whose remoteness towards $u$ obeys the constraint.
@@ -187,10 +185,13 @@ After a leader is gone, the algorithm consists on three waves:
 \end{frame}
 
 \begin{frame}{Nodes, Neighbors and Heights}
+\begin{itemize}
+
 		\item $\delta$, an integer that is set to ensure that links are directed appropriately to neighbors with the same first three components.
 	\item $nlts$, a non-positive timestamp whose absolute value is the causal clock time when the current leader was elected.
 	\item $lid$, the $id$ of the current leader.
 	\item $id$, the node’s unique ID.
+\end{itemize}
 \end{frame}
 \subsection{Initial State}
 \begin{frame}{Initial State}
@@ -203,39 +204,31 @@ After a leader is gone, the algorithm consists on three waves:
 \end{list}
 \end{frame}
 
+\subsection{Algorithm Description}
 
-\subsection{Description Of The Algorithm}
-\begin{frame}{Heights}
-
-The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nlts, lid), id)$, where the first three components are referred to as the reference level ($RL$) and the fifth and sixth.
-
-\begin{itemize}
-	\item $\tau$, a non-negative timestamp which is either 0 or the value of the causal clock time when the current search for an alternate path to the leader was initiated.
-	\item $oid$, is a non-negative value that is either 0 or the id of the node that started the current search (we assume node ids are positive integers).
-	\item $r$, a bit that is set to 0 when the current search is initiated and set to 1 when the current search hits a dead end.
-	\item $\delta$
-
-\end{itemize}
-
-\end{frame}
-
-
-\subsection{Sample Execution}
-
-\begin{frame}{The Code triggered by Update Message}
+\begin{frame}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.5\linewidth]{tcode_update.png}
-	%\caption{Code triggered by Update Message}
+	\includegraphics[width=0.8\linewidth]{channel_up_down.png}
+	\caption{Code triggered by Topology Changes}
 	\label{fig:figure1}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Subroutines}
+\begin{frame}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{subroutines.png}
-	%\caption{Code triggered by Update Message}
+	\includegraphics[width=0.7\linewidth]{message_received.png}
+	\caption{Code triggered by Update Message}
+	\label{fig:figure1}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{subroutines.png}
+	\caption{Subroutines}
 	\label{fig:figure1}
 \end{figure}
 \end{frame}
@@ -243,12 +236,29 @@ The height for each node is a 7-tuple of integers $((\tau , oid, r), \delta, (nl
 
 % -----------------------------------------------------------------------------
 \section{Correctness}
+\begin{frame}{How the proof is dealt with ?}
+	The proof uses a number of invariants, denoted as “Properties”, which are shown to hold in every configuration of every execution; each one is proved (separately) by induction on the configurations occurring in an execution.
+\end{frame}
+
 
 \subsection{Bounding the Number of Elections}
 
-\subsection{Bounding the Number of New Reference Levels}
+\begin{frame}{Bounding the Number of Elections}
+	We bound, in Lemma 3, the number of elections that can occur after the last topology change; this result relies on the fact, shown in Lemma 2, that once a node u adopts a leader that was elected after the last topology change, u never becomes a sink again.
+\end{frame}
 
+\subsection{Bounding the Number of New Reference Levels}
+\begin{frame}{Bounding the Number of Elections}
+We bound, in Lemma 4, the number of new reference levels that are started after the last topology change; the proof of this result relies on several additional properties.
+\end{frame}
 \subsection{Bounding the Number of Messages}
+\begin{frame}{Bounding the Number of Messages}
+We show, in Lemmas 5, 6, and 7, that eventually there are no messages in transit and every node has an accurate view of its neighbors’ heights.
+\end{frame}
+\subsection{Leader-Oriented DAG}
+\begin{frame}{Bounding the Number of Messages}
+All the pieces are put together in Theorem 1 of Section 4.6 to show that eventually we have a leader-oriented connected component; a couple of additional properties are needed for this result.
+\end{frame}
 % -----------------------------------------------------------------------------
 
 \section{Implementation}
@@ -261,10 +271,25 @@ JBoTSim is a java library that offers basic primitives for proto-typing, running
 \subsection{Simulation}
 \begin{frame}
 
+  \animategraphics[loop,controls,width=\linewidth]{10}{output/out-}{0}{224}
+
+
+
 
 \end{frame}
 
 \subsection{Performance Test}
+
+\begin{frame}
+	\begin{enumerate}
+		\item \textbf{Latency} $l$. The number of rounds necessary for a component to elect a leader (become stable) after a topology change (average over all initial topologies).
+		
+		\item \textbf{Sensitivity} $s$. The number of nodes that updated their heights in response to a topology change (average over all possible topology changes).
+		
+		\item \textbf{Resilience} $r$. The maximal fraction of links which can go down in a stable component without reelecting the current leader.
+		
+	\end{enumerate}
+\end{frame}
 \begin{frame}{How is our algorithm's performance ?}
 	\begin{figure}
 		\centering
