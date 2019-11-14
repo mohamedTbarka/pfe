@@ -30,24 +30,30 @@
 
 \AtBeginSection[]
 {
+	\begingroup
+	\tiny
   \begin{frame}<beamer>
     \frametitle{Outline}
     \tableofcontents[currentsection]
   \end{frame}
+\endgroup
 }
 \beamerdefaultoverlayspecification{<+->}
 % -----------------------------------------------------------------------------
 \begin{document}
 % -----------------------------------------------------------------------------
+\setbeamerfont{Outline}{size=\tiny}
 
 \frame{\titlepage}
 
 \section[Outline]{}
+\begingroup
+\tiny
 \begin{frame}{Outline}
 
   \tableofcontents
 \end{frame}
-
+\endgroup
 % -----------------------------------------------------------------------------
 \section{Introduction}
 \subsection{Leader Election Problem}
@@ -280,7 +286,7 @@ JBoTSim is a java library that offers basic primitives for proto-typing, running
 
 \subsection{Performance Test}
 
-\begin{frame}
+\begin{frame}{Performance Characteristics}
 	\begin{enumerate}
 		\item \textbf{Latency} $l$. The number of rounds necessary for a component to elect a leader (become stable) after a topology change (average over all initial topologies).
 		
@@ -293,7 +299,7 @@ JBoTSim is a java library that offers basic primitives for proto-typing, running
 \begin{frame}{How is our algorithm's performance ?}
 	\begin{figure}
 		\centering
-		\includegraphics[width=1\linewidth]{performance_test}
+		\includegraphics[width=1.1\linewidth]{performance_test}
 		\caption{Simulation Results}
 		\label{fig:performancetest}
 	\end{figure}
