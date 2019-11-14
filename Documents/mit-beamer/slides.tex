@@ -67,12 +67,14 @@ Distributed computing is a model in which components of a software system are sh
 
 \subsection{State of art}
 \begin{frame}{State of art}
-	\begin{figure}
-		\centering
-		\includegraphics[width=1\linewidth]{../state_of_art}
-		\caption{}
-		\label{fig:stateofart}
-	\end{figure}
+	
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{state_of_art}
+	\caption[State Of Art]{State Of Art}
+	\label{fig:stateofart}
+\end{figure}
+
 \end{frame}
 \iffalse
 \begin{frame}{The Bully Algorithm}
@@ -155,6 +157,7 @@ Each node $u$ in the system should have after the last topology change :
 \subsection{Informal Description}
 \begin{frame}{Informal description}
 After a leader is gone, the algorithm consists on three waves:
+\pause
 \begin{itemize}
 	\item First wave : initiated by one of the lost leader's neighbors looking for it;
 	\item Second wave : initiated by the node located at the edge of the network if the search has hit a dead-end;
@@ -229,6 +232,14 @@ After a leader is gone, the algorithm consists on three waves:
 	\label{fig:figure1}
 \end{figure}
 \end{frame}
+\begin{frame}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{sample_execution.png}
+	\caption{Sample Execution}
+	\label{fig:figure1}
+\end{figure}
+\end{frame}
 
 \begin{frame}
 \begin{figure}[h]
@@ -261,8 +272,8 @@ We bound, in Lemma 4, the number of new reference levels that are started after 
 \begin{frame}{Bounding the Number of Messages}
 We show, in Lemmas 5, 6, and 7, that eventually there are no messages in transit and every node has an accurate view of its neighbors’ heights.
 \end{frame}
-\subsection{Leader-Oriented DAG}
-\begin{frame}{Bounding the Number of Messages}
+\subsection{Proving The Leader-Oriented DAG Aspect}
+\begin{frame}{Leader-Oriented DAG}
 All the pieces are put together in Theorem 1 of Section 4.6 to show that eventually we have a leader-oriented connected component; a couple of additional properties are needed for this result.
 \end{frame}
 % -----------------------------------------------------------------------------
@@ -296,6 +307,40 @@ JBoTSim is a java library that offers basic primitives for proto-typing, running
 		
 	\end{enumerate}
 \end{frame}
+
+\begin{frame}{Performance Characteristics}
+\begin{itemize}
+	\item Merging two stable components:
+	\begin{itemize}
+		\item Given two fully connected (every two nodes are neighbours) components: $l \simeq 2$.
+		\item Given two poorly connected (a node can have not more than two neigh- bours) components: $l \simeq n$.
+	\end{itemize}
+
+	\item Partitioning a stable component:
+	\begin{itemize}
+		\item Getting two fully connected component: $l = 2$.
+		\item Getting two poorly connected component: $l = 2n$.
+	\end{itemize}
+	
+
+\end{itemize}
+\end{frame}
+\begin{frame}
+	\begin{itemize}
+		\item Topology change in a “small world-like” stable component (every node has O(log n) neighbours) without partitioning:
+		\begin{itemize}
+			\item Latency $l = O(1)$.
+			\item Sensitivity $s = O(log(n))$.
+		\end{itemize}
+		\item Resilience of a stable component:
+		\begin{itemize}
+			\item Given a fully connected component: $r \simeq 1 - 2/n$.
+			\item Given a “small world-like” component: $r \simeq 1 - 2/log(n)$.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
 \begin{frame}{How is our algorithm's performance ?}
 	\begin{figure}
 		\centering
@@ -310,11 +355,15 @@ JBoTSim is a java library that offers basic primitives for proto-typing, running
 \section{Conclusion}
 \subsection{Is The Algorithm Perfect ?}
 \begin{frame}{Is The Algorithm Perfect ?}
- An open question is how to extend our algorithm and its analysis to handle a wider range of clocks, such as approximately synchronized clocks and vector clocks.
+ \begin{itemize}
+	\item  An open question is how to extend our algorithm and its analysis to handle a wider range of clocks, such as approximately synchronized clocks and vector clocks.
+	\item Another question could be asked concerning the possibility of building up an optimized spanning tree using some algorithms such as Kruskal’s Minimum Spanning Tree Algorithm (MST).
+ \end{itemize}
+
 \end{frame}
 
-\begin{frame}{Question ?}
-	
+\begin{frame}{Thank you for your attention}
+	All your questions and remarks are welcomed.
 \end{frame}
 % -----------------------------------------------------------------------------
 \end{document}
