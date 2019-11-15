@@ -19,13 +19,20 @@
 	\item $lid$, the $id$ of the current leader.
 	\item $id$, the node’s unique ID.
 \end{list}
-\paragraph{}Each node $u$ keeps track of the heights of its neighbors in an array $height_u$, where the height of a neighbor node $v$ is stored in $height_u[v]$. The components of $height_u[v]$ are referred to as $(\tau ^v , oid^v , r^v , \delta ^v , nlts^v , lid^v , v)$ in the pseudocode.
+In addition to $height_u$, $u$ keeps another height which is a 2-tuple, with the following components:
+\begin{list}{--}{}
+	\item $slid$, the $id$ of the sub-leader of $u$.
+	\item $pred$, the $id$ of the predecessor of $u$ in the spanning tree.
+\end{list}
+Components $(slid, pred)$ are referred to as the sub-leader pair, or $SLP$. The sub-leader pair of a node $u$ is referred to as $SLP_u$.
+\paragraph{}Each node $u$ keeps track of the heights of its neighbors in an array $height_u$, where the height of a neighbor node $v$ is stored in $height_u[v]$. The components of $height_u[v]$ are referred to as $(\tau _v , oid_v , r_v , \delta _v , nlts_v , lid_v , v)$ in the pseudo-code.
 \section{Initial States}
-\paragraph{}The definition of an initial configuration for the entire system from Section 2.3 included the condition that each node be in an initial state according to its algorithm. The collection of initial states for the nodes must be consistent with the collection of initial states for the channels. Let $G_{init} ^{chan}$ be the undirected graph corresponding to the initial states of the channels, as defined in Section 2.3. Then in an initial configuration, the state of each node $u$ must satisfy the following:
+\paragraph{}The definition of an initial configuration for the entire system from Section 2.3 included the condition that each node be in an initial state according to its algorithm. The collection of initial states for the nodes must be consistent with the collection of initial states for the channels. Let $G^{init} _{chan}$ be the undirected graph corresponding to the initial states of the channels, as defined in Section 2.3. Then in an initial configuration, the state of each node $u$ must satisfy the following:
 \begin{list}{--}{}
 	\item $forming_u$ is empty,
 	\item $N_u$ equals the set of neighbors of $u$ in $G ^{init} _{chan}$
-	\item $height_u[u] = (0, 0, 0, \delta _u , 0, l, u)$ where $l$ is the $id$ of a fixed node in $u's$ connected component in $G^{init} _{chan}$ (the current leader), and $\delta _u$ equals the distance from $u$ to $l$ in component in $G^{init} _{chan}$,
+	\item $SLP_u = (slid_u, pred_u)$ where $slid_u$ is the $id$ of the sub-leader of $u$ and $pred_u$ is the predecessor of $u$ in the initial spanning tree.
+	\item $height_u[u] = (0, 0, 0, \delta _u , 0, l, u)$ where $l$ is the $id$ of a fixed node in $u's$ connected component in $G^{init} _{chan}$ (the current leader), and $\delta _u$ equals the distance from $u$ to $l$ in component in $G^{init} _{chan}$ ($SLP_l = (pred_l, -1)$ where $-1$ indicates that $l$ has no predecessor),
 	\item for each $v$ in $N_u$, $height_u[v] = height_v[v]$ (i.e., $u$ has accurate information about $v$’s height), and
 	\item $\mathcal{T} _u$ is initialized properly with respect to the definition of causal clocks.
 \end{list}
@@ -36,18 +43,18 @@
 	\item No messages are in transit in $CC$.
 	\item For each (undirected) edge $\left\lbrace  u, v \right\rbrace $ in $CC$, if $(u, v)$ is a link of $u$, then $u$ has the correct view of $v$’s height.
 	\item  Each node in $CC$ has the same leader $id$, say $l$, where $l$ is also in $\overset{\longrightarrow}{CC}$. 
-	\item  $CC$ is a directed acyclic graph (DAG) with $l$ as the unique sink.
+	\item  $\overset{\longrightarrow}{CC}$ is a directed acyclic graph (DAG) with $l$ as the unique sink.
 \end{enumerate}
 A consequence of each connected component being leader-oriented is that the leader election problem is solved.
 \section{Description of the Algorithm}
 \paragraph{}The algorithm consists of three different actions, one for each of the possible events that can occur in the system: a channel going up, a channel going down, and the receipt of a message from another node. Next, we describe each of these actions in detail.
 \paragraph{}First, we formally define the conditions under which a node is considered to be a sink:
 \begin{list}{--}{}
-	\item $SINK = ((\forall v \in N_u,~LP_u ^v = LP_u ^u )$ and $(\forall v \in N_u,~height_u[u] < height_u[v])$ and $(lid_u ^u = u))$. Recall that the $LP$ component of node $u’s$ view of $v’s$ height, as stored in $u's$ height array, is denoted $LP_u ^v$ , and similarly for all the other height components. This predicate is true when, according to $u's$ local state, all of $u's$ neighbors have the same leader pair as $u$, $u$ has no outgoing links, and $u$ is not its own leader. If node $u$ has links to any neighbors with different $LPs$, $u$ is not considered a sink, regardless of the directions of those links.
+	\item $SINK = ((\forall v \in N_u,~LP_u ^v = LP_u ^u )$ and $(\forall v \in N_u,~height_u[u] < height_u[v])$ and $(lid_u ^u \neq u))$. Recall that the $LP$ component of node $u’s$ view of $v’s$ height, as stored in $u's$ height array, is denoted $LP_u ^v$ , and similarly for all the other height components. This predicate is true when, according to $u's$ local state, all of $u's$ neighbors have the same leader pair as $u$, $u$ has no outgoing links, and $u$ is not its own leader. If node $u$ has links to any neighbors with different $LPs$, $u$ is not considered a sink, regardless of the directions of those links.
 \end{list}
-\paragraph{}$ChannelDown$ event: When a node $u$ receives a notification that one of its incident channels has gone down, it needs to check whether it still has a path to the current leader. If the $ChannelDown$ event has caused $u$ to lose its last neighbor, as indicated by $u's~N$ variable, then $u$ elects itself by calling the subroutine $ELECTSELF$. In this subroutine, node $u$ sets its first four components to 0, and the LP component to $(nlts,u)$ where $nlts$ is the negative value of u’s current causal clock time. Then, in case $u$ has any incident channels that are in the process of forming, $u$ sends its new height over them. If the $ChannelDown$ event has not robbed $u$ of all its neighbors (as indicated by $u’s~N$ variable) but $u$ has lost its last outgoing link, i.e., it passes the $SINK$ test, then $u$ starts a new reference level (a search for the leader) by setting its $\tau$ value to the current clock time, oid to u’s id, the r bit to 0, and the $\delta$ value to $0$, as shown in subroutine $STARTNEWREFLEVEL$. The complete pseudo-code for the $ChannelDown$ action is available in Figure 1.
+\paragraph{}$ChannelDown$ event: When a node $u$ receives a notification that one of its incident channels has gone down, it needs to check whether it still has a path to the current leader. If the $ChannelDown$ event has caused $u$ to lose its last neighbor, as indicated by $u's~N$ variable, then $u$ elects itself by calling the subroutine $ELECTSELF$. In this subroutine, node $u$ sets its first four components to 0, and the LP component to $(nlts,u)$ where $nlts$ is the negative value of u’s current causal clock time. Then, in case $u$ has any incident channels that are in the process of forming, $u$ sends its new height over them. If the $ChannelDown$ event has not robbed $u$ of all its neighbors (as indicated by $u’s~N$ variable) but $u$ has lost its last outgoing link, i.e., it passes the $SINK$ test, then $u$ starts a new reference level (a search for the leader) by setting its $\tau$ value to the current clock time, $oid$ to $u’s$ $id$, the $r$ bit to $0$, and the $\delta$ value to $0$, as shown in subroutine $STARTNEWREFLEVEL$. The complete pseudo-code for the $ChannelDown$ action is available in Algorithm 1.
 
-\paragraph{}$ChannelUp$ event: When a node $u$ receives a notification of a channel going up to another node, say $v$, then $u$ sends its current height to $v$ and includes $v$ in its set $forming_u$ . The pseudo-code for the $ChannelUp$ action is available in Figure 1.
+\paragraph{}$ChannelUp$ event: When a node $u$ receives a notification of a channel going up to another node, say $v$, then $u$ sends its current height to $v$ and includes $v$ in its set $forming_u$ . The pseudo-code for the $ChannelUp$ action is available in Algorithm 2.
 
 \begin{algorithm}
 	\caption{When $ChannelDown_{uv}$ event occurs:}
@@ -63,12 +70,12 @@ A consequence of each connected component being leader-oriented is that the lead
 		\ElsIf {$SINK$}
 		\State $STARTNEWREFLEVEL$
 		\State send Update($height[u]$) to all $w \in (N \cup forming))$
-		\ElsIf {$id^v = pred^u$ \textbf{and} $id^v = slid^u$}
-		\State $pred^u = \min \left\lbrace  k~|~k \in N^u~and~\delta ^k = \delta ^u \right\rbrace  $
-		\State $slid^u =  \min \left\lbrace  k~|~k \in N^u~and~\delta ^k = \delta ^u \right\rbrace$
-		\ElsIf {$id^v = pred^u$ \textbf{and} $id^v \neq slid^u$}
-		\State $pred^u = \min \left\lbrace  k~|~k \in N_u~and~\delta ^k = \delta ^u \right\rbrace  $
-		\State $slid^u = slid^{~\min \left\lbrace  k~|~k~\in~ N_u~and~\delta ^k~=~\delta ^u \right\rbrace}$
+		\ElsIf {$id_v = pred_u$ \textbf{and} $id_v = slid_u$}
+		\State $pred_u = id_{~\min \left\lbrace  k~|~k \in N_u~and~\delta _k = \delta _u \right\rbrace}$
+		\State $slid_u = id_{~\min \left\lbrace  k~|~k \in N_u~and~\delta _k = \delta _u \right\rbrace}$
+		\ElsIf {$id_v = pred_u$ \textbf{and} $id_v \neq slid_u$}
+		\State $pred_u = id_{~\min \left\lbrace  k~|~k \in N_u~and~\delta _k = \delta _u \right\rbrace  }$
+		\State $slid_u = slid_{~\min \left\lbrace  k~|~k~\in~ N_u~and~\delta _k~=~\delta _u \right\rbrace}$
 		\EndIf
 		
 		%\EndProcedure
@@ -164,22 +171,22 @@ Next, we provide an example which illustrates a particular algorithm execution. 
 \begin{algorithm}
 	\caption{$REFLECTREFLEVEL$}
 	\begin{algorithmic}[1]
-		\State $height[u] := (\tau, oid, 1, 0, nlts^u ,lid^u ,u)$
+		\State $height[u] := (\tau, oid, 1, 0, nlts_u ,lid_u ,u)$
 		\State $SLP_u := (-1, -1)$
 	\end{algorithmic}
 \end{algorithm}
 \begin{algorithm}[h!]
 	\caption{$PROPAGATELARGESTREFLEVEL$}
 	\begin{algorithmic}[1]
-		\State $ (\tau^u , oid^{u}, r^{u}) := max\left\lbrace (\tau ^{k},oid^{k},r^{k})~\vert~k\in N\right\rbrace  $
-		\State $ \delta ^{u} := min \left\lbrace \delta ^{k} \quad \vert \quad k \in N \quad and \quad (\tau ^{u} , oid^{u}, r^{u}) = (\tau ^{k},oid^{k},r^{k})\right\rbrace - 1 $
+		\State $ (\tau_u , oid_{u}, r_{u}) := max\left\lbrace (\tau _{k},oid_{k},r_{k})~\vert~k\in N\right\rbrace  $
+		\State $ \delta _{u} := min \left\lbrace \delta _{k} \quad \vert \quad k \in N \quad and \quad (\tau _{u} , oid_{u}, r_{u}) = (\tau _{k},oid_{k},r_{k})\right\rbrace - 1 $
 		\State $SLP_u := (-1,-1)$
 	\end{algorithmic}
 \end{algorithm}
 \begin{algorithm}
 	\caption{$STARTNEWREFLEVEL$}
 	\begin{algorithmic}[1]
-		\State $ height[u] := (\tau ,oid,1,0,nlts^{u},lid^u,u) $
+		\State $ height[u] := (\tau ,oid,1,0,nlts_{u},lid_u,u) $
 		\State $SLP_u := (-1,-1)$
 	\end{algorithmic}
 \end{algorithm}
@@ -187,14 +194,12 @@ Next, we provide an example which illustrates a particular algorithm execution. 
 \begin{algorithm}
 	\caption{$ADOPTLPIFPRIORITY(v)$}
 	\begin{algorithmic}[1]
-		\If{$nlts^{v}<nlts^{u}~\Or~nlts^{v}=nlts^{u}~\textbf{and}~lid^{v} < lid^{u}$}
-		\State $ height[u] := (\tau ^{v} ,oid^{v},r^{v},\delta ^{v}+1,nlts^{v},lid^v,u) $
-		\If{$ (\delta ^{v} \quad \textbf{mod} \quad D \neq 0) $}
-		\State $ SLP_u = (lid^v, id^{~\textbf{min} \left\lbrace k \quad \vert \quad k\in N^u \quad \textbf{and} \quad \delta^k = \delta^v \right\rbrace  })$
-		\ElsIf{$ \delta^v = 0 $}
-		\State $SLP_u = (v, -1)$
+		\If{$nlts_{v}<nlts_{u}~\Or~nlts_{v}=nlts_{u}~\textbf{and}~lid_{v} < lid_{u}~\Or~nlts_{v}=nlts_{u}~\textbf{and}~lid_{v}=lid_{u}~\textbf{and}~id_v<pred_u$}
+		\State $ height[u] := (\tau _{v} ,oid_{v},r_{v},\delta _{v}+1,nlts_{v},lid_v,u) $
+		\If{$ (\delta _{v} \quad \textbf{mod} \quad D \neq 0) $}
+		\State $ SLP_u = (slid_v, id_v)$
 		\Else
-		\State $SLP_u = (v, v)$
+		\State $SLP_u = (id_v, id_v)$
 		\EndIf
 		\EndIf
 		

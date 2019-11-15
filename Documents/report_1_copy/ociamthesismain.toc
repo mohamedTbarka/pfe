@@ -50,22 +50,22 @@
 \contentsline {paragraph}{}{14}% 
 \contentsline {paragraph}{}{14}% 
 \contentsline {paragraph}{}{15}% 
-\contentsline {section}{\numberline {3.3}Initial States}{15}% 
-\contentsline {paragraph}{}{15}% 
+\contentsline {section}{\numberline {3.3}Initial States}{16}% 
+\contentsline {paragraph}{}{16}% 
 \contentsline {paragraph}{}{16}% 
 \contentsline {section}{\numberline {3.4}Goal of the Algorithm}{16}% 
 \contentsline {paragraph}{}{16}% 
 \contentsline {section}{\numberline {3.5}Description of the Algorithm}{17}% 
 \contentsline {paragraph}{}{17}% 
 \contentsline {paragraph}{}{17}% 
-\contentsline {paragraph}{}{17}% 
-\contentsline {paragraph}{}{17}% 
 \contentsline {paragraph}{}{18}% 
 \contentsline {paragraph}{}{18}% 
 \contentsline {paragraph}{}{19}% 
 \contentsline {paragraph}{}{19}% 
+\contentsline {paragraph}{}{19}% 
+\contentsline {paragraph}{}{20}% 
 \contentsline {section}{\numberline {3.6}Sample execution}{20}% 
-\contentsline {paragraph}{}{21}% 
+\contentsline {paragraph}{}{22}% 
 \contentsline {paragraph}{}{22}% 
 \contentsline {chapter}{\numberline {4}Correctness}{26}% 
 \contentsline {paragraph}{}{26}% 
@@ -257,5 +257,5 @@
 \contentsline {paragraph}{}{68}% 
 \contentsline {paragraph}{}{68}% 
 \contentsline {section}{\numberline {5.2}Performance Analysis}{69}% 
-\contentsline {chapter}{\numberline {6}Conclusion}{71}% 
-\contentsline {paragraph}{Acknowledgments}{71}% 
+\contentsline {chapter}{\numberline {6}Conclusion}{72}% 
+\contentsline {paragraph}{Acknowledgments}{72}% 

@@ -8,7 +8,7 @@
 \paragraph{}The possible values of the $status_{uv}$ variable are $Up$ and $Down$. The channel transitions between the two values of its $status_{uv}$ variable through $ChannelUp_{uv}$ and $ChannelDown_{uv}$ events, called the “topology change” events. We assume that the $ChannelUp$ and $ChannelDown$ events for the channel alternate. The $ChannelUp$ and $ChannelDown$ events for the channel from $u$ to $v$ occur simultaneously at node $u$ and the channel, but do not occur at node $v$.
 \paragraph{}The variable $mqueue_{uv}$ holds messages in transit from $u$ to $v$. An attempt by node $u$ to send a message to node $v$ results in the message being appended to $mqueue_{uv}$ if the channel’s status is $Up$; otherwise there is no effect. When the channel is $Up$, the message at the head of $mqueue_{uv}$ can be delivered to node $v$; when a message is delivered, it is removed from $mqueue_{uv}$. Thus, messages are delivered in FIFO order.
 \paragraph{}When a $ChannelDown_{uv}$ event occurs, $mqueue_{uv}$ is emptied. Neither $u$ nor $v$ is alerted to which messages in transit have been lost. Thus, the messages delivered to node $v$ from node $u$ during a (maximal-length) interval when the channel is $Up$ form a prefix of the messages sent by node $u$ to node $v$ during that interval.
-	\section{Configurations and Executions}
+\section{Configurations and Executions}
 The notion of configuration is used to capture an instantaneous snapshot of the state of the entire system. A configuration is a vector of node states, one for each node in $\mathcal{P}$, and a vector of channel states, one for each channel in $\chi$ . In an initial configuration:
 \begin{list}{--}{}
 	\item each node is in an initial state (according to its algorithm),
@@ -36,7 +36,7 @@ The causal clocks at all the nodes, collectively denoted $\mathcal{T}$, must sat
 	\item For each node $u$, the values of $\mathcal{T}_u$ are increasing, i.e., if $e_i$ and $e_j$ are events involving $u$ in the execution with $i < j$, then $\mathcal{T}_u(e_i) < \mathcal{T}_u(e_j)$. In particular, if there is an infinite number of events involving $u$, then $\mathcal{T}_u$ increases without bound.
 	\item $\mathcal{T}$ preserves the happens-before relation [16] on events; i.e., if event $e_i$ happens before event $e_j$, then $\mathcal{T}(e_i) < \mathcal{T}(e_j)$.
 \end{list}
-\subparagraph{}Our description and proof of the algorithm assume that nodes have access to causal clocks. One way to implement causal clocks is to use perfect clocks, which ensure that $\mathcal{T}_u(t) = t$ for each node $u$ and global time $t$. Since an event that causes another event must occur before it in real time, perfect clocks capture causality. Perfect clocks could be provided by, say a GPS service, and were assumed in the preliminary version of this paper [15]. Another way to implement causal clocks is to use Lamport’s logical clocks [16], which were specifically designed to capture causality.
+\subparagraph{}Our description and proof of the algorithm assume that nodes have access to causal clocks. One way to implement causal clocks is to use perfect clocks, which ensure that $\mathcal{T}_u(t) = t$ for each node $u$ and global time $t$. Since an event that causes another event must occur before it in real time, perfect clocks capture causality. Perfect clocks could be provided by, say a GPS service, and were assumed in the preliminary version of the paper [15]. Another way to implement causal clocks is to use Lamport’s logical clocks [16], which were specifically designed to capture causality.
 \newpage
 \section{Problem Definition}
 \paragraph{}Each node $u$ in the system has a local variable $lid_{u}$ to hold the identifier of the node currently considered by $u$ to be the supreme leader of the connected component containing $u$, and another local variable $slid_u$ to hold the identifier of the node currently considered by $u$ to be the sub-leader in such a way that the distance to this sub-leader does not exceed a certain constant $d$ (the remoteness constraint).
@@ -44,17 +44,18 @@ The causal clocks at all the nodes, collectively denoted $\mathcal{T}$, must sat
 In every execution that includes a finite number of topology changes, we require that the following eventually holds:
 \begin{itemize}
 	\item Every connected component $CC$ of the final topology contains a node $l$, the supreme leader, such that $l$ is the only node which verifies $ lid_{l} = l $.
-	\item For each node $u$ of each component $CC$, different from the supreme leader, a node $v$ exists such as $slid_{u} = v$ and $d_{u,v} < D$ ($D$ is the maximum remoteness towards a leader and the $ d_{u,v} $ is the shortest distance between $u$ and $v$)
+	\item For each node $u$ of each component $CC$, different from the supreme leader, a node $v$ exists such as $slid_{u} = v$ and $d_{u,v} \leq D$ ($D$ is the maximum remoteness towards a leader and the $ d_{u,v} $ is the shortest distance between $u$ and $v$)
 \end{itemize}
 
-\paragraph{}In a more formal way, one can state the problem as follows:\\
+\paragraph{}In a more formal way, one can state the aspect of the problem related the construction of the spanning tree as follows:
+
 In every execution that includes a finite number of topology changes, we require that the following eventually holds:
 
 \begin{itemize}
 	\item For each node $u$ of every connected component $CC$ of the final topology:
-	$u$ selects ${(slid_u, pred_u) \in N_u \times N_u}$ such that ${(slid_u, pred_u)}_{u \in CC}$ is a spanning tree $T$ ($slid_u$ (resp. $pred_u$) is the sub-leader (resp. the predecessor to reach $slid_u$) considered as such by $u$.
+	$u$ selects ${(slid_u, pred_u) \in \mathcal{P} \times N_u}$ such that ${(slid_u, pred_u)}_{u \in CC}$ is a spanning tree $T$ ($slid_u$, resp. $pred_u$, is the sub-leader, resp. the predecessor to reach $slid_u$, considered as such by $u$) (the remoteness constraint).
 	\item For each node $u$, different from the root of $T$, of every connected component $CC$ of the final topology:\\
-	if $ (k-1)D < depth_T (i) <= kD, k \in IN $, then $ depth_T(lid_i)=(k-1)D$ ($depth_T(u)$ is the depth of u in T)
+	if $ (k-1)D < depth_T (u) \leq kD,~k \in  \mathbb{N} \setminus \left\lbrace 0 \right\rbrace $, then $ depth_T(slid_u)=(k-1)D$ ($depth_T(u)$ is the depth of $u$ in $T$)
 \end{itemize}
 
 \paragraph{}Our algorithm also ensures that eventually each link in the system has a direction imposed on it by virtue of the data stored at each endpoint such that each connected component $CC$ is a leader-oriented DAG containing a spanning tree, i.e., every node has a directed path to its local leader respecting, among the other leaders, a certain hierarchy containing one supreme leader.
