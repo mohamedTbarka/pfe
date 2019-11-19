@@ -1310,6 +1310,8 @@ ul.slick-dots {
 .container.pad_rm {
     max-width: 980px!important;
 }}
+@media (min-width: 768px) and (max-width: 991px){h2.title.text-uppercase.nouv_text{margin-left: -36px;}}
+
 
 /* nav After::  */
 @media (max-width: 1199px) and (min-width: 1025px){.afterr::after {right: -4%;}}
