@@ -25,7 +25,7 @@
     </div>
     <div class="row row_mob">
     <div class="col-md-4 centering">
-        <img src="../../media/{{promotion.image}}" class="mb-3" alt="">
+        <img src="../../media/{{promotion.image}}" class="mb-3 promo_img" alt="">
        
     </div>
     <div class="col-md-8 centering">
@@ -39,7 +39,7 @@
         <div class="t15 pt-3">{{promotion.content|safe}} </div>
         {%if promotion.gallery%}    
         
-       {%comment%} <div id="slide" class="col-md-12 px-0">
+      <div id="slide" class="col-md-12 px-0">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         {% for  slide in  promotion.gallery.images.all%}    
@@ -64,7 +64,7 @@
                       <span class="sr-only">Next</span>
                     </a>
                   </div>
-            </div>{%endcomment%}
+            </div>
             {%endif%}
            
            
