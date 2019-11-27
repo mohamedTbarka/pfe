@@ -48,7 +48,7 @@ class Promotion(BaseModel):
         return ""
 
     def get_absolute_url(self):
-        return reverse('promotion_detail', kwargs={'pk': self.pk, })
+        return reverse('promotion_detail', kwargs={'slug': self.slug, })
 
 
 class Event(BaseModel):
@@ -78,7 +78,7 @@ class Event(BaseModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('event_detail', kwargs={'pk': self.pk, })
+        return reverse('event_detail', kwargs={'slug': self.slug, })
 
     def clean(self):
         'here we go'
@@ -114,7 +114,7 @@ class Compagne(BaseModel):
         return ""
 
     def get_absolute_url(self):
-        return reverse('compagne_detail', kwargs={'pk': self.pk, })
+        return reverse('compagne_detail', kwargs={'slug': self.slug, })
 
 
 class Display(BaseModel):
