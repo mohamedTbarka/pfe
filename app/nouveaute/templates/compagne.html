@@ -31,7 +31,7 @@
             <div class="row pad_l_rm">
                 {%for compagne in compagne_list%}
                 <div class="col-md-3 pb-3">
-                    <div class="card" >
+                    <div class="card" ><a href="../compagne/{{compagne.pk}}">
                         <div class="border_img">
                                 <img src="../../media/{{compagne.image}}" class="card-img-top" alt="..." >
                                 
@@ -41,6 +41,7 @@
                           <h5 class="card-title text-uppercase text-white mb-0 t18  ">{{compagne.title}}</h5>
                           <p id="card_date" class="card-text text-white t15 ">{{compagne.date|date:''}} </p>
                         </div>
+                    </a>
                       </div>                  
                 </div>
                 {%endfor%}

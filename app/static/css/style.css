@@ -1322,3 +1322,6 @@ ul.slick-dots {
 .promo_img{
     width: 275px!important;
 }
+#slide a.carousel-control-next {
+    margin-right: 0px!important;
+}
