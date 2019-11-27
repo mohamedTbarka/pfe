@@ -40,7 +40,7 @@
                         </div>
                         <h5  class="  px-2 py-1 t15 badges text-white {%ifequal event.get_badge 'En cours'%}bg_orange{%else%} bg_badges{%endifequal%}">{{event.get_badge}}</h5>
                         <div class="card-body bg_green ">
-                          <h5 class="card-title text-uppercase text-white mb-0 t18  ">{{event.title}}</h5>
+                          <h5 class="card-title text-uppercase text-white mb-0 t15  ">{{event.title}}</h5>
                           <p id="card_date" class="card-text text-white t15 ">Du {{event.start_date|date:'m'}} au {{event.end_date|date:'m'}} </p>
                         </div>
                       </a>
