@@ -1324,6 +1324,13 @@ ul.slick-dots {
 .promo_img{
     width: 275px!important;
 }
-#slide a.carousel-control-next {
+/* #slide a.carousel-control-next {
     margin-right: 0px!important;
+} */
+
+@media (min-width: 620px) {
+  #slide a.carousel-control-next {
+    margin-right: 0px!important;
+}
+
 }
