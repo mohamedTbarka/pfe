@@ -49,6 +49,8 @@ class EventListView(generic.ListView):
 class EventDetailView(generic.DetailView):
     model = Event
     template_name = "event_detail.html"
+    slug_url_kwarg = 'slug'
+    slug_field = 'slug'
 
 
 class CompagneListView(generic.ListView):
@@ -68,6 +70,8 @@ class CompagneListView(generic.ListView):
 class CompagneDetailView(generic.DetailView):
     model = Compagne
     template_name = "compain_detail.html"
+    slug_url_kwarg = 'slug'
+    slug_field = 'slug'
 
 
 class NouveauteList(generic.TemplateView):
@@ -84,12 +88,14 @@ class NouveauteList(generic.TemplateView):
         for event in events:
             nouveautes.append(
                 {"pk": event.pk, "title": event.title, "date": event.start_date, "end_date": event.end_date,
-                 "image": event.get_image_url(), "type": "evenement", "badge": event.get_badge()})
+                 "image": event.get_image_url(), "type": "evenement", "badge": event.get_badge(), "slug": event.slug})
         for compagne in compagnes:
             nouveautes.append({"pk": compagne.pk, "title": compagne.title, "date": compagne.date, "end_date": None,
-                               "image": compagne.get_image_url(), "type": "compagne", "badge": None})
+                               "image": compagne.get_image_url(), "type": "compagne", "badge": None,
+                               "slug": event.slug})
         for promotion in promotions:
             nouveautes.append({"pk": promotion.pk, "title": promotion.title, "date": promotion.date, "end_date": None,
-                               "image": promotion.get_image_url(), "type": "promotion", "badge": None})
+                               "image": promotion.get_image_url(), "type": "promotion", "badge": None,
+                               "slug": event.slug})
         context = {"nouveautes": nouveautes, }
         return context

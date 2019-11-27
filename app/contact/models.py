@@ -20,3 +20,9 @@ class Contacts(BaseModel):
 class Newsletter(BaseModel):
     email = models.EmailField(unique=True)
     subscribed = models.BooleanField(default=True)
+
+
+try:
+    from .signals import *
+except ImportError:
+    pass

@@ -152,7 +152,9 @@ HAYSTACK_CONNECTIONS = {
         'BATCH_SIZE': 100,
     },
 }
-
+USE_SEND_EMAIL = False
+DEFAULT_FROM_EMAIL = ""
+SUPPORT_EMAIL = []
 try:
     from app.local_settings import *
 except ImportError:
