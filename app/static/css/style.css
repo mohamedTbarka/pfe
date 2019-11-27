@@ -1092,7 +1092,9 @@ img.d-block.w-100{
 
 
 @media (min-width: 481px) and (max-width: 767px){
-
+    #slide a.carousel-control-next {
+        margin-right: 0px!important;
+    }
     .row.fl{
         margin-right: -38px!important;
         margin-left: -38px!important;
