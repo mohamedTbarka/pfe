@@ -22,6 +22,10 @@ class Gallery(BaseModel):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "Albums"
+        verbose_name = "Album"
+
 
 class Promotion(BaseModel):
     title = models.CharField(max_length=100, )
@@ -88,6 +92,10 @@ class Event(BaseModel):
             self.slug = slugify(self.title)
         super(Event, self).clean()
 
+    class Meta:
+        verbose_name_plural = "Événements"
+        verbose_name = "Événement"
+
 
 class Compagne(BaseModel):
     title = models.CharField(max_length=100, )
@@ -115,6 +123,10 @@ class Compagne(BaseModel):
 
     def get_absolute_url(self):
         return reverse('compagne_detail', kwargs={'slug': self.slug, })
+
+    class Meta:
+        verbose_name_plural = "Galeries"
+        verbose_name = "Galerie"
 
 
 class Display(BaseModel):
