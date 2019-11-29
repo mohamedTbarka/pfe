@@ -29,7 +29,7 @@
 
     <div class="container pl-0">
             <div class="row pad_l_rm">
-                {%for compagne in compagne_list%}
+                {%for compagne in compagne_list|dictsort:'date'%}
                 <div class="col-md-3 pb-3">
                     <div class="card" ><a href="../compagne/{{compagne.slug}}" style="text-decoration:none;"> 
                         <div class="border_img">
