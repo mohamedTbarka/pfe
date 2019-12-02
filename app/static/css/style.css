@@ -933,7 +933,7 @@ ul.slick-dots > li > button {
     padding-left: 15px!important;
 }
 img.w-100 {
-    width: 112%!important;
+    width: 100%!important;
 }
 
 .alphab{
@@ -1330,7 +1330,7 @@ ul.slick-dots {
 
 @media (max-width: 620px) {
   #slide a.carousel-control-next { margin-right: 0px!important;}
-  #slide a.carousel-control-prev { margin-right: 0px!important;}
+  #slide a.carousel-control-prev { margin-left: 0px!important;}
 
   #slide a.carousel-control-next img { width: 30%; }
   #slide a.carousel-control-prev img { width: 30%; }
