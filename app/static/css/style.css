@@ -138,8 +138,8 @@ html {
    
     min-height:353px;
     max-height:353px;
-    max-width: 282px;
-    min-width: 282px;
+    max-width: 265px;
+    min-width: 264px;
     background-position: center;
    background-repeat: no-repeat;
    background-size: 300px;
@@ -1042,7 +1042,7 @@ img.d-block.w-100{
         min-width: 200px!important;
     }
     .nv3{
-        min-width: 565px!important;
+        min-width: 521px!important;
     }
 }
 
@@ -1076,7 +1076,7 @@ img.d-block.w-100{
         min-width: 200px!important;
     }
     .nv3{
-        min-width: 325px!important;
+        min-width: 288px!important;
     }
     div#paral {
         min-height: 241px!important;
@@ -1299,8 +1299,8 @@ ul.slick-dots {
     min-width: 522px!important;
 }
 .nv2 {
-    max-width: 250px!important;
-    min-width: 250px!important;
+    max-width: 215px!important;
+    min-width: 215px!important;
 }
 .nv1 {
     min-height: 353px!important;
