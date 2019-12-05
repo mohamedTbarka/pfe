@@ -113,7 +113,7 @@ class Marque(BaseModel):
         return reverse('marque_detail', kwargs={'slug': self.slug, })
 
     def clean(self):
-        'here we go'
+
         if self.slug:
             self.slug = slugify(self.slug)
         else:

@@ -1,3 +1,4 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
@@ -36,7 +37,7 @@ class Promotion(BaseModel):
     slug = models.CharField(max_length=100, unique=True, )
 
     def clean(self):
-        'here we go'
+
         if self.slug:
             self.slug = slugify(self.slug)
         else:
@@ -85,7 +86,7 @@ class Event(BaseModel):
         return reverse('event_detail', kwargs={'slug': self.slug, })
 
     def clean(self):
-        'here we go'
+
         if self.slug:
             self.slug = slugify(self.slug)
         else:
@@ -106,7 +107,7 @@ class Compagne(BaseModel):
     slug = models.CharField(max_length=100, unique=True)
 
     def clean(self):
-        'here we go'
+
         if self.slug:
             self.slug = slugify(self.slug)
         else:
@@ -130,9 +131,11 @@ class Compagne(BaseModel):
 
 
 class Display(BaseModel):
-    image = models.ImageField(upload_to="./uploads/gallery/display/img")
+    image = models.ImageField(upload_to="./uploads/gallery/display/img", null=True, blank=True)
     title = models.CharField(max_length=100, null=True, blank=True)
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, related_name='images')
+    is_video = models.BooleanField(default=False)
+    video_url = models.CharField(max_length=100, null=True, blank=True)
 
     # def __str__(self):
     #     return self.title
@@ -141,3 +144,13 @@ class Display(BaseModel):
         if self.image:
             return "{0}{1}".format(settings.MEDIA_URL, self.image)
         return ""
+
+    def clean(self):
+
+        if self.is_video:
+            if not self.video_url:
+                raise ValidationError("Vous devez entrer l'url de la vidéo")
+        elif not self.image:
+            raise ValidationError("Vous devez entrer une image")
+
+        super(Display, self).clean()
