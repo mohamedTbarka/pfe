@@ -44,12 +44,13 @@
                   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                       <div class="carousel-inner">
                           {% for  slide in  compagne.gallery.images.all%}    
-                       
-  
-                        
+
   
                         <div class="carousel-item  {% if not forloop.counter0 %}active{%endif%}">
                           <img class="d-block w-100" src="{{slide.get_image_url}}" alt="First slide">
+                          {% if slide.is_video %}
+                          <iframe width="854" height="480" src="https://www.youtube.com/embed/{{}}" frameborder="0" allowfullscreen style="width:100%;"></iframe>
+                          {% endif %}
                         </div>
                       
                         {%endfor%}
