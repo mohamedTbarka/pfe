@@ -22,8 +22,8 @@ class MarqueListView(generic.ListView):
         context = super().get_context_data(**kwargs)
         alphas = list(string.ascii_lowercase)
         alphabet = []
-        cat = self.request.POST.get('cat', '')
-        group = self.request.POST.get('group', '')
+        cat = self.request.GET.get('cat', '')
+        group = self.request.GET.get('group', '')
 
         for alpha in alphas:
             alpha_dict = {'key': alpha, "value": Marque.objects.filter(name__istartswith=alpha, ).exists()}
@@ -32,7 +32,7 @@ class MarqueListView(generic.ListView):
                     Q(categories__pk__in=cat) | Q(categories__group__pk__in=group)).exists()}
             alphabet.append(alpha_dict)
 
-        alpha = self.request.POST.get('alpha', '')
+        alpha = self.request.GET.get('alpha', '')
 
         context['now'] = timezone.now()
         context['alphabet'] = alphabet
@@ -48,9 +48,9 @@ class MarqueListView(generic.ListView):
         return context
 
     def get_queryset(self):
-        alpha = self.request.POST.get('alpha', '')
-        cat = self.request.POST.get('cat', '')
-        group = self.request.POST.get('group', '')
+        alpha = self.request.GET.get('alpha', '')
+        cat = self.request.GET.get('cat', '')
+        group = self.request.GET.get('group', '')
         new_context = Marque.objects.all()
         if alpha:
             new_context = Marque.objects.filter(name__istartswith=alpha)
