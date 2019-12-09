@@ -1346,6 +1346,11 @@ ul.slick-dots {
 
   #slide a.carousel-control-next img { width: 30%; }
   #slide a.carousel-control-prev img { width: 30%; }
+  #slide{padding-left: 15px!important;}
+  .breadcrumb.bg-white.pl-0{padding-left: 15px!important;}
+  .bd-example.m .carousel-indicators{bottom: -20px;}
+  .bd-example.m .carousel-indicators li{    background-color: #28a745;}
+
 }
 @media (max-width: 1024px) and  (min-width: 620px){
     #slide a.carousel-control-next { margin-right: 0px!important;}
