@@ -1350,6 +1350,7 @@ ul.slick-dots {
   .breadcrumb.bg-white.pl-0{padding-left: 15px!important;}
   .bd-example.m .carousel-indicators{bottom: -20px;}
   .bd-example.m .carousel-indicators li{    background-color: #246630;}
+  .mrqimg{text-align: center!important;margin-left: 15px!important}
 
 }
 @media (max-width: 1024px) and  (min-width: 620px){
