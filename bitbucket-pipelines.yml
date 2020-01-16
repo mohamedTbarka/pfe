@@ -1,0 +1,45 @@
+image: docker:stable
+
+options:
+  docker: true
+
+pipelines:
+  branches:
+    develop:
+      - step:
+          name: Build test and publish
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - apk add make
+            - apk add git
+            - make up
+            - make test
+    staging:
+      - step:
+          name: Build test and publish
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - apk add make
+            - apk add git
+            - make up
+            - make test
+            - make publish-latest
+    master:
+      - step:
+          name: Build and test
+          services:
+            - docker
+          caches:
+            - docker
+          script:
+            - apk add make
+            - apk add git
+            - make up
+            - make test
+            - make publish-latest

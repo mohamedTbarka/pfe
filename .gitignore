@@ -4,7 +4,6 @@
 *.xml
 media
 .idea
-fichiers_traites
 *.pdf
 *.docx
 *.doc
@@ -20,6 +19,4 @@ local_settings.py
 *.sqlite3
 static_root/
 certs/
-migrations/
-!packages/*
-/app/app/whoosh_index/
+secrets/

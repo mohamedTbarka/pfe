@@ -30,7 +30,7 @@ urlpatterns = [
                   path('', include('service.urls')),
                   path('', include('contact.urls')),
                   path('search/', include('haystack.urls')),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler500 = service.views.error_500
 handler404 = service.views.error_404
