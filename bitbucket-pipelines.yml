@@ -13,6 +13,8 @@ pipelines:
           caches:
             - docker
           script:
+            - mkdir docker-files/secrets
+            - touch docker-files/secrets/cr_deploy.env
             - apk add make
             - apk add git
             - make up
@@ -25,6 +27,8 @@ pipelines:
           caches:
             - docker
           script:
+            - mkdir docker-files/secrets
+            - touch docker-files/secrets/cr_deploy.env
             - apk add make
             - apk add git
             - make up
@@ -38,6 +42,8 @@ pipelines:
           caches:
             - docker
           script:
+            - mkdir docker-files/secrets
+            - touch docker-files/secrets/cr_deploy.env
             - apk add make
             - apk add git
             - make up
