@@ -38,7 +38,7 @@ build-nc: ## Build the container without caching
 run: ## Run container on port configured in `config.env`
 	sh $(DOCKER_FOLDER)/run.sh $(APP_NAME) $(TAG):$(VERSION)
 
-deploy-latest: stop ## Deploy container on server
+deploy-latest: stop repo-login ## Deploy container on server
 	sh $(DOCKER_FOLDER)/deploy.sh $(APP_NAME) $(DOCKER_REPO)/$(TAG):latest
 
 test: ## Run container test command
