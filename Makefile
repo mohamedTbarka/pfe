@@ -72,12 +72,12 @@ publish-version: repo-login tag-version ## Publish the `{version}` taged contain
 pull: repo-login pull-latest pull-version ## Pull the `{version}` and `latest` tagged containers from WCR
 
 pull-latest: repo-login ## Pull the `latest` container from WCR
-	@echo 'publish latest to $(DOCKER_REPO)'
-	docker push $(DOCKER_REPO)/$(TAG):latest
+	@echo 'pull latest to $(DOCKER_REPO)'
+	docker pull $(DOCKER_REPO)/$(TAG):latest
 
 pull-version: repo-login ## Pull the `{version}` container from WCR
-	@echo 'publish $(VERSION) to $(DOCKER_REPO)'
-	docker push $(DOCKER_REPO)/$(TAG):$(VERSION)
+	@echo 'pull $(VERSION) to $(DOCKER_REPO)'
+	docker pull $(DOCKER_REPO)/$(TAG):$(VERSION)
 
 
 # Docker tagging
