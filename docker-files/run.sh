@@ -11,7 +11,7 @@ RUNSERVER_PORT=$(awk -F "=" '/RUNSERVER_PORT/ {print $2}' $DEPLOY_ENV_FILE)
 STATIC_ROOT="$PROJECT_PATH/static_root"
 MEDIA_ROOT="$PROJECT_PATH/app/media"
 if [ -f $CONFIG_ENV_FILE ]; then
-docker run -d --user $UID:$GID -p $CONTAINER_PORT:8000 -p $RUNSERVER_PORT:8001 --env-file $CONFIG_ENV_FILE -v $STATIC_ROOT:/static_root -v $MEDIA_ROOT:/src/media --name $TICKER $TAG
+docker run -d -p $CONTAINER_PORT:8000 -p $RUNSERVER_PORT:8001 --env-file $CONFIG_ENV_FILE -v $STATIC_ROOT:/static_root -v $MEDIA_ROOT:/src/media --name $TICKER $TAG
 else
-docker run -d --user $UID:$GID -p $CONTAINER_PORT:8000 -p $RUNSERVER_PORT:8001 -v $STATIC_ROOT:/static_root -v $MEDIA_ROOT:/src/media --name $TICKER $TAG
+docker run -d -p $CONTAINER_PORT:8000 -p $RUNSERVER_PORT:8001 -v $STATIC_ROOT:/static_root -v $MEDIA_ROOT:/src/media --name $TICKER $TAG
 fi
