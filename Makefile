@@ -38,7 +38,7 @@ build-nc: ## Build the container without caching
 run: ## Run container on port configured in `config.env`
 	sh $(DOCKER_FOLDER)/run.sh $(APP_NAME) $(TAG):$(VERSION)
 
-deploy-latest: stop repo-login ## Deploy container on server
+deploy-latest: stop pull-latest ## Deploy container on server
 	sh $(DOCKER_FOLDER)/deploy.sh $(APP_NAME) $(DOCKER_REPO)/$(TAG):latest
 
 test: ## Run container test command
@@ -56,18 +56,29 @@ up: build stop run ## Run container on port configured in `config.env` (Alias to
 stop: ## Stop and remove a running container
 	sh $(DOCKER_FOLDER)/stop.sh $(APP_NAME)
 
-release: build-nc publish ## Make a release by building and publishing the `{version}` ans `latest` tagged containers to ECR
+release: build-nc publish ## Make a release by building and publishing the `{version}` ans `latest` tagged containers to WCR
 
 # Docker publish
-publish: repo-login publish-latest publish-version ## Publish the `{version}` ans `latest` tagged containers to ECR
+publish: repo-login publish-latest publish-version ## Publish the `{version}` ans `latest` tagged containers to WCR
 
 publish-latest: repo-login tag-latest ## Publish the `latest` taged container to WCR
 	@echo 'publish latest to $(DOCKER_REPO)'
 	docker push $(DOCKER_REPO)/$(TAG):latest
 
-publish-version: repo-login tag-version ## Publish the `{version}` taged container to ECR
+publish-version: repo-login tag-version ## Publish the `{version}` taged container to WCR
 	@echo 'publish $(VERSION) to $(DOCKER_REPO)'
 	docker push $(DOCKER_REPO)/$(TAG):$(VERSION)
+
+pull: repo-login pull-latest pull-version ## Pull the `{version}` and `latest` tagged containers from WCR
+
+pull-latest: repo-login ## Pull the `latest` container from WCR
+        @echo 'publish latest to $(DOCKER_REPO)'
+        docker push $(DOCKER_REPO)/$(TAG):latest
+
+pull-version: repo-login ## Pull the `{version}` container from WCR
+        @echo 'publish $(VERSION) to $(DOCKER_REPO)'
+        docker push $(DOCKER_REPO)/$(TAG):$(VERSION)
+
 
 # Docker tagging
 tag: tag-latest tag-version ## Generate container tags for the `{version}` ans `latest` tags
