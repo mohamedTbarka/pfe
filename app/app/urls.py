@@ -32,6 +32,10 @@ urlpatterns = [
                   path('', include('contact.urls')),
                   path('concours-saintvalentin/', include('saintv.urls')),
                   path('concours-saintvalentin/', TemplateView.as_view(template_name="concours_saintvalentin.html")),
+                  path('concours-saintvalentin/inscription/', TemplateView.as_view(template_name="inscription.html")),
+                  path('concours-saintvalentin/quiz/', TemplateView.as_view(template_name="quiz.html")),
+                  path('concours-saintvalentin/merci/', TemplateView.as_view(template_name="merci.html")),
+
                   path('search/', include('haystack.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
                                                                                          document_root=settings.STATIC_ROOT)

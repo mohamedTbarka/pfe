@@ -10,26 +10,46 @@
     
     <link rel="stylesheet" href="{%static 'css/style.css' %}">
     <link rel="stylesheet" href="{%static 'css/valentine.css' %}">
-    <title>Arribat Center - Quiz Saint valentin</title>
+    <title>Arribat Center</title>
 </head>
 <body>
     <div id="main-valentine" style="background: url({%static 'resources/background.jpg'%})">
         <div class="container">
-            <!-- STEP 01 -->
+            <!-- STEP 02 -->
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="content-form show content-one">
+                    <div class="content-form content-two" id="inscription">
                         <div class="logo">
                             <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
                         </div>
                         <div class="content">
-                            <img src="{%static 'resources/Titre.png'%}" alt="image title">
                             <p>joyeuse saint-valentin</p>
+                            <h4>je participe !</h4>
                         </div>
-                        <a href="/concours-saintvalentin/inscription/" class="btn btn-primary start">Suivant</a>
+                        <form name="registration" class="form-one" method="post">
+                            {% csrf_token %}
+                            <div class="nom">
+                                <input type="text" name="fullname" placeholder="Nom et prénom" required>
+                            </div>
+                            <div class="mail">
+                                <input type="email" name="email" placeholder="Adresse mail" required>
+                            </div>
+                            <div class="tel">
+                                <input type="text" name="phone" placeholder="Numero de téléphone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" required>
+                            </div>
+                            <div class="fileUpload blue-btn btn width100">
+                                <span>Telecharger votre ticket de caisse</span>
+                                <input name="image" type="file" id="uploadlogo" class="uploadlogo" required />
+                            </div>
+                            <input type="hidden" id="ticker_value"/>
+                            <div class="submit">
+                                <button type="submit" href="#quiz" class="btn btn-primary to-step-3">Suivant</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+            
 
             <!-- LINKS FOOTER -->
             <div class="row">

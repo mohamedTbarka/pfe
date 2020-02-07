@@ -1,0 +1,109 @@
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <link rel="stylesheet" href="{%static 'css/valentine.css' %}">
+    <title>Arribat Center</title>
+</head>
+<body>
+    <div id="main-valentine" style="background: url({%static 'resources/background.jpg'%})">
+        <div class="container">
+        
+            
+            <!-- STEP 03 -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="content-form content-three" id="quiz">
+                        <div class="logo">
+                            <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
+                        </div>
+                        <div class="content">
+                            <h4 id="question"></h4>
+                        </div>
+                        <form name="frm_quiz" class="frm_quiz form-one" method="post">
+                            {% csrf_token %}
+                            <div class="submit">
+                                <button type="submit" class="btn btn-primary to-step-4">Envoyer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- LINKS FOOTER -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="links-footer">
+                        <li><a href="#">mentions légales</a></li>
+                        <li><a href="#">politique de confidentialité</a></li>
+                        <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f4aa020ac2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="{%static 'js/valentine.js' %}"></script>
+    <script>
+        $(document).ready(function(){
+            var quiz = JSON.parse(localStorage.getItem("quiz"));
+            var hash_code = quiz.hash_code;
+            var question_id = quiz.data.id;
+            var question_text = quiz.data.question;
+            $('#question').text(question_text);
+            var options = '';
+            for(var i = 0 ; i < quiz.data.responses.length ; i++){
+                options += '<div class="choice">';
+                options += '<input name="choice1" id="check'+quiz.data.responses[i].id+'" type="radio" value="'+quiz.data.responses[i].id+'" />';
+                options += '<label for="check'+quiz.data.responses[i].id+'">'+quiz.data.responses[i].response+'</label>';
+                options += '</div>';
+            }            
+            $('.frm_quiz').prepend(options);
+
+            $('.frm_quiz').submit(function(e){
+                e.preventDefault();
+                $.ajax({
+                    method: "POST",
+                    url: "/concours-saintvalentin/participate/",
+                    data: {
+                        'id': $('input[type="radio"]').val(),
+                        'hash_code': hash_code,
+                    },
+                    statusCode: {
+                        406: function(error){
+                            console.log('Attendez 24H pour reparticiper', error);
+                        },
+                        200: function(response){
+                            window.location = '/concours-saintvalentin/merci/';
+                        },
+                        500: function(message){
+                            console.log('Erreur 500', message.responseText);
+                        },
+                        404: function(message){
+                             window.location = '/concours-saintvalentin/';
+                        }
+                    }
+                });
+            });
+            // Radio Color Background
+            $('.choice').on('click', function(){
+            console.log('clicked');
+            if($(this).find('input[type="radio"]').is(':checked')){
+                $('.choice').removeClass('checked');
+                $(this).addClass('checked');
+            }
+            })
+        });
+    </script>
+</body>
+</html>
