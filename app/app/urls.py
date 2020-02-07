@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
 
 import service
 from app import settings
@@ -29,9 +30,11 @@ urlpatterns = [
                   path('', include('nouveaute.urls')),
                   path('', include('service.urls')),
                   path('', include('contact.urls')),
-                  path('api/saintv/', include('saintv.urls')),
+                  path('concours-saintvalentin/', include('saintv.urls')),
+                  path('concours-saintvalentin/', TemplateView.as_view(template_name="concours_saintvalentin.html")),
                   path('search/', include('haystack.urls')),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
+                                                                                         document_root=settings.STATIC_ROOT)
 
 handler500 = service.views.error_500
 handler404 = service.views.error_404

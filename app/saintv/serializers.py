@@ -25,7 +25,7 @@ class CreateParticipantSerializer(serializers.ModelSerializer):
         if "ticket_base64" in data and data["ticket_base64"]:
             try:
                 decoded_image = base64.b64decode(data["ticket_base64"])
-                data["ticket"] = decoded_image
+                # data["ticket"] = decoded_image
             except:
                 raise CustomValidation("detail", "406_invalide_Foto", status.HTTP_406_NOT_ACCEPTABLE)
 

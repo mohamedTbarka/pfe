@@ -1,19 +1,14 @@
 import base64
 import os
 
-from django.core.files.base import ContentFile
 from django.db.models import Q
-from django.shortcuts import render
 
-# Create your views here.
-from django.utils.text import slugify
 from rest_framework import status
 from rest_framework.response import Response as Response_rest
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from rest_framework.views import APIView
 
-from app import settings
-from saintv.models import Participant, Ticket, Participation, Question, Response
+from saintv.models import Participant, Participation, Question, Response
 from saintv.serializers import CreateParticipantSerializer, ParticipateSerializer, QuestionSerializer
 
 
@@ -22,7 +17,6 @@ class CreateParticipantAPIView(APIView):
     authentication_classes = ()
 
     def post(self, request):
-        ticket = None
         source = None
         medium = None
         campaign = None
@@ -41,8 +35,7 @@ class CreateParticipantAPIView(APIView):
 
         if "ticket_base64" in data:
             ticket_base64 = data["ticket_base64"]
-            ticket = Ticket.objects.create(ticket_base64=ticket_base64, participant=participant)
-
+            
         if "utm_source" in self.request.session:
             source = self.request.session.get("utm_source")
         if "utm_medium" in self.request.session:
@@ -51,7 +44,8 @@ class CreateParticipantAPIView(APIView):
             campaign = self.request.session.get("utm_campaign")
 
         question = Question.objects.last()  #############""
-        participation = Participation.objects.create(ticket=ticket, participant=participant, question=question,
+        participation = Participation.objects.create(ticket_base64=ticket_base64, participant=participant,
+                                                     question=question,
                                                      source=source, medium=medium, campaign=campaign)
 
         serializer_question = QuestionSerializer(question)

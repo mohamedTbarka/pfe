@@ -34,21 +34,11 @@ class Participant(SaintVBaseModel):
         verbose_name_plural = "Participants"
 
 
-class Ticket(SaintVBaseModel):
-    ticket = models.ImageField(upload_to="./tickets", blank=True, null=True)
-    ticket_base64 = models.TextField(blank=True, null=True, editable=False)
-    participant = models.ForeignKey(Participant, null=True, blank=True, on_delete=models.CASCADE,
-                                    related_name=u"participant_tickets")
-
-    def __str__(self):
-        return "%s" % self.pk
-
-
 class Question(SaintVBaseModel):
     question = models.TextField()
 
     def __str__(self):
-        return "%s" % self.pk
+        return "%s" % self.question
 
     class Meta:
         verbose_name_plural = "Question"
@@ -60,7 +50,7 @@ class Response(SaintVBaseModel):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=u"question_responses")
 
     def __str__(self):
-        return "%s" % self.pk
+        return "%s" % self.response
 
     class Meta:
         verbose_name_plural = "Réponses"
@@ -73,9 +63,8 @@ class Participation(SaintVBaseModel):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name=u"question_participations")
     response = models.ForeignKey(Response, on_delete=models.CASCADE, related_name=u"response_participations",
                                  verbose_name=u"Réponse", null=True, blank=True)
-    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, null=True, blank=True,
-                               related_name=u"ticketparticipations",
-                               verbose_name=u"Ticket")
+    ticket = models.ImageField(upload_to="./tickets", blank=True, null=True)
+    ticket_base64 = models.TextField(blank=True, null=True, editable=False)
     source = models.CharField(max_length=355, verbose_name=(u"Source"), null=True, blank=True)
     medium = models.CharField(max_length=355, verbose_name=(u"Medium"), null=True, blank=True)
     campaign = models.CharField(max_length=355, verbose_name=(u"Campaign"), null=True, blank=True)
@@ -87,4 +76,4 @@ class Participation(SaintVBaseModel):
         verbose_name_plural = "Participations"
 
 
-post_save.connect(signal_create_ticket_image, sender=Ticket)
+post_save.connect(signal_create_ticket_image, sender=Participation)
