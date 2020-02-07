@@ -27,7 +27,7 @@ class CreateParticipantSerializer(serializers.ModelSerializer):
                 decoded_image = base64.b64decode(data["ticket_base64"])
                 # data["ticket"] = decoded_image
             except:
-                raise CustomValidation("detail", "406_invalide_Foto", status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
+                raise CustomValidation("detail", "4015_invalide_Foto", status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
 
         return data
 
