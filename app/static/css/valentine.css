@@ -152,6 +152,7 @@
     
 }
 #main-valentine .content-form .form-one input[type='text'],
+#main-valentine .content-form .form-one input[type='email'],
 #main-valentine .content-form .form-one .fileUpload {
     width: 100%;
     height: 36px;
@@ -223,6 +224,81 @@
     height: 41px;
     margin-top: 30px;
 }
+#main-valentine .merci_1{
+    font-size: 30px !important;
+    color: #d21d27 !important;
+}
+#main-valentine .merci_2{
+    font-size: 30px !important;
+    color: #000 !important;
+}
+
+.own-share .button {
+	border-radius: 8px;
+	color: #fff;
+	font-size: 24px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.own-share .share {
+    background: #fff;
+    width: 283px;
+    height: 55px;
+    border: 2px solid #000;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.own-share .twitter {
+	background: #00acee;
+	box-shadow: 0 4px 0 #0080b1;
+}
+
+.own-share .facebook {
+  color:#ffff;
+	background: #3B5998;
+	box-shadow: 0 4px 0 #3B5998;
+}
+
+.own-share .google {
+	background: #CC3732;
+	box-shadow: 0 4px 0 #CC3732;
+}
+
+.own-share .btn-share {
+	display: inline-block;
+	position: relative;
+}
+
+.own-share .btn-share li {
+	float: left;
+	margin: 0 8px;
+	list-style: none !important;
+}
+
+.own-share .btn-share li:first-child {
+	margin-left: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.own-share .btn-share li:nth-child(2) {
+	/*margin: 0 8px 0 80px;*/
+}
+
+.own-share .btn-share li:last-child {
+	margin: 0 0 0 8px
+}
+
 @media screen and (max-width: 768px){
     #main-valentine .content-form{
         padding: 35px 80px 60px;
