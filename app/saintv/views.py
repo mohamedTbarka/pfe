@@ -43,7 +43,7 @@ class CreateParticipantAPIView(APIView):
         if "utm_campaign" in self.request.session:
             campaign = self.request.session.get("utm_campaign")
 
-        question = Question.objects.last()  #############""
+        question = Question.objects.order_by('?')[0]  #############""
         participation = Participation.objects.create(ticket_base64=ticket_base64, participant=participant,
                                                      question=question,
                                                      source=source, medium=medium, campaign=campaign)
