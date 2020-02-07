@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "valentin";
+    src: url("/fonts/VALENTIN.woff") format("woff");
+}
+#main-valentine .hide{
+    display: none !important;
+}
+#main-valentine .show{ 
+    display: flex !important;
+}
+#main-valentine .error{
+    color: #d21d27;
+}
+#main-valentine{
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-valentine .content-form {
+    margin: 0 auto;
+    background: #fff;
+    width: calc(100% - 40px);
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 35px 150px 60px;
+}
+#main-valentine .content-form .content {
+    text-align: center;
+}
+#main-valentine .content-form .content img {
+    margin-bottom: 30px;
+    width: 100%;
+}
+#main-valentine .content-form .content h3 {
+    font-size: 100px;
+    color: #d21d27;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "valentin";
+}
+#main-valentine .content-form .content p {
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Sequel100Wide-65Wide';
+}
+#main-valentine .content-two .content p {
+    font-size: 20px;
+}
+#main-valentine .content-two .content h4 {
+    font-size: 46px;
+    font-family: 'Sequel100Wide-65Wide';
+    text-transform: uppercase;
+    color: #d21d27;
+}
+#main-valentine .content-three .content h4 {
+    font-size: 30px;
+    font-family: 'Sequel100Wide-65Wide';
+    text-transform: uppercase;
+    color: #d21d27;
+}
+#main-valentine .content-form .form-init button {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #000;
+    width: 283px;
+    height: 41px;
+    margin: 0 auto;
+}
+#main-valentine .links-footer{
+    width: calc(100% - 40px);
+    margin: 20px auto 0;
+    padding: 0;
+}
+#main-valentine .links-footer li{
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-right: 30px;
+}
+#main-valentine .links-footer li.right{
+    float: right;
+    margin-right: 0px;
+}
+#main-valentine .links-footer li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+#main-valentine .content-form .form-one .upload{
+    position: relative;
+    display: block;
+}
+
+#main-valentine .content-form .form-one .fileUpload {
+    position: relative;
+    height: 43px;
+    margin-top: 0;
+}
+  
+#main-valentine .content-form .form-one .fileUpload input.uploadlogo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 42px;
+}
+  
+  /*Chrome fix*/
+#main-valentine .content-form .form-one input::-webkit-file-upload-button {
+    cursor: pointer !important;
+    height: 42px;
+    width: 100%;
+}
+
+#main-valentine .content-form .form-one {
+    width: 100%;
+    text-align: center;
+}
+#main-valentine .content-form .form-one > div {
+    position: relative;
+}
+#main-valentine .content-form .form-one div i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+#main-valentine .content-form .form-one input[type='text'],
+#main-valentine .content-form .form-one .fileUpload {
+    width: 100%;
+    height: 36px;
+    border: 1px solid #000;
+    margin: 20px 0;
+}
+#main-valentine .content-form .form-one .fileUpload span {
+    font-weight: bold;
+}
+#main-valentine .content-form .form-one input::placeholder {
+    color: #000;
+    text-align: center;
+    font-size: 15px;
+}
+#main-valentine .content-form .form-one .submit .btn {
+    background: #fff !important;
+    border: 2px solid #000;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #000;
+    width: 283px;
+    height: 41px;
+    margin-top: 30px;
+}
+#main-valentine .content-form .form-one .choice{
+    border: 1px solid #000;
+    margin: 20px 0;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-valentine .content-form .form-one input[type='radio']{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main-valentine .content-form .form-one label{
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+#main-valentine label#image-error {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-transform: capitalize;
+}
+#main-valentine .content-form .form-one .checked{
+    background: #d21d27;
+}
+#main-valentine .content-form .form-one .checked label{
+    color: #fff;
+}
+#main-valentine .content-form .btn {
+    background: #fff !important;
+    border: 2px solid #000;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #000;
+    width: 283px;
+    height: 41px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 768px){
+    #main-valentine .content-form{
+        padding: 35px 80px 60px;
+    }
+    #main-valentine .content-one .content p{
+        font-size: 20px;
+    }
+    #main-valentine .content-one .content h3{
+        font-size: 70px;
+    }
+    #main-valentine .content-two .content p{
+        font-size: 20px;
+    }
+    #main-valentine .content-two .content h3{
+        font-size: 40px;
+    }
+    #main-valentine .content-three .content p{
+        font-size: 20px;
+    }
+    #main-valentine .content-three .content h3{
+        font-size: 40px;
+    }
+}
