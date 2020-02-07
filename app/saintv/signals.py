@@ -19,7 +19,6 @@ def signal_create_ticket_image(sender, instance=None, created=False, **kwargs):
             decoded_image = base64.b64decode(instance.ticket_base64)
             fh.write(decoded_image)
             fh.close()
-            ticket = ContentFile(decoded_image, filename)
-            print(ticket)
+            image = ContentFile(decoded_image, filename)
             sender.objects.filter(pk=instance.pk) \
-                .update(ticket=ticket)
+                .update(ticket=image)

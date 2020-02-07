@@ -2,18 +2,27 @@
 
 
 from django.contrib import admin
+from django.utils.html import format_html
 
 from . import models
-from .models import Response, Ticket
+from .models import Response, Participation
 
 
-class TicketTabularInlineAdmin(admin.TabularInline):
-    model = Ticket
+class ParticipationTabularInlineAdmin(admin.TabularInline):
+    model = Participation
+    exclude = ("ticket_base64", "ticket")
     extra = 0
+
+    def imagem_logo(self, obj):
+        return format_html('<img src="data:;base64,{}" height="100", width="100">', obj.ticket_base64)
+
+    imagem_logo.short_description = "Ticket"
+
+    readonly_fields = ("imagem_logo",)
 
 
 class ParticipantAdmin(admin.ModelAdmin):
-    inlines = [TicketTabularInlineAdmin, ]
+    inlines = (ParticipationTabularInlineAdmin,)
     list_display = (
         'id',
         'full_name',
@@ -60,21 +69,16 @@ class ParticipationAdmin(admin.ModelAdmin):
         'created_at',
         'updated_at',
     )
+    raw_id_fields = ("participant", "question",)
+    exclude = ("ticket_base64", "ticket")
 
+    def imagem_logo(self, obj):
+        return format_html('<img src="data:;base64,{}">', obj.ticket_base64)
 
-class TicketAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'ticket',
-        'participant',
-        'created_at',
-        'updated_at',
-    )
-    list_filter = (
-        'created_at',
-        'updated_at',
-    )
-    readonly_fields = ("ticket_base64",)
+    imagem_logo.short_description = "Ticket"
+
+    readonly_fields = ("imagem_logo",)
+
 
 def _register(model, admin_class):
     admin.site.register(model, admin_class)
@@ -83,4 +87,3 @@ def _register(model, admin_class):
 _register(models.Participant, ParticipantAdmin)
 _register(models.Question, QuestionAdmin)
 _register(models.Participation, ParticipationAdmin)
-_register(models.Ticket, TicketAdmin)
