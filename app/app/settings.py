@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_admin_generator',
     ###############
+    'rest_framework',
     'haystack',
     'snakeoil',
     ###############
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'service',
     'contact',
     'custom_flatpages',
+    'saintv',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'saintv.middleware.SourceMediumMiddleware',
+
 ]
 
 ROOT_URLCONF = 'app.urls'

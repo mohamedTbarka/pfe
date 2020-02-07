@@ -29,6 +29,7 @@ urlpatterns = [
                   path('', include('nouveaute.urls')),
                   path('', include('service.urls')),
                   path('', include('contact.urls')),
+                  path('api/saintv/', include('saintv.urls')),
                   path('search/', include('haystack.urls')),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
