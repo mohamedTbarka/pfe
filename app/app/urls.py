@@ -13,9 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.views.static import serve
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path, re_path, include
+from django.urls import path, include
+from django.views.generic import TemplateView
 
 import service
 from app import settings
@@ -29,9 +30,15 @@ urlpatterns = [
                   path('', include('nouveaute.urls')),
                   path('', include('service.urls')),
                   path('', include('contact.urls')),
+                  path('concours-saintvalentin/', include('saintv.urls')),
+                  path('concours-saintvalentin/', TemplateView.as_view(template_name="concours_saintvalentin.html")),
+                  path('concours-saintvalentin/inscription/', TemplateView.as_view(template_name="inscription.html")),
+                  path('concours-saintvalentin/quiz/', TemplateView.as_view(template_name="quiz.html")),
+                  path('concours-saintvalentin/merci/', TemplateView.as_view(template_name="merci.html")),
+
                   path('search/', include('haystack.urls')),
-                  re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})
-              ]
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,
+                                                                                         document_root=settings.STATIC_ROOT)
 
 handler500 = service.views.error_500
 handler404 = service.views.error_404
