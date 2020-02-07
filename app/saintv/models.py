@@ -38,7 +38,7 @@ class Question(SaintVBaseModel):
     question = models.TextField()
 
     def __str__(self):
-        return "%s" % self.pk
+        return "%s" % self.question
 
     class Meta:
         verbose_name_plural = "Question"

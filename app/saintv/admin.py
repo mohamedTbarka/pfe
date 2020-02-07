@@ -8,7 +8,31 @@ from . import models
 from .models import Response, Participation
 
 
-class ParticipationTabularInlineAdmin(admin.TabularInline):
+class ReadOnlyInlineAdmin(admin.TabularInline):
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_add_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class ReadOnlyAdmin(admin.ModelAdmin):
+    def get_readonly_fields(self, request, obj=None):
+        return list(self.readonly_fields) + \
+               [field.name for field in obj._meta.fields] + \
+               [field.name for field in obj._meta.many_to_many]
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+class ParticipationTabularInlineAdmin(ReadOnlyInlineAdmin):
     model = Participation
     exclude = ("ticket_base64", "ticket")
     extra = 0
@@ -21,7 +45,7 @@ class ParticipationTabularInlineAdmin(admin.TabularInline):
     readonly_fields = ("imagem_logo",)
 
 
-class ParticipantAdmin(admin.ModelAdmin):
+class ParticipantAdmin(ReadOnlyAdmin):
     inlines = (ParticipationTabularInlineAdmin,)
     list_display = (
         'id',
@@ -52,7 +76,7 @@ class QuestionAdmin(admin.ModelAdmin):
     )
 
 
-class ParticipationAdmin(admin.ModelAdmin):
+class ParticipationAdmin(ReadOnlyAdmin):
     list_display = (
         'id',
         'hash_code',
