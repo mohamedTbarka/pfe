@@ -161,28 +161,28 @@ DEFAULT_FROM_EMAIL = ""
 SUPPORT_EMAIL = []
 
 
-# import sys
-# import json
-# if 'test' in sys.argv or 'test_coverage' in sys.argv:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
-#     DEBUG = True
-# else:
-#     DEBUG = os.environ.get('DEBUG') == 'TRUE'
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': os.environ.get('DB_ENGINE'),
-#             'NAME': os.environ.get('DB_NAME'),
-#             'USER': os.environ.get('DB_USER'),
-#             'PASSWORD': os.environ.get('DB_PASSWORD'),
-#             'HOST': os.environ.get('DB_HOST'),
-#             'PORT': os.environ.get('DB_PORT'),
-#         }
-#     }
-#     ALLOWED_HOSTS = json.loads(os.environ.get('ALLOWED_HOSTS', '[]'))
-#     ADMINS = json.loads(os.environ.get('ADMINS', '[]'))
-#     MANAGERS = ADMINS
+import sys
+import json
+if 'test' in sys.argv or 'test_coverage' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+    DEBUG = True
+else:
+    DEBUG = os.environ.get('DEBUG') == 'TRUE'
+    DATABASES = {
+        'default': {
+            'ENGINE': os.environ.get('DB_ENGINE'),
+            'NAME': os.environ.get('DB_NAME'),
+            'USER': os.environ.get('DB_USER'),
+            'PASSWORD': os.environ.get('DB_PASSWORD'),
+            'HOST': os.environ.get('DB_HOST'),
+            'PORT': os.environ.get('DB_PORT'),
+        }
+    }
+    ALLOWED_HOSTS = json.loads(os.environ.get('ALLOWED_HOSTS', '[]'))
+    ADMINS = json.loads(os.environ.get('ADMINS', '[]'))
+    MANAGERS = ADMINS
