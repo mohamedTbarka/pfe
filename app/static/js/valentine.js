@@ -48,7 +48,7 @@ $(document).ready(function($) {
         },
         statusCode: {
           406: function(error){
-            console.log('Attendez 24H pour reparticiper', error);
+            $('.msg_error').text('Attendez 24H pour reparticiper');
           },
           200: function(response){
             console.log('Inscription correcte');

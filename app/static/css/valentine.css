@@ -58,8 +58,9 @@ body{
 }
 #main-valentine .content-form .content img.aime {
     margin: 0 0;
-    width:409px;
-    height: 315px;
+    max-width:409px;
+    max-height: 315px;
+    width: 100%;
 }
 #main-valentine .content-form .content h3 {
     font-size: 100px;
@@ -75,6 +76,7 @@ body{
     text-align: center;
     margin:0;
     font-family: 'Sequel100Wide-65Wide';
+    margin-top: 30px;
 }
 #main-valentine .content-two .content p {
     font-size: 20px;
@@ -170,13 +172,14 @@ body{
 #main-valentine .content-form .form-one input[type='text'],
 #main-valentine .content-form .form-one input[type='email'],
 #main-valentine .content-form .form-one .fileUpload {
-    width: 100%;
     height: 36px;
     border: 1px solid #d7d7d7;
     margin: 20px 0;
     text-align:center;
     font-family: 'Sequel100Wide-45Wide';
     color:#222222;
+    width: 100%;
+    max-width: 100%;
 }
 #main-valentine .content-form .form-one input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-family: 'Sequel100Wide-45Wide';
@@ -241,7 +244,8 @@ body{
     border-radius: 0;
     text-transform: uppercase;
     color: #000;
-    width: 283px;
+    max-width: 283px;
+    width: 100%;
     height: 41px;
     margin-top: 30px;
 }
@@ -293,7 +297,8 @@ body{
     border-radius: 0;
     text-transform: uppercase;
     color: #000;
-    width: 283px;
+    max-width: 283px;
+    width: 100%;
     height: 41px;
     margin-top: 0;
     font-family: 'Sequel100Wide-45Wide';
@@ -320,11 +325,13 @@ body{
 
 #own-share-btn {
     background: #fff;
-    width: 283px;
+    max-width: 283px;
     height: 43px;
     border: 2px solid #000;
     border-radius: 2px;
     margin: auto;
+    width: 100%;
+    overflow: hidden;
 }
 #own-share-btn li a{
     text-transform: uppercase;
@@ -437,4 +444,10 @@ body{
     .content-two .submit .btn{
         margin-top: 0 !important;
     }
+}
+
+.msg_error{
+    background: rgba(210, 29, 39, .2);
+    padding: 10px;
+    border-radius: 5px;
 }
