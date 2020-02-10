@@ -20,6 +20,7 @@ class CreateParticipantAPIView(APIView):
         source = None
         medium = None
         campaign = None
+        ticket_base64 = None
 
         serializer = CreateParticipantSerializer(data=request.data)
         if not serializer.is_valid():
