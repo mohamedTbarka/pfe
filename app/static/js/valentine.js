@@ -10,7 +10,6 @@ $(window).resize(function(){
 });
 */
 $(document).ready(function($) {
-  $('.msg_error').hide();
 
   function readFile() {
   
