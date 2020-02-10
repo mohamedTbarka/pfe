@@ -10,6 +10,7 @@ $(window).resize(function(){
 });
 */
 $(document).ready(function($) {
+  $('.msg_error').hide();
 
   function readFile() {
   
@@ -32,7 +33,6 @@ $(document).ready(function($) {
     // end statement
     var current_url = document.location.href;
     $('form[name="registration"').submit(function(e) {
-      $('.msg_error').hide();
       e.preventDefault();
       var fullname = $('input[name="fullname"').val();
       var email = $('input[name="email"').val();
