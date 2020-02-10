@@ -86,29 +86,27 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="main-valentine">
-        <div class="container">
-            <!-- STEP 03 -->
-            <div class="content-global">
-                <div class="content-form content-three" id="quiz">
-                    <div class="logo">
-                        <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
-                    </div>
-                    <div class="content">
-                        <h4 id="question"></h4>
-                    </div>
-                    <form name="frm_quiz" class="frm_quiz form-one" method="post">
-                        {% csrf_token %}
-                        <div class="submit">
-                            <button type="submit" class="btn btn-primary to-step-4">Envoyer</button>
-                        </div>
-                    </form>
+        <!-- STEP 03 -->
+        <div class="content-global">
+            <div class="content-form content-three" id="quiz">
+                <div class="logo">
+                    <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
                 </div>
-                <div class="links">
-                    <ul class="links-footer">
-                        <li><a href="#">Règlement du jeu</a></li>
-                        <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>
-                    </ul>
+                <div class="content">
+                    <h4 id="question"></h4>
                 </div>
+                <form name="frm_quiz" class="frm_quiz form-one" method="post">
+                    {% csrf_token %}
+                    <div class="submit">
+                        <button type="submit" class="btn btn-primary to-step-4">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+            <div class="links">
+                <ul class="links-footer">
+                    <li><a href="#">Règlement du jeu</a></li>
+                    <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>
+                </ul>
             </div>
         </div>
     </div>

@@ -32,20 +32,34 @@ body{
     right: 0;
     z-index: -1;
 }
+.logo{
+    margin:33px auto 59px;
+    width:149px;
+    height:159px;
+    display: inline-block;
+}
+#main-valentine{    
+    width: 1030px;
+    margin:0 auto;
+}
 #main-valentine .content-form {
     margin: 50px auto 20px;
     background: #fff;
     justify-content: space-around;
-    padding: 35px 150px 60px;
+    padding: 0 150px 55px;
     display: block;
     text-align: center;
+    width: 1030px;
+    min-height:500px;
 }
 #main-valentine .content-form .content {
     text-align: center;
+    margin-bottom:60px;
 }
-#main-valentine .content-form .content img {
-    margin: 30px 0;
-    width: 50%;
+#main-valentine .content-form .content img.aime {
+    margin: 0 0;
+    width:409px;
+    height: 315px;
 }
 #main-valentine .content-form .content h3 {
     font-size: 100px;
@@ -59,6 +73,7 @@ body{
     color: #000;
     text-transform: uppercase;
     text-align: center;
+    margin:0;
     font-family: 'Sequel100Wide-65Wide';
 }
 #main-valentine .content-two .content p {
@@ -69,6 +84,7 @@ body{
     font-family: 'Sequel100Wide-65Wide';
     text-transform: uppercase;
     color: #d21d27;
+    margin-top:13px;
 }
 #main-valentine .content-three .content h4 {
     font-size: 30px;
@@ -102,8 +118,9 @@ body{
 #main-valentine .links-footer li a{
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
+    font-family: 'Sequel100Wide-45Wide';
 }
 #main-valentine .content-form .form-one .upload{
     position: relative;
@@ -155,11 +172,63 @@ body{
 #main-valentine .content-form .form-one .fileUpload {
     width: 100%;
     height: 36px;
-    border: 1px solid #000;
+    border: 1px solid #d7d7d7;
     margin: 20px 0;
+    text-align:center;
+    font-family: 'Sequel100Wide-45Wide';
+    color:#222222;
+}
+#main-valentine .content-form .form-one input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: 'Sequel100Wide-45Wide';
+    color:#222222;
+    text-align:center;
+}
+#main-valentine .content-form .form-one input::-moz-placeholder { /* Firefox 19+ */
+    font-family: 'Sequel100Wide-45Wide';
+    color:#222222;
+    text-align:center;
+}
+#main-valentine .content-form .form-one input:-ms-input-placeholder { /* IE 10+ */
+    font-family: 'Sequel100Wide-45Wide';
+    color:#222222;
+    text-align:center;
+}
+#main-valentine .content-form .form-one input::placeholder { /* Firefox 18- */
+    font-family: 'Sequel100Wide-45Wide';
+    color:#222222;
+    text-align:center;
+}
+#main-valentine .content-form .form-one .nom input{
+    background-image:url(../resources/nom.png);
+    background-repeat: no-repeat;
+    background-position: 6px 8px;
+}
+#main-valentine .content-form .form-one .mail input{
+    background-image:url(../resources/mail.png);
+    background-repeat: no-repeat;
+    background-position: 6px 9px;
+}
+#main-valentine .content-form .form-one .tel input{
+    background-image:url(../resources/tel.png);
+    background-repeat: no-repeat;
+    background-position: 6px 9px;
+}
+#main-valentine .content-form .form-one .fileUpload{
+    position:relative;
+}
+#main-valentine .content-form .form-one .fileUpload span::before{
+    background-image:url(../resources/fileUpload.png);
+    background-repeat: no-repeat;
+    width:12px;
+    height:15px;
+    position:absolute;
+    content: '';
+    left:6px;
+    top:9px;
 }
 #main-valentine .content-form .form-one .fileUpload span {
     font-weight: bold;
+    text-transform: none;
 }
 #main-valentine .content-form .form-one input::placeholder {
     color: #000;
@@ -177,7 +246,7 @@ body{
     margin-top: 30px;
 }
 #main-valentine .content-form .form-one .choice{
-    border: 1px solid #000;
+    border: 1px solid #d7d7d7;
     margin: 20px 0;
     width: 100%;
     height: 36px;
@@ -185,6 +254,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 #main-valentine .content-form .form-one input[type='radio']{
     position: absolute;
     left: 10px;
@@ -199,6 +269,9 @@ body{
     justify-content: center;
     display: flex;
     align-items: center;
+    font-family: 'Sequel100Wide-45Wide';
+    color:#222222;
+    text-align:center;
 }
 #main-valentine label#image-error {
     position: absolute;
@@ -209,6 +282,7 @@ body{
 }
 #main-valentine .content-form .form-one .checked{
     background: #d21d27;
+    border:1px solid #d21d27;
 }
 #main-valentine .content-form .form-one .checked label{
     color: #fff;
@@ -221,7 +295,8 @@ body{
     color: #000;
     width: 283px;
     height: 41px;
-    margin-top: 30px;
+    margin-top: 0;
+    font-family: 'Sequel100Wide-45Wide';
 }
 #main-valentine .merci_1{
     font-size: 30px !important;
@@ -230,46 +305,37 @@ body{
 #main-valentine .merci_2{
     font-size: 30px !important;
     color: #000 !important;
+    margin:58px 0!important;
 }
 
 .own-share .button {
-	border-radius: 8px;
-	color: #fff;
-	font-size: 24px;
-	height: 50px;
-	line-height: 50px;
-	text-align: center;
-    width: 50px;
+    height: 32px;
+    width: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 4px;
 }
 
 
-.own-share .share {
+#own-share-btn {
     background: #fff;
     width: 283px;
-    height: 55px;
+    height: 43px;
     border: 2px solid #000;
-    border-radius: 0;
+    border-radius: 2px;
+    margin: auto;
+}
+#own-share-btn li a{
     text-transform: uppercase;
     color: #000;
     text-decoration: none;
+    font-size:15px;
+    font-family: 'Sequel100Wide-45Wide';
 }
-
-.own-share .twitter {
-	background: #00acee;
-	box-shadow: 0 4px 0 #0080b1;
-    text-decoration: none;
+.own-share .share img{
+    margin-left:10px;
 }
-
-.own-share .facebook {
-  color:#ffff;
-	background: #3B5998;
-	box-shadow: 0 4px 0 #3B5998;
-    text-decoration: none;
-}
-
 
 .own-share .btn-share {
 	display: inline-block;
@@ -283,12 +349,23 @@ body{
 }
 
 .own-share .btn-share li:first-child {
-	margin-left: 0;
+	margin: 0;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 100%;
+    transform: translateX(-66%);
+    background: white;
+    width: 278px;
+    height: 39px;
+    text-align: center;
 }
-
+.twitter_icon{
+    border-radius:5px;
+}
+.own-share .btn-share li:first-child a{
+    width:278px;
+    height:39px;
+    margin: 0;
+}
 .own-share .btn-share li:nth-child(2) {
 	/*margin: 0 8px 0 80px;*/
 }

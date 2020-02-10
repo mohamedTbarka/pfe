@@ -41,44 +41,43 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="main-valentine">
-        <div class="container">  
-            <!-- STEP 04 -->
-            <div class="content-global">
-                <div class="content-form content-four" id="remerciement">
-                    <div class="logo">
-                        <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
-                    </div>
-                    <div class="content">
-                        <p class="merci_1">Votre participation a été enregistrée.</p>
-                        <p class="merci_2">invitez vos amis à participer</p>
-                        
-                        <div ID="own-share-btn" class="share own-share">
-                            <ul class="btn-share clearfix">
-                                <li>
-                                    <a href="#" class="button share entypo-share">
-                                        Partager
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://arribat-center.ma/concours-saintvalentin/" class="button facebook entypo-facebook" target="_blank">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/home?status=https://arribat-center.ma/concours-saintvalentin/" class="button twitter entypo-twitter" target="_blank">
-                                        <i class="fab fa-twitter-square"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+        <!-- STEP 04 -->
+        <div class="content-global">
+            <div class="content-form content-four" id="remerciement">
+                <div class="logo">
+                    <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
+                </div>
+                <div class="content">
+                    <p class="merci_1">Votre participation <br/>a été enregistrée.</p>
+                    <p class="merci_2">invitez vos amis à participer</p>
+                    
+                    <div ID="own-share-btn" class="share own-share">
+                        <ul class="btn-share clearfix">
+                            <li>
+                                <a href="#" class="button share entypo-share">
+                                    Partager
+                                    <img src="{%static 'resources/share.png'%}" alt="arribat center">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=http://c705-arribatcenter.wbc-prod.com/concours-saintvalentin/" class="button facebook entypo-facebook" target="_blank">
+                                    <img src="{%static 'resources/facebook.png'%}" alt="arribat center">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://twitter.com/share?text=Joyeuse saint-valentin&url=http://c705-arribatcenter.wbc-prod.com/concours-saintvalentin/" class="button twitter entypo-twitter" target="_blank">
+                                    <img src="{%static 'resources/twitter.png'%}" alt="arribat center" class="twitter_icon">
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="links">
-                    <ul class="links-footer">
-                        <li><a href="#">Règlement du jeu</a></li>
-                        <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>
-                    </ul>
-                </div>
+            </div>
+            <div class="links">
+                <ul class="links-footer">
+                    <li><a href="#">Règlement du jeu</a></li>
+                    <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -93,6 +92,7 @@
                 'display' : $this.hide(),
                 'width': $this.width() > 200 ? '0px' : '304px'
             }, 200, 'swing');
+            $(this).parent('li').css('display','none');
             console.log($this.width());
         });
         });
