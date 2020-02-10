@@ -300,24 +300,62 @@
 
 @media screen and (max-width: 768px){
     #main-valentine .content-form{
-        padding: 35px 80px 60px;
+        padding: 0px 20px 0px;
+        height: calc(100vh - 170px);
+    }
+    .content-one .content img{
+        width: 80%;
+    }
+    .content-one .btn{
+        margin-top: 0;
     }
     #main-valentine .content-one .content p{
-        font-size: 20px;
+        font-size: 16px;
     }
     #main-valentine .content-one .content h3{
         font-size: 70px;
     }
     #main-valentine .content-two .content p{
-        font-size: 20px;
+        font-size: 16px;
     }
-    #main-valentine .content-two .content h3{
-        font-size: 40px;
+    #main-valentine .content-two .content h4{
+        font-size: 25px;
+    }
+    #main-valentine .content-form .form-one input[type='text'], #main-valentine .content-form .form-one input[type='email'], #main-valentine .content-form .form-one .fileUpload{
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    #main-valentine .content-two .submit .btn{
+        width: 100%;
+        margin-top: 20px;
     }
     #main-valentine .content-three .content p{
+        font-size: 16px;
+    }
+    #main-valentine .content-three .content h4{
         font-size: 20px;
     }
-    #main-valentine .content-three .content h3{
+}
+@media screen and (max-width: 1024px){
+    .content-one .content{
+        margin-top: 0;
+    }
+    .content-one .content img{
+        width: 70%;
+    }
+    .content-one .content p{
+        font-size: 25px;
+    }
+    .content-one .btn{
+        margin-top: 0;
+    }
+    .content-two .content p{
+        margin-top: 20px;
+    }
+    .content-two .content h4{
         font-size: 40px;
+    }
+    .content-two .submit .btn{
+        margin-top: 0;
     }
 }
