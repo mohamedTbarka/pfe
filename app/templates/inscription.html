@@ -21,52 +21,45 @@
       })(window,document,'script','dataLayer','GTM-5F6DC3Q');</script>
     <!-- End Google Tag Manager -->
 </head>
-<body>
+<body style="background: url({% static 'resources/background.jpg' %})">
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F6DC3Q"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="main-valentine" style="background: url({%static 'resources/background.jpg'%})">
+    <div id="main-valentine">
         <div class="container">
             <!-- STEP 02 -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="content-form content-two" id="inscription">
-                        <div class="logo">
-                            <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
-                        </div>
-                        <div class="content">
-                            <p>joyeuse saint-valentin</p>
-                            <h4>je participe !</h4>
-                        </div>
-                        <form name="registration" class="form-one" method="post">
-                            {% csrf_token %}
-                            <div class="nom">
-                                <input type="text" name="fullname" placeholder="Nom et prénom" required>
-                            </div>
-                            <div class="mail">
-                                <input type="email" name="email" placeholder="Adresse mail" required>
-                            </div>
-                            <div class="tel">
-                                <input type="text" name="phone" placeholder="Numero de téléphone" pattern="[\+(212)]*(?:\d[\s\-\.()xX]*){10,14}" required>
-                            </div>
-                            <div class="fileUpload blue-btn btn width100">
-                                <span>Telecharger votre ticket de caisse</span>
-                                <input name="image" type="file" id="uploadlogo" class="uploadlogo" required />
-                            </div>
-                            <input type="hidden" id="ticker_value"/>
-                            <div class="submit">
-                                <button type="submit" href="#quiz" class="btn btn-primary to-step-3">Suivant</button>
-                            </div>
-                        </form>
+            <div class="content-global">
+                <div class="content-form content-two" id="inscription">
+                    <div class="logo">
+                        <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
                     </div>
+                    <div class="content">
+                        <p>joyeuse saint-valentin</p>
+                        <h4>je participe !</h4>
+                    </div>
+                    <form name="registration" class="form-one" method="post">
+                        {% csrf_token %}
+                        <div class="nom">
+                            <input type="text" name="fullname" placeholder="Nom et prénom" required>
+                        </div>
+                        <div class="mail">
+                            <input type="email" name="email" placeholder="Adresse mail" required>
+                        </div>
+                        <div class="tel">
+                            <input type="text" name="phone" placeholder="Numero de téléphone" pattern="[\+(212)]*(?:\d[\s\-\.()xX]*){10,14}" required>
+                        </div>
+                        <div class="fileUpload blue-btn btn width100">
+                            <span>Telecharger votre ticket de caisse</span>
+                            <input name="image" type="file" id="uploadlogo" class="uploadlogo" required />
+                        </div>
+                        <input type="hidden" id="ticker_value"/>
+                        <div class="submit">
+                            <button type="submit" href="#quiz" class="btn btn-primary to-step-3">Suivant</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
-            
-
-            <!-- LINKS FOOTER -->
-            <div class="row">
-                <div class="col-lg-12">
+                <div class="links">
                     <ul class="links-footer">
                         <li><a href="#">Règlement du jeu</a></li>
                         <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>

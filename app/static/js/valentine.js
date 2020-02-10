@@ -1,4 +1,16 @@
+/*function autoBg(){
+  var current_w = $(window).width();
+  var current_h = $(window).height();
+  $('.bg_img').css('height',current_h+'px');
+  $('.bg_img').css('width',current_w+'px');
+}  
+autoBg();
+$(window).resize(function(){
+  autoBg();
+});
+*/
 $(document).ready(function($) {
+
   function readFile() {
   
     if (this.files && this.files[0]) {

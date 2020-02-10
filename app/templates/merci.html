@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="{%static 'css/valentine.css' %}">
     <title>Arribat Center - Merci pour votre participation</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script>
+    <script src="https://kit.fontawesome.com/f4aa020ac2.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+    <script src="{%static 'js/valentine.js' %}"></script>
+    <script>  
         $(document).ready(function(){            
             var response = JSON.parse(localStorage.getItem("response"));
             if(!response){
@@ -22,6 +25,7 @@
             }
             console.log(response);
         });
+	});
     </script>
     <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,52 +35,45 @@
       })(window,document,'script','dataLayer','GTM-5F6DC3Q');</script>
     <!-- End Google Tag Manager -->
 </head>
-<body>
+<body style="background: url({% static 'resources/background.jpg' %})">
     <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5F6DC3Q"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="main-valentine" style="background: url({%static 'resources/background.jpg'%})">
-        <div class="container">        
-
+    <div id="main-valentine">
+        <div class="container">  
             <!-- STEP 04 -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="content-form content-four" id="remerciement">
-                        <div class="logo">
-                            <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
-                        </div>
-                        <div class="content">
-                            <p class="merci_1">Votre participation a été enregistrée.</p>
-                            <p class="merci_2">invitez vos amis à participer</p>
-                            
-							<div ID="own-share-btn" class="share own-share">
-								<ul class="btn-share clearfix">
-									<li>
-										<a href="#" class="button share entypo-share">
-											Partager
-										</a>
-									</li>
-									<li>
-										<a href="https://www.facebook.com/sharer/sharer.php?u=https://arribat-center.ma/concours-saintvalentin/" class="button facebook entypo-facebook" target="_blank">
-											<i class="fab fa-facebook-square"></i>
-										</a>
-									</li>
-									<li>
-										<a href="https://twitter.com/home?status=https://arribat-center.ma/concours-saintvalentin/" class="button twitter entypo-twitter" target="_blank">
-											<i class="fab fa-twitter-square"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
+            <div class="content-global">
+                <div class="content-form content-four" id="remerciement">
+                    <div class="logo">
+                        <img src="{%static 'resources/logo.png'%}" alt="arribat center logo">
+                    </div>
+                    <div class="content">
+                        <p class="merci_1">Votre participation a été enregistrée.</p>
+                        <p class="merci_2">invitez vos amis à participer</p>
+                        
+                        <div ID="own-share-btn" class="share own-share">
+                            <ul class="btn-share clearfix">
+                                <li>
+                                    <a href="#" class="button share entypo-share">
+                                        Partager
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://arribat-center.ma/concours-saintvalentin/" class="button facebook entypo-facebook" target="_blank">
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/home?status=https://arribat-center.ma/concours-saintvalentin/" class="button twitter entypo-twitter" target="_blank">
+                                        <i class="fab fa-twitter-square"></i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- LINKS FOOTER -->
-            <div class="row">
-                <div class="col-lg-12">
+                <div class="links">
                     <ul class="links-footer">
                         <li><a href="#">Règlement du jeu</a></li>
                         <li class="right"><a href="#">© 2020 arribat center - tous droits réservés</a></li>
@@ -85,21 +82,20 @@
             </div>
         </div>
     </div>
-
-    <script src="https://kit.fontawesome.com/f4aa020ac2.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
-    <script src="{%static 'js/valentine.js' %}"></script>
-    <script>        
-        $('.own-share .share').on('click', function(e) {
-		e.preventDefault();
-		var $this = $(this);
-		console.log($this.width());
-		$this.animate({
-            'display' : $this.hide(),
-			'width': $this.width() > 200 ? '0px' : '304px'
-		}, 200, 'swing');
-		console.log($this.width());
-	});
+    <script>
+        
+        $(document).ready(function(){
+            $('.own-share .share').on('click', function(e) {
+            e.preventDefault();
+            var $this = $(this);
+            console.log($this.width());
+            $this.animate({
+                'display' : $this.hide(),
+                'width': $this.width() > 200 ? '0px' : '304px'
+            }, 200, 'swing');
+            console.log($this.width());
+        });
+        });
     </script>
 </body>
 </html>

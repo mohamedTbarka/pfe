@@ -24,28 +24,28 @@ body{
     width: 100%;
     height: 100%;
 }
-#main-valentine{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bg_img{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
 #main-valentine .content-form {
-    margin: 0 auto;
+    margin: 50px auto;
     background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     padding: 35px 150px 60px;
+    display: block;
+    text-align: center;
 }
 #main-valentine .content-form .content {
     text-align: center;
 }
 #main-valentine .content-form .content img {
     margin: 30px 0;
-    width: 100%;
+    width: 50%;
 }
 #main-valentine .content-form .content h3 {
     font-size: 100px;
@@ -87,8 +87,6 @@ body{
     margin: 0 auto;
 }
 #main-valentine .links-footer{
-    width: calc(100% - 40px);
-    margin: 20px auto 0;
     padding: 0;
 }
 #main-valentine .links-footer li{
@@ -96,7 +94,6 @@ body{
     display: inline-block;
     padding: 0;
     margin: 0;
-    margin-right: 30px;
 }
 #main-valentine .links-footer li.right{
     float: right;
