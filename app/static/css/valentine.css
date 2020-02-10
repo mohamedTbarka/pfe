@@ -255,23 +255,22 @@
     border-radius: 0;
     text-transform: uppercase;
     color: #000;
+    text-decoration: none;
 }
 
 .own-share .twitter {
 	background: #00acee;
 	box-shadow: 0 4px 0 #0080b1;
+    text-decoration: none;
 }
 
 .own-share .facebook {
   color:#ffff;
 	background: #3B5998;
 	box-shadow: 0 4px 0 #3B5998;
+    text-decoration: none;
 }
 
-.own-share .google {
-	background: #CC3732;
-	box-shadow: 0 4px 0 #CC3732;
-}
 
 .own-share .btn-share {
 	display: inline-block;
