@@ -378,9 +378,6 @@ body{
     #main-valentine .content-form{
         padding: 20px 20px 20px !important;
     }
-    .content-one .content img{
-        width: 80% !important;
-    }
     .content-one .btn{
         margin-top: 0 !important;
     }
@@ -424,10 +421,6 @@ body{
     }
     .content-one .content{
         margin-top: 0 !important;
-    }
-    .content-one .content img{
-        margin-top: 25px;
-        width: 70% !important;
     }
     .content-one .content p{
         font-size: 25px !important;
