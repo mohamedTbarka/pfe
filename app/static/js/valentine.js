@@ -32,6 +32,7 @@ $(document).ready(function($) {
     // end statement
     var current_url = document.location.href;
     $('form[name="registration"').submit(function(e) {
+      $('.msg_error').hide();
       e.preventDefault();
       var fullname = $('input[name="fullname"').val();
       var email = $('input[name="email"').val();
@@ -48,6 +49,7 @@ $(document).ready(function($) {
         },
         statusCode: {
           406: function(error){
+            $('.msg_error').show();
             $('.msg_error').text('Attendez 24H pour reparticiper');
           },
           200: function(response){
