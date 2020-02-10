@@ -50,7 +50,7 @@ $(document).ready(function($) {
         statusCode: {
           406: function(error){
             $('.msg_error').show();
-            $('.msg_error').text('Attendez 24H pour reparticiper');
+            $('.msg_error').text("Vous avez déjà participé aujourd'hui, réessayez demain !");
           },
           200: function(response){
             console.log('Inscription correcte');
