@@ -97,11 +97,26 @@ class ParticipationAdmin(ReadOnlyAdmin):
     exclude = ("ticket_base64", "ticket")
 
     def imagem_logo(self, obj):
-        return format_html('<img src="data:;base64,{}">', obj.ticket_base64)
+        try:
+            return format_html('<img src="data:;base64,{}">', obj.ticket_base64)
+        except:
+            return None
 
     imagem_logo.short_description = "Ticket"
 
-    readonly_fields = ("imagem_logo",)
+    def get_readonly_fields(self, request, obj=None):
+        return (
+        'id',
+        'hash_code',
+        'participant',
+        'question',
+        'response',
+        'source',
+        'medium',
+        'campaign',
+        'imagem_logo',
+    )
+
 
 
 def _register(model, admin_class):
