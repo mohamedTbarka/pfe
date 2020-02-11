@@ -3,9 +3,11 @@
 
 from django.contrib import admin
 from django.utils.html import format_html
+from import_export.admin import ExportActionMixin
 
 from . import models
 from .models import Response, Participation
+from .resources import ParticipantResource, QuestionResource, ParticipationResource
 
 
 class ReadOnlyInlineAdmin(admin.TabularInline):
@@ -17,6 +19,7 @@ class ReadOnlyInlineAdmin(admin.TabularInline):
 
     def has_delete_permission(self, request, obj=None):
         return False
+
 
 
 class ReadOnlyAdmin(admin.ModelAdmin):
@@ -33,6 +36,7 @@ class ReadOnlyAdmin(admin.ModelAdmin):
 
 
 class ParticipationTabularInlineAdmin(ReadOnlyInlineAdmin):
+    resource_class = ParticipationResource
     model = Participation
     exclude = ("ticket_base64", "ticket")
     extra = 0
@@ -45,7 +49,8 @@ class ParticipationTabularInlineAdmin(ReadOnlyInlineAdmin):
     readonly_fields = ("imagem_logo",)
 
 
-class ParticipantAdmin(ReadOnlyAdmin):
+class ParticipantAdmin(ExportActionMixin, ReadOnlyAdmin):
+    resource_class = ParticipantResource
     inlines = (ParticipationTabularInlineAdmin,)
     list_display = (
         'id',
@@ -58,7 +63,6 @@ class ParticipantAdmin(ReadOnlyAdmin):
     list_filter = (
         'created_at',
         'updated_at',
-
     )
 
 
@@ -67,7 +71,8 @@ class ResponseTabularInlineAdmin(admin.TabularInline):
     extra = 0
 
 
-class QuestionAdmin(admin.ModelAdmin):
+class QuestionAdmin(ExportActionMixin, admin.ModelAdmin):
+    resource_class = QuestionResource
     inlines = [ResponseTabularInlineAdmin, ]
     list_display = ('id', 'question', 'created_at', 'updated_at',)
     list_filter = (
@@ -76,7 +81,8 @@ class QuestionAdmin(admin.ModelAdmin):
     )
 
 
-class ParticipationAdmin(ReadOnlyAdmin):
+class ParticipationAdmin(ExportActionMixin, ReadOnlyAdmin):
+    resource_class = ParticipationResource
     list_display = (
         'id',
         'hash_code',
